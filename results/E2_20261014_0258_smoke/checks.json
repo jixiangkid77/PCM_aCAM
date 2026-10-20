@@ -1,0 +1,134 @@
+{
+  "C1": {
+    "G1": {
+      "max_abs_diff_mV": 0.00036215871224154483,
+      "pass": true
+    },
+    "C1": {
+      "max_abs_diff_mV": 0.0002995318671983327,
+      "pass": true
+    }
+  },
+  "C2": {
+    "G1": {
+      "max_abs_lsb": 8.695904621380812e-08,
+      "pass": true
+    },
+    "C1": {
+      "max_abs_lsb": 2.8570973253927434e-07,
+      "pass": true
+    }
+  },
+  "C3": {
+    "G1/pdk/1d": {
+      "max_abs_lsb": 8.695904454847359e-08,
+      "pass": true
+    },
+    "G1/pdk/30d": {
+      "max_abs_lsb": 8.695904454847359e-08,
+      "pass": true
+    },
+    "G1/pdk/1y": {
+      "max_abs_lsb": 8.695904454847359e-08,
+      "pass": true
+    },
+    "G1/div_only/1d": {
+      "max_abs_lsb": 8.695904454847359e-08,
+      "pass": true
+    },
+    "G1/div_only/30d": {
+      "max_abs_lsb": 8.695904454847359e-08,
+      "pass": true
+    },
+    "G1/div_only/1y": {
+      "max_abs_lsb": 8.695904454847359e-08,
+      "pass": true
+    },
+    "G1/pd_only/1d": {
+      "max_abs_lsb": 8.695904454847359e-08,
+      "pass": true
+    },
+    "G1/pd_only/30d": {
+      "max_abs_lsb": 8.695904454847359e-08,
+      "pass": true
+    },
+    "G1/pd_only/1y": {
+      "max_abs_lsb": 8.695904454847359e-08,
+      "pass": true
+    },
+    "C1/pdk/1d": {
+      "max_abs_lsb": 2.8570973253927434e-07,
+      "pass": true
+    },
+    "C1/pdk/30d": {
+      "max_abs_lsb": 2.8570973253927434e-07,
+      "pass": true
+    },
+    "C1/pdk/1y": {
+      "max_abs_lsb": 2.8570973253927434e-07,
+      "pass": true
+    },
+    "C1/div_only/1d": {
+      "max_abs_lsb": 2.8570973253927434e-07,
+      "pass": true
+    },
+    "C1/div_only/30d": {
+      "max_abs_lsb": 2.8570973253927434e-07,
+      "pass": true
+    },
+    "C1/div_only/1y": {
+      "max_abs_lsb": 2.8570973253927434e-07,
+      "pass": true
+    },
+    "C1/pd_only/1d": {
+      "max_abs_lsb": 2.857097475272852e-07,
+      "pass": true
+    },
+    "C1/pd_only/30d": {
+      "max_abs_lsb": 2.857097475272852e-07,
+      "pass": true
+    },
+    "C1/pd_only/1y": {
+      "max_abs_lsb": 2.857097475272852e-07,
+      "pass": true
+    }
+  },
+  "C4": {
+    "G1": {
+      "sigma_mc_mV": 22.22396212002251,
+      "sigma_pred_mV": 22.612248930355932,
+      "tolerance": 0.7071067811865476,
+      "pass": true
+    },
+    "C1": {
+      "sigma_mc_mV": 22.309964280463927,
+      "sigma_pred_mV": 22.68216255179275,
+      "tolerance": 0.7071067811865476,
+      "pass": true
+    }
+  },
+  "C5": {},
+  "C6": {
+    "vsw_nom": {
+      "pd_min/tt/27C": 0.5262215070479054,
+      "pd_min/ss/27C": 0.6244604796440055
+    },
+    "ordering": {},
+    "pass": true
+  },
+  "C7": {
+    "G1": {
+      "max_abs_dlnI": 0.0,
+      "pass": true
+    },
+    "C1": {
+      "max_abs_dlnI": 0.0,
+      "pass": true
+    }
+  },
+  "failed": [
+    "C5 C1 pdk dac_remap 1y: 1.88 % invalid pairs",
+    "C5 C1 div_only dac_remap 1y: 1.25 % invalid pairs"
+  ],
+  "all_pass": false
+}

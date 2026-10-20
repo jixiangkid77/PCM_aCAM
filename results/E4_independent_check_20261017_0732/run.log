@@ -1,0 +1,42 @@
+[2026-10-17 07:32:13] E4 independent check -> results/E4_independent_check_20261017_0732
+[2026-10-17 07:32:14] task 1: forest accuracies (640 evaluations)
+[2026-10-17 07:32:14] [task1] wine split 0: n_test 54, rows 141, constraints 482, acc_ref 0.981481
+[2026-10-17 07:32:19] [task1] wine seed 0 done (5.7 s)
+[2026-10-17 07:32:24] [task1] wine seed 1 done (10.6 s)
+[2026-10-17 07:32:24] [task1] breast_cancer split 0: n_test 171, rows 243, constraints 1022, acc_ref 0.941520
+[2026-10-17 07:32:41] [task1] breast_cancer seed 0 done (27.9 s)
+[2026-10-17 07:32:59] [task1] breast_cancer seed 1 done (45.1 s)
+[2026-10-17 07:32:59] [task1] 640 evaluations: acc identical 640, differing 0 (max 0 samples); leaf_loss differing 0 (max 0); a_hat max rel diff 0.00e+00; PASS=True
+[2026-10-17 07:32:59] [task1] C2 reproduction (40 bisection steps): 32/32 values bit-identical
+[2026-10-17 07:33:00] [task1] C2 reproduction (64 bisection steps): 0/32 values bit-identical
+[2026-10-17 07:33:00] task 1 sensitivity: 64 bisection steps; bilinear ln I surface
+[2026-10-17 07:33:00] [task1_n64] wine split 0: n_test 54, rows 141, constraints 482, acc_ref 0.981481
+[2026-10-17 07:33:06] [task1_n64] wine seed 0 done (5.8 s)
+[2026-10-17 07:33:11] [task1_n64] wine seed 1 done (11.1 s)
+[2026-10-17 07:33:11] [task1_n64] breast_cancer split 0: n_test 171, rows 243, constraints 1022, acc_ref 0.941520
+[2026-10-17 07:33:30] [task1_n64] breast_cancer seed 0 done (29.4 s)
+[2026-10-17 07:33:47] [task1_n64] breast_cancer seed 1 done (47.0 s)
+[2026-10-17 07:33:47] [task1_n64] 640 evaluations: acc identical 640, differing 0 (max 0 samples); leaf_loss differing 24 (max 0.00116); a_hat max rel diff 0.00e+00; PASS=False
+[2026-10-17 07:33:48] [task1_bilinear] wine split 0: n_test 54, rows 141, constraints 482, acc_ref 0.981481
+[2026-10-17 07:33:53] [task1_bilinear] wine seed 0 done (5.5 s)
+[2026-10-17 07:33:58] [task1_bilinear] wine seed 1 done (10.5 s)
+[2026-10-17 07:33:58] [task1_bilinear] breast_cancer split 0: n_test 171, rows 243, constraints 1022, acc_ref 0.941520
+[2026-10-17 07:34:15] [task1_bilinear] breast_cancer seed 0 done (27.8 s)
+[2026-10-17 07:34:32] [task1_bilinear] breast_cancer seed 1 done (44.5 s)
+[2026-10-17 07:34:32] [task1_bilinear] 640 evaluations: acc identical 640, differing 0 (max 0 samples); leaf_loss differing 0 (max 0); a_hat max rel diff 0.00e+00; PASS=True
+[2026-10-17 07:34:32] task 2: V1 row transients (SPICE)
+[2026-10-17 07:34:33] [task2] model side recomputed for 48 V1 cases
+[2026-10-17 07:34:35] [task2] t_s(30) = 413.384 ns (main 413.384 ns)
+[2026-10-17 07:34:39] [task2] case 0 (P1, t0): t_sim 1377.528 ns, main 1377.530 ns, diff -0.000 %, ratio to t_pred 0.9993 (7 s)
+[2026-10-17 07:34:43] [task2] case 8 (P1, dac_remap): t_sim 1384.498 ns, main 1384.500 ns, diff -0.000 %, ratio to t_pred 1.0068 (11 s)
+[2026-10-17 07:34:47] [task2] case 16 (P1, supply): t_sim 1371.884 ns, main 1371.880 ns, diff +0.000 %, ratio to t_pred 0.9969 (15 s)
+[2026-10-17 07:34:52] [task2] case 24 (P3, t0): t_sim 1378.592 ns, main 1378.590 ns, diff +0.000 %, ratio to t_pred 1.0005 (19 s)
+[2026-10-17 07:34:56] [task2] case 32 (P3, dac_remap): t_sim 1372.184 ns, main 1372.180 ns, diff +0.000 %, ratio to t_pred 1.0027 (24 s)
+[2026-10-17 07:35:00] [task2] case 40 (P3, supply): t_sim 1377.403 ns, main 1377.400 ns, diff +0.000 %, ratio to t_pred 1.0027 (28 s)
+[2026-10-17 07:35:06] [task2] max |rel diff| vs main 0.000 %; PASS=True
+[2026-10-17 07:35:06] task 3: switching points (SPICE)
+[2026-10-17 07:35:08] [task3] pull-down sweeps done (1.7 s)
+[2026-10-17 07:35:31] [task3] inverter sweep done (24.3 s)
+[2026-10-17 07:35:33] [task3] extra checks done (26.8 s)
+[2026-10-17 07:35:33] [task3] max |diff| (uV): L6T 0.033, UINV 0.828, LBUF 0.792, LBUF_Wstar 0.817; PASS=True
+[2026-10-17 07:35:33] done: {'task1': True, 'task2': True, 'task3': True} all_pass=True (200.5 s)

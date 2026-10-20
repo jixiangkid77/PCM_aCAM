@@ -1,0 +1,166 @@
+{
+ "note": "Supplementary diagnostic (outside the protocol's pass/fail): form of the supply law.",
+ "a_1y": 0.4969457102774913,
+ "conditions": {
+  "G2": {
+   "main_mc_300x16": {
+    "rms_sim_lsb": 0.5819812797635993,
+    "rms_law_ln_r_lsb": 0.5749031110663527,
+    "rms_law_r_minus_1_lsb": 0.5824047717223798,
+    "vs_ln_r": {
+     "rms_ratio_sim_over_law": 1.0123119331953478,
+     "slope_through_origin": 1.0110676120650646,
+     "rms_residual_lsb": 0.02954032079530729,
+     "max_abs_residual_lsb": 0.3172315211520449
+    },
+    "vs_r_minus_1": {
+     "rms_ratio_sim_over_law": 0.9992728563031377,
+     "slope_through_origin": 0.999171718482709,
+     "rms_residual_lsb": 0.008293991547422986,
+     "max_abs_residual_lsb": 0.04697832002416649
+    }
+   },
+   "independent_full_branch_40x4": {
+    "vs_ln_r": {
+     "rms_ratio_sim_over_law": 0.9999018646325502,
+     "slope_through_origin": 0.9991015737371818,
+     "rms_residual_lsb": 0.021571928411862274,
+     "max_abs_residual_lsb": 0.10468873001759457
+    },
+    "vs_r_minus_1": {
+     "rms_ratio_sim_over_law": 1.0038059703280913,
+     "slope_through_origin": 1.0037300324473548,
+     "rms_residual_lsb": 0.006927592237767166,
+     "max_abs_residual_lsb": 0.028604337914396247
+    }
+   },
+   "predictor_with_r_minus_1": {
+    "E_ln2_r": 0.0034642920540860806,
+    "E_r_minus_1_sq": 0.0036525324360242484,
+    "rms_ratio": 1.0268092960224098,
+    "pred_rms_ln_r_main": 0.6148942998316773,
+    "pred_rms_r_minus_1": 0.6313791831383572
+   }
+  },
+  "C2": {
+   "main_mc_300x16": {
+    "rms_sim_lsb": 0.5817599852529847,
+    "rms_law_ln_r_lsb": 0.5692361083244147,
+    "rms_law_r_minus_1_lsb": 0.5765287265242467,
+    "vs_ln_r": {
+     "rms_ratio_sim_over_law": 1.0220011990550546,
+     "slope_through_origin": 1.011132876769473,
+     "rms_residual_lsb": 0.08485379740934831,
+     "max_abs_residual_lsb": 0.801372021588055
+    },
+    "vs_r_minus_1": {
+     "rms_ratio_sim_over_law": 1.0090737173848667,
+     "slope_through_origin": 0.9999865765159311,
+     "rms_residual_lsb": 0.07789885412115224,
+     "max_abs_residual_lsb": 0.6241796504794855
+    }
+   },
+   "independent_full_branch_40x4": {
+    "vs_ln_r": {
+     "rms_ratio_sim_over_law": 1.032617382107999,
+     "slope_through_origin": 1.0276544135118164,
+     "rms_residual_lsb": 0.05617460126980931,
+     "max_abs_residual_lsb": 0.23276827659662153
+    },
+    "vs_r_minus_1": {
+     "rms_ratio_sim_over_law": 1.0365558255792895,
+     "slope_through_origin": 1.0315034599433175,
+     "rms_residual_lsb": 0.05709845470964875,
+     "max_abs_residual_lsb": 0.2467686083607218
+    }
+   },
+   "predictor_with_r_minus_1": {
+    "E_ln2_r": 0.0033846489232469148,
+    "E_r_minus_1_sq": 0.003564162183157279,
+    "rms_ratio": 1.0261761462117385,
+    "pred_rms_ln_r_main": 0.6077850762306897,
+    "pred_rms_r_minus_1": 0.6236945472514168
+   }
+  },
+  "T3": {
+   "main_mc_300x16": {
+    "rms_sim_lsb": 0.5890242337119056,
+    "rms_law_ln_r_lsb": 0.5818027773526399,
+    "rms_law_r_minus_1_lsb": 0.5896426719557579,
+    "vs_ln_r": {
+     "rms_ratio_sim_over_law": 1.012412206748351,
+     "slope_through_origin": 1.011393343270112,
+     "rms_residual_lsb": 0.027238001792027306,
+     "max_abs_residual_lsb": 0.27861896506375483
+    },
+    "vs_r_minus_1": {
+     "rms_ratio_sim_over_law": 0.9989511643690897,
+     "slope_through_origin": 0.9988720321181196,
+     "rms_residual_lsb": 0.007443629989967157,
+     "max_abs_residual_lsb": 0.06716340926579176
+    }
+   },
+   "independent_full_branch_40x4": {
+    "vs_ln_r": {
+     "rms_ratio_sim_over_law": 1.0005484069788837,
+     "slope_through_origin": 0.9999119436638454,
+     "rms_residual_lsb": 0.01947273922920881,
+     "max_abs_residual_lsb": 0.09187648016268854
+    },
+    "vs_r_minus_1": {
+     "rms_ratio_sim_over_law": 1.0042510786865075,
+     "slope_through_origin": 1.0041424216768584,
+     "rms_residual_lsb": 0.00834180222619202,
+     "max_abs_residual_lsb": 0.05735344239654841
+    }
+   },
+   "predictor_with_r_minus_1": {
+    "E_ln2_r": 0.003549870343766086,
+    "E_r_minus_1_sq": 0.0037477302818010798,
+    "rms_ratio": 1.027490744239078,
+    "pred_rms_ln_r_main": 0.622442823066983,
+    "pred_rms_r_minus_1": 0.6395542395193671
+   }
+  },
+  "G6": {
+   "main_mc_300x16": {
+    "rms_sim_lsb": 0.388910948646144,
+    "rms_law_ln_r_lsb": 0.38783844371312376,
+    "rms_law_r_minus_1_lsb": 0.3892292135326206,
+    "vs_ln_r": {
+     "rms_ratio_sim_over_law": 1.0027653394097609,
+     "slope_through_origin": 1.00267440375693,
+     "rms_residual_lsb": 0.005339204494536766,
+     "max_abs_residual_lsb": 0.05384445967752394
+    },
+    "vs_r_minus_1": {
+     "rms_ratio_sim_over_law": 0.9991823201460445,
+     "slope_through_origin": 0.9989622572959573,
+     "rms_residual_lsb": 0.008171906970231176,
+     "max_abs_residual_lsb": 0.06283359880668485
+    }
+   },
+   "independent_full_branch_40x4": {
+    "vs_ln_r": {
+     "rms_ratio_sim_over_law": 0.9995716662424838,
+     "slope_through_origin": 0.9995107242111116,
+     "rms_residual_lsb": 0.004074075795188344,
+     "max_abs_residual_lsb": 0.01945202391388224
+    },
+    "vs_r_minus_1": {
+     "rms_ratio_sim_over_law": 1.0067119383365826,
+     "slope_through_origin": 1.0064762022016382,
+     "rms_residual_lsb": 0.00832113013716728,
+     "max_abs_residual_lsb": 0.05825145179274252
+    }
+   },
+   "predictor_with_r_minus_1": {
+    "E_ln2_r": 0.0015424527701612693,
+    "E_r_minus_1_sq": 0.0015789918677640857,
+    "rms_ratio": 1.0117751514866964,
+    "pred_rms_ln_r_main": 0.41029776914867855,
+    "pred_rms_r_minus_1": 0.41512908753505784
+   }
+  }
+ }
+}

@@ -1,0 +1,8 @@
+[2026-10-14 05:32:20] E3b Monte Carlo phase; predictions results/E3b_predict_20261014_0532/predictions.json sha256 1b6014495d8e385012a4cfd4c1d215cbe1a8866d5e24e69bd12a0107a18337ea
+[2026-10-14 05:33:13] U1: done in 52.9 s; V_Y* 0.5703 V, sigma 10.57 mV, C1 2.48e-03 mV
+[2026-10-14 05:33:35] U2: done in 22.7 s; V_Y* 0.5703 V, sigma 10.57 mV, C1 3.71e-03 mV
+[2026-10-14 05:33:58] U3: done in 23.1 s; V_Y* 0.5703 V, sigma 10.57 mV, C1 2.13e-03 mV
+[2026-10-14 05:34:47] U4: done in 49.0 s; V_Y* 0.8497 V, sigma 17.67 mV, C1 7.97e-04 mV
+[2026-10-14 05:35:11] U5: done in 23.6 s; V_Y* 0.8497 V, sigma 17.67 mV, C1 5.44e-04 mV
+[2026-10-14 05:35:11] checks passed
+[2026-10-14 05:35:11] decision: A1 100% (True), A2 True (4 clear), A3 100%; validated True

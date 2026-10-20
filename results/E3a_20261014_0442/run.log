@@ -1,0 +1,7 @@
+[2026-10-14 04:42:43] E3a Monte Carlo phase; predictions results/E3a_predict_20261014_0442/predictions.json sha256 8f28f5cae689a48826c5bb482e44aaddcd6e0a26a9fcf3e48bc71a0f22b2ac22
+[2026-10-14 04:43:13] P1: done in 29.9 s; V_sw,nom 0.5262 V, sigma 24.88 mV, C1 3.33e-04 mV, C2 5.7e-14 LSB
+[2026-10-14 04:43:42] S1: done in 28.8 s; V_sw,nom 0.5262 V, sigma 24.88 mV, C1 3.01e-04 mV, C2 3.1e-13 LSB
+[2026-10-14 04:44:12] G1: done in 30.8 s; V_sw,nom 0.5262 V, sigma 24.88 mV, C1 3.62e-04 mV, C2 5.7e-14 LSB
+[2026-10-14 04:44:39] P3: done in 26.6 s; V_sw,nom 0.5262 V, sigma 24.88 mV, C1 2.24e-04 mV, C2 5.3e-14 LSB
+[2026-10-14 04:44:39] checks passed
+[2026-10-14 04:44:39] decision: B1 True (max 9.34e-05 LSB), B2 100% of 173 (3 excluded), B3 True (79 clear); validated True

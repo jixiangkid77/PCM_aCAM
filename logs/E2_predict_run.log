@@ -1,0 +1,15 @@
+[2026-10-14 03:15:42] G1: V_sw,nom 0.5262 V, sigma_delta 22.61 mV, bound(30 uS) 0.787 V, feasible True, 0.7 s
+[2026-10-14 03:15:42] G2: V_sw,nom 0.5262 V, sigma_delta 22.61 mV, bound(30 uS) 0.897 V, feasible True, 0.4 s
+[2026-10-14 03:15:43] G3: V_sw,nom 0.4966 V, sigma_delta 11.53 mV, bound(30 uS) 1.262 V, feasible True, 0.7 s
+[2026-10-14 03:15:43] G4: V_sw,nom 0.5262 V, sigma_delta 22.61 mV, bound(30 uS) 1.004 V, feasible True, 0.3 s
+[2026-10-14 03:15:44] G5: V_sw,nom 0.5262 V, sigma_delta 22.61 mV, bound(30 uS) 0.836 V, feasible True, 0.3 s
+[2026-10-14 03:15:44] G6: V_sw,nom 0.4966 V, sigma_delta 11.53 mV, bound(30 uS) 1.627 V, feasible True, 0.4 s
+[2026-10-14 03:15:45] C1: V_sw,nom 0.6245 V, sigma_delta 22.68 mV, bound(30 uS) 0.956 V, feasible True, 0.8 s
+[2026-10-14 03:15:46] C2: V_sw,nom 0.4197 V, sigma_delta 22.37 mV, bound(30 uS) 0.744 V, feasible True, 0.8 s
+[2026-10-14 03:15:46] C3: V_sw,nom 0.6245 V, sigma_delta 22.68 mV, bound(30 uS) 1.489 V, feasible True, 0.3 s
+[2026-10-14 03:15:46] C4: V_sw,nom 0.4197 V, sigma_delta 22.37 mV, bound(30 uS) 1.324 V, feasible True, 0.3 s
+[2026-10-14 03:15:47] T1: V_sw,nom 0.5828 V, sigma_delta 22.87 mV, bound(30 uS) 0.878 V, feasible True, 0.7 s
+[2026-10-14 03:15:48] T2: V_sw,nom 0.4789 V, sigma_delta 22.34 mV, bound(30 uS) 0.815 V, feasible True, 0.7 s
+[2026-10-14 03:15:48] T3: V_sw,nom 0.5828 V, sigma_delta 22.87 mV, bound(30 uS) 1.274 V, feasible True, 0.4 s
+[2026-10-14 03:15:48] T4: V_sw,nom 0.4789 V, sigma_delta 22.34 mV, bound(30 uS) 1.550 V, feasible True, 0.4 s
+[2026-10-14 03:15:48] predictions written; sha256 2c4af6ccbacd99d543c04a033f1bb9613261cfd51dc3dc2a87315a363b78bee3

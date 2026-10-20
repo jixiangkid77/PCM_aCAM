@@ -1,0 +1,3 @@
+[2026-10-14 03:01:07] G1: V_sw,nom 0.5262 V, sigma_delta 22.61 mV, bound(30 uS) 0.787 V, feasible True, 0.8 s
+[2026-10-14 03:01:08] C1: V_sw,nom 0.6245 V, sigma_delta 22.68 mV, bound(30 uS) 0.956 V, feasible True, 0.6 s
+[2026-10-14 03:01:08] predictions written; sha256 ea6bc93ee01b92ca886e6a0c2de33ae4e5423f110dc0cb07c09a81fde9b19248

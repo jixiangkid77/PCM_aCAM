@@ -1,0 +1,112 @@
+{
+  "H1": {
+    "rule": "crosstalk suppressed (arm gs): the node with the smaller per-cell bound error (E2/E3b laws) gives the smaller loss: delta(P1) > 0 (supply better), delta(P3) < 0 (input remap better)",
+    "by_design": {
+      "P1": {
+        "mean": 0.7435256660168941,
+        "se": 0.12131700485505814,
+        "ci_lo": 0.5057443365009802,
+        "ci_hi": 0.981306995532808,
+        "per_dataset": {
+          "iris": 1.3333333333333337,
+          "wine": -0.09259259259259317,
+          "breast_cancer": 0.40935672514619886,
+          "digits": 0.6141975308641974,
+          "synthetic": 1.4533333333333336
+        },
+        "predicted_sign": 1,
+        "class": "CONFIRMED",
+        "material": true
+      },
+      "P3": {
+        "mean": -0.06274723846653614,
+        "se": 0.0744825390683323,
+        "ci_lo": -0.20873301504046743,
+        "ci_hi": 0.08323853810739516,
+        "per_dataset": {
+          "iris": -0.11111111111111124,
+          "wine": -0.03086419753086378,
+          "breast_cancer": 0.23391812865497072,
+          "digits": -0.23456790123456647,
+          "synthetic": -0.1711111111111099
+        },
+        "predicted_sign": -1,
+        "class": "UNRESOLVED",
+        "material": false
+      }
+    },
+    "holds": false
+  },
+  "H2": {
+    "rule": "6T2M as published (arm xt): the supply node gives the smaller loss for both designs: delta(P1) > 0 and delta(P3) > 0",
+    "by_design": {
+      "P1": {
+        "mean": 2.204775828460039,
+        "se": 0.14623042755681065,
+        "ci_lo": 1.9181641904486901,
+        "ci_hi": 2.4913874664713878,
+        "per_dataset": {
+          "iris": 0.9259259259259257,
+          "wine": 0.9876543209876554,
+          "breast_cancer": 0.1072124756335285,
+          "digits": 0.8086419753086421,
+          "synthetic": 8.194444444444445
+        },
+        "predicted_sign": 1,
+        "class": "CONFIRMED",
+        "material": true
+      },
+      "P3": {
+        "mean": 1.2120402858999355,
+        "se": 0.12444800837560802,
+        "ci_lo": 0.9681221894837438,
+        "ci_hi": 1.4559583823161273,
+        "per_dataset": {
+          "iris": -0.11111111111111066,
+          "wine": 1.3271604938271613,
+          "breast_cancer": 0.0682261208576997,
+          "digits": 0.20370370370370405,
+          "synthetic": 4.572222222222224
+        },
+        "predicted_sign": 1,
+        "class": "CONFIRMED",
+        "material": true
+      }
+    },
+    "holds": true
+  },
+  "H3": {
+    "rule": "crosstalk is first-order at the system level: crosstalk_loss at t0 (programming noise only) >= 1.0 pp for both designs",
+    "by_design": {
+      "P1": {
+        "mean": 4.12083950617284,
+        "se": 0.11929373386144988,
+        "ci_lo": 3.887023787804398,
+        "ci_hi": 4.354655224541282,
+        "per_dataset": {
+          "iris": 2.148148148148147,
+          "wine": 2.530864197530866,
+          "breast_cancer": 0.7407407407407401,
+          "digits": 0.8055555555555564,
+          "synthetic": 14.37888888888889
+        }
+      },
+      "P3": {
+        "mean": 3.1459662118258613,
+        "se": 0.09889634241049444,
+        "ci_lo": 2.952129380701292,
+        "ci_hi": 3.3398030429504306,
+        "per_dataset": {
+          "iris": 1.7407407407407405,
+          "wine": 1.8518518518518539,
+          "breast_cancer": 0.4385964912280703,
+          "digits": 1.0864197530864197,
+          "synthetic": 10.612222222222222
+        }
+      }
+    },
+    "holds": true
+  },
+  "classification_rule": "for H1 and H2, each design: CONFIRMED if the 95 % CI excludes 0 with the predicted sign, CONTRADICTED if it excludes 0 with the opposite sign, UNRESOLVED otherwise; a confirmed difference is MATERIAL if |delta| >= 0.5 pp. H1/H2 hold if both designs are CONFIRMED. H3 holds if the mean crosstalk loss is >= 1.0 pp for both designs",
+  "instrument_sha256": "22699dcc0a52c4c4135b47dae3dbae741aadcedced6eb6f3c919f4068168057f"
+}

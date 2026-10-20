@@ -1,0 +1,18 @@
+[2026-10-14 15:43:50] V_sw,nom 0.526222 V; t_s N=1: 242.795 ns, N=16: 331.056 ns (2 s)
+[2026-10-14 15:43:56] T1 N=1: V_sw,tr nominal 0.526221 V (V_sw 0.526222); sigma_tr 22.675 mV vs sigma_qs 22.612 mV (8 s)
+[2026-10-14 15:44:52] T1 N=16: V_sw,tr nominal 0.526221 V (V_sw 0.526222); sigma_tr 22.675 mV vs sigma_qs 22.612 mV (64 s)
+[2026-10-14 15:46:42] T3 predictions for P1 done (174 s)
+[2026-10-14 15:48:29] T3 predictions for P3 done (281 s)
+[2026-10-14 15:48:34] map d 1.0 LSB t0: V_X - V_sw -17.7 mV, k_max 1
+[2026-10-14 15:48:39] map d 1.0 LSB supply_1y: V_X - V_sw -30.3 mV, k_max 1
+[2026-10-14 15:48:43] map d 2.0 LSB t0: V_X - V_sw -34.9 mV, k_max 2
+[2026-10-14 15:48:48] map d 2.0 LSB supply_1y: V_X - V_sw -59.2 mV, k_max 3
+[2026-10-14 15:48:54] map d 3.0 LSB t0: V_X - V_sw -51.6 mV, k_max 3
+[2026-10-14 15:48:59] map d 3.0 LSB supply_1y: V_X - V_sw -86.9 mV, k_max 6
+[2026-10-14 15:49:04] map d 4.0 LSB t0: V_X - V_sw -68.0 mV, k_max 4
+[2026-10-14 15:49:10] map d 4.0 LSB supply_1y: V_X - V_sw -113.5 mV, k_max 13
+[2026-10-14 15:49:15] map d 6.0 LSB t0: V_X - V_sw -99.8 mV, k_max 9
+[2026-10-14 15:49:20] map d 6.0 LSB supply_1y: V_X - V_sw -163.7 mV, k_max 15
+[2026-10-14 15:49:24] map d 7.5 LSB t0: V_X - V_sw -122.7 mV, k_max 15
+[2026-10-14 15:49:29] map d 7.5 LSB supply_1y: V_X - V_sw -199.0 mV, k_max 15
+[2026-10-14 15:49:29] predictions written; sha256 ae7d400172a35b9f05bdc1919c98674e4ef8658095ad9b689cc1e4fee114c649

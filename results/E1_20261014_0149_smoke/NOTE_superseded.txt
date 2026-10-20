@@ -1,0 +1,1 @@
+This smoke run stopped at check C4 because the 15 % tolerance did not allow for the sampling error of a standard deviation with 20 instances (expected 16 % standard error). The rule was changed before freezing to max(0.15, 3/sqrt(2(n-1))) and the smoke run was repeated in E1_20261014_0149_smoke_b. Nothing here is interpreted.

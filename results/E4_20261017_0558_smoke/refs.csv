@@ -1,0 +1,3 @@
+dataset,split,n_test,n_rows,n_constraints,n_lower,n_features,acc_float,acc_ref
+iris,0,45,126,385,207,4,0.9777777777777777,0.9777777777777777
+wine,0,54,141,482,275,13,1.0,0.9814814814814815

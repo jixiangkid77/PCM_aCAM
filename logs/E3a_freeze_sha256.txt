@@ -1,0 +1,9 @@
+# E3a freeze record (JST); 04:42 protocol frozen (section 11 empty):
+d1367bfe7cbbb4834c26f8684b52300d547c84d853441fb353c9957581ca52e7  docs/E3a_protocol.md
+a841d7a2804e96376450e253c00e233a2ec4a0e8b491e397ad11a03234256e37  experiments/E3a_config.json
+52b90380f974567057e698f521e8242abb22073652d4e24712a872d34000fef1  experiments/E3a_pcm_nonlinearity.py
+be1ef7fac0f644d97d4f3f386afc3127410713ecd173c9094632d87d0ee7909d  src/pcm_acam/pcm_iv.py
+# 04:42:30 predict phase written:
+8f28f5cae689a48826c5bb482e44aaddcd6e0a26a9fcf3e48bc71a0f22b2ac22  results/E3a_predict_20261014_0442/predictions.json
+# 04:42:36 section 11 filled:
+26ce6e89d1707f6af6c2ac18614ba0bbef724a4b51cc1647fe33a1ff76a235ac  docs/E3a_protocol.md

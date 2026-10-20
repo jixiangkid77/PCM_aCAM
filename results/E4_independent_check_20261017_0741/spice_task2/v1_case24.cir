@@ -1,0 +1,89 @@
+* E4 independent V1 row case24
+.include "/home/claude/PCM_aCAM/third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice"
+.options reltol=1e-4 abstol=1e-15 vntol=1e-8
+
+VDD vdd 0 1.8
+VSLLO sl_lo 0 0.72622150704790545
+VSLHI sl_hi 0 0.77032252167094417
+VDL0 dl0 0 1.035432200587338
+RPCM0 sl_lo x0 181015.51756206594
+XDIV0 x0 dl0 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0 mm_vth0=1.7153266293308533 mm_toxe=0.37213746671614939 mm_voff=-0.92964632887483856 mm_nfactor=0.025008799086510748
+XPD0 ml x0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15 mm_vth0=-1.531838351711186 mm_toxe=-0.23006940092222067 mm_voff=0.31616451625495851 mm_nfactor=-0.74740906706870891
+VDL1 dl1 0 1.1558532652377183
+RPCM1 sl_lo x1 82870.482958488195
+XDIV1 x1 dl1 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0 mm_vth0=0.13626839305717134 mm_toxe=3.3212743465380798 mm_voff=2.9686605035731031 mm_nfactor=1.0283892390938185
+XPD1 ml x1 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15 mm_vth0=-1.1068532683311485 mm_toxe=0.19561695332174614 mm_voff=1.5236590051280474 mm_nfactor=0.36132137546660753
+VDL2 dl2 0 1.0716143614281721
+RPCM2 sl_hi y2 51249.584747387096
+XDIV2 y2 dl2 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0 mm_vth0=-0.89460781460164973 mm_toxe=-2.1951376750117979 mm_voff=2.0581794508554498 mm_nfactor=1.1632832077408377
+XIP2 z2 y2 vdd vdd sky130_fd_pr__pfet_01v8 w=0.42 l=4.0 mm_vth0=0.059713160979777968 mm_toxe=-0.64781917683677459 mm_voff=0.79985334328882773 mm_nfactor=0.71543926984147566
+XIN2 z2 y2 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15 mm_vth0=1.3623512631925443 mm_toxe=-1.1806985831849228 mm_voff=-1.2964543675226308 mm_nfactor=0.74125018998991543
+XPD2 ml z2 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15 mm_vth0=0.25920600885677125 mm_toxe=1.6322875793382212 mm_voff=-0.27552345444516496 mm_nfactor=0.59557774045592171
+XW0 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW1 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW2 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW3 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW4 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW5 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW6 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW7 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW8 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW9 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW10 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW11 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW12 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW13 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW14 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW15 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW16 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW17 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW18 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW19 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW20 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW21 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW22 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW23 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW24 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW25 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW26 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW27 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW28 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW29 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW30 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW31 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW32 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW33 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW34 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW35 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW36 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW37 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW38 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW39 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW40 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW41 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW42 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW43 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW44 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW45 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW46 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW47 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW48 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW49 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW50 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW51 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW52 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW53 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW54 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW55 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+XW56 ml 0 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+CML ml 0 8e-14
+.ic v(ml)=1.8
+.control
+tran 1e-10 2.85585e-06 0 1e-10
+meas tran tcross when v(ml)=0.9 fall=1
+meas tran g0_2ns find v(x0) at=2n
+meas tran g1_2ns find v(x1) at=2n
+meas tran g2_2ns find v(z2) at=2n
+quit
+.endc
+.end

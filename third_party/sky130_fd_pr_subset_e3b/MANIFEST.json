@@ -1,0 +1,46 @@
+{
+ "source": "https://github.com/google/skywater-pdk-libs-sky130_fd_pr",
+ "commit": "f62031a1be9aefe902d6d54cddd6f59b57627436",
+ "files": {
+  "sky130_fd_pr__nfet_01v8__tt.pm3.spice (original)": "3d706d50cf2e57175aea78bcf27e4ee07d9f750b154a4b06e6090531364a831b",
+  "sky130_fd_pr__nfet_01v8_lvt__tt.pm3.spice (original)": "5aa88993ad3ca9c34a3191b545dc7b4cfaa0dcd348439a92a60040f9d22a43a2",
+  "sky130_fd_pr__pfet_01v8__tt.pm3.spice (original)": "bf40d8c358fc11998f60f3734208dce44c206b0007a51c7bb5680f55d41a5c55",
+  "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "lod.spice": "6200b50c14eebb68d8009ca68e452d4c045e2d25d7438ee417c155883527fd7c",
+  "sky130_fd_pr__nfet_01v8__mismatch.corner.spice": "24a3b29d7d7f26f99098811c31eb5497950a3aed520ab83768a96f35467fe818",
+  "sky130_fd_pr__nfet_01v8__tt.corner.spice": "0c03b2e5727c414942f1d2b27e19a68724fb84be90b2c73b361ad41779311130",
+  "sky130_fd_pr__nfet_01v8__tt.pm3.spice": "566aa156f1c71bd963030f760e1862569593ceba740e81ecede32fad974d5875",
+  "sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice": "1855038a2ad2fe3989b64a17128d47daaa3dbc15d0f4db2c4526988923daa311",
+  "sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice": "716b48c11275bb1edbb228807f1b8849453884adf498ac7c57a31b9295335f2b",
+  "sky130_fd_pr__nfet_01v8_lvt__tt.pm3.spice": "8969f1112446ab7c5b138bd83904fe27f4c5a0448db587198274b9fab96ee117",
+  "sky130_fd_pr__pfet_01v8__mismatch.corner.spice": "f4d560668712678ea60641de923fce7691e64acda951949f840986837c31741a",
+  "sky130_fd_pr__pfet_01v8__tt.corner.spice": "641d251a08bf9ddcfc67ba4bd4698ae1978d09447eb6ebf90055fdf3d21917ab",
+  "sky130_fd_pr__pfet_01v8__tt.pm3.spice": "73cf64a757da3ee9af41b8f2446c71e9796622e4edc842091086f28613e3f6f4",
+  "sky130_subset_tt.lib.spice": "8693a91e23e16678a97c0f0b9671ed0a690d1bd0211c22e6b90b0c451693c105"
+ },
+ "patch_counts": {
+  "nfet_01v8/tt": {
+   "vth0": 180,
+   "toxe": 180,
+   "voff": 180,
+   "nfactor": 0
+  },
+  "nfet_01v8_lvt/tt": {
+   "vth0": 88,
+   "toxe": 88,
+   "voff": 88,
+   "nfactor": 88
+  },
+  "pfet_01v8/tt": {
+   "vth0": 108,
+   "toxe": 108,
+   "voff": 108,
+   "nfactor": 108
+  }
+ },
+ "devices": [
+  "nfet_01v8",
+  "nfet_01v8_lvt",
+  "pfet_01v8"
+ ]
+}

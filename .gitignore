@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Kept locally, not part of the repository
+/docs/
+/paper/
+*.docx
+*.zip
+
+# Scratch folders of the independent checks (netlists, logs and raw files of single solver jobs)
+logs/*_independent_work/
+
+# ngspice binary output (rebuilt by the scripts; parsed values are stored in CSV and JSON files)
+*.raw
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

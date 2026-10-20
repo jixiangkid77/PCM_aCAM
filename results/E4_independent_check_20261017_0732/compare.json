@@ -1,0 +1,363 @@
+{
+ "check": "E4 independent check",
+ "run_dir": "results/E4_independent_check_20261017_0732",
+ "start_jst": "2026-10-17T07:32:13+09:00",
+ "instrument_sha256_matches_protocol": true,
+ "task1": {
+  "bound_inversion_bisection_steps": 40,
+  "surface_scheme": "lnvg_ivds",
+  "n_evaluations": 640,
+  "acc_identical": 640,
+  "acc_differing": 0,
+  "acc_differing_by_one_sample": 0,
+  "max_sample_difference": 0,
+  "allowed_one_sample_differences": 6,
+  "leaf_loss_differing": 0,
+  "max_abs_leaf_loss_difference": 0.0,
+  "max_sample_tree_pairs_difference": 0,
+  "a_hat_max_rel_difference": 0.0,
+  "multi_match_differing": 0,
+  "removed_by_crosstalk_differing": 0,
+  "differences_by_point": {},
+  "min_rel_gap_to_crosstalk_threshold": 3.429103336982231e-06,
+  "max_tie_pairs_x_eq_xeff_per_eval": 21,
+  "refs": {
+   "wine": {
+    "acc_ref_indep": 0.9814814814814815,
+    "acc_ref_main": 0.9814814814814815,
+    "n_rows_indep": 141,
+    "n_rows_main": 141,
+    "n_constraints_indep": 482,
+    "n_constraints_main": 482,
+    "n_lower_indep": 275,
+    "n_lower_main": 275,
+    "equal": true
+   },
+   "breast_cancer": {
+    "acc_ref_indep": 0.9415204678362573,
+    "acc_ref_main": 0.9415204678362573,
+    "n_rows_indep": 243,
+    "n_rows_main": 243,
+    "n_constraints_indep": 1022,
+    "n_constraints_main": 1022,
+    "n_lower_indep": 471,
+    "n_lower_main": 471,
+    "equal": true
+   }
+  },
+  "pass_acc": true,
+  "pass_leaf_loss": true,
+  "pass": true,
+  "elapsed_s": 45.1,
+  "c2_reproduction": {
+   "40": {
+    "values_bit_identical": 32,
+    "values_total": 32
+   },
+   "64": {
+    "values_bit_identical": 0,
+    "values_total": 32
+   }
+  },
+  "sensitivity": {
+   "bisection_64_steps": {
+    "acc_differing": 0,
+    "max_sample_difference": 0,
+    "leaf_loss_differing": 24,
+    "max_abs_leaf_loss_difference": 0.0011574074074074073,
+    "max_sample_tree_pairs_difference": 1,
+    "multi_match_differing": 8,
+    "removed_by_crosstalk_differing": 24,
+    "differences_by_point": {
+     "unif/t0/t0": {
+      "acc": 0,
+      "leaf_loss": 6,
+      "multi_match": 2,
+      "removed_by_crosstalk": 6
+     },
+     "unif/1d/ideal": {
+      "acc": 0,
+      "leaf_loss": 6,
+      "multi_match": 2,
+      "removed_by_crosstalk": 6
+     },
+     "unif/30d/ideal": {
+      "acc": 0,
+      "leaf_loss": 6,
+      "multi_match": 2,
+      "removed_by_crosstalk": 6
+     },
+     "unif/1y/ideal": {
+      "acc": 0,
+      "leaf_loss": 6,
+      "multi_match": 2,
+      "removed_by_crosstalk": 6
+     }
+    }
+   },
+   "surface_bilinear_ln": {
+    "acc_differing": 0,
+    "max_sample_difference": 0,
+    "leaf_loss_differing": 0,
+    "max_abs_leaf_loss_difference": 0.0,
+    "max_sample_tree_pairs_difference": 0,
+    "multi_match_differing": 0,
+    "removed_by_crosstalk_differing": 0,
+    "differences_by_point": {}
+   }
+  }
+ },
+ "task2": {
+  "selected_cases": [
+   0,
+   8,
+   16,
+   24,
+   32,
+   40
+  ],
+  "threshold_rel": 0.005,
+  "c_ml_F": 8.000000000000001e-14,
+  "w0": 1.0150773798247159e-05,
+  "w0_indep": 1.0150773798247159e-05,
+  "tran": {
+   "options": "reltol=1e-4 abstol=1e-15 vntol=1e-8",
+   "tmax_s": 1e-10
+  },
+  "t_s_indep_ns": 413.38439999999997,
+  "t_s_main_ns": 413.384,
+  "t_s_rel_diff": 9.67623323466782e-07,
+  "max_abs_rel_diff_vs_main": 2.915706913020344e-06,
+  "ratio_indep_to_pred_range": [
+   0.9969473542163616,
+   1.0068480047529218
+  ],
+  "max_abs_ln_ratio_indep_to_pred": 0.006824663667693057,
+  "gate_2ns_by_class": {
+   "in_window": {
+    "n_bounds": 18,
+    "max_abs_diff_mV": 0.9673847675130132,
+    "max_w_model": 0.3005048114412467
+   },
+   "node_outside_transfer_window": {
+    "n_bounds": 3,
+    "max_abs_diff_mV": 7.087987665019035,
+    "max_w_model": 1.3373052483525611e-05
+   },
+   "u_cut_gate_0V": {
+    "n_bounds": 1,
+    "max_abs_diff_mV": 17.656789999999997,
+    "max_w_model": 9.094029889030453e-06
+   }
+  },
+  "cases": [
+   {
+    "case": 0,
+    "design": "P1",
+    "node": "t0",
+    "n_bounds": 5,
+    "S_main": 0.3000523082047262,
+    "t_pred_ns": 1378.5315512348984,
+    "t_sim_main_ns": 1377.5300000000002,
+    "t_sim_indep_ns": 1377.528,
+    "rel_diff_vs_main": -1.4518740064639601e-06,
+    "ratio_indep_to_pred": 0.9992720143155233,
+    "ratio_main_to_pred": 0.9992734651346926,
+    "pass": true,
+    "max_abs_gate_diff_2ns_mV_uncut": 0.5446138382788901,
+    "max_abs_gate_diff_2ns_mV_cut": NaN
+   },
+   {
+    "case": 8,
+    "design": "P1",
+    "node": "dac_remap",
+    "n_bounds": 3,
+    "S_main": 0.30080514732774566,
+    "t_pred_ns": 1375.0814357920415,
+    "t_sim_main_ns": 1384.5,
+    "t_sim_indep_ns": 1384.498,
+    "rel_diff_vs_main": -1.4445648248706533e-06,
+    "ratio_indep_to_pred": 1.0068480047529218,
+    "ratio_main_to_pred": 1.0068494592122346,
+    "pass": true,
+    "max_abs_gate_diff_2ns_mV_uncut": 0.6560497889091521,
+    "max_abs_gate_diff_2ns_mV_cut": NaN
+   },
+   {
+    "case": 16,
+    "design": "P1",
+    "node": "supply",
+    "n_bounds": 4,
+    "S_main": 0.30058583903674463,
+    "t_pred_ns": 1376.084699154804,
+    "t_sim_main_ns": 1371.8800000000003,
+    "t_sim_indep_ns": 1371.884,
+    "rel_diff_vs_main": 2.915706913020344e-06,
+    "ratio_indep_to_pred": 0.9969473542163616,
+    "ratio_main_to_pred": 0.9969444474185445,
+    "pass": true,
+    "max_abs_gate_diff_2ns_mV_uncut": 7.087987665019035,
+    "max_abs_gate_diff_2ns_mV_cut": NaN
+   },
+   {
+    "case": 24,
+    "design": "P3",
+    "node": "t0",
+    "n_bounds": 3,
+    "S_main": 0.30018426094538864,
+    "t_pred_ns": 1377.9255866993087,
+    "t_sim_main_ns": 1378.59,
+    "t_sim_indep_ns": 1378.592,
+    "rel_diff_vs_main": 1.4507576582278858e-06,
+    "ratio_indep_to_pred": 1.000483635188376,
+    "ratio_main_to_pred": 1.000482183731186,
+    "pass": true,
+    "max_abs_gate_diff_2ns_mV_uncut": 0.0863704545782662,
+    "max_abs_gate_diff_2ns_mV_cut": 17.656789999999997
+   },
+   {
+    "case": 32,
+    "design": "P3",
+    "node": "dac_remap",
+    "n_bounds": 3,
+    "S_main": 0.30225548876206165,
+    "t_pred_ns": 1368.4832509582238,
+    "t_sim_main_ns": 1372.18,
+    "t_sim_indep_ns": 1372.184,
+    "rel_diff_vs_main": 2.9150694513813136e-06,
+    "ratio_indep_to_pred": 1.002704270614335,
+    "ratio_main_to_pred": 1.0027013476702675,
+    "pass": true,
+    "max_abs_gate_diff_2ns_mV_uncut": 0.07228849990886799,
+    "max_abs_gate_diff_2ns_mV_cut": NaN
+   },
+   {
+    "case": 40,
+    "design": "P3",
+    "node": "supply",
+    "n_bounds": 4,
+    "S_main": 0.3011143438063741,
+    "t_pred_ns": 1373.6694461392083,
+    "t_sim_main_ns": 1377.3999999999999,
+    "t_sim_indep_ns": 1377.403,
+    "rel_diff_vs_main": 2.1780165528895168e-06,
+    "ratio_indep_to_pred": 1.002717941984722,
+    "ratio_main_to_pred": 1.0027157580532031,
+    "pass": true,
+    "max_abs_gate_diff_2ns_mV_uncut": 4.827749760365487,
+    "max_abs_gate_diff_2ns_mV_cut": NaN
+   }
+  ],
+  "numerical_sensitivity": [
+   {
+    "case": 0,
+    "variant": "default_tolerances",
+    "t_sim_ns": 1377.528,
+    "rel_change": 0.0
+   },
+   {
+    "case": 0,
+    "variant": "tmax_0.4ns",
+    "t_sim_ns": 1377.528,
+    "rel_change": 0.0
+   }
+  ],
+  "model_side_all_48_cases": {
+   "n_cases": 48,
+   "n_bounds": 200,
+   "idx_all_equal": true,
+   "n_bounds_equal": true,
+   "no_violated_bound": true,
+   "max_abs_x_diff": 0.0,
+   "max_rel_g_us": 0.0,
+   "max_abs_theta_eff": 0.0,
+   "max_abs_v_dl_V": 1.1102230246251565e-16,
+   "max_rel_w": 3.97584819674371e-08,
+   "max_rel_S": 3.886873866633327e-08,
+   "max_abs_a_hat": 0.0,
+   "max_abs_v_sl_diff_V": 0.0
+  },
+  "pass": true,
+  "elapsed_s": 34.3
+ },
+ "task3": {
+  "threshold_uV": 50.0,
+  "per_type": {
+   "L6T": {
+    "max_abs_diff_uV_inst1_20": 0.032697410889959144,
+    "mean_diff_uV_inst1_20": -0.02249900014072992,
+    "nominal_diff_uV": -0.03273516024915324,
+    "pass": true
+   },
+   "UINV": {
+    "max_abs_diff_uV_inst1_20": 0.8281194856518681,
+    "mean_diff_uV_inst1_20": -0.5219018230306904,
+    "nominal_diff_uV": -0.7448519466768388,
+    "pass": true
+   },
+   "LBUF": {
+    "max_abs_diff_uV_inst1_20": 0.7918235257475814,
+    "mean_diff_uV_inst1_20": -0.5298055535896129,
+    "nominal_diff_uV": -0.39840004439906096,
+    "pass": true
+   },
+   "LBUF_Wstar": {
+    "max_abs_diff_uV_inst1_20": 0.8169948577663178,
+    "mean_diff_uV_inst1_20": -0.5161655341978655,
+    "nominal_diff_uV": -0.7448519466768388,
+    "pass": true
+   }
+  },
+  "vsw_nominal_indep_V": 0.5262214743127451,
+  "vsw_nominal_main_V": 0.5262215070479054,
+  "interp_error_estimate_uV": {
+   "pull_down": 0.0013544005916799051,
+   "inverter": 0.0013344044758056839
+  },
+  "coarse_grid_emulation_max_abs_diff_uV": {
+   "L6T": 0.13670614384952984,
+   "UINV": 0.005648478240694033,
+   "LBUF": 0.00027844337946447695,
+   "LBUF_Wstar": 0.006064937996264064
+  },
+  "coarse_grid_note": "same SPICE data reduced to 1 mV pull-down knots and 0.5 mV inverter knots (config sweep steps) with linear interpolation; agreement here shows that the remaining sub-uV differences are the main run's grid interpolation error",
+  "pool_v_sp_identical_P1_P3_and_chain": true,
+  "spice_options": "reltol=1e-7 abstol=1e-16 vntol=1e-10",
+  "pass": true,
+  "extras": {
+   "pulldown_ln_w_max_abs_diff_Vsw-0.25..+0.05": {
+    "L6T": 2.865825035058833e-07,
+    "UINV": 5.049020881386923e-07
+   },
+   "ln_ref_indep_minus_main": 0.0,
+   "inverter_transfer_max_abs_diff_mV": {
+    "UINV_t_first": 0.17925561629206221,
+    "LBUF_t_first": 0.17933020216798212,
+    "LBUF_t_second": 0.17885965279251792
+   },
+   "inverter_transfer_max_abs_diff_mV_from_0.5mV_knots": {
+    "UINV_t_first": 0.004361564359456338,
+    "LBUF_t_first": 0.0031025163287345947,
+    "LBUF_t_second": 0.0037594030748433482
+   },
+   "divider_bound_voltage_max_abs_diff_uV_0.2-5uA": {
+    "P1/L6T": 0.4615606010727191,
+    "P1/UINV": 0.48900083060576804,
+    "P1/LBUF": 0.47930044766442137,
+    "P3/L6T": 0.5989689690899525,
+    "P3/UINV": 0.5982043869146025,
+    "P3/LBUF": 0.6123660356571747
+   },
+   "note": "extras use the instrument's own v_sp[k] as drain voltage; SPICE curves on a 0.5 mV grid with linear interpolation in ln I"
+  },
+  "elapsed_s": 26.8
+ },
+ "pass": {
+  "task1": true,
+  "task2": true,
+  "task3": true
+ },
+ "all_pass": true,
+ "end_jst": "2026-10-17T07:35:33+09:00",
+ "elapsed_s": 200.5
+}

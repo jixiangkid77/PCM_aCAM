@@ -1,0 +1,9 @@
+# E3b freeze record (JST); 05:32 protocol frozen (section 10 empty):
+be219815e329c02c445b80c052c28833013aaf3f92d07260d19d6062559f2d53  docs/E3b_protocol.md
+233dc92b009c62aea36163bbc821d7694b37d53cdefce4009b393e78641a13c2  experiments/E3b_config.json
+905d6174a2677b09fcf023fdbd3f05d29cb5778b80dcabc88be174ebe861a7e2  experiments/E3b_upper_branch.py
+7dbf86d401d7f55889e03aa62ada9799f3a8cc3c719fec1f7e04d7b12798474b  src/pcm_acam/inverter.py
+# predict phase written:
+1b6014495d8e385012a4cfd4c1d215cbe1a8866d5e24e69bd12a0107a18337ea  results/E3b_predict_20261014_0532/predictions.json
+# section 10 filled:
+96a5ac2fa5189d6d2cacb8f86e57559004dd1c18c9144b49d4d2487aca25cc43  docs/E3b_protocol.md

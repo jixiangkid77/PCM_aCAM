@@ -1,0 +1,67 @@
+{
+  "bits": 4,
+  "gate_A": {
+    "pass": true,
+    "prog_t0": {
+      "V1_abs_full": {
+        "mean_loss_pp": -0.5082469135802464,
+        "max_loss_pp": -1.4802973661668755e-15,
+        "worst_dataset": "breast_cancer",
+        "meets": true
+      },
+      "V2_abs_high": {
+        "mean_loss_pp": 0.29672254710851254,
+        "max_loss_pp": 0.8024691358024689,
+        "worst_dataset": "digits",
+        "meets": true
+      },
+      "V3_ratio": {
+        "mean_loss_pp": 1.0151994801819366,
+        "max_loss_pp": 2.8622222222222216,
+        "worst_dataset": "synthetic",
+        "meets": true
+      }
+    }
+  },
+  "gate_B": {
+    "pass": true,
+    "absolute_scheme": "V1_abs_full",
+    "untracked_mean_loss_1d_pp": 18.367703703703704,
+    "untracked_max_loss_1d_pp": 29.65333333333333
+  },
+  "gate_C": {
+    "pass": true,
+    "candidates": {
+      "V1_abs_full + replica": {
+        "meets_A": true,
+        "mean_loss_30d_pp": 0.42372969460688753,
+        "max_loss_30d_pp": 2.0666666666666655,
+        "pass": true
+      },
+      "V2_abs_high + replica": {
+        "meets_A": true,
+        "mean_loss_30d_pp": 3.6892371669915542,
+        "max_loss_30d_pp": 8.008888888888889,
+        "pass": true
+      },
+      "V3_ratio": {
+        "meets_A": true,
+        "mean_loss_30d_pp": 5.003950617283951,
+        "max_loss_30d_pp": 11.377777777777778,
+        "pass": false
+      }
+    }
+  },
+  "verdict": "GO",
+  "failing_gates": [],
+  "rule": {
+    "primary_bits": 4,
+    "gate_A": "PASS if some scheme in {V1_abs_full, V2_abs_high, V3_ratio} has mean_loss(prog) <= 2.0 pp and max_loss(prog) <= 5.0 pp",
+    "gate_B": "PASS if, for the absolute scheme (V1 or V2) with the smaller mean_loss(prog), the untracked mean_loss(all@1d) >= 10.0 pp",
+    "gate_C": "PASS if some scheme in {V1_abs_full + replica, V2_abs_high + replica, V3_ratio} that meets the gate-A criteria has mean_loss(all@30d) <= 5.0 pp",
+    "verdict": "GO only if A, B and C all pass; otherwise NO_GO with the failing gates named",
+    "secondary": "3 and 5 bits, the dual-device scheme, 1-year losses, per-dataset losses and path integrity are reported but do not change the verdict"
+  },
+  "config_sha256": "44d1d458564e7a36f32d67a24b7686a674fb4702b9b54353c0ca06232dcff25a",
+  "run_dir": "E0_1_20261012_1652"
+}

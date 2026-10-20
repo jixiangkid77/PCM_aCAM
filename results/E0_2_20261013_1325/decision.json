@@ -1,0 +1,66 @@
+{
+  "primary": "mismatch setting m20, threshold programming, 4 bits",
+  "gate_A": {
+    "pass": false,
+    "dac_minus_ideal_365d_pp": 0.7036933073424312
+  },
+  "classification": {
+    "supply_minus_ideal_365d_pp": 0.3985601039636124
+  },
+  "verdict": "NO_GO",
+  "by_time": {
+    "30d": {
+      "none": {
+        "mean_loss_pp": 38.40149187784276,
+        "max_loss_pp": 52.51461988304093,
+        "minus_ideal_pp": 36.63818063677713
+      },
+      "dac": {
+        "mean_loss_pp": 2.2867992202729055,
+        "max_loss_pp": 4.835555555555555,
+        "minus_ideal_pp": 0.5234879792072777
+      },
+      "supply": {
+        "mean_loss_pp": 2.0689642625081226,
+        "max_loss_pp": 5.008888888888889,
+        "minus_ideal_pp": 0.30565302144249484
+      },
+      "ideal": {
+        "mean_loss_pp": 1.7633112410656278,
+        "max_loss_pp": 4.120000000000001,
+        "minus_ideal_pp": 0.0
+      }
+    },
+    "365d": {
+      "none": {
+        "mean_loss_pp": 44.327064327485374,
+        "max_loss_pp": 55.16569200779727,
+        "minus_ideal_pp": 42.35916829109811
+      },
+      "dac": {
+        "mean_loss_pp": 2.6715893437296963,
+        "max_loss_pp": 6.0311111111111115,
+        "minus_ideal_pp": 0.7036933073424312
+      },
+      "supply": {
+        "mean_loss_pp": 2.3664561403508775,
+        "max_loss_pp": 5.475555555555555,
+        "minus_ideal_pp": 0.3985601039636124
+      },
+      "ideal": {
+        "mean_loss_pp": 1.967896036387265,
+        "max_loss_pp": 4.528888888888889,
+        "minus_ideal_pp": 0.0
+      }
+    }
+  },
+  "rule": {
+    "primary": "mismatch setting m20, threshold programming, 4 bits",
+    "gate_A": "PASS (the coupling is first-order) if mean_loss(dac, all@365d) - mean_loss(ideal, all@365d) >= 1.0 pp",
+    "classification": "if gate A passes: GO_STRONG if mean_loss(supply, all@365d) - mean_loss(ideal, all@365d) >= 1.0 pp (no conventional global node is mismatch-invariant; a new compensation circuit is needed); otherwise GO_WEAK (compensating at the divider supply already avoids the coupling)",
+    "verdict": "NO_GO if gate A fails",
+    "secondary": "30-day differences, the other mismatch settings, conductance programming, clipping counts and path integrity are reported only"
+  },
+  "config_sha256": "a3fa8d5506169c6e5da76dc1028135803aa3993d6f102cc8ab6344056dec1d23",
+  "run_dir": "E0_2_20261013_1325"
+}

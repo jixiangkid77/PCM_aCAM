@@ -1,0 +1,4 @@
+[2026-10-14 02:58:04] E2 Monte Carlo phase; predictions results/E2_predict_20261014_0257_smoke/predictions.json sha256 ea6bc93ee01b92ca886e6a0c2de33ae4e5423f110dc0cb07c09a81fde9b19248
+[2026-10-14 02:58:06] G1: Monte Carlo done in 1.8 s; V_sw,nom 0.5262 V, sigma 22.22 mV
+[2026-10-14 02:58:07] C1: Monte Carlo done in 1.8 s; V_sw,nom 0.6245 V, sigma 22.31 mV
+[2026-10-14 02:58:07] CHECK FAILURE -> stop before criteria: C5 C1 pdk dac_remap 1y: 1.88 % invalid pairs; C5 C1 div_only dac_remap 1y: 1.25 % invalid pairs

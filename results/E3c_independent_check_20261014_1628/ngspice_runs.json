@@ -1,0 +1,296 @@
+[
+ {
+  "n": 1,
+  "tag": "vsw_sweep",
+  "seconds": 0.174,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 2,
+  "tag": "vsw_newton0",
+  "seconds": 0.102,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 3,
+  "tag": "vsw_newton1",
+  "seconds": 0.083,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 4,
+  "tag": "vsw_verify",
+  "seconds": 0.092,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 5,
+  "tag": "ts1_pre",
+  "seconds": 0.193,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 6,
+  "tag": "ts1",
+  "seconds": 0.132,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 7,
+  "tag": "ts16_pre",
+  "seconds": 0.799,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 8,
+  "tag": "ts16",
+  "seconds": 0.351,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 9,
+  "tag": "divmap_sweep",
+  "seconds": 0.133,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 10,
+  "tag": "divmap_newton0",
+  "seconds": 0.106,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 11,
+  "tag": "divmap_newton1",
+  "seconds": 0.105,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 12,
+  "tag": "divmap_verify",
+  "seconds": 0.102,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 13,
+  "tag": "lambda",
+  "seconds": 0.104,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 14,
+  "tag": "leaker_vx_op",
+  "seconds": 0.094,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 15,
+  "tag": "leaker_vx_polish0",
+  "seconds": 0.122,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 16,
+  "tag": "cut_off",
+  "seconds": 4.531,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 17,
+  "tag": "pd_it00",
+  "seconds": 3.379,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 18,
+  "tag": "pd_it01",
+  "seconds": 5.647,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 19,
+  "tag": "pd_it02",
+  "seconds": 5.597,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 20,
+  "tag": "pd_it03",
+  "seconds": 6.08,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 21,
+  "tag": "pd_it04",
+  "seconds": 5.643,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 22,
+  "tag": "pd_it05",
+  "seconds": 5.273,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 23,
+  "tag": "pd_it06",
+  "seconds": 5.509,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 24,
+  "tag": "pd_it07",
+  "seconds": 5.35,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 25,
+  "tag": "pd_it08",
+  "seconds": 5.831,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 26,
+  "tag": "pd_it09",
+  "seconds": 5.446,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 27,
+  "tag": "pd_it10",
+  "seconds": 5.661,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 28,
+  "tag": "pd_it11",
+  "seconds": 4.577,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 29,
+  "tag": "full_it00",
+  "seconds": 13.667,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 30,
+  "tag": "full_it01",
+  "seconds": 20.722,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 31,
+  "tag": "full_it02",
+  "seconds": 20.271,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 32,
+  "tag": "full_it03",
+  "seconds": 20.379,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 33,
+  "tag": "full_it04",
+  "seconds": 20.642,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 34,
+  "tag": "full_it05",
+  "seconds": 20.877,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 35,
+  "tag": "full_it06",
+  "seconds": 20.092,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 36,
+  "tag": "full_it07",
+  "seconds": 20.66,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 37,
+  "tag": "full_it08",
+  "seconds": 20.668,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 38,
+  "tag": "full_it09",
+  "seconds": 20.773,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 39,
+  "tag": "full_it10",
+  "seconds": 21.111,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 40,
+  "tag": "full_it11",
+  "seconds": 14.345,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 41,
+  "tag": "full_it12",
+  "seconds": 13.748,
+  "returncode": 0,
+  "flags": []
+ },
+ {
+  "n": 42,
+  "tag": "fullrow_i0",
+  "seconds": 0.114,
+  "returncode": 0,
+  "flags": []
+ }
+]

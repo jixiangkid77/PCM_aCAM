@@ -1,0 +1,22 @@
+[2026-10-13 13:25:14] E0.2 (PCM_aCAM) start; run dir E0_2_20261013_1325; config sha256 a3fa8d5506169c6e5da76dc1028135803aa3993d6f102cc8ab6344056dec1d23
+[2026-10-13 13:25:14] pre-run checks
+[2026-10-13 13:25:15]   check_1_cam_equals_quantized_tree_traversal: {'mismatched_predictions': 0, 'min_integrity': 1.0} PASS
+[2026-10-13 13:25:15]   check_2_nominal_mapping_exact: 1.1102230246251565e-16 PASS
+[2026-10-13 13:25:15]   check_3_nodes_equal_without_mismatch: 3.3306690738754696e-16 PASS
+[2026-10-13 13:25:15]   check_4_closed_forms_uniform_drift: 5.551115123125783e-16 PASS
+[2026-10-13 13:25:15] iris split 0: constraints 385, test 45, 4-bit ref acc 0.9778 (0.3s)
+[2026-10-13 13:25:15] iris split 1: constraints 378, test 45, 4-bit ref acc 0.9556 (0.4s)
+[2026-10-13 13:25:16] iris split 2: constraints 404, test 45, 4-bit ref acc 1.0000 (0.4s)
+[2026-10-13 13:25:16] wine split 0: constraints 482, test 54, 4-bit ref acc 0.9815 (0.5s)
+[2026-10-13 13:25:17] wine split 1: constraints 456, test 54, 4-bit ref acc 1.0000 (0.4s)
+[2026-10-13 13:25:17] wine split 2: constraints 546, test 54, 4-bit ref acc 0.9815 (0.5s)
+[2026-10-13 13:25:19] breast_cancer split 0: constraints 1022, test 171, 4-bit ref acc 0.9415 (1.5s)
+[2026-10-13 13:25:20] breast_cancer split 1: constraints 988, test 171, 4-bit ref acc 0.9474 (1.4s)
+[2026-10-13 13:25:22] breast_cancer split 2: constraints 1062, test 171, 4-bit ref acc 0.9474 (1.6s)
+[2026-10-13 13:25:48] digits split 0: constraints 4645, test 540, 4-bit ref acc 0.9130 (25.5s)
+[2026-10-13 13:26:12] digits split 1: constraints 4600, test 540, 4-bit ref acc 0.9370 (24.8s)
+[2026-10-13 13:26:35] digits split 2: constraints 4552, test 540, 4-bit ref acc 0.9074 (23.1s)
+[2026-10-13 13:28:23] synthetic split 0: constraints 5447, test 1500, 4-bit ref acc 0.7180 (107.7s)
+[2026-10-13 13:30:10] synthetic split 1: constraints 5455, test 1500, 4-bit ref acc 0.7087 (107.2s)
+[2026-10-13 13:31:56] synthetic split 2: constraints 5418, test 1500, 4-bit ref acc 0.7367 (105.7s)
+[2026-10-13 13:31:56] verdict NO_GO; elapsed 402.5 s

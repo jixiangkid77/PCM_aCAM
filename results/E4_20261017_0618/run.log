@@ -1,0 +1,20 @@
+[2026-10-17 06:18:13] E4 forest phase; instrument E4_spice_20261017_0602 (sha256 22699dcc0a52c4c4135b47dae3dbae741aadcedced6eb6f3c919f4068168057f; recorded by the spice phase 22699dcc0a52c4c4135b47dae3dbae741aadcedced6eb6f3c919f4068168057f)
+[2026-10-17 06:34:03] synthetic split 0: K 5447, N 20, ref acc 0.7180 (951 s since start)
+[2026-10-17 06:34:08] synthetic split 1: K 5455, N 20, ref acc 0.7087 (955 s since start)
+[2026-10-17 06:39:55] digits split 0: K 4645, N 64, ref acc 0.9130 (1303 s since start)
+[2026-10-17 06:45:35] digits split 1: K 4600, N 64, ref acc 0.9370 (1642 s since start)
+[2026-10-17 06:51:17] digits split 2: K 4552, N 64, ref acc 0.9074 (1985 s since start)
+[2026-10-17 06:51:50] synthetic split 2: K 5418, N 20, ref acc 0.7367 (2017 s since start)
+[2026-10-17 06:52:26] breast_cancer split 0: K 1022, N 30, ref acc 0.9415 (2053 s since start)
+[2026-10-17 06:52:54] breast_cancer split 1: K 988, N 30, ref acc 0.9474 (2081 s since start)
+[2026-10-17 06:53:22] wine split 0: K 482, N 13, ref acc 0.9815 (2109 s since start)
+[2026-10-17 06:53:32] breast_cancer split 2: K 1062, N 30, ref acc 0.9474 (2120 s since start)
+[2026-10-17 06:53:49] wine split 1: K 456, N 13, ref acc 1.0000 (2137 s since start)
+[2026-10-17 06:54:00] wine split 2: K 546, N 13, ref acc 0.9815 (2148 s since start)
+[2026-10-17 06:54:13] iris split 0: K 385, N 4, ref acc 0.9778 (2161 s since start)
+[2026-10-17 06:54:25] iris split 1: K 378, N 4, ref acc 0.9556 (2173 s since start)
+[2026-10-17 06:54:37] iris split 2: K 404, N 4, ref acc 1.0000 (2185 s since start)
+[2026-10-17 06:54:38] H1 P1: +0.744 [+0.506, +0.981] CONFIRMED, P3: -0.063 [-0.209, +0.083] UNRESOLVED -> holds False
+[2026-10-17 06:54:38] H2 P1: +2.205 [+1.918, +2.491] CONFIRMED, P3: +1.212 [+0.968, +1.456] CONFIRMED -> holds True
+[2026-10-17 06:54:38] H3 P1: +4.121 [+3.887, +4.355], P3: +3.146 [+2.952, +3.340] -> holds True
+[2026-10-17 06:54:38] forest phase finished in 2185.5 s

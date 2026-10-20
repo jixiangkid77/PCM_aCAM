@@ -1,0 +1,179 @@
+{
+  "interior_exact_ties_ideal": {
+    "iris/split0": 60,
+    "iris/split1": 96,
+    "iris/split2": 0,
+    "wine/split0": 10,
+    "wine/split1": 0,
+    "wine/split2": 12,
+    "breast_cancer/split0": 2,
+    "breast_cancer/split1": 3,
+    "breast_cancer/split2": 0,
+    "digits/split0": 11260,
+    "digits/split1": 4388,
+    "digits/split2": 3269,
+    "synthetic/split0": 0,
+    "synthetic/split1": 0,
+    "synthetic/split2": 0
+  },
+  "boundary_exact_ties_ideal": {
+    "iris/split0": 0,
+    "iris/split1": 0,
+    "iris/split2": 8,
+    "wine/split0": 0,
+    "wine/split1": 0,
+    "wine/split2": 0,
+    "breast_cancer/split0": 19,
+    "breast_cancer/split1": 3,
+    "breast_cancer/split2": 25,
+    "digits/split0": 133511,
+    "digits/split1": 154346,
+    "digits/split2": 159456,
+    "synthetic/split0": 2,
+    "synthetic/split1": 0,
+    "synthetic/split2": 0
+  },
+  "near_ties_1e-12_not_exact_ideal": {
+    "iris/split0": 40,
+    "iris/split1": 0,
+    "iris/split2": 78,
+    "wine/split0": 0,
+    "wine/split1": 12,
+    "wine/split2": 20,
+    "breast_cancer/split0": 0,
+    "breast_cancer/split1": 0,
+    "breast_cancer/split2": 5,
+    "digits/split0": 0,
+    "digits/split1": 0,
+    "digits/split2": 0,
+    "synthetic/split0": 0,
+    "synthetic/split1": 0,
+    "synthetic/split2": 0
+  },
+  "alt_minmaxscaler": {
+    "iris/split0": {
+      "forest_identical": true,
+      "n_train_values_differ": 214,
+      "n_test_values_differ": 90,
+      "acc_ref": 0.9777777777777777,
+      "acc_ref_alt": 0.9777777777777777
+    },
+    "iris/split1": {
+      "forest_identical": true,
+      "n_train_values_differ": 211,
+      "n_test_values_differ": 102,
+      "acc_ref": 0.9555555555555556,
+      "acc_ref_alt": 0.9555555555555556
+    },
+    "iris/split2": {
+      "forest_identical": true,
+      "n_train_values_differ": 176,
+      "n_test_values_differ": 78,
+      "acc_ref": 1.0,
+      "acc_ref_alt": 1.0
+    },
+    "wine/split0": {
+      "forest_identical": true,
+      "n_train_values_differ": 875,
+      "n_test_values_differ": 373,
+      "acc_ref": 0.9814814814814815,
+      "acc_ref_alt": 0.9814814814814815
+    },
+    "wine/split1": {
+      "forest_identical": true,
+      "n_train_values_differ": 925,
+      "n_test_values_differ": 419,
+      "acc_ref": 1.0,
+      "acc_ref_alt": 1.0
+    },
+    "wine/split2": {
+      "forest_identical": true,
+      "n_train_values_differ": 1006,
+      "n_test_values_differ": 427,
+      "acc_ref": 0.9814814814814815,
+      "acc_ref_alt": 0.9814814814814815
+    },
+    "breast_cancer/split0": {
+      "forest_identical": true,
+      "n_train_values_differ": 6381,
+      "n_test_values_differ": 2683,
+      "acc_ref": 0.9415204678362573,
+      "acc_ref_alt": 0.9415204678362573
+    },
+    "breast_cancer/split1": {
+      "forest_identical": true,
+      "n_train_values_differ": 5791,
+      "n_test_values_differ": 2547,
+      "acc_ref": 0.9473684210526315,
+      "acc_ref_alt": 0.9473684210526315
+    },
+    "breast_cancer/split2": {
+      "forest_identical": true,
+      "n_train_values_differ": 6044,
+      "n_test_values_differ": 2560,
+      "acc_ref": 0.9473684210526315,
+      "acc_ref_alt": 0.9473684210526315
+    },
+    "digits/split0": {
+      "forest_identical": true,
+      "n_train_values_differ": 265,
+      "n_test_values_differ": 123,
+      "acc_ref": 0.912962962962963,
+      "acc_ref_alt": 0.912962962962963
+    },
+    "digits/split1": {
+      "forest_identical": true,
+      "n_train_values_differ": 283,
+      "n_test_values_differ": 111,
+      "acc_ref": 0.937037037037037,
+      "acc_ref_alt": 0.937037037037037
+    },
+    "digits/split2": {
+      "forest_identical": true,
+      "n_train_values_differ": 302,
+      "n_test_values_differ": 110,
+      "acc_ref": 0.9074074074074074,
+      "acc_ref_alt": 0.9074074074074074
+    },
+    "synthetic/split0": {
+      "forest_identical": true,
+      "n_train_values_differ": 32790,
+      "n_test_values_differ": 14134,
+      "acc_ref": 0.718,
+      "acc_ref_alt": 0.718
+    },
+    "synthetic/split1": {
+      "forest_identical": true,
+      "n_train_values_differ": 29697,
+      "n_test_values_differ": 12686,
+      "acc_ref": 0.7086666666666667,
+      "acc_ref_alt": 0.7086666666666667
+    },
+    "synthetic/split2": {
+      "forest_identical": true,
+      "n_train_values_differ": 30772,
+      "n_test_values_differ": 13257,
+      "acc_ref": 0.7366666666666667,
+      "acc_ref_alt": 0.7366666666666667
+    }
+  },
+  "half_rounding_cases": 113,
+  "thresholds_outside_01": 0,
+  "single_leaf_trees": 0,
+  "rows_without_constraints": 0,
+  "infeasible_rows_after_quantization": 286,
+  "score_exact_ties_ideal": 3,
+  "score_near_ties_ideal": 0,
+  "score_exact_ties_noisy": 1161,
+  "score_near_ties_noisy": 0,
+  "nomatch_samples_noisy": 0,
+  "rows_renormalisation_changed_value": 298,
+  "pred_diff_onematmul_ideal": 0,
+  "pred_diff_rawvalue_ideal": 0,
+  "pred_diff_onematmul_noisy": 0,
+  "pred_diff_rawvalue_noisy": 0,
+  "evals_acc_diff_onematmul": 0,
+  "evals_acc_diff_rawvalue": 0,
+  "n_evaluations": 2250,
+  "gateB_tie_between_V1_V2": false
+}

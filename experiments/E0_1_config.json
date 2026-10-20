@@ -1,0 +1,100 @@
+{
+  "experiment": "E0.1",
+  "name": "E0_1_acam_magnitude",
+  "project": "PCM_aCAM",
+  "title": "Magnitude probe: can a PCM analog CAM serve tree-based inference, does drift break it, and do tracking or ratio thresholds rescue it?",
+  "plan_version": "1.1",
+  "deviations": [
+    "1.1 (2026-10-12 16:52 JST, before any full-run outcome): check 2 originally compared the 30-bit-threshold CAM with sklearn and failed on digits (0.9963, run E0_1_20261012_1650 stopped by the check). Cause: digits features are discrete, so test values can lie exactly on a split threshold (e.g. 0.875 = midpoint of the training values 0.8125 and 0.9375 in a node), and the (2^30 - 1) grid moves such a threshold by about 1e-10, flipping x <= thr. The CAM with float64 thresholds agrees 100 %. Check 2 now uses float64 thresholds; plan 1.0 config sha256 83ace66b9f75ae0a1e9cc3f239a53eedcb6dd633dc2576229b4ce896f5c8ddbd. No model, scheme, metric or decision setting changed."
+  ],
+
+  "questions": {
+    "A_viability": "With programming noise only (t0), is a PCM analog CAM close to the ideal quantized CAM?",
+    "B_problem": "Without drift tracking, does the accuracy collapse within a day?",
+    "C_solution": "Does global drift tracking or a ratio threshold keep the accuracy close to the ideal for 30 days?"
+  },
+
+  "pcm_model": {
+    "source": "AIHWKit PCMLikeNoiseModel (IBM/aihwkit master, read 2026-10-12); Nandakumar et al., ICECS 2019, IEEE Xplore 8964852",
+    "g_max": 25.0,
+    "g_min": 0.0,
+    "prog_coeff": [0.26348, 1.9650, -1.1731],
+    "prog_coeff_g_max_reference": 25.0,
+    "t0": 20.0,
+    "t_read": 2.5e-7,
+    "nu_mean_a": -0.0155, "nu_mean_b": 0.0244, "nu_mean_min": 0.049, "nu_mean_max": 0.1,
+    "nu_std_a": -0.0125, "nu_std_b": -0.0059, "nu_std_min": 0.008, "nu_std_max": 0.045,
+    "read_q0": 0.0088, "read_exp": 0.65, "read_floor": 0.001, "read_qmax": 0.2,
+    "prog_noise_scale": 1.0, "read_noise_scale": 1.0, "drift_scale": 1.0
+  },
+
+  "cam_model": {
+    "cell": "two bounds per feature per row (lower: match if x > theta_L; upper: match if x <= theta_U), the semantics of the sklearn split x <= thr; wildcard (unconstrained) bounds always match",
+    "threshold_mapping": "each bound is set by a memristor-transistor voltage divider; to first order the threshold voltage is affine in the device conductance and both bounds increase with conductance (Li et al. 2020 / Pedretti et al. 2021 6T2M cell, linear conduction at low voltage); the input DAC maps the normalized feature x in [0, 1] onto that affine range",
+    "matching": "row matches if all its constrained bounds are satisfied; forest score = sum over matching rows of the leaf class-probability vector; prediction = argmax of the score, and a sample with no matching row in any tree counts as wrong",
+    "inputs": "features min-max normalized on the training split, test features clipped to [0, 1], applied as continuous values (no input DAC quantization)",
+    "threshold_quantization": "theta = round(thr * (2^B - 1)) / (2^B - 1)"
+  },
+
+  "schemes": {
+    "V1_abs_full": {"kind": "absolute", "g_lo": 0.0, "g_hi": 25.0, "devices_per_bound": 1, "note": "theta = (G/a_hat - g_lo)/(g_hi - g_lo)"},
+    "V2_abs_high": {"kind": "absolute", "g_lo": 8.22, "g_hi": 25.0, "devices_per_bound": 1, "note": "g_lo = 25 uS * exp(-(0.008 + 0.0059)/0.0125), the conductance above which the AIHWKit drift spread is at its floor"},
+    "V3_ratio": {"kind": "ratio", "g_sum": 25.0, "r_lo": 0.3333333333333333, "r_hi": 0.6666666666666666, "devices_per_bound": 2, "note": "G1 = r g_sum, G2 = (1 - r) g_sum, theta = (G1/(G1 + G2) - r_lo)/(r_hi - r_lo); mean drift cancels by construction"},
+    "V2d_abs_high_dual": {"kind": "absolute", "g_lo": 8.22, "g_hi": 25.0, "devices_per_bound": 2, "note": "secondary: two parallel devices programmed to the same target, threshold from their mean"}
+  },
+  "tracking": {
+    "none": "a_hat = 1",
+    "replica": "a_hat(t) = mean of 64 replica cells at the middle of the absolute range at t (with their own programming, drift and read noise) / their mean right after programming"
+  },
+  "replica_cells": 64,
+
+  "datasets": {
+    "iris": "sklearn load_iris",
+    "wine": "sklearn load_wine",
+    "breast_cancer": "sklearn load_breast_cancer",
+    "digits": "sklearn load_digits",
+    "synthetic": "sklearn make_classification(n_samples=5000, n_features=20, n_informative=10, n_redundant=4, n_classes=4, n_clusters_per_class=2, class_sep=1.0, random_state=20261012)"
+  },
+  "model": "sklearn RandomForestClassifier(n_estimators=16, max_depth=6, random_state=split_seed); stratified 70/30 split with random_state=split_seed",
+  "split_seeds": [0, 1, 2],
+  "device_seeds": 5,
+  "base_seed": 20261012,
+  "bits_primary": 4,
+  "bits_secondary": [3, 5],
+  "times_inference_s": {"t0": 0, "1h": 3600, "1d": 86400, "30d": 2592000, "365d": 31536000},
+
+  "metrics": {
+    "acc_ref": "accuracy of the ideal quantized CAM (no device noise) for the same dataset, split and bit width",
+    "loss": "acc_ref - accuracy, in percentage points; averaged over split seeds and device seeds per dataset",
+    "mean_loss": "mean of the per-dataset losses over the 5 datasets",
+    "max_loss": "largest per-dataset loss",
+    "conditions": "prog: programming noise only at t0; all@t: programming noise, drift and accumulated read noise at t (AIHWKit semantics, read noise present already at t0)",
+    "path_integrity": "share of (sample, tree) pairs with exactly one matching row"
+  },
+
+  "decision": {
+    "primary_bits": 4,
+    "gate_A": "PASS if some scheme in {V1_abs_full, V2_abs_high, V3_ratio} has mean_loss(prog) <= 2.0 pp and max_loss(prog) <= 5.0 pp",
+    "gate_B": "PASS if, for the absolute scheme (V1 or V2) with the smaller mean_loss(prog), the untracked mean_loss(all@1d) >= 10.0 pp",
+    "gate_C": "PASS if some scheme in {V1_abs_full + replica, V2_abs_high + replica, V3_ratio} that meets the gate-A criteria has mean_loss(all@30d) <= 5.0 pp",
+    "verdict": "GO only if A, B and C all pass; otherwise NO_GO with the failing gates named",
+    "secondary": "3 and 5 bits, the dual-device scheme, 1-year losses, per-dataset losses and path integrity are reported but do not change the verdict"
+  },
+
+  "checks": {
+    "check_1_cam_equals_quantized_tree_traversal": "predictions identical and exactly one match per tree for every test sample (all datasets, split 0, 4 bits)",
+    "check_2_float_thresholds_equal_sklearn": "with unquantized (float64) thresholds the ideal CAM prediction equals sklearn predict for at least 99.9 % of test samples (all datasets, split 0); the 30-bit agreement and the number of exact value-threshold ties are reported for information only",
+    "check_3_pcm_hand_values": 1e-12,
+    "check_4_tracking_exact_without_spread": "with programming and read noise off and the drift spread set to 0, V2 + replica and V3 reproduce the quantized thresholds to 1e-12 at every time"
+  },
+
+  "smoke": {"datasets": ["iris", "wine"], "split_seeds": [0], "device_seeds": 2, "bits": [4]},
+
+  "not_modelled": [
+    "transistor nonlinearity, threshold-voltage variation and mismatch of the cell transistors",
+    "match-line sensing errors and timing",
+    "input DAC quantization",
+    "wildcard bounds are assumed robust (bypassed), i.e. they never cause a mismatch",
+    "temperature"
+  ]
+}

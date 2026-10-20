@@ -1,0 +1,26 @@
+{
+  "experiment": "E3c",
+  "phase": "sim",
+  "smoke": false,
+  "start_jst": "2026-10-14T15:49:41+09:00",
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39"
+  },
+  "ngspice": "ngspice-42 : Circuit level simulation program",
+  "sha256": {
+    "experiments/E3c_config.json": "27f75286ff9ecbe9b6c7af2f499389bb2b756da65f3bd6c8e7f8f6376d0743b5",
+    "experiments/E3c_ml_transient.py": "e46a420fe63f02e4bba91e1cf76d0ded0b5150a1c80360bc78d245b20a8dc5b7",
+    "src/pcm_acam/ml_transient.py": "c19294a99fd5feeaf48c0989db8604b73b203052a696ab19009aafec62ff3ba3",
+    "src/pcm_acam/law_predict.py": "4e0f1a4d7acacd43e7b81fc4e4e5f1d70d6b86c141959e3f79122f96694d0ee3",
+    "src/pcm_acam/spice_iv.py": "1e016b586a84cf26870619f4bea4fa16d213341405f82d1a565d9d2a439bd073",
+    "src/pcm_acam/branch_post.py": "1b2d1db2755eb4973d249065b31909ae57e30f5fd4a7baf323aad4b6cc7dfaf1",
+    "third_party/sky130_fd_pr_subset/sky130_subset_tt.lib.spice": "2338df6f3ca08d7b45ec398ed4c5e7b05d921e0ea10e5669e3a355d0c9e8c2b7"
+  },
+  "predictions_file": "results/E3c_predict_20261014_1543/predictions.json",
+  "predictions_sha256": "ae7d400172a35b9f05bdc1919c98674e4ef8658095ad9b689cc1e4fee114c649",
+  "status": "complete",
+  "end_jst": "2026-10-14T16:05:04+09:00"
+}

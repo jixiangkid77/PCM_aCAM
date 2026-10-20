@@ -1,0 +1,9 @@
+[2026-10-17 05:57:42] E4 spice phase; run dir E4_spice_20261017_0557_smoke; 40 instances per branch type; designs ['P1']
+[2026-10-17 05:57:56] pull-downs and inverters: V_sw,nom 0.526222 V, V_Y*,nom 0.570323 V, V_X*,nom 0.568421 V (13 s)
+[2026-10-17 05:57:57] P1 L6T: 40 instances, window 0.240-1.279 V (1 s)
+[2026-10-17 05:57:57] P1 UINV: 40 instances, window 0.235-1.274 V (1 s)
+[2026-10-17 05:57:58] P1 LBUF: 40 instances, window 0.235-1.274 V (1 s)
+[2026-10-17 05:58:07] P1: I-V surface (601, 1801) (9 s)
+[2026-10-17 05:58:13] checks C1-C6 computed (6 s)
+[2026-10-17 05:58:28] V1: 6 cases, pass fraction 1.000, max |ln ratio| 0.011872410002907872, t_s(30) 413.384 ns (15 s)
+[2026-10-17 05:58:28] spice phase complete; instrument sha256 e464e92ed9ac21019f7e2d6bafffae07b2b16cb230a45c27325e7b5d0f6f2813; 45.4 s

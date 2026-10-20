@@ -1,0 +1,78 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: * e4 independent v1 row case16
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+sl_lo                                 0.920092
+sl_hi                                 0.964193
+dl0                                   0.792709
+x0                                    0.463771
+ml                                         1.8
+dl1                                     0.7913
+x1                                    0.369226
+dl2                                   0.737065
+y2                                    0.636259
+z2                                   0.0111044
+dl3                                   0.739463
+y3                                    0.644643
+z3                                   0.0121656
+vdl3#branch                                  0
+vdl2#branch                                  0
+vdl1#branch                                  0
+vdl0#branch                                  0
+vslhi#branch                      -2.73217e-06
+vsllo#branch                      -5.89185e-06
+vdd#branch                         -5.0459e-07
+
+ Reference value :  2.01280e-08
+ Reference value :  1.10928e-07
+ Reference value :  1.93128e-07
+ Reference value :  2.82028e-07
+ Reference value :  3.71928e-07
+ Reference value :  4.61628e-07
+ Reference value :  5.44128e-07
+ Reference value :  6.34928e-07
+ Reference value :  7.23928e-07
+ Reference value :  7.96428e-07
+ Reference value :  8.80328e-07
+ Reference value :  9.73928e-07
+ Reference value :  1.06493e-06
+ Reference value :  1.15983e-06
+ Reference value :  1.25413e-06
+ Reference value :  1.34533e-06
+ Reference value :  1.42913e-06
+ Reference value :  1.49703e-06
+ Reference value :  1.58873e-06
+ Reference value :  1.67993e-06
+ Reference value :  1.76263e-06
+ Reference value :  1.85183e-06
+ Reference value :  1.94263e-06
+ Reference value :  2.01683e-06
+ Reference value :  2.11173e-06
+ Reference value :  2.20513e-06
+ Reference value :  2.29953e-06
+ Reference value :  2.39383e-06
+ Reference value :  2.48533e-06
+ Reference value :  2.56623e-06
+ Reference value :  2.65633e-06
+ Reference value :  2.74893e-06
+ Reference value :  2.84353e-06
+No. of Data Rows : 28530
+tcross              =  1.371884e-06
+g0_2ns              =  4.637646e-01
+g1_2ns              =  3.692084e-01
+g2_2ns              =  1.110004e-02
+g3_2ns              =  1.216064e-02
+ngspice-42 done
+Using SPARSE 1.3 as Direct Linear Solver

@@ -1,0 +1,196 @@
+{
+  "experiment": "E1",
+  "name": "E1_spice_bound_branch",
+  "project": "PCM_aCAM",
+  "plan_version": "1.0",
+  "title": "Transistor-level (sky130, ngspice) check of the aCAM lower-bound branch: operating region of the divider transistor, and which transistor mismatch each global drift-compensation node re-exposes after threshold-verify programming",
+  "questions": {
+    "Q1": "In which region (subthreshold / saturation / triode) is the divider transistor at the switching point, for realistic sky130 sizing with PCM conductances of 2.5-22.5 uS?",
+    "Q2": "With the PDK's own mismatch model, threshold-verify programming and uniform PCM drift, which mismatch does each compensation node re-expose (N2 at transistor level)?",
+    "Q3": "Which node leaves the smaller input-referred bound error, and does the answer depend on the design (N3)?"
+  },
+  "models": {
+    "source": "https://github.com/google/skywater-pdk-libs-sky130_fd_pr",
+    "commit": "f62031a1be9aefe902d6d54cddd6f59b57627436",
+    "subset": "third_party/sky130_fd_pr_subset/sky130_subset_tt.lib.spice",
+    "corner": "tt",
+    "temperature_c": 27,
+    "mismatch_hooks": "mm_vth0, mm_toxe, mm_voff, mm_nfactor = per-instance standard-normal draws applied through the PDK slopes / sqrt(l*w*mult) (src/pcm_acam/sky130_models.py)"
+  },
+  "circuit": {
+    "branch": "lower bound: PCM conductance G from V_SL to node X; divider nfet from X to ground, gate = V_DL; X drives the match-line pull-down",
+    "criterion": "bound = V_DL at which V_X = V_sw (quasi-static); V_sw = gate voltage at which the pull-down conducts I_sw = 100 nA * W/L with V_DS = 1.8 V",
+    "vdd": 1.8,
+    "divider": {
+      "device": "nfet_01v8",
+      "w_um": 0.42
+    },
+    "pulldowns": {
+      "pd_min": {
+        "device": "nfet_01v8_lvt",
+        "w_um": 0.42,
+        "l_um": 0.15
+      },
+      "pd_4x": {
+        "device": "nfet_01v8_lvt",
+        "w_um": 0.84,
+        "l_um": 0.3
+      }
+    },
+    "pcm_linear_conductance": true,
+    "g_lo_us": 2.5,
+    "g_hi_us": 22.5,
+    "g_max_us": 25.0,
+    "v_sl_rule": "V_SL,nom = V_sw,nom + D (D = PCM voltage at the switching point)"
+  },
+  "designs": [
+    {
+      "id": "P1",
+      "role": "primary",
+      "l_div_um": 0.15,
+      "d_v": 0.2,
+      "pulldown": "pd_min"
+    },
+    {
+      "id": "P2",
+      "role": "primary",
+      "l_div_um": 1.0,
+      "d_v": 0.2,
+      "pulldown": "pd_min"
+    },
+    {
+      "id": "P3",
+      "role": "primary",
+      "l_div_um": 4.0,
+      "d_v": 0.2,
+      "pulldown": "pd_min"
+    },
+    {
+      "id": "P4",
+      "role": "primary",
+      "l_div_um": 8.0,
+      "d_v": 0.2,
+      "pulldown": "pd_min"
+    },
+    {
+      "id": "S1",
+      "role": "secondary",
+      "l_div_um": 0.15,
+      "d_v": 0.4,
+      "pulldown": "pd_min"
+    },
+    {
+      "id": "S2",
+      "role": "secondary",
+      "l_div_um": 1.0,
+      "d_v": 0.4,
+      "pulldown": "pd_min"
+    },
+    {
+      "id": "S3",
+      "role": "secondary",
+      "l_div_um": 4.0,
+      "d_v": 0.4,
+      "pulldown": "pd_min"
+    },
+    {
+      "id": "S4",
+      "role": "secondary",
+      "l_div_um": 4.0,
+      "d_v": 0.2,
+      "pulldown": "pd_4x"
+    },
+    {
+      "id": "S5",
+      "role": "secondary",
+      "l_div_um": 8.0,
+      "d_v": 0.2,
+      "pulldown": "pd_4x"
+    }
+  ],
+  "design_rule_note": "L_div from the minimum 0.15 um to 8 um, the largest power of two for which the nominal bound at 22.5 uS stays below 1.7 V with D = 0.2 V (pre-run feasibility scan of the nominal device only, 2026-10-14 01:43; 16 um reaches the 1.8 V rail).",
+  "mismatch": {
+    "n_instances": 300,
+    "rng": "numpy.random.default_rng([base_seed, 0]); z_div = standard_normal((n_instances, 4)); then z_pd = standard_normal((n_instances, 4)); columns = (vth0, toxe, voff, nfactor); the same draws for every design",
+    "base_seed": 20261014,
+    "settings": {
+      "none": "no mismatch (all instances nominal)",
+      "pdk": "divider mm = z_div, pull-down mm = z_pd (PDK mismatch model)",
+      "div_only": "divider mm = z_div, pull-down nominal",
+      "pd_only": "divider nominal, pull-down mm = z_pd",
+      "e02": "E0.2-style: gate-referred threshold offsets only, 20 mV sigma on both devices (divider offset = 0.020 * z_div[:,0], pull-down offset = 0.020 * z_pd[:,0]), no other mismatch"
+    }
+  },
+  "programming": "threshold verify: G_k(theta) = I_div,k(M0(theta)) / (V_SL,nom - V_sw,k), clipped to [0, g_max]; clipped pairs are flagged and excluded from the primary metric",
+  "thresholds": "theta_j = j/15, j = 0..15",
+  "drift": {
+    "model": "uniform multiplicative factor a(t) = (t / t0)^(-nu), nu = 0.049, t0 = 20 s; perfect tracking a_hat = a",
+    "times_s": {
+      "1d": 86400,
+      "30d": 2592000,
+      "1y": 31536000
+    },
+    "nu": 0.049,
+    "t0_s": 20
+  },
+  "nodes": {
+    "none": "V_DL map unchanged: M0(x) = B_nom(G(x); V_SL,nom)",
+    "dac_remap": "input map follows the nominal drifted cell: Ma(x) = B_nom(a_hat * G(x); V_SL,nom)",
+    "dac_gain": "E0.2-style linear DAC gain: Mg(x) = V0 + a_hat * (M0(x) - V0), V0 = intercept of the least-squares line of M0 versus G over x in [0, 1] (secondary)",
+    "supply": "V_SL(t) = V_sw,nom + D / a_hat, input map M0 unchanged",
+    "ideal": "conductance rescaled G -> G / a_hat (mismatch-invariant reference)"
+  },
+  "metric": {
+    "error": "input-referred bound error in LSB: 15 * (x_eff - theta), x_eff = inverse of the node's input map at the cell's actual bound",
+    "primary": "rms over unclipped (instance, theta) pairs",
+    "also": [
+      "mean",
+      "p95_abs",
+      "max_abs",
+      "per-theta rms",
+      "clip fraction",
+      "out-of-range count"
+    ],
+    "x_grid": [
+      -0.12,
+      1.12,
+      0.0001
+    ]
+  },
+  "sweep": {
+    "vg_start": 0.0,
+    "vg_stop": 1.8,
+    "vg_step": 0.0005
+  },
+  "regime": "nominal divider at V_DS = V_sw,nom and V_GS = bound: subthreshold if V_GS < vth; triode if V_DS < vdsat; otherwise saturation (BSIM4 operating-point vth, vdsat)",
+  "checks": {
+    "C1_branch_vs_iv_mV": 0.05,
+    "C1_desc": "nominal full-branch DC simulation (PCM resistor + divider, crossing of V_X = V_sw) equals the I-V inversion, G in {2.5, 7.5, 12.5, 17.5, 22.5} uS at V_SL,nom and V_SL(1y), every design",
+    "C2_zero_mismatch_lsb": 0.001,
+    "C2_desc": "setting none: |error| <= 0.001 LSB for nodes dac_remap, supply, ideal at every time and theta",
+    "C3_verify_lsb": 0.001,
+    "C3_desc": "every setting: ideal-node |error| <= 0.001 LSB on unclipped pairs (threshold verify reproduces the target)",
+    "C4_sigma_tolerance": 0.15,
+    "C4_desc": "pdk setting: measured sigma of V_sw within a relative tolerance of max(0.15, 3 / sqrt(2 (n - 1))) (sampling error of a standard deviation; 0.15 for n = 300) of 5.456e-3 / sqrt(0.42 * 0.15) V = 21.74 mV, and for pd_4x within 15 % of 5.456e-3 / sqrt(0.84 * 0.30) V = 10.87 mV",
+    "C5_desc": "all I-V curves strictly increasing over the used current range; no NaN bound for unclipped pairs",
+    "stop_rule": "any failed check stops the run before decisions are computed"
+  },
+  "decisions": {
+    "primary_condition": "setting pdk, designs P1-P4, time 1y, metric rms (LSB)",
+    "D1a": "setting div_only: supply rms <= 0.01 LSB in every primary design AND dac_remap rms >= 0.05 LSB in at least one primary design",
+    "D1b": "setting pd_only: supply rms >= 0.05 LSB in at least one primary design",
+    "N2_rule": "N2 holds at transistor level if D1a and D1b both hold",
+    "D2": "setting pdk, 1y: classify N3 as 'supply_better_everywhere' if supply rms < dac_remap rms in all of P1-P4, 'dac_better_everywhere' if dac_remap rms < supply rms in all of P1-P4, otherwise 'design_dependent'",
+    "D2_expectation": "design_dependent (first-order: supply better for the short divider P1, dac_remap better for the long divider P4)",
+    "D3": "node choice matters if max over P1-P4 of |rms(dac_remap) - rms(supply)| at 1y >= 0.25 LSB; otherwise 'minor'",
+    "secondary": "D = 0.4 V designs, 4x pull-down, e02 setting, 1d and 30d, dac_gain node, regime map, per-theta profiles: reported, not used in the decisions"
+  },
+  "smoke": {
+    "n_instances": 20,
+    "designs": [
+      "P1",
+      "P4"
+    ],
+    "note": "smoke run only confirms that the program runs and the checks pass; no decisions are computed or interpreted"
+  }
+}

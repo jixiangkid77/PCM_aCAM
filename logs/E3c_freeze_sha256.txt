@@ -1,0 +1,9 @@
+# E3c freeze record (JST); 15:43 protocol frozen (section 10 empty):
+bf55e55f538cbabaf62021ad96e2ac9c420600967b4e96ebede599cee12bfc23  docs/E3c_protocol.md
+27f75286ff9ecbe9b6c7af2f499389bb2b756da65f3bd6c8e7f8f6376d0743b5  experiments/E3c_config.json
+e46a420fe63f02e4bba91e1cf76d0ded0b5150a1c80360bc78d245b20a8dc5b7  experiments/E3c_ml_transient.py
+c19294a99fd5feeaf48c0989db8604b73b203052a696ab19009aafec62ff3ba3  src/pcm_acam/ml_transient.py
+# predict phase written:
+ae7d400172a35b9f05bdc1919c98674e4ef8658095ad9b689cc1e4fee114c649  results/E3c_predict_20261014_1543/predictions.json
+# section 10 filled:
+b56789d64082b1195fa1803c45d7de1e8c93c360e684cef26f26b47a261d5067  docs/E3c_protocol.md

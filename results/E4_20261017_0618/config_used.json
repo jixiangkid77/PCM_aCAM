@@ -1,0 +1,248 @@
+{
+  "experiment": "E4",
+  "name": "E4_forest_system",
+  "project": "PCM_aCAM",
+  "run_prefix": "E4",
+  "plan_version": "1.0",
+  "title": "System-level evaluation: random-forest inference on a PCM analog CAM with transistor-level bound errors (sky130, PDK mismatch), AIHWKit PCM noise and match-line crosstalk; input remap versus divider supply as drift-compensation node",
+  "models": {
+    "lib": "third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice",
+    "note": "tt, 27 C; the E3b subset (nfet_01v8 and nfet_01v8_lvt files identical to the E1 subset, plus pfet_01v8)"
+  },
+  "circuit": {
+    "vdd": 1.8,
+    "divider_device": "nfet_01v8",
+    "pulldown": {
+      "device": "nfet_01v8_lvt",
+      "w_um": 0.42,
+      "l_um": 0.15
+    },
+    "inverter": {
+      "name": "INV_S",
+      "n_dev": "nfet_01v8",
+      "wn": 2.0,
+      "ln": 0.15,
+      "p_dev": "pfet_01v8",
+      "wp": 0.42,
+      "lp": 4.0
+    },
+    "d_v": 0.2,
+    "g_lo_us": 2.5,
+    "g_hi_us": 22.5,
+    "g_max_us": 25.0,
+    "criterion": "V_sw,pd = gate voltage at which the pull-down conducts 100 nA * W/L with V_DS = 1.8 V (E1-E3c)",
+    "branch_types": {
+      "L6T": "lower bound of the 6T2M cell: divider node X drives the pull-down; switching point V_sp = V_sw,pd",
+      "UINV": "upper bound of the 6T2M cell: divider node Y -> INV_S -> pull-down; V_sp = V_Y*, the inverter input at which its output equals V_sw,pd (E3b)",
+      "LBUF": "lower bound with a gain stage: X -> INV_S -> INV_S -> pull-down; V_sp = V_X* = T1^-1(T2^-1(V_sw,pd)) with the instance's own inverters and pull-down"
+    },
+    "supplies": "each branch type has its own supply V_SL = V_sp,nom + D (lower SL_lo, upper SL_hi)",
+    "data_line": "one data line per cell drives both dividers; the input map is defined by the nominal curve of the cell set's lower-bound type: M0(x) = I_0^-1(G(x) D) at V_DS = V_sp,nom(lower), G(x) = g_lo + x (g_hi - g_lo); every bound (lower and upper) is programmed by threshold verify to switch at V_DL = M0(theta)",
+    "programming": "G_k = I_div,k(M0(theta)) / (V_SL,nom - V_sp,k), clipped to [0, g_max]; then AIHWKit programming noise",
+    "wildcards": "unconstrained bounds are bypassed (never mismatch); their pull-downs stay at gate 0 V (w0 each)"
+  },
+  "designs": [
+    {
+      "id": "P1",
+      "w_div_um": 0.42,
+      "l_div_um": 0.15,
+      "note": "E1 P1 / E3b U1 divider"
+    },
+    {
+      "id": "P3",
+      "w_div_um": 0.42,
+      "l_div_um": 4.0,
+      "note": "E1 P3 / E3b U3 divider"
+    }
+  ],
+  "cell_sets": {
+    "6T2M": {
+      "lower": "L6T",
+      "upper": "UINV"
+    },
+    "GS": {
+      "lower": "LBUF",
+      "upper": "UINV"
+    }
+  },
+  "arms": {
+    "xt": {
+      "cell_set": "6T2M",
+      "crosstalk": true,
+      "role": "6T2M as published: match-line crosstalk modelled"
+    },
+    "is": {
+      "cell_set": "6T2M",
+      "crosstalk": false,
+      "role": "reference: the same 6T2M cells with ideal per-cell sensing"
+    },
+    "gs": {
+      "cell_set": "GS",
+      "crosstalk": true,
+      "role": "crosstalk suppressed by a gain stage in the lower branch (residual leakage near the bounds modelled)"
+    },
+    "gi": {
+      "cell_set": "GS",
+      "crosstalk": false,
+      "role": "reference: gain-stage cells with ideal per-cell sensing"
+    }
+  },
+  "ml": {
+    "v_pre": 1.8,
+    "v_ref": 0.9,
+    "v_mid": 1.35,
+    "c_sa_f": 5e-14,
+    "c_wire_per_cell_f": 1e-15,
+    "rule": "inverse-time additivity: a row of N cells mismatches if a bound is violated or if sum_k w_k + (2N - n_c) w0 >= 1 + (2N - 1) w0, with w(V) = I_D(V, V_DS = v_mid) / I_D(V_sw, V_DS = v_mid) of the nominal pull-down, w0 = w(0); the sense time t_s(N) is defined as in E3c (nominal pull-down at V_sw, all other gates 0 V)",
+    "leakage": "per instance: the divider node of a matched bound follows from the load line G_k (V_SL - V) = I_k(V_DL, V_sp,k) I_nom(V_G', V) / I_nom(V_G', V_sp,k) (instance divider curve from the pool, V_DS dependence of the nominal I-V surface at the nominal gate voltage V_G' with the same current), then passes through the instance's own inverters (UINV, LBUF) and pull-down discharge curve; UINV beyond 3 LSB and LBUF beyond 0.45 LSB inside the bound are taken at gate 0 V",
+    "calibration_before_freeze": "on the E3c data (prior experiment): the rule with v_mid = 1.35 V reproduces the E3c pull-down-only switching-level shifts within 0.26 mV (|delta_l| <= 53 mV) and 2.3 mV (k15d7.5 at t0, delta_l -117 and -96 mV), all 30 false-mismatch flags and 11 of 12 entries of the false-mismatch map (d = 4 LSB, supply: 12 vs 13, sum 1.002); the nominal load-line solver reproduces the 30 E3c leaker node voltages within 0.9 uV. Smoke run E4_spice_20261017_0547_smoke: a nominal-shape leakage model (a matched cell leaks like the nominal cell with the same effective bound) was off by up to a factor 2 per cell (mismatch changes V_SL - V_sp,k and the divider's operating point) and failed V1 (3 of 6 cases); the per-instance model reproduces the SPICE node voltages of those cells within 0.3 mV (2.1 mV where the node is 290 mV below V_sp)"
+  },
+  "pcm_model": {
+    "source": "AIHWKit PCMLikeNoiseModel (IBM/aihwkit master, read 2026-10-12); Nandakumar et al., ICECS 2019, IEEE Xplore 8964852; identical to E0.1/E0.2",
+    "g_max": 25.0,
+    "g_min": 0.0,
+    "prog_coeff": [
+      0.26348,
+      1.965,
+      -1.1731
+    ],
+    "prog_coeff_g_max_reference": 25.0,
+    "t0": 20.0,
+    "t_read": 2.5e-07,
+    "nu_mean_a": -0.0155,
+    "nu_mean_b": 0.0244,
+    "nu_mean_min": 0.049,
+    "nu_mean_max": 0.1,
+    "nu_std_a": -0.0125,
+    "nu_std_b": -0.0059,
+    "nu_std_min": 0.008,
+    "nu_std_max": 0.045,
+    "read_q0": 0.0088,
+    "read_exp": 0.65,
+    "read_floor": 0.001,
+    "read_qmax": 0.2,
+    "prog_noise_scale": 1.0,
+    "read_noise_scale": 1.0,
+    "drift_scale": 1.0
+  },
+  "replica_cells": 64,
+  "replica": "a_hat(t) = mean of 64 replica PCM cells programmed to 12.5 uS at t / their mean right after programming (E0.1/E0.2); a_hat = 1 at t0",
+  "conditions": {
+    "all": "primary: AIHWKit programming noise, drift (state-dependent exponent spread) and accumulated read noise; replica a_hat",
+    "unif": "secondary: no PCM noise; uniform drift a(t) = ((t + t0)/t0)^-0.049 for every device and a_hat = a(t) (isolates transistor coupling, clipping and crosstalk)"
+  },
+  "times_inference_s": {
+    "t0": 0,
+    "1h": 3600,
+    "1d": 86400,
+    "30d": 2592000,
+    "1y": 31536000
+  },
+  "times_evaluated": [
+    "1d",
+    "30d",
+    "1y"
+  ],
+  "time_note": "PCM draws as E0.2: make_draws([base_seed, ds_idx, split, seed], K, 5, 64) over the five E0.2 times; E4 evaluates t0 (programming noise only, every node identical) and 1d, 30d, 1y",
+  "nodes": {
+    "dac_remap": "input map Ma(x) = I_0^-1(a_hat G(x) D) (lower-type nominal curve), supplies nominal",
+    "supply": "V_SL(t) = V_sp,nom + D / a_hat for each branch type, input map M0",
+    "ideal": "reference: G / a_hat inside the bound (mismatch-invariant global scaling), V_SL nominal, map M0"
+  },
+  "datasets": {
+    "iris": "sklearn load_iris",
+    "wine": "sklearn load_wine",
+    "breast_cancer": "sklearn load_breast_cancer",
+    "digits": "sklearn load_digits",
+    "synthetic": "sklearn make_classification(n_samples=5000, n_features=20, n_informative=10, n_redundant=4, n_classes=4, n_clusters_per_class=2, class_sep=1.0, random_state=20261012)"
+  },
+  "model": "sklearn RandomForestClassifier(n_estimators=16, max_depth=6, random_state=split_seed); stratified 70/30 split with random_state=split_seed; min-max on the training split, test clipped to [0, 1]; identical to E0.1/E0.2",
+  "bits": 4,
+  "split_seeds": [
+    0,
+    1,
+    2
+  ],
+  "device_seeds": 20,
+  "base_seed": 20261012,
+  "pools": {
+    "n_instances": 2000,
+    "base_seed": 20261017,
+    "rng_stream": 5,
+    "rng": "numpy.random.default_rng([base_seed, rng_stream]); then, in this order, standard_normal((n, 4)) for: lower divider, lower pull-down, LBUF inverter-1 nMOS, LBUF inverter-1 pMOS, LBUF inverter-2 nMOS, LBUF inverter-2 pMOS, upper divider, upper inverter nMOS, upper inverter pMOS, upper pull-down; columns (vth0, toxe, voff, nfactor); the same draws serve P1 and P3; L6T and LBUF share the lower divider and lower pull-down draws",
+    "assignment": "each CAM constraint k of a forest gets the instance index rng.integers(1, n + 1) from numpy.random.default_rng([base_seed(top level), ds_idx, split, seed, 4]); lower constraints use the lower-type pool, upper constraints the UINV pool",
+    "sweep": {
+      "vg_start": 0.0,
+      "vg_stop": 1.8,
+      "vg_step": 0.001,
+      "inverter_step": 0.0005
+    },
+    "storage": "divider curves stored as ln I_k - ln I_0 on a 5 mV grid inside the window [V_0(1e-10 A) - 0.1 V, V_0(5e-5 A) + 0.1 V] clipped to [0, 1.8] V (V_0 = nominal curve), float32; reconstructed on the 1 mV nominal grid",
+    "coarse_step": 0.005
+  },
+  "surface": {
+    "vds_start": 0.0,
+    "vds_stop": 1.2,
+    "vds_step": 0.002,
+    "vg_step": 0.001
+  },
+  "checks": {
+    "C1": "nominal full-branch DC (SPICE: PCM resistor, divider, inverters) equals the I-V inversion of the pool's nominal curve within 0.05 mV: every design and branch type, G in {2.5, 12.5, 22.5} uS, V_SL nominal and supply at 1 year",
+    "C2": "no mismatch, no PCM noise, uniform drift: supply and ideal nodes exact (<= 0.001 LSB) for every branch type; dac_remap exact for the lower type of each cell set; the upper-bound residual of the shared data line is reported (systematic, not a check)",
+    "C3": "load-line node voltage from the I-V surface equals the SPICE full-branch DC node voltage within 20 uV where the node lies within V_sp - 0.25 V ... V_sp + 0.05 V (L6T and UINV, G in {2.5, 12.5, 22.5} uS, V_SL nominal and supply at 1 year)",
+    "C4": "setup: sigma of V_sp per branch type within 15 % of the reference (L6T 22.15 mV, E1 pd_min; UINV 10.57 mV, E3b INV_S; LBUF 10.57 mV)",
+    "C5": "ideal 4-bit CAM equals quantized tree traversal (all datasets, split 0), as E0.1/E0.2",
+    "C6": "storage: bound voltages from the reconstructed divider curves equal those from the raw SPICE curves within 2 uV (all instances; currents G D for the 16 thresholds and a G D at 1 year); pull-down discharge from the stored chains equals the raw SPICE curve within 0.002 in ln w for gate voltages V_sw - 0.25 ... V_sw + 0.05 V",
+    "V1": "row validation (full-row transient SPICE with the actual mismatched devices, PCM conductances and supplies): breast_cancer, split 0, seed 0, arm xt, designs P1 and P3, conditions all@t0, dac_remap@1y, supply@1y; 8 violation-matched (sample, row) pairs per design and condition with leakage sum S in [0.3, 3], evenly spread in ln S; predicted crossing t_c = t_s(N) (1 + (2N-1) w0) / S; pass if |ln(t_c,sim / t_c,pred)| <= 0.05 for >= 90 % of the 48 cases; the gate voltages of the constrained pull-downs at t = 2 ns are recorded for diagnosis",
+    "stop_rule": "a failed check stops the run before any accuracy is computed (spice phase) or before any decision (forest phase)"
+  },
+  "metrics": {
+    "acc_ref": "accuracy of the ideal 4-bit quantized CAM (no device effects), as E0.1/E0.2",
+    "loss": "100 (acc_ref - acc) in percentage points; a sample with no matching row in any tree counts as wrong",
+    "mean_loss": "mean over the 5 datasets of the per-dataset mean over 3 splits x device seeds",
+    "delta": "paired difference loss(dac_remap) - loss(supply) (positive: supply better) per (dataset, split, seed); mean over datasets of the per-dataset means; SE = sqrt(sum_d var_d / n_d) / 5; 95 % CI = mean +- 1.96 SE",
+    "crosstalk_loss": "paired loss(xt) - loss(is), same statistics",
+    "leaf_loss": "share of (sample, tree) pairs with no matching row"
+  },
+  "hypotheses": {
+    "primary_condition": "all (AIHWKit PCM noise), 1 year",
+    "H1": "crosstalk suppressed (arm gs): the node with the smaller per-cell bound error (E2/E3b laws) gives the smaller loss: delta(P1) > 0 (supply better), delta(P3) < 0 (input remap better)",
+    "H2": "6T2M as published (arm xt): the supply node gives the smaller loss for both designs: delta(P1) > 0 and delta(P3) > 0",
+    "H3": "crosstalk is first-order at the system level: crosstalk_loss at t0 (programming noise only) >= 1.0 pp for both designs",
+    "classification": "for H1 and H2, each design: CONFIRMED if the 95 % CI excludes 0 with the predicted sign, CONTRADICTED if it excludes 0 with the opposite sign, UNRESOLVED otherwise; a confirmed difference is MATERIAL if |delta| >= 0.5 pp. H1/H2 hold if both designs are CONFIRMED. H3 holds if the mean crosstalk loss is >= 1.0 pp for both designs",
+    "report_only": "1 day and 30 days; arms is and gi; condition unif; per-dataset results; leaf-loss; per-cell bound-error statistics of the forests; the shared-data-line residual"
+  },
+  "smoke": {
+    "datasets": [
+      "iris",
+      "wine"
+    ],
+    "split_seeds": [
+      0
+    ],
+    "device_seeds": 1,
+    "designs": [
+      "P1"
+    ],
+    "n_instances": 40,
+    "v1_cases_per_group": 2,
+    "note": "program check only; outcomes not interpreted"
+  },
+  "not_modelled": [
+    "PCM read nonlinearity (E3a) and read disturb",
+    "process corners and temperature (E2 tested the laws there)",
+    "sense-amplifier offset and noise, precharge transistor, ML wire resistance",
+    "input DAC quantization (inputs applied as continuous values, as E0.1/E0.2)",
+    "mismatch of the wildcard pull-downs (gate 0 V)",
+    "replica-cell transistor mismatch (a_hat is taken from PCM replica conductances, as E0.2)"
+  ],
+  "chains": {
+    "pulldown_discharge": "per instance ln I_D(V_G, V_DS = v_mid) of the lower (L6T, LBUF) and upper (UINV) pull-downs, swept 0-1.8 V in 0.5 mV; stored as the deviation from the nominal on a 5 mV grid over 0-0.8 V (float32, Catmull-Rom)",
+    "inverters": "per instance output of each inverter at (its switching input + offset), offsets -60 ... +60 mV in 0.5 mV (UINV: Z at V_Y*,k + offset; LBUF: W at V_X*,k + offset and Z at V_W*,k + offset); linear interpolation, clamped outside",
+    "u_cut_lsb": {
+      "UINV": 3.0,
+      "LBUF": 0.45
+    }
+  },
+  "runtime_note": "forest phase timed before the freeze on the smoke instrument (code check only): synthetic 19.8 s and digits 7.3 s per (split, seed, design); 20 device seeds chosen from this timing (about 30 min with 2 processes)"
+}

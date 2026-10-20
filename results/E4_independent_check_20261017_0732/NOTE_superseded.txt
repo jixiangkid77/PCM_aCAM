@@ -1,0 +1,7 @@
+Superseded by results/E4_independent_check_20261017_0741/ (written 2026-10-17 07:45 JST).
+
+All numbers of this run (tasks 1-3, PASS) are identical to the 0741 run. After this run the
+report generator and two diagnostic outputs were changed (task 1: exact-tie listing per dataset;
+task 3: the 0.5 mV inverter-grid emulation now uses the fine pull-down targets; report wording),
+so the script SHA-256 values in this folder's run_info.json no longer match the delivered
+scripts in experiments/E4_independent/. Use the 0741 folder.

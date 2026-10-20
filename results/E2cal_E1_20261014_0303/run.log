@@ -1,0 +1,12 @@
+[2026-10-14 03:03:14] E2 Monte Carlo phase; predictions results/E2cal_E1_predict_20261014_0303/predictions.json sha256 3206cbdb0d0dcfec641bf125a7c562b11f0c8026518187e7a77d9c1e1d5f3823
+[2026-10-14 03:03:46] P1: Monte Carlo done in 31.6 s; V_sw,nom 0.5262 V, sigma 22.15 mV
+[2026-10-14 03:08:57] P2: Monte Carlo done in 310.9 s; V_sw,nom 0.5262 V, sigma 22.15 mV
+[2026-10-14 03:09:28] P3: Monte Carlo done in 30.9 s; V_sw,nom 0.5262 V, sigma 22.15 mV
+[2026-10-14 03:09:28] P4: infeasible in the predict phase -> skipped
+[2026-10-14 03:09:59] S1: Monte Carlo done in 31.4 s; V_sw,nom 0.5262 V, sigma 22.15 mV
+[2026-10-14 03:10:29] S2: Monte Carlo done in 30.2 s; V_sw,nom 0.5262 V, sigma 22.15 mV
+[2026-10-14 03:10:29] S3: infeasible in the predict phase -> skipped
+[2026-10-14 03:10:58] S4: Monte Carlo done in 29.1 s; V_sw,nom 0.4966 V, sigma 11.30 mV
+[2026-10-14 03:10:58] S5: infeasible in the predict phase -> skipped
+[2026-10-14 03:10:58] checks C1-C7 passed
+[2026-10-14 03:10:58] decision: A1 100% (pass), A2 pass, A3 100%; laws validated: True

@@ -1,0 +1,29 @@
+{
+  "check_1_cam_equals_quantized_tree_traversal": {
+    "value": {
+      "mismatched_predictions": 0,
+      "min_integrity": 1.0
+    },
+    "pass": true
+  },
+  "check_2_float_thresholds_equal_sklearn": {
+    "value": 1.0,
+    "pass": true,
+    "info_30bit_agreement": {
+      "iris": 1.0,
+      "wine": 1.0
+    },
+    "info_exact_ties_sample_constraint_pairs": {
+      "iris": 14,
+      "wine": 0
+    }
+  },
+  "check_3_pcm_hand_values": {
+    "value": 0.0,
+    "pass": true
+  },
+  "check_4_tracking_exact_without_spread": {
+    "value": 4.440892098500626e-16,
+    "pass": true
+  }
+}

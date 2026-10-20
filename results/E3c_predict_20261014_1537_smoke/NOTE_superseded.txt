@@ -1,0 +1,1 @@
+Superseded: delta_l now referenced to the isolated row's V_sw,tr (difference 0.1 uV) and T1 changed to report-only; the lambda law itself was unchanged. Final smoke follows.

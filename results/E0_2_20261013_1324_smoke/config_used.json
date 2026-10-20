@@ -1,0 +1,180 @@
+{
+  "experiment": "E0.2",
+  "name": "E0_2_mismatch_drift_coupling",
+  "project": "PCM_aCAM",
+  "title": "Magnitude probe: does PCM drift re-expose the transistor mismatch that threshold verification absorbed, under global drift compensation, and which compensation node avoids it?",
+  "plan_version": "1.0",
+  "hypothesis": "In a 6T2M analog CAM the bound is V_TH + G (V_SL/V_TX - 1)/beta: a non-drifting additive transistor term plus a drifting PCM term. Verifying the threshold through the search path absorbs each cell's mismatch into G. When PCM drift is compensated globally at the input DAC, the absorbed V_TH mismatch reappears as (1/a - 1) dV_TH; compensating at the divider supply leaves only a V_TX-dependent term; a mismatch-invariant global scaling of G leaves none. A crossbar MAC array does not have this coupling because its offsets can be corrected per column at the output.",
+  "pcm_model": {
+    "source": "AIHWKit PCMLikeNoiseModel (IBM/aihwkit master, read 2026-10-12); Nandakumar et al., ICECS 2019, IEEE Xplore 8964852",
+    "g_max": 25.0,
+    "g_min": 0.0,
+    "prog_coeff": [
+      0.26348,
+      1.965,
+      -1.1731
+    ],
+    "prog_coeff_g_max_reference": 25.0,
+    "t0": 20.0,
+    "t_read": 2.5e-07,
+    "nu_mean_a": -0.0155,
+    "nu_mean_b": 0.0244,
+    "nu_mean_min": 0.049,
+    "nu_mean_max": 0.1,
+    "nu_std_a": -0.0125,
+    "nu_std_b": -0.0059,
+    "nu_std_min": 0.008,
+    "nu_std_max": 0.045,
+    "read_q0": 0.0088,
+    "read_exp": 0.65,
+    "read_floor": 0.001,
+    "read_qmax": 0.2,
+    "prog_noise_scale": 1.0,
+    "read_noise_scale": 1.0,
+    "drift_scale": 1.0
+  },
+  "cell_model": {
+    "source": "C. Li et al., Nat. Commun. 11, 1638 (2020), Eq. 1 (6T2M analog CAM, divider transistor in the triode regime)",
+    "equation": "V_bound = V_TH + G (V_SL / V_TX - 1) / beta; V_TX is the match-line pull-down threshold for the lower bound and the inverter threshold for the upper bound",
+    "v_sl": 0.5,
+    "v_sl_source": "Li 2020: SL_hi = 0.5 V",
+    "v_th": 0.2,
+    "v_th_source": "assumption: lower end of the 0.2-0.6 V data-line range Li 2020 uses for 4-bit discrimination",
+    "v_tx": 0.35,
+    "v_tx_source": "assumption: must lie below V_SL; gives c_nom = V_SL/V_TX - 1 = 0.4286",
+    "g_lo": 2.5,
+    "g_hi": 22.5,
+    "g_max": 25.0,
+    "mapping_source": "assumption: the normalized threshold range [0, 1] is mapped onto 2.5-22.5 uS, leaving 2.5 uS headroom at both ends of the AIHWKit 0-25 uS range so that threshold verification can absorb offsets",
+    "beta_rule": "beta_nom = c_nom (g_hi - g_lo) / r_in, so k_nom = r_in / (g_hi - g_lo)",
+    "replica_target_uS": 12.5
+  },
+  "mismatch": {
+    "source": "Pelgrom scaling sigma(V_T) = A_VT / sqrt(W L). P. Kinget, device-mismatch chapter (www.ee.columbia.edu/~kinget/papers_files/chapter3.pdf): A_VT0 ~ 0.5 mV.um per nm of t_ox + 3.4 mV.um. Assumptions: a 130-nm-class 1.8-V device with t_ox ~ 4 nm (A_VT ~ 5.4 mV.um) and W x L = 0.42 um x 0.15 um give sigma(V_T) ~ 22 mV; 20 mV is taken as the primary value. The beta mismatch value is an assumption.",
+    "settings": {
+      "m20": {
+        "sigma_vth_V": 0.02,
+        "sigma_vtx_V": 0.02,
+        "sigma_beta": 0.02,
+        "r_in_V": 0.4,
+        "role": "primary"
+      },
+      "m0": {
+        "sigma_vth_V": 0.0,
+        "sigma_vtx_V": 0.0,
+        "sigma_beta": 0.0,
+        "r_in_V": 0.4,
+        "role": "anchor (no mismatch)"
+      },
+      "m10": {
+        "sigma_vth_V": 0.01,
+        "sigma_vtx_V": 0.01,
+        "sigma_beta": 0.02,
+        "r_in_V": 0.4,
+        "role": "secondary"
+      },
+      "m30": {
+        "sigma_vth_V": 0.03,
+        "sigma_vtx_V": 0.03,
+        "sigma_beta": 0.02,
+        "r_in_V": 0.4,
+        "role": "secondary"
+      },
+      "m20_r02": {
+        "sigma_vth_V": 0.02,
+        "sigma_vtx_V": 0.02,
+        "sigma_beta": 0.02,
+        "r_in_V": 0.2,
+        "role": "secondary (low-voltage input span)"
+      },
+      "m20_vth_only": {
+        "sigma_vth_V": 0.02,
+        "sigma_vtx_V": 0.0,
+        "sigma_beta": 0.0,
+        "r_in_V": 0.4,
+        "role": "attribution (divider-transistor threshold only)"
+      },
+      "m20_vtx_only": {
+        "sigma_vth_V": 0.0,
+        "sigma_vtx_V": 0.02,
+        "sigma_beta": 0.0,
+        "r_in_V": 0.4,
+        "role": "attribution (pull-down / inverter threshold only)"
+      }
+    },
+    "draws": "per (dataset, split, device seed) one standard-normal vector of length K for each of dV_TH, dV_TX, d_beta from numpy default_rng([base_seed, ds_idx, split, dev, 2]) in that order; every mismatch setting scales the same draws (paired)"
+  },
+  "programming": {
+    "threshold": "primary: G is set so that the cell's own bound equals the target at t0 (absorbs the mismatch); clipped to [0, g_max]; then AIHWKit programming noise is added to G",
+    "conductance": "secondary (m20 only): G is set to the nominal value g_lo + theta (g_hi - g_lo)"
+  },
+  "nodes": {
+    "none": "no compensation",
+    "dac": "DAC gain scaled by a_hat around V_TH,nom",
+    "supply": "divider supply V_SL(t) = V_TX,nom (1 + c_nom / a_hat)",
+    "ideal": "G -> G / a_hat inside the bound (mismatch-invariant reference)"
+  },
+  "replica": "a_hat(t) = mean of 64 replica PCM cells programmed to 12.5 uS at t / their mean right after programming (as E0.1); a_hat = 1 in the prog condition",
+  "replica_cells": 64,
+  "datasets": {
+    "iris": "sklearn load_iris",
+    "wine": "sklearn load_wine",
+    "breast_cancer": "sklearn load_breast_cancer",
+    "digits": "sklearn load_digits",
+    "synthetic": "sklearn make_classification(n_samples=5000, n_features=20, n_informative=10, n_redundant=4, n_classes=4, n_clusters_per_class=2, class_sep=1.0, random_state=20261012)"
+  },
+  "model": "sklearn RandomForestClassifier(n_estimators=16, max_depth=6, random_state=split_seed); stratified 70/30 split with random_state=split_seed; identical to E0.1",
+  "split_seeds": [
+    0,
+    1,
+    2
+  ],
+  "device_seeds": 5,
+  "base_seed": 20261012,
+  "bits": 4,
+  "pcm_draws": "make_draws([base_seed, ds_idx, split, dev], K, 5, 64) exactly as E0.1; one device per bound (column 0)",
+  "times_inference_s": {
+    "t0": 0,
+    "1h": 3600,
+    "1d": 86400,
+    "30d": 2592000,
+    "365d": 31536000
+  },
+  "metrics": {
+    "acc_ref": "accuracy of the ideal 4-bit quantized CAM (no device noise, no mismatch), as E0.1",
+    "loss": "acc_ref - accuracy in percentage points, averaged over 3 splits x 5 device seeds per dataset",
+    "mean_loss": "mean of the per-dataset losses over the 5 datasets",
+    "max_loss": "largest per-dataset loss",
+    "conditions": "prog: programming noise and mismatch at t0 (a_hat = 1, all nodes identical); all@t: programming noise, drift and accumulated read noise at t"
+  },
+  "decision": {
+    "primary": "mismatch setting m20, threshold programming, 4 bits",
+    "gate_A": "PASS (the coupling is first-order) if mean_loss(dac, all@365d) - mean_loss(ideal, all@365d) >= 1.0 pp",
+    "classification": "if gate A passes: GO_STRONG if mean_loss(supply, all@365d) - mean_loss(ideal, all@365d) >= 1.0 pp (no conventional global node is mismatch-invariant; a new compensation circuit is needed); otherwise GO_WEAK (compensating at the divider supply already avoids the coupling)",
+    "verdict": "NO_GO if gate A fails",
+    "secondary": "30-day differences, the other mismatch settings, conductance programming, clipping counts and path integrity are reported only"
+  },
+  "checks": {
+    "check_1_cam_equals_quantized_tree_traversal": "as E0.1 (all datasets, split 0)",
+    "check_2_nominal_mapping_exact": "zero mismatch, no PCM noise or drift: effective theta equals the quantized theta for every node and both programming modes (1e-12)",
+    "check_3_nodes_equal_without_mismatch": "zero mismatch with the full PCM model: dac, supply and ideal give identical effective thresholds at every time (1e-12)",
+    "check_4_closed_forms_uniform_drift": "uniform drift (nu_mean_a = 0 so mu_nu = 0.049 for every state, sigma_nu = 0, no programming or read noise), m20 mismatch, threshold programming: the implemented effective thresholds of none, dac, supply and ideal equal the hand-derived closed forms for unclipped cells at every time (1e-12)"
+  },
+  "smoke": {
+    "datasets": [
+      "iris",
+      "wine"
+    ],
+    "split_seeds": [
+      0
+    ],
+    "device_seeds": 2
+  },
+  "not_modelled": [
+    "PCM current-voltage nonlinearity (matters for the supply node, which raises the voltage across the PCM over time)",
+    "transistor operation outside the triode regime at low conductance (Li 2020 notes the linear relation fails there)",
+    "temperature dependence of PCM conductance, drift and transistor thresholds",
+    "match-line sensing errors and timing; input DAC quantization",
+    "wildcard bounds are assumed robust (bypassed)"
+  ]
+}

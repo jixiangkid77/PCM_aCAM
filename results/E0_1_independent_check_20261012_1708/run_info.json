@@ -1,0 +1,15 @@
+{
+  "runstamp_jst": "2026-10-12 17:08:09 JST",
+  "elapsed_s": 33.238774061203,
+  "script": "/tmp/claude-0/-home-claude/6dfef7ba-89f2-5845-85d8-aa33235ce2d6/scratchpad/independent_check_acam/E0_1_independent_recompute.py",
+  "script_sha256": "46158c19adcc6d2ceb1434e8c6830e03866ff99e6b3d6d740ba01f1bcf7a0d89",
+  "config": "/home/claude/PCM_aCAM/experiments/E0_1_config.json",
+  "config_sha256": "44d1d458564e7a36f32d67a24b7686a674fb4702b9b54353c0ca06232dcff25a",
+  "config_plan_version": "1.1",
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+  "numpy": "2.5.3",
+  "scikit_learn": "1.9.1",
+  "scipy": "1.18.1",
+  "quick": false
+}

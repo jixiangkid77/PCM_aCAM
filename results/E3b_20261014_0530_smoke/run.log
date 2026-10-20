@@ -1,0 +1,4 @@
+[2026-10-14 05:30:15] E3b Monte Carlo phase; predictions results/E3b_predict_20261014_0530_smoke/predictions.json sha256 709b711f49a587154094ef39b9c121c66136cb4c45bf097ba02971f60a9e548f
+[2026-10-14 05:30:18] U1: done in 3.2 s; V_Y* 0.5703 V, sigma 10.13 mV, C1 2.48e-03 mV
+[2026-10-14 05:30:21] U4: done in 3.2 s; V_Y* 0.8497 V, sigma 12.94 mV, C1 7.97e-04 mV
+[2026-10-14 05:30:21] checks passed

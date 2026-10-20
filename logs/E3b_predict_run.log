@@ -1,0 +1,6 @@
+[2026-10-14 05:32:08] U1: V_Y* 0.5703 V, sigma_dY 11.00 mV, gain 22.6, bound(30 uS) 0.839 V, 2.1 s
+[2026-10-14 05:32:09] U2: V_Y* 0.5703 V, sigma_dY 11.00 mV, gain 22.6, bound(30 uS) 0.787 V, 0.4 s
+[2026-10-14 05:32:09] U3: V_Y* 0.5703 V, sigma_dY 11.00 mV, gain 22.6, bound(30 uS) 1.368 V, 0.5 s
+[2026-10-14 05:32:11] U4: V_Y* 0.8497 V, sigma_dY 17.55 mV, gain 16.2, bound(30 uS) 0.822 V, 2.1 s
+[2026-10-14 05:32:12] U5: V_Y* 0.8497 V, sigma_dY 17.55 mV, gain 16.2, bound(30 uS) 1.339 V, 0.4 s
+[2026-10-14 05:32:12] predictions written; sha256 1b6014495d8e385012a4cfd4c1d215cbe1a8866d5e24e69bd12a0107a18337ea

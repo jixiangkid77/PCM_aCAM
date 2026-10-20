@@ -1,0 +1,119 @@
+{
+  "A1": {
+    "pass_rate": 1.0,
+    "pass": true,
+    "n": 28,
+    "failures": []
+  },
+  "A2": {
+    "pass": true,
+    "n_clear": 12,
+    "rows": [
+      {
+        "condition": "C1",
+        "pred_better": "supply",
+        "sim_better": "supply",
+        "clear_prediction": false,
+        "agree": true
+      },
+      {
+        "condition": "C2",
+        "pred_better": "supply",
+        "sim_better": "supply",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "C3",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "C4",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "G1",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "G2",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "G3",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "G4",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "G5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "G6",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "T1",
+        "pred_better": "supply",
+        "sim_better": "supply",
+        "clear_prediction": false,
+        "agree": true
+      },
+      {
+        "condition": "T2",
+        "pred_better": "supply",
+        "sim_better": "supply",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "T3",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "T4",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      }
+    ]
+  },
+  "A3_secondary": {
+    "pass_rate": 1.0,
+    "pass": true,
+    "n": 42,
+    "failures": []
+  },
+  "laws_validated": true
+}

@@ -1,0 +1,11 @@
+# E2 freeze record (JST)
+# 03:15 protocol frozen (section 11 empty):
+020ed981d653c67a79c4321da955197dc489459fc2a121bdebbec6219efa7c6e  docs/E2_protocol.md
+d035419040b5001984cdb6dae53d72660f8934f1a70b6fec74e389b663c8be18  experiments/E2_config.json
+e68e0c4fff259cfa85aa32caf3d8a522fd1794fa746c37adf9b2dd9c7512632b  experiments/E2_law_validation.py
+4e0f1a4d7acacd43e7b81fc4e4e5f1d70d6b86c141959e3f79122f96694d0ee3  src/pcm_acam/law_predict.py
+# 03:15:48 predict phase written:
+2c4af6ccbacd99d543c04a033f1bb9613261cfd51dc3dc2a87315a363b78bee3  results/E2_predict_20261014_0315/predictions.json
+# 03:16 section 11 filled (first write said 03:15, corrected to 03:16 within the same minute; no other change):
+b361853eb9ee28fd4687632a000f138bf4b5417760970d0bf29b6bac7bf82956  docs/E2_protocol.md (superseded by the time correction)
+4d83561dbc8a65bf496f3bf4a43b32da46977725f667b284bb098c7771800942  docs/E2_protocol.md

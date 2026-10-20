@@ -1,0 +1,27 @@
+[2026-10-12 16:52:25] E0.1 (PCM_aCAM) start; run dir E0_1_20261012_1652; config sha256 44d1d458564e7a36f32d67a24b7686a674fb4702b9b54353c0ca06232dcff25a
+[2026-10-12 16:52:25] pre-run checks
+[2026-10-12 16:52:25]   iris: 4-bit CAM vs traversal mismatches 0, integrity 1.0000; float-threshold CAM vs sklearn agreement 1.0000 (30-bit: 1.0000, exact value-threshold ties 14)
+[2026-10-12 16:52:25]   wine: 4-bit CAM vs traversal mismatches 0, integrity 1.0000; float-threshold CAM vs sklearn agreement 1.0000 (30-bit: 1.0000, exact value-threshold ties 0)
+[2026-10-12 16:52:25]   breast_cancer: 4-bit CAM vs traversal mismatches 0, integrity 1.0000; float-threshold CAM vs sklearn agreement 1.0000 (30-bit: 1.0000, exact value-threshold ties 0)
+[2026-10-12 16:52:26]   digits: 4-bit CAM vs traversal mismatches 0, integrity 1.0000; float-threshold CAM vs sklearn agreement 1.0000 (30-bit: 0.9963, exact value-threshold ties 10322)
+[2026-10-12 16:52:27]   synthetic: 4-bit CAM vs traversal mismatches 0, integrity 1.0000; float-threshold CAM vs sklearn agreement 1.0000 (30-bit: 1.0000, exact value-threshold ties 0)
+[2026-10-12 16:52:27]   check_1_cam_equals_quantized_tree_traversal: {'mismatched_predictions': 0, 'min_integrity': 1.0} PASS
+[2026-10-12 16:52:27]   check_2_float_thresholds_equal_sklearn: 1.0 PASS
+[2026-10-12 16:52:27]   check_3_pcm_hand_values: 0.0 PASS
+[2026-10-12 16:52:27]   check_4_tracking_exact_without_spread: 4.440892098500626e-16 PASS
+[2026-10-12 16:52:27] iris split 0: rows 126, constraints 385, test 45, float acc 0.9778, 4-bit ref acc 0.9778 (0.3s)
+[2026-10-12 16:52:27] iris split 1: rows 125, constraints 378, test 45, float acc 0.9778, 4-bit ref acc 0.9556 (0.3s)
+[2026-10-12 16:52:28] iris split 2: rows 127, constraints 404, test 45, float acc 1.0000, 4-bit ref acc 1.0000 (0.4s)
+[2026-10-12 16:52:28] wine split 0: rows 141, constraints 482, test 54, float acc 1.0000, 4-bit ref acc 0.9815 (0.4s)
+[2026-10-12 16:52:28] wine split 1: rows 135, constraints 456, test 54, float acc 1.0000, 4-bit ref acc 1.0000 (0.4s)
+[2026-10-12 16:52:29] wine split 2: rows 155, constraints 546, test 54, float acc 1.0000, 4-bit ref acc 0.9815 (0.4s)
+[2026-10-12 16:52:30] breast_cancer split 0: rows 243, constraints 1022, test 171, float acc 0.9357, 4-bit ref acc 0.9415 (1.0s)
+[2026-10-12 16:52:31] breast_cancer split 1: rows 233, constraints 988, test 171, float acc 0.9474, 4-bit ref acc 0.9474 (0.9s)
+[2026-10-12 16:52:32] breast_cancer split 2: rows 249, constraints 1062, test 171, float acc 0.9474, 4-bit ref acc 0.9474 (1.0s)
+[2026-10-12 16:52:49] digits split 0: rows 809, constraints 4645, test 540, float acc 0.9333, 4-bit ref acc 0.9130 (17.7s)
+[2026-10-12 16:53:06] digits split 1: rows 803, constraints 4600, test 540, float acc 0.9463, 4-bit ref acc 0.9370 (16.9s)
+[2026-10-12 16:53:22] digits split 2: rows 796, constraints 4552, test 540, float acc 0.9185, 4-bit ref acc 0.9074 (15.7s)
+[2026-10-12 16:54:34] synthetic split 0: rows 956, constraints 5447, test 1500, float acc 0.7353, 4-bit ref acc 0.7180 (72.3s)
+[2026-10-12 16:55:47] synthetic split 1: rows 955, constraints 5455, test 1500, float acc 0.7200, 4-bit ref acc 0.7087 (72.7s)
+[2026-10-12 16:56:57] synthetic split 2: rows 949, constraints 5418, test 1500, float acc 0.7280, 4-bit ref acc 0.7367 (70.1s)
+[2026-10-12 16:56:57] verdict GO; elapsed 272.3 s

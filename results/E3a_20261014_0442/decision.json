@@ -1,0 +1,725 @@
+{
+  "B1": {
+    "pass": true,
+    "max_abs_diff_from_linear_lsb": 9.344704130165304e-05
+  },
+  "B2": {
+    "pass": true,
+    "pass_rate": 1.0,
+    "n_usable": 173,
+    "n_excluded": 3,
+    "failures": []
+  },
+  "B3": {
+    "pass": true,
+    "n_clear": 79,
+    "disagreements": [],
+    "rows": [
+      {
+        "design": "P1",
+        "grid": "linear",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=2|beta=-0.5",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=2|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=2|beta=+0.5",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=1|beta=-0.5",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=1|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=1|beta=+0.5",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=0.6|beta=-0.5",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=0.6|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=0.6|beta=+0.5",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=0.4|beta=-0.5",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": false,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=0.4|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=0.4|beta=+0.5",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=0.3|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": false,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=0.3|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=0.3|beta=+0.5",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": false,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=0.2|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=0.2|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=0.2|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": false,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=0.15|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=0.15|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P1",
+        "grid": "V0=0.15|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "linear",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=2|beta=-0.5",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=2|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=2|beta=+0.5",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=1|beta=-0.5",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=1|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=1|beta=+0.5",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=0.6|beta=-0.5",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": false,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=0.6|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=0.6|beta=+0.5",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": false,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=0.4|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=0.4|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=0.4|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": false,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=0.3|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=0.3|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=0.3|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=0.2|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=0.2|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=0.2|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=0.15|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=0.15|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "S1",
+        "grid": "V0=0.15|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "linear",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=2|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=2|beta=+0",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=2|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=1|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=1|beta=+0",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=1|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=0.6|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=0.6|beta=+0",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=0.6|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=0.4|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=0.4|beta=+0",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=0.4|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=0.3|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=0.3|beta=+0",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": false,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=0.3|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=0.2|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=0.2|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": false,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=0.2|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=0.15|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=0.15|beta=+0",
+        "pred_better": "supply_rep",
+        "sim_better": "supply_rep",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "G1",
+        "grid": "V0=0.15|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "linear",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=2|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=2|beta=+0",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=2|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=1|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=1|beta=+0",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=1|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=0.6|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=0.6|beta=+0",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=0.6|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=0.4|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=0.4|beta=+0",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=0.4|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=0.3|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=0.3|beta=+0",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=0.3|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=0.2|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=0.2|beta=+0",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=0.2|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=0.15|beta=-0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=0.15|beta=+0",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "design": "P3",
+        "grid": "V0=0.15|beta=+0.5",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      }
+    ]
+  },
+  "laws_validated": true
+}

@@ -1,0 +1,33 @@
+{
+  "start_jst": "2026-10-13 13:38:08 JST",
+  "end_jst": "2026-10-13 13:38:31 JST",
+  "runtime_s": 22.342737197875977,
+  "script": "/tmp/claude-0/-home-claude/6dfef7ba-89f2-5845-85d8-aa33235ce2d6/scratchpad/independent_check_acam_e02/e02_independent.py",
+  "script_sha256": "46ed6501d9754467065c13c9c9079073d78f9967f3fd4e679dd1e51ec6b63d73",
+  "spec_files": {
+    "/home/claude/PCM_aCAM/docs/E0_1_protocol.md": "b118ce0981fc9520b67289d982c418dbb1f98f6940fa0e335a1fc9bd9ea1c6c8",
+    "/home/claude/PCM_aCAM/experiments/E0_1_config.json": "44d1d458564e7a36f32d67a24b7686a674fb4702b9b54353c0ca06232dcff25a",
+    "/home/claude/PCM_aCAM/docs/E0_2_protocol.md": "95e230dc82a017cfb3e93e5907a02922cc5173573cb2232dd7c22798bd24e84b",
+    "/home/claude/PCM_aCAM/experiments/E0_2_config.json": "a3fa8d5506169c6e5da76dc1028135803aa3993d6f102cc8ab6344056dec1d23"
+  },
+  "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+  "numpy": "2.5.3",
+  "sklearn": "1.9.1",
+  "scipy": "1.18.1",
+  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+  "cell": {
+    "c_nom": 0.4285714285714286,
+    "beta_nom_uS_per_V": 21.42857142857143,
+    "k_nom_V_per_uS": 0.02
+  },
+  "datasets": [
+    "iris",
+    "wine",
+    "breast_cancer",
+    "digits",
+    "synthetic"
+  ],
+  "n_dev": 5,
+  "clipped_total": 2206,
+  "constraints_total": 179200
+}

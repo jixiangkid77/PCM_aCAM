@@ -1,0 +1,159 @@
+{
+  "experiment": "E3a",
+  "name": "E3a_pcm_nonlinearity",
+  "project": "PCM_aCAM",
+  "run_prefix": "E3a",
+  "plan_version": "1.0",
+  "title": "PCM read nonlinearity at the two drift-compensation nodes: input remap versus divider supply (linear rule and replica rule), lower-bound branch, sky130 PDK mismatch",
+  "pcm_model": {
+    "iv": "I(V) = A s(V; V0), s = V0 sinh(V/V0) (linear limit for V0 = inf); a state is identified by its chord conductance at the programming voltage D: G = I(D)/D",
+    "state_dependence": "V0(G) = V0_ref (G / G_ref)^beta, G_ref = 12.5 uS (theta = 0.5); the V0 of a cell programmed to level theta is V0(G(theta))",
+    "g_ref_us": 12.5,
+    "drift": "uniform factor on the whole characteristic: I(V, t) = a I(V, 0)",
+    "source": "src/pcm_acam/pcm_iv.py"
+  },
+  "grid": {
+    "v0_ref_v": [
+      "inf",
+      2.0,
+      1.0,
+      0.6,
+      0.4,
+      0.3,
+      0.2,
+      0.15
+    ],
+    "beta": [
+      -0.5,
+      0.0,
+      0.5
+    ],
+    "note": "V0_ref = inf is the linear PCM (one point, beta irrelevant); 1 + 7 x 3 = 22 grid points"
+  },
+  "nodes": {
+    "none": "map M0, V_SL,nom",
+    "dac_remap": "map Ma(x) = B_nom(a G(x)) at V_SL,nom (PCM voltage at the switching point unchanged)",
+    "supply_lin": "V_SL(t) = V_sw,nom + D / a (the E2 rule, exact only for a linear PCM), map M0",
+    "supply_rep": "V_SL(t) = V_sw,nom + V*, a s(V*; V0(G_rep)) = s(D; V0(G_rep)), replica at G_rep = 12.5 uS (theta = 0.5), map M0",
+    "ideal": "conductance divided by a (reference)"
+  },
+  "laws": {
+    "dac_remap": "dx = (G/dG) [eps(aI) - eps(I)] (E2 law; independent of the PCM nonlinearity)",
+    "supply": "dx = (G/dG) [(rho(delta) - 1) + rho0 (eps(rho0 I) - eps(I))], rho(delta) = a s(V_t - delta; V0) / s(D - delta; V0), rho0 = rho(0)",
+    "rms": "E[dx^2] = (G/dG)^2 { E_delta[(rho(delta) - 1 + rho0 dlambda delta)^2] + rho0^2 sum_p ds_p^2 }; predicted rms (LSB) = 15 sqrt(mean over theta)",
+    "inputs_allowed": "nominal and +-1 sigma single-device simulations only (same sensitivities as E2), no Monte Carlo",
+    "source": "src/pcm_acam/pcm_iv.py (predict_supply, predict_dac) and src/pcm_acam/law_predict.py"
+  },
+  "models": {
+    "source": "https://github.com/google/skywater-pdk-libs-sky130_fd_pr",
+    "commit": "f62031a1be9aefe902d6d54cddd6f59b57627436",
+    "subset_dir": "third_party/sky130_fd_pr_subset_corners",
+    "lib_pattern": "sky130_subset_{corner}.lib.spice"
+  },
+  "circuit": {
+    "vdd": 1.8,
+    "divider_device": "nfet_01v8",
+    "pulldowns": {
+      "pd_min": {
+        "device": "nfet_01v8_lvt",
+        "w_um": 0.42,
+        "l_um": 0.15
+      }
+    },
+    "criterion": "bound = V_DL at which V_X = V_sw; V_sw = gate voltage at which the pull-down conducts 100 nA * W/L with V_DS = 1.8 V",
+    "v_sl_rule": "V_SL,nom = V_sw,nom + D",
+    "g_lo_us": 2.5,
+    "g_hi_us": 22.5,
+    "programming": "threshold verify at V_SL,nom: the PCM current at its own voltage D - delta_k equals I_div,k(M0(theta)); no clipping"
+  },
+  "designs": [
+    {
+      "id": "P1",
+      "w_div_um": 0.42,
+      "l_div_um": 0.15,
+      "d_v": 0.2,
+      "pulldown": "pd_min",
+      "corner": "tt",
+      "temp_c": 27,
+      "note": "E1 P1: supply better for a linear PCM"
+    },
+    {
+      "id": "S1",
+      "w_div_um": 0.42,
+      "l_div_um": 0.15,
+      "d_v": 0.4,
+      "pulldown": "pd_min",
+      "corner": "tt",
+      "temp_c": 27,
+      "note": "E1 S1: larger D"
+    },
+    {
+      "id": "G1",
+      "w_div_um": 1.0,
+      "l_div_um": 0.5,
+      "d_v": 0.2,
+      "pulldown": "pd_min",
+      "corner": "tt",
+      "temp_c": 27,
+      "note": "E2 G1"
+    },
+    {
+      "id": "P3",
+      "w_div_um": 0.42,
+      "l_div_um": 4.0,
+      "d_v": 0.2,
+      "pulldown": "pd_min",
+      "corner": "tt",
+      "temp_c": 27,
+      "note": "E1 P3: input remap better"
+    }
+  ],
+  "mismatch": {
+    "n_instances": 300,
+    "base_seed": 20261014,
+    "rng_stream": 3,
+    "rng": "numpy.random.default_rng([base_seed, rng_stream]); z_div = standard_normal((n, 4)); then z_pd = standard_normal((n, 4)); columns (vth0, toxe, voff, nfactor); fresh draws (E1 stream 0, E2 stream 2)",
+    "setting": "pdk (both devices with PDK mismatch)"
+  },
+  "drift": {
+    "nu": 0.049,
+    "t0_s": 20,
+    "times_s": {
+      "1d": 86400,
+      "30d": 2592000,
+      "1y": 31536000
+    },
+    "model": "uniform factor a = (t/t0)^-nu, perfect tracking (a_hat = a)"
+  },
+  "metric": "input-referred bound error 15 (x_eff - theta) in LSB, rms over all (instance, theta) pairs, theta_j = j/15; x_eff from the exact inverse of the nominal map: G(x_eff) D = I_0(b) for M0, G(x_eff) a D = I_0(b) for Ma (I_0 = nominal divider current at V_DS = V_sw,nom)",
+  "sweep": {
+    "vg_start": 0.0,
+    "vg_stop": 1.8,
+    "vg_step": 0.0005
+  },
+  "checks": {
+    "C1": "full-branch DC with the PCM as a nonlinear element (ngspice B-source I = A V0 sinh(V/V0)) equals the I-V inversion within 0.05 mV: nominal cell, G in {2.5, 12.5, 22.5} uS, (V0_ref, beta) in {(inf, 0), (0.3, 0), (0.3, +0.5)}, V_SL,nom and the 1-year V_SL of supply_lin and supply_rep, every design",
+    "C2": "zero mismatch: dac_remap and ideal errors <= 0.001 LSB; supply errors equal 15 (G/dG)(rho0 - 1) within 0.001 LSB, every design, grid point and time (pairs with a valid bound)",
+    "C3": "ideal node error <= 0.001 LSB on all valid pairs",
+    "C4": "Monte Carlo sigma of V_sw within max(0.15, 3/sqrt(2(n-1))) relative of the predicted sigma_delta",
+    "C5": "dac_remap: pairs without a valid bound <= 1 % for every design, grid point and time (stop rule); supply_lin and supply_rep may lose pairs at strong nonlinearity (reported; grid points with > 1 % invalid pairs are excluded from B2 and B3)",
+    "C7": "nominal divider curve identical in both phases",
+    "stop_rule": "any failed check stops the run before the decisions are evaluated"
+  },
+  "decisions": {
+    "tolerance": "a prediction passes if |pred - sim| <= max(0.15 sim, 0.02 LSB)",
+    "B1": "input remap immune: full-branch DC simulation with the PCM as a nonlinear element (ngspice B-source), programmed by threshold verify at V_SL,nom and drifted by a (1 year), first 20 Monte Carlo instances (pdk), theta in {1, 5, 10, 14}/15: the errors for (V0_ref, beta) in {(0.3, 0), (0.3, +0.5), (0.15, -0.5)} equal those for the linear PCM within 0.001 LSB, every design (the Monte Carlo rms of dac_remap is independent of the grid point by the same argument and is reported)",
+    "B2": "extended supply law: supply_lin and supply_rep, 1 year, all (design, grid point) with <= 1 % invalid pairs: at least 90 % pass",
+    "B3": "ranking: 1 year, every (design, grid point) where the predicted gap between supply_rep and dac_remap is >= 20 % of the larger: the predicted better node equals the Monte Carlo better node",
+    "conclusion": "the extended laws are validated if B1, B2 and B3 hold; the crossover nonlinearity (largest V0_ref at which supply_rep is no longer better than dac_remap) is then read from the validated predictions and checked against the Monte Carlo",
+    "secondary": "1 day and 30 days; supply_lin crossover; voltage stress (PCM voltage at the switching point and at the top input for the lowest level); per-theta systematic error"
+  },
+  "voltage_stress": "nominal cell, linear PCM and (V0_ref, beta) = (0.3, 0): PCM voltage at the switching point for each node at 1 year, and the PCM voltage when the input is at the top of the input range (x = 1) and the cell holds the lowest level (G = 2.5 uS), from a full-branch DC simulation",
+  "smoke": {
+    "n_instances": 10,
+    "designs": [
+      "P1"
+    ],
+    "note": "program check only"
+  }
+}

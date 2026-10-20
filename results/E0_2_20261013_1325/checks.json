@@ -1,0 +1,23 @@
+{
+  "check_1_cam_equals_quantized_tree_traversal": {
+    "value": {
+      "mismatched_predictions": 0,
+      "min_integrity": 1.0
+    },
+    "pass": true
+  },
+  "check_2_nominal_mapping_exact": {
+    "value": 1.1102230246251565e-16,
+    "pass": true
+  },
+  "check_3_nodes_equal_without_mismatch": {
+    "value": 3.3306690738754696e-16,
+    "pass": true
+  },
+  "check_4_closed_forms_uniform_drift": {
+    "value": 5.551115123125783e-16,
+    "pass": true,
+    "unclipped_cells": 14,
+    "cells": 16
+  }
+}

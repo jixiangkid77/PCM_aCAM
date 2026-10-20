@@ -1,0 +1,1 @@
+Superseded: x_grid upper end 1.12 was too narrow (C5 failure at C1, x_eff up to 1.15). Config changed to x_grid [-0.12, 1.6] before freezing; smoke rerun follows.

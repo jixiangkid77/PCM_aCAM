@@ -1,0 +1,12 @@
+[2026-10-12 16:50:19] E0.1 (PCM_aCAM) start; run dir E0_1_20261012_1650; config sha256 83ace66b9f75ae0a1e9cc3f239a53eedcb6dd633dc2576229b4ce896f5c8ddbd
+[2026-10-12 16:50:19] pre-run checks
+[2026-10-12 16:50:19]   iris: 4-bit CAM vs traversal mismatches 0, integrity 1.0000; 30-bit CAM vs sklearn agreement 1.0000
+[2026-10-12 16:50:19]   wine: 4-bit CAM vs traversal mismatches 0, integrity 1.0000; 30-bit CAM vs sklearn agreement 1.0000
+[2026-10-12 16:50:19]   breast_cancer: 4-bit CAM vs traversal mismatches 0, integrity 1.0000; 30-bit CAM vs sklearn agreement 1.0000
+[2026-10-12 16:50:19]   digits: 4-bit CAM vs traversal mismatches 0, integrity 1.0000; 30-bit CAM vs sklearn agreement 0.9963
+[2026-10-12 16:50:20]   synthetic: 4-bit CAM vs traversal mismatches 0, integrity 1.0000; 30-bit CAM vs sklearn agreement 1.0000
+[2026-10-12 16:50:20]   check_1_cam_equals_quantized_tree_traversal: {'mismatched_predictions': 0, 'min_integrity': 1.0} PASS
+[2026-10-12 16:50:20]   check_2_high_bits_equals_sklearn: 0.9962962962962963 FAIL
+[2026-10-12 16:50:20]   check_3_pcm_hand_values: 0.0 PASS
+[2026-10-12 16:50:20]   check_4_tracking_exact_without_spread: 4.440892098500626e-16 PASS
+[2026-10-12 16:50:20] a check failed; stopping before any outcome is computed

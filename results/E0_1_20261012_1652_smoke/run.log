@@ -1,0 +1,11 @@
+[2026-10-12 16:52:17] E0.1 (PCM_aCAM) start; run dir E0_1_20261012_1652_smoke; config sha256 44d1d458564e7a36f32d67a24b7686a674fb4702b9b54353c0ca06232dcff25a
+[2026-10-12 16:52:17] pre-run checks
+[2026-10-12 16:52:17]   iris: 4-bit CAM vs traversal mismatches 0, integrity 1.0000; float-threshold CAM vs sklearn agreement 1.0000 (30-bit: 1.0000, exact value-threshold ties 14)
+[2026-10-12 16:52:17]   wine: 4-bit CAM vs traversal mismatches 0, integrity 1.0000; float-threshold CAM vs sklearn agreement 1.0000 (30-bit: 1.0000, exact value-threshold ties 0)
+[2026-10-12 16:52:17]   check_1_cam_equals_quantized_tree_traversal: {'mismatched_predictions': 0, 'min_integrity': 1.0} PASS
+[2026-10-12 16:52:17]   check_2_float_thresholds_equal_sklearn: 1.0 PASS
+[2026-10-12 16:52:17]   check_3_pcm_hand_values: 0.0 PASS
+[2026-10-12 16:52:17]   check_4_tracking_exact_without_spread: 4.440892098500626e-16 PASS
+[2026-10-12 16:52:17] iris split 0: rows 126, constraints 385, test 45, float acc 0.9778, 4-bit ref acc 0.9778 (0.1s)
+[2026-10-12 16:52:17] wine split 0: rows 141, constraints 482, test 54, float acc 1.0000, 4-bit ref acc 0.9815 (0.1s)
+[2026-10-12 16:52:17] verdict SMOKE (not interpreted); elapsed 0.3 s

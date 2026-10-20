@@ -1,0 +1,84 @@
+{
+ "experiment": "E2cal",
+ "name": "E2_calibration_on_E1_designs",
+ "project": "PCM_aCAM",
+ "run_prefix": "E2cal_E1",
+ "plan_version": "1.0",
+ "title": "Pre-freeze calibration of the E2 predictor on the E1 designs with the E1 draws (exploratory data; not part of the E2 test)",
+ "laws": {
+  "supply": "dx = (G/dG) ln[(D - a delta)/(D - delta)], delta = V_sw,k - V_sw,nom",
+  "dac_remap": "dx = (G/dG) [eps(aI) - eps(I)], eps(I) = sum_p s_p(I) z_p + lambda(I) delta, s_p = -d lnI/d mm_p, lambda = -d lnI/d V_DS, at the nominal gate voltage for current I = G D",
+  "rms": "predicted rms (LSB) = 15 sqrt(mean over theta of E[dx^2]); E[dx_supply^2] = (G/dG)^2 E[ln^2 r]; E[dx_remap^2] = (G/dG)^2 {sum_p [s_p(aI)-s_p(I)]^2 + [lambda(aI)-lambda(I)]^2 sigma_delta^2}; sigma_delta^2 = sum_p (dV_sw/dmm_p)^2",
+  "source": "src/pcm_acam/law_predict.py"
+ },
+ "predictor": {
+  "mm_step": "central difference with mm_p = +1 and -1 (one PDK sigma)",
+  "vds_step_v": 0.005,
+  "supply_expectation": "trapezoid rule over delta in [-6 sigma, 6 sigma] with 4001 points; delta >= 0.95 D dropped and the Gaussian weights renormalized",
+  "inputs_allowed": "nominal and +-1 sigma perturbed single-device simulations only (no Monte Carlo, no circuit-level result)"
+ },
+ "models": {
+  "source": "https://github.com/google/skywater-pdk-libs-sky130_fd_pr",
+  "commit": "f62031a1be9aefe902d6d54cddd6f59b57627436",
+  "subset_dir": "third_party/sky130_fd_pr_subset_corners",
+  "lib_pattern": "sky130_subset_{corner}.lib.spice",
+  "note": "tt files are byte-identical to the E1 subset; ss and ff are patched the same way (src/pcm_acam/sky130_models.py)"
+ },
+ "circuit": {
+  "vdd": 1.8,
+  "divider_device": "nfet_01v8",
+  "pulldowns": {"pd_min": {"device": "nfet_01v8_lvt", "w_um": 0.42, "l_um": 0.15}, "pd_4x": {"device": "nfet_01v8_lvt", "w_um": 0.84, "l_um": 0.3}},
+  "criterion": "bound = V_DL at which V_X = V_sw; V_sw = gate voltage at which the pull-down conducts 100 nA * W/L with V_DS = 1.8 V (same as E1)",
+  "v_sl_rule": "V_SL,nom = V_sw,nom(condition) + D (the bias generator tracks the pull-down's corner and temperature)",
+  "g_lo_us": 2.5,
+  "g_hi_us": 22.5,
+  "g_max_secondary_us": 25.0,
+  "programming": "threshold verify: G_k(theta) = I_div,k(M0(theta)) / (V_SL,nom - V_sw,k); primary evaluation without clipping (the laws describe the circuit, not the PCM range); clipped to [0, 25] uS as a secondary evaluation"
+ },
+ "conditions": [
+  {"id": "P1", "set": "E1_design", "w_div_um": 0.42, "l_div_um": 0.15, "d_v": 0.2, "pulldown": "pd_min", "corner": "tt", "temp_c": 27},
+  {"id": "P2", "set": "E1_design", "w_div_um": 0.42, "l_div_um": 1.0, "d_v": 0.2, "pulldown": "pd_min", "corner": "tt", "temp_c": 27},
+  {"id": "P3", "set": "E1_design", "w_div_um": 0.42, "l_div_um": 4.0, "d_v": 0.2, "pulldown": "pd_min", "corner": "tt", "temp_c": 27},
+  {"id": "P4", "set": "E1_design", "w_div_um": 0.42, "l_div_um": 8.0, "d_v": 0.2, "pulldown": "pd_min", "corner": "tt", "temp_c": 27},
+  {"id": "S1", "set": "E1_design", "w_div_um": 0.42, "l_div_um": 0.15, "d_v": 0.4, "pulldown": "pd_min", "corner": "tt", "temp_c": 27},
+  {"id": "S2", "set": "E1_design", "w_div_um": 0.42, "l_div_um": 1.0, "d_v": 0.4, "pulldown": "pd_min", "corner": "tt", "temp_c": 27},
+  {"id": "S3", "set": "E1_design", "w_div_um": 0.42, "l_div_um": 4.0, "d_v": 0.4, "pulldown": "pd_min", "corner": "tt", "temp_c": 27},
+  {"id": "S4", "set": "E1_design", "w_div_um": 0.42, "l_div_um": 4.0, "d_v": 0.2, "pulldown": "pd_4x", "corner": "tt", "temp_c": 27},
+  {"id": "S5", "set": "E1_design", "w_div_um": 0.42, "l_div_um": 8.0, "d_v": 0.2, "pulldown": "pd_4x", "corner": "tt", "temp_c": 27}
+ ],
+ "condition_note": "the nine E1 designs (P1-P4, S1-S5), tt, 27 C; same circuit, programming and drift as E2; E1 draws (rng_stream 0) so that the result can be compared with the E1 run; used only to see how well the predictor works on known data before E2 is frozen",
+ "feasibility_rule": "decided in the predict phase from nominal curves only: a condition is dropped before the Monte Carlo phase if the nominal bound at G = 30 uS exceeds 1.75 V, or if the nominal input map cannot be computed on x in [-0.12, 1.0]",
+ "mismatch": {
+  "n_instances": 300,
+  "rng": "numpy.random.default_rng([base_seed, rng_stream]); z_div then z_pd (300 x 4 each); rng_stream 0 = the E1 draws",
+  "base_seed": 20261014,
+  "rng_stream": 0,
+  "settings": ["pdk", "div_only", "pd_only"]
+ },
+ "drift": {"nu": 0.049, "t0_s": 20, "times_s": {"1d": 86400, "30d": 2592000, "1y": 31536000}, "model": "uniform factor a = (t/t0)^-nu, perfect tracking"},
+ "nodes": ["none", "dac_remap", "supply", "ideal"],
+ "metric": "input-referred bound error in LSB, rms over all (instance, theta) pairs, theta_j = j/15, j = 0..15",
+ "sweep": {"vg_start": 0.0, "vg_stop": 1.8, "vg_step": 0.0005},
+ "x_grid": [-0.12, 1.6, 0.0001],
+ "x_grid_note": "input grid of the DAC maps; upper end 1.6 (was 1.12 before the smoke test, where the dac_remap estimate reached x_eff = 1.15 > 1.12 for condition C1 and those pairs were counted as invalid by C5)",
+ "phases": "predict -> mc (same program as E2); the decision fields are computed but have no meaning for the E2 test",
+ "checks": {
+  "C1": "full-branch DC simulation equals the I-V inversion for the nominal cell (G in {2.5, 12.5, 22.5} uS, V_SL,nom and V_SL(1y)) within 0.05 mV, every condition",
+  "C2": "zero mismatch: |error| <= 0.001 LSB for dac_remap, supply, ideal, every condition and time",
+  "C3": "ideal node |error| <= 0.001 LSB on all valid pairs (threshold verify reproduces the target)",
+  "C4": "Monte Carlo sigma of V_sw within max(0.15, 3/sqrt(2(n-1))) relative of the predicted sigma_delta, every condition",
+  "C5": "I-V curves monotone over the used range; pairs without a valid bound <= 1 % per condition, setting and node",
+  "C6": "pull-down V_sw,nom ordering: ss > tt > ff at 27 C, and -40 C > 27 C > 85 C at tt (pd_min)",
+  "C7": "nominal divider curve of the Monte Carlo phase equals that of the predict phase (max |d ln I| <= 1e-9) for every condition",
+  "stop_rule": "any failed check stops the run before the criteria are evaluated"
+ },
+ "criteria": {
+  "tolerance": "a prediction passes if |pred - sim| <= max(0.15 sim, 0.02 LSB)",
+  "A1": "setting pdk, 1y, nodes dac_remap and supply: at least 90 % of the (feasible condition, node) pairs pass",
+  "A2": "setting pdk, 1y: in every feasible condition whose predicted gap |pred_dac - pred_supply| >= 0.2 max(pred_dac, pred_supply), the predicted better node is the simulated better node",
+  "A3": "settings div_only (dac_remap) and pd_only (dac_remap, supply), 1y: at least 90 % pass (secondary, reported, not part of the decision)",
+  "decision": "the laws are validated as a design-time predictor if A1 and A2 both hold; otherwise not validated, and the failing conditions are reported",
+  "secondary": "1d and 30d, clipped programming (g_max 25 uS), per-theta profiles: reported only"
+ },
+ "smoke": {"n_instances": 10, "conditions": ["P1"], "note": "program check only"}
+}

@@ -1,0 +1,2 @@
+Used predictions from results/E3a_predict_20261014_0439_smoke (superseded only because of the pcm_iv.py fix; its predictions.json has the same SHA-256 73c08ce1... as results/E3a_predict_20261014_0439_smoke_b).
+Superseded by results/E3a_20261014_0440_smoke (same code, run on the matching predictions results/E3a_predict_20261014_0439_smoke_b).

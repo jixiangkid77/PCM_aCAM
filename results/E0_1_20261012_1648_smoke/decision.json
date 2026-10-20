@@ -1,0 +1,68 @@
+{
+  "bits": 4,
+  "gate_A": {
+    "pass": true,
+    "prog_t0": {
+      "V1_abs_full": {
+        "mean_loss_pp": -2.037037037037037,
+        "max_loss_pp": -1.851851851851849,
+        "worst_dataset": "wine",
+        "meets": true
+      },
+      "V2_abs_high": {
+        "mean_loss_pp": -0.18518518518518545,
+        "max_loss_pp": 1.8518518518518545,
+        "worst_dataset": "wine",
+        "meets": true
+      },
+      "V3_ratio": {
+        "mean_loss_pp": 0.3703703703703709,
+        "max_loss_pp": 1.8518518518518545,
+        "worst_dataset": "wine",
+        "meets": true
+      }
+    }
+  },
+  "gate_B": {
+    "pass": true,
+    "absolute_scheme": "V1_abs_full",
+    "untracked_mean_loss_1d_pp": 20.648148148148152,
+    "untracked_max_loss_1d_pp": 31.11111111111111
+  },
+  "gate_C": {
+    "pass": true,
+    "candidates": {
+      "V1_abs_full + replica": {
+        "meets_A": true,
+        "mean_loss_30d_pp": -1.481481481481481,
+        "max_loss_30d_pp": -1.1111111111111127,
+        "pass": true
+      },
+      "V2_abs_high + replica": {
+        "meets_A": true,
+        "mean_loss_30d_pp": 1.2037037037037042,
+        "max_loss_30d_pp": 3.3333333333333326,
+        "pass": true
+      },
+      "V3_ratio": {
+        "meets_A": true,
+        "mean_loss_30d_pp": 0.9259259259259273,
+        "max_loss_30d_pp": 1.85185185185186,
+        "pass": true
+      }
+    }
+  },
+  "failing_gates": [],
+  "rule": {
+    "primary_bits": 4,
+    "gate_A": "PASS if some scheme in {V1_abs_full, V2_abs_high, V3_ratio} has mean_loss(prog) <= 2.0 pp and max_loss(prog) <= 5.0 pp",
+    "gate_B": "PASS if, for the absolute scheme (V1 or V2) with the smaller mean_loss(prog), the untracked mean_loss(all@1d) >= 10.0 pp",
+    "gate_C": "PASS if some scheme in {V1_abs_full + replica, V2_abs_high + replica, V3_ratio} that meets the gate-A criteria has mean_loss(all@30d) <= 5.0 pp",
+    "verdict": "GO only if A, B and C all pass; otherwise NO_GO with the failing gates named",
+    "secondary": "3 and 5 bits, the dual-device scheme, 1-year losses, per-dataset losses and path integrity are reported but do not change the verdict"
+  },
+  "verdict_if_full": "GO",
+  "verdict": "SMOKE (not interpreted)",
+  "config_sha256": "83ace66b9f75ae0a1e9cc3f239a53eedcb6dd633dc2576229b4ce896f5c8ddbd",
+  "run_dir": "E0_1_20261012_1648_smoke"
+}

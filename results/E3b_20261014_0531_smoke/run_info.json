@@ -1,0 +1,39 @@
+{
+  "experiment": "E3b",
+  "phase": "mc",
+  "smoke": true,
+  "start_jst": "2026-10-14T05:31:08+09:00",
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39"
+  },
+  "ngspice": "ngspice-42 : Circuit level simulation program",
+  "sha256": {
+    "experiments/E3b_config.json": "233dc92b009c62aea36163bbc821d7694b37d53cdefce4009b393e78641a13c2",
+    "experiments/E3b_upper_branch.py": "905d6174a2677b09fcf023fdbd3f05d29cb5778b80dcabc88be174ebe861a7e2",
+    "src/pcm_acam/inverter.py": "7dbf86d401d7f55889e03aa62ada9799f3a8cc3c719fec1f7e04d7b12798474b",
+    "src/pcm_acam/law_predict.py": "4e0f1a4d7acacd43e7b81fc4e4e5f1d70d6b86c141959e3f79122f96694d0ee3",
+    "src/pcm_acam/spice_iv.py": "1e016b586a84cf26870619f4bea4fa16d213341405f82d1a565d9d2a439bd073",
+    "src/pcm_acam/branch_post.py": "1b2d1db2755eb4973d249065b31909ae57e30f5fd4a7baf323aad4b6cc7dfaf1",
+    "src/pcm_acam/sky130_models.py": "e6286b31c2da355e92a602dd3ca9f5fca3c1f84cd3af53cd1bbd5dfcf0c09150",
+    "third_party/sky130_fd_pr_subset_e3b/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "third_party/sky130_fd_pr_subset_e3b/MANIFEST.json": "1e3f7a381491bccd27d47d26a4d2395cdc95294ae609b7c47c220573b6301dd4",
+    "third_party/sky130_fd_pr_subset_e3b/lod.spice": "6200b50c14eebb68d8009ca68e452d4c045e2d25d7438ee417c155883527fd7c",
+    "third_party/sky130_fd_pr_subset_e3b/sky130_fd_pr__nfet_01v8__mismatch.corner.spice": "24a3b29d7d7f26f99098811c31eb5497950a3aed520ab83768a96f35467fe818",
+    "third_party/sky130_fd_pr_subset_e3b/sky130_fd_pr__nfet_01v8__tt.corner.spice": "0c03b2e5727c414942f1d2b27e19a68724fb84be90b2c73b361ad41779311130",
+    "third_party/sky130_fd_pr_subset_e3b/sky130_fd_pr__nfet_01v8__tt.pm3.spice": "566aa156f1c71bd963030f760e1862569593ceba740e81ecede32fad974d5875",
+    "third_party/sky130_fd_pr_subset_e3b/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice": "1855038a2ad2fe3989b64a17128d47daaa3dbc15d0f4db2c4526988923daa311",
+    "third_party/sky130_fd_pr_subset_e3b/sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice": "716b48c11275bb1edbb228807f1b8849453884adf498ac7c57a31b9295335f2b",
+    "third_party/sky130_fd_pr_subset_e3b/sky130_fd_pr__nfet_01v8_lvt__tt.pm3.spice": "8969f1112446ab7c5b138bd83904fe27f4c5a0448db587198274b9fab96ee117",
+    "third_party/sky130_fd_pr_subset_e3b/sky130_fd_pr__pfet_01v8__mismatch.corner.spice": "f4d560668712678ea60641de923fce7691e64acda951949f840986837c31741a",
+    "third_party/sky130_fd_pr_subset_e3b/sky130_fd_pr__pfet_01v8__tt.corner.spice": "641d251a08bf9ddcfc67ba4bd4698ae1978d09447eb6ebf90055fdf3d21917ab",
+    "third_party/sky130_fd_pr_subset_e3b/sky130_fd_pr__pfet_01v8__tt.pm3.spice": "73cf64a757da3ee9af41b8f2446c71e9796622e4edc842091086f28613e3f6f4",
+    "third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice": "8693a91e23e16678a97c0f0b9671ed0a690d1bd0211c22e6b90b0c451693c105"
+  },
+  "predictions_file": "results/E3b_predict_20261014_0531_smoke/predictions.json",
+  "predictions_sha256": "709b711f49a587154094ef39b9c121c66136cb4c45bf097ba02971f60a9e548f",
+  "status": "complete",
+  "end_jst": "2026-10-14T05:31:15+09:00"
+}

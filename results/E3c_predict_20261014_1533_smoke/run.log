@@ -1,0 +1,5 @@
+[2026-10-14 15:33:47] V_sw,nom 0.526222 V; t_s N=1: 242.795 ns, N=16: 331.056 ns (2 s)
+[2026-10-14 15:33:50] T1 N=1: V_sw,tr nominal 0.526185 V (V_sw 0.526222); sigma_tr 22.652 mV vs sigma_qs 22.612 mV (6 s)
+[2026-10-14 15:34:24] T1 N=16: V_sw,tr nominal 0.526185 V (V_sw 0.526222); sigma_tr 22.652 mV vs sigma_qs 22.612 mV (40 s)
+[2026-10-14 15:34:37] T3 predictions for P1 done (52 s)
+[2026-10-14 15:34:37] predictions written; sha256 0499aacac8d21d87d2f9e84c43f7f04501f20502559c6559b111b930625d68a9

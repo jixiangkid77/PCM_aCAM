@@ -1,0 +1,84 @@
+{
+ "experiment": "E3b",
+ "name": "E3b_upper_branch",
+ "project": "PCM_aCAM",
+ "run_prefix": "E3b",
+ "plan_version": "1.0",
+ "title": "Upper-bound branch of the 6T2M cell (PCM, divider, CMOS inverter, match-line pull-down): prospective test of the first-order drift-compensation laws, sky130 PDK mismatch, linear PCM",
+ "branch": "PCM from SL_hi to node Y; divider nfet from Y to ground, gate = DL; Y drives a CMOS inverter (output Z); Z drives the match-line pull-down. Upper bound = V_DL at which Z reaches the pull-down switching voltage V_sw,pd, i.e. Y = V_Y*, the inverter input at which its output equals V_sw,pd",
+ "laws": {
+  "switching_point": "V_Y* replaces V_sw of the lower branch; delta_Y = V_Y*,k - V_Y*,nom comes from the inverter nMOS and pMOS and, divided by the inverter gain, from the pull-down",
+  "supply": "dx = (G/dG) (r - 1), r = (D - a delta_Y)/(D - delta_Y) (exact form for a linear PCM; E2 used the first-order equivalent ln r)",
+  "dac_remap": "dx = (G/dG) [eps(aI) - eps(I)], eps(I) = sum_p s_p(I) z_p + lambda(I) delta_Y, at V_DS = V_Y*,nom (E2 law)",
+  "sigma_delta_Y": "sqrt of the sum of squared central-difference sensitivities of V_Y* to the 12 mismatch parameters (inverter nMOS 4, inverter pMOS 4, pull-down 4)",
+  "rms": "predicted rms (LSB) = 15 sqrt(mean over theta of E[dx^2]); E[(r - 1)^2] by the trapezoid rule on [-6 sigma, 6 sigma], delta >= 0.95 D dropped",
+  "inputs_allowed": "nominal and +-1 sigma single-device and single-inverter simulations only (no Monte Carlo)"
+ },
+ "models": {
+  "source": "https://github.com/google/skywater-pdk-libs-sky130_fd_pr",
+  "commit": "f62031a1be9aefe902d6d54cddd6f59b57627436",
+  "subset_dir": "third_party/sky130_fd_pr_subset_e3b",
+  "lib": "sky130_subset_tt.lib.spice",
+  "note": "tt; nfet_01v8, nfet_01v8_lvt (files identical to the corner subset) and pfet_01v8 (same per-instance mismatch patch)"
+ },
+ "circuit": {
+  "vdd": 1.8,
+  "divider_device": "nfet_01v8",
+  "pulldown": {"device": "nfet_01v8_lvt", "w_um": 0.42, "l_um": 0.15},
+  "inverters": {
+   "INV_S": {
+    "n_dev": "nfet_01v8",
+    "wn": 2.0,
+    "ln": 0.15,
+    "p_dev": "pfet_01v8",
+    "wp": 0.42,
+    "lp": 4.0,
+    "note": "skewed (strong nMOS, weak pMOS): V_Y* close to the lower branch's V_sw so that SL_hi stays near SL_lo"
+   },
+   "INV_M": {"n_dev": "nfet_01v8", "wn": 0.42, "ln": 0.15, "p_dev": "pfet_01v8", "wp": 0.42, "lp": 0.15, "note": "minimum-size devices: higher trip point, larger mismatch"}
+  },
+  "criterion": "V_sw,pd = gate voltage at which the pull-down conducts 100 nA * W/L with V_DS = 1.8 V; V_Y* = inverter input at which the unloaded inverter output equals V_sw,pd",
+  "v_sl_rule": "V_SL_hi,nom = V_Y*,nom + D",
+  "g_lo_us": 2.5,
+  "g_hi_us": 22.5,
+  "programming": "threshold verify: G_k(theta) = I_div,k(M0(theta)) / (V_SL,nom - V_Y*,k), divider at V_DS = V_Y*,k; no clipping"
+ },
+ "conditions": [
+  {"id": "U1", "w_div_um": 0.42, "l_div_um": 0.15, "d_v": 0.2, "inverter": "INV_S"},
+  {"id": "U2", "w_div_um": 1.0, "l_div_um": 0.5, "d_v": 0.2, "inverter": "INV_S"},
+  {"id": "U3", "w_div_um": 0.42, "l_div_um": 4.0, "d_v": 0.2, "inverter": "INV_S"},
+  {"id": "U4", "w_div_um": 0.42, "l_div_um": 0.15, "d_v": 0.2, "inverter": "INV_M"},
+  {"id": "U5", "w_div_um": 0.42, "l_div_um": 4.0, "d_v": 0.2, "inverter": "INV_M"}
+ ],
+ "condition_note": "tt, 27 C; the divider geometries are those of E1 P1 (L 0.15), E2 G1 (1/0.5) and E1 P3 (L 4) so that the upper branch can be compared with the lower branch",
+ "feasibility_rule": "a condition is dropped before the Monte Carlo phase if the nominal bound at G = 30 uS exceeds 1.75 V",
+ "mismatch": {
+  "n_instances": 300,
+  "base_seed": 20261014,
+  "rng_stream": 4,
+  "rng": "numpy.random.default_rng([base_seed, rng_stream]); then, in this order, standard_normal((n, 4)) for the divider, the pull-down, the inverter nMOS and the inverter pMOS; columns (vth0, toxe, voff, nfactor); fresh draws",
+  "settings": {"pdk": "all four devices mismatched", "div_only": "divider only (V_Y* nominal)", "y_only": "inverter and pull-down only (divider nominal at V_DS = V_Y*,k)"}
+ },
+ "drift": {"nu": 0.049, "t0_s": 20, "times_s": {"1d": 86400, "30d": 2592000, "1y": 31536000}, "model": "uniform factor a = (t/t0)^-nu, perfect tracking"},
+ "nodes": ["none", "dac_remap", "supply", "ideal"],
+ "metric": "input-referred bound error 15 (x_eff - theta) in LSB, rms over all (instance, theta) pairs; x_eff from the exact inverse of the nominal map (G(x_eff) D = I_0(b) for M0, G(x_eff) a D = I_0(b) for Ma)",
+ "sweep": {"vg_start": 0.0, "vg_stop": 1.8, "vg_step": 0.0005},
+ "checks": {
+  "C1": "nominal full upper branch (PCM resistor, divider, inverter; bound where the inverter output equals V_sw,pd,nom) equals the I-V inversion with V_Y*,nom within 0.05 mV; G in {2.5, 12.5, 22.5} uS, V_SL,nom and V_SL(1 year)",
+  "C2": "zero mismatch: dac_remap, supply and ideal errors <= 0.001 LSB",
+  "C3": "ideal node <= 0.001 LSB on all valid pairs",
+  "C4": "setup check (mismatch hooks active in all four devices): Monte Carlo sigma of V_Y* within +-50 % of the predicted sigma_delta_Y, every condition. The accuracy of the sigma_delta_Y prediction is not a stop rule: it is reported (secondary) and tested through A1, because the supply-node predictions depend on it",
+  "C5": "invalid pairs <= 1 % per condition, setting, node (none excluded)",
+  "C7": "nominal V_Y* and nominal divider curve identical in both phases",
+  "stop_rule": "any failed check stops the run before the criteria are evaluated"
+ },
+ "criteria": {
+  "tolerance": "a prediction passes if |pred - sim| <= max(0.15 sim, 0.02 LSB)",
+  "A1": "pdk, 1 year, dac_remap and supply: at least 90 % of the (condition, node) pairs pass (10 pairs: at most 1 failure)",
+  "A2": "pdk, 1 year: in every condition whose predicted gap is >= 20 % of the larger prediction, the predicted better node is the simulated better node",
+  "A3": "secondary: div_only (dac_remap) and y_only (dac_remap, supply), 1 year: at least 90 % pass (reported)",
+  "decision": "the laws hold for the upper branch if A1 and A2 hold",
+  "secondary": "1 day and 30 days; sigma_delta_Y Monte Carlo versus prediction (relative difference); comparison of sigma_delta_Y with the lower branch's sigma_delta (E2: 22.61 mV predicted); per-theta profiles"
+ },
+ "smoke": {"n_instances": 10, "conditions": ["U1", "U4"], "note": "program check only"}
+}

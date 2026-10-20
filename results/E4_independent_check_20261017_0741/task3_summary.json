@@ -1,0 +1,71 @@
+{
+ "threshold_uV": 50.0,
+ "per_type": {
+  "L6T": {
+   "max_abs_diff_uV_inst1_20": 0.032697410889959144,
+   "mean_diff_uV_inst1_20": -0.02249900014072992,
+   "nominal_diff_uV": -0.03273516024915324,
+   "pass": true
+  },
+  "UINV": {
+   "max_abs_diff_uV_inst1_20": 0.8281194856518681,
+   "mean_diff_uV_inst1_20": -0.5219018230306904,
+   "nominal_diff_uV": -0.7448519466768388,
+   "pass": true
+  },
+  "LBUF": {
+   "max_abs_diff_uV_inst1_20": 0.7918235257475814,
+   "mean_diff_uV_inst1_20": -0.5298055535896129,
+   "nominal_diff_uV": -0.39840004439906096,
+   "pass": true
+  },
+  "LBUF_Wstar": {
+   "max_abs_diff_uV_inst1_20": 0.8169948577663178,
+   "mean_diff_uV_inst1_20": -0.5161655341978655,
+   "nominal_diff_uV": -0.7448519466768388,
+   "pass": true
+  }
+ },
+ "vsw_nominal_indep_V": 0.5262214743127451,
+ "vsw_nominal_main_V": 0.5262215070479054,
+ "interp_error_estimate_uV": {
+  "pull_down": 0.0013544005916799051,
+  "inverter": 0.0013344044758056839
+ },
+ "inverter_0p5mV_grid_emulation_max_abs_diff_uV": {
+  "UINV": 0.0014891308186548713,
+  "LBUF": 0.00010426914887062821,
+  "LBUF_Wstar": 0.0014658078084650583
+ },
+ "inverter_grid_note": "inverter crossings from the same SPICE data reduced to 0.5 mV knots (config 'inverter_step') with linear interpolation, targets = fine pull-down V_sw; agreement here shows that the sub-uV inverter differences are the main run's 0.5 mV grid interpolation error",
+ "pool_v_sp_identical_P1_P3_and_chain": true,
+ "spice_options": "reltol=1e-7 abstol=1e-16 vntol=1e-10",
+ "pass": true,
+ "extras": {
+  "pulldown_ln_w_max_abs_diff_Vsw-0.25..+0.05": {
+   "L6T": 2.865825035058833e-07,
+   "UINV": 5.049020881386923e-07
+  },
+  "ln_ref_indep_minus_main": 0.0,
+  "inverter_transfer_max_abs_diff_mV": {
+   "UINV_t_first": 0.17925561629206221,
+   "LBUF_t_first": 0.17933020216798212,
+   "LBUF_t_second": 0.17885965279251792
+  },
+  "inverter_transfer_max_abs_diff_mV_from_0.5mV_knots": {
+   "UINV_t_first": 0.004361564359456338,
+   "LBUF_t_first": 0.0031025163287345947,
+   "LBUF_t_second": 0.0037594030748433482
+  },
+  "divider_bound_voltage_max_abs_diff_uV_0.2-5uA": {
+   "P1/L6T": 0.4615606010727191,
+   "P1/UINV": 0.48900083060576804,
+   "P1/LBUF": 0.47930044766442137,
+   "P3/L6T": 0.5989689690899525,
+   "P3/UINV": 0.5982043869146025,
+   "P3/LBUF": 0.6123660356571747
+  },
+  "note": "extras use the instrument's own v_sp[k] as drain voltage; SPICE curves on a 0.5 mV grid with linear interpolation in ln I"
+ },
+ "elapsed_s": 27.3
+}

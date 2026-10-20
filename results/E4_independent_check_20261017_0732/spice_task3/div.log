@@ -1,0 +1,28 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: * e4 independent: divider curves at v_ds = v_sp[k]
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+ Reference value :  2.04000e-01
+ Reference value :  3.10000e-01
+ Reference value :  4.34000e-01
+ Reference value :  5.60000e-01
+ Reference value :  6.86500e-01
+ Reference value :  8.07000e-01
+ Reference value :  9.34500e-01
+ Reference value :  1.04700e+00
+ Reference value :  1.17150e+00
+ Reference value :  1.28550e+00
+ Reference value :  1.38800e+00
+ Reference value :  1.48700e+00
+ Reference value :  1.58950e+00
+ Reference value :  1.69300e+00
+ Reference value :  1.78900e+00
+No. of Data Rows : 3201
+binary raw file "div.raw"
+ngspice-42 done
+Using SPARSE 1.3 as Direct Linear Solver

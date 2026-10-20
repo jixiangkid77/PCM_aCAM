@@ -1,0 +1,1 @@
+Superseded: C4 changed to a +-50 % setup check before freezing (see docs/E3b_protocol.md section 0).

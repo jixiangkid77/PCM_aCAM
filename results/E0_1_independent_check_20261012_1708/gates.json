@@ -1,0 +1,80 @@
+{
+  "gate_A": "PASS",
+  "gate_B": "PASS",
+  "gate_C": "PASS",
+  "verdict": "GO",
+  "failing_gates": [],
+  "details": {
+    "gate_A": {
+      "rule": "PASS if some scheme in {V1_abs_full, V2_abs_high, V3_ratio} has mean_loss(prog) <= 2.0 pp and max_loss(prog) <= 5.0 pp",
+      "per_scheme": {
+        "V1_abs_full": {
+          "mean_loss_prog": -0.5082469135802465,
+          "max_loss_prog": -1.4802973661668755e-15,
+          "meets_A": true
+        },
+        "V2_abs_high": {
+          "mean_loss_prog": 0.29672254710851254,
+          "max_loss_prog": 0.8024691358024689,
+          "meets_A": true
+        },
+        "V3_ratio": {
+          "mean_loss_prog": 1.0151994801819366,
+          "max_loss_prog": 2.8622222222222216,
+          "meets_A": true
+        }
+      }
+    },
+    "gate_B": {
+      "rule": "PASS if, for the absolute scheme (V1 or V2) with the smaller mean_loss(prog), the untracked mean_loss(all@1d) >= 10.0 pp",
+      "mean_loss_prog": {
+        "V1_abs_full": -0.5082469135802465,
+        "V2_abs_high": 0.29672254710851254
+      },
+      "chosen_scheme": "V1_abs_full",
+      "untracked_mean_loss_all@1d": 18.3677037037037
+    },
+    "gate_C": {
+      "rule": "PASS if some scheme in {V1_abs_full + replica, V2_abs_high + replica, V3_ratio} that meets the gate-A criteria has mean_loss(all@30d) <= 5.0 pp",
+      "candidates": {
+        "V1_abs_full+replica": {
+          "meets_A": true,
+          "mean_loss_prog": -0.5082469135802465,
+          "max_loss_prog": -1.4802973661668755e-15,
+          "mean_loss_all@30d": 0.42372969460688753,
+          "passes_C": true
+        },
+        "V2_abs_high+replica": {
+          "meets_A": true,
+          "mean_loss_prog": 0.29672254710851254,
+          "max_loss_prog": 0.8024691358024689,
+          "mean_loss_all@30d": 3.6892371669915542,
+          "passes_C": true
+        },
+        "V3_ratio+none": {
+          "meets_A": true,
+          "mean_loss_prog": 1.0151994801819366,
+          "max_loss_prog": 2.8622222222222216,
+          "mean_loss_all@30d": 5.003950617283952,
+          "passes_C": false
+        }
+      }
+    }
+  },
+  "scope": {
+    "datasets": [
+      "iris",
+      "wine",
+      "breast_cancer",
+      "digits",
+      "synthetic"
+    ],
+    "splits": [
+      0,
+      1,
+      2
+    ],
+    "device_seeds": 5,
+    "bits": 4
+  }
+}

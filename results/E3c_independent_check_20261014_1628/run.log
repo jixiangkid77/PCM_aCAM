@@ -1,0 +1,41 @@
+[2026-10-14 16:28:44] E3c independent check, root /home/claude/PCM_aCAM, work /home/claude/PCM_aCAM/logs/E3c_independent_work/run_20261014_1628, out /home/claude/PCM_aCAM/results/E3c_independent_check_20261014_1628
+[2026-10-14 16:28:44] stage 1: V_sw
+[2026-10-14 16:28:44]   V_sw = 0.526221473393 V (I rel err -2.89e-15)
+[2026-10-14 16:28:44] stage 2: t_s(1), t_s(16)
+[2026-10-14 16:28:44]   t_s(1) = 2.4279538747e-07 s (pre-run with 2 us stop: 2.4279538747e-07)
+[2026-10-14 16:28:46]   t_s(16) = 3.3105610572e-07 s (pre-run with 2 us stop: 3.3105610572e-07)
+[2026-10-14 16:28:46] stage 3: divider map, lambda, leaker V_X
+[2026-10-14 16:28:46]   lambda(I)  = [-1.1742037826079965, -1.0149193811443524, -0.9126070713335821, -0.8382747070779573]
+[2026-10-14 16:28:46]   lambda(aI) = [-1.220103267688799, -1.1150533843059307, -1.0398671016847771, -0.9799713857214343]
+[2026-10-14 16:28:46]   ('k4d6', 't0'): V_X = 0.426471065 V (op 0.426471065; V_X - V_sw = -99.7504 mV)
+[2026-10-14 16:28:46]   ('k4d6', 'dac_1y'): V_X = 0.429810156 V (op 0.429810156; V_X - V_sw = -96.4113 mV)
+[2026-10-14 16:28:46]   ('k4d6', 'supply_1y'): V_X = 0.362487771 V (op 0.362487771; V_X - V_sw = -163.7337 mV)
+[2026-10-14 16:28:46]   ('k15d7.5', 't0'): V_X = 0.403553408 V (op 0.403553408; V_X - V_sw = -122.6681 mV)
+[2026-10-14 16:28:46]   ('k15d7.5', 'dac_1y'): V_X = 0.408052192 V (op 0.408052192; V_X - V_sw = -118.1693 mV)
+[2026-10-14 16:28:46]   ('k15d7.5', 'supply_1y'): V_X = 0.327215089 V (op 0.327215089; V_X - V_sw = -199.0064 mV)
+[2026-10-14 16:28:51]   ('k4d6', 't0'): CUT off crossing 7.804694e-07 s (full-branch leakers 7.805857e-07); false mismatch = False
+[2026-10-14 16:28:51]   ('k4d6', 'dac_1y'): CUT off crossing 7.220987e-07 s (full-branch leakers 7.223246e-07); false mismatch = False
+[2026-10-14 16:28:51]   ('k4d6', 'supply_1y'): CUT off crossing inf s (full-branch leakers inf); false mismatch = False
+[2026-10-14 16:28:51]   ('k15d7.5', 't0'): CUT off crossing 3.565084e-07 s (full-branch leakers 3.566243e-07); false mismatch = False
+[2026-10-14 16:28:51]   ('k15d7.5', 'dac_1y'): CUT off crossing 3.206326e-07 s (full-branch leakers 3.208570e-07); false mismatch = True
+[2026-10-14 16:28:51]   ('k15d7.5', 'supply_1y'): CUT off crossing inf s (full-branch leakers inf); false mismatch = False
+[2026-10-14 16:28:51] stage 3d: pull-down-only bisection
+[2026-10-14 16:29:55]   V_sw,tr(16) = 0.5262214257 (V_sw 0.5262214734, diff -0.048 uV); V_sw,tr(1) = 0.5262215211
+[2026-10-14 16:29:55]   ('k4d6', 't0'): delta_l = -25.27862 mV; pred shift = 0.30062, 1.07020, 1.81308, 2.53997
+[2026-10-14 16:29:55]   ('k4d6', 'dac_1y'): delta_l = -28.05694 mV; pred shift = 0.33749, 1.21359, 2.06676, 2.90371
+[2026-10-14 16:29:55]   ('k4d6', 'supply_1y'): delta_l = -4.52186 mV; pred shift = 0.03116, 0.10922, 0.18308, 0.25441
+[2026-10-14 16:29:55]   ('k15d7.5', 't0'): delta_l = -116.60827 mV; pred shift = 1.52875, 5.37575, 9.03444, 12.58198
+[2026-10-14 16:29:55]   ('k15d7.5', 'supply_1y'): delta_l = -7.45841 mV; pred shift = 0.05155, 0.18062, 0.30268, 0.42053
+[2026-10-14 16:29:55] stage 4: full-row bisection
+[2026-10-14 16:34:04]   k4d6|t0|0.0: bound 0.687342539 V, error 0.29979, iso -0.00090, shift 0.30069 LSB (pred 0.30062)
+[2026-10-14 16:34:04]   k15d7.5|t0|0.0: bound 0.711909669 V, error 1.53315, iso -0.00090, shift 1.53405 LSB (pred 1.52875)
+[2026-10-14 16:34:04]   k4d6|t0|1.0: bound 0.829284328 V, error 2.52753, iso -0.00090, shift 2.52843 LSB (pred 2.53997)
+[2026-10-14 16:34:04]   k15d7.5|t0|1.0: bound 0.865662914 V, error 12.28940, iso -0.00090, shift 12.29030 LSB (pred 12.58198)
+[2026-10-14 16:34:04]   k4d6|dac_1y|0.0: bound 0.652851855 V, error 0.33598, iso -0.00181, shift 0.33780 LSB (pred 0.33749)
+[2026-10-14 16:34:04]   k4d6|dac_1y|1.0: bound 0.777855070 V, error 2.89016, iso -0.00182, shift 2.89198 LSB (pred 2.90371)
+[2026-10-14 16:34:04]   k4d6|supply_1y|0.0: bound 0.680410423 V, error 0.03025, iso -0.00090, shift 0.03115 LSB (pred 0.03116)
+[2026-10-14 16:34:04]   k15d7.5|supply_1y|0.0: bound 0.680963495 V, error 0.05064, iso -0.00090, shift 0.05155 LSB (pred 0.05155)
+[2026-10-14 16:34:04]   k4d6|supply_1y|1.0: bound 0.819118326 V, error 0.25323, iso -0.00090, shift 0.25413 LSB (pred 0.25441)
+[2026-10-14 16:34:04]   k15d7.5|supply_1y|1.0: bound 0.819890078 V, error 0.41904, iso -0.00090, shift 0.41994 LSB (pred 0.42053)
+[2026-10-14 16:34:04] ITEMS: {"t_s16": {"pass_": true, "max_abs_rel_diff": 3.1933442667941847e-07, "threshold": 0.0001}, "vx": {"pass_": true, "max_abs_diff_mV": 0.00035854586283301515, "threshold_mV": 0.01}, "delta_l": {"pass_": true, "max_abs_diff_mV": 0.0014114379881533523, "threshold_mV": 0.01, "n": 5}, "false_mismatch": {"pass_": true, "flags": {"k4d6|t0": [false, false], "k4d6|dac_1y": [false, false], "k4d6|supply_1y": [false, false], "k15d7.5|t0": [false, false], "k15d7.5|dac_1y": [true, true], "k15d7.5|supply_1y": [false, false]}}, "pred_shift": {"pass_": true, "max_abs_diff_lsb_theta01": 0.00016648535560292999, "max_abs_diff_lsb_all4": 0.00016648535560292999, "threshold_lsb": 0.01, "n_gated": 10}, "fullrow_shift": {"pass_": true, "max_abs_diff_lsb": 0.000170693110288056, "threshold_lsb": 0.01, "n": 10}, "fullrow_isolated_error": {"pass_": true, "max_abs_diff_lsb_t3": 8.241626897609322e-07, "max_abs_diff_lsb_t2": 8.241626897609322e-07, "threshold_lsb": 0.01, "n_t2": 6}}
+[2026-10-14 16:34:04] overall pass = True; 42 ngspice runs; 321 s

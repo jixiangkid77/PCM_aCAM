@@ -1,0 +1,103 @@
+{
+  "C1": {
+    "P1": {
+      "max_abs_diff_mV": 0.0003331830741304387,
+      "pass": true
+    },
+    "S1": {
+      "max_abs_diff_mV": 0.00030102020498468107,
+      "pass": true
+    },
+    "G1": {
+      "max_abs_diff_mV": 0.0003621395312514153,
+      "pass": true
+    },
+    "P3": {
+      "max_abs_diff_mV": 0.00022364557716869626,
+      "pass": true
+    }
+  },
+  "C2": {
+    "P1": {
+      "max_abs_lsb": 5.684341886080802e-14,
+      "pass": true
+    },
+    "S1": {
+      "max_abs_lsb": 3.126388037344441e-13,
+      "pass": true
+    },
+    "G1": {
+      "max_abs_lsb": 5.684341886080802e-14,
+      "pass": true
+    },
+    "P3": {
+      "max_abs_lsb": 5.3290705182007514e-14,
+      "pass": true
+    }
+  },
+  "C3": {
+    "P1": {
+      "max_abs_lsb": 4.6629367034256575e-14,
+      "pass": true
+    },
+    "S1": {
+      "max_abs_lsb": 4.3298697960381105e-14,
+      "pass": true
+    },
+    "G1": {
+      "max_abs_lsb": 4.163336342344337e-14,
+      "pass": true
+    },
+    "P3": {
+      "max_abs_lsb": 4.6629367034256575e-14,
+      "pass": true
+    }
+  },
+  "C4": {
+    "P1": {
+      "sigma_mc_mV": 24.883931630666282,
+      "sigma_pred_mV": 22.612248930355932,
+      "tolerance": 0.15,
+      "pass": true
+    },
+    "S1": {
+      "sigma_mc_mV": 24.883931630666282,
+      "sigma_pred_mV": 22.612248930355932,
+      "tolerance": 0.15,
+      "pass": true
+    },
+    "G1": {
+      "sigma_mc_mV": 24.883931630666282,
+      "sigma_pred_mV": 22.612248930355932,
+      "tolerance": 0.15,
+      "pass": true
+    },
+    "P3": {
+      "sigma_mc_mV": 24.883931630666282,
+      "sigma_pred_mV": 22.612248930355932,
+      "tolerance": 0.15,
+      "pass": true
+    }
+  },
+  "C5": {},
+  "C7": {
+    "P1": {
+      "identical": true,
+      "pass": true
+    },
+    "S1": {
+      "identical": true,
+      "pass": true
+    },
+    "G1": {
+      "identical": true,
+      "pass": true
+    },
+    "P3": {
+      "identical": true,
+      "pass": true
+    }
+  },
+  "failed": [],
+  "all_pass": true
+}

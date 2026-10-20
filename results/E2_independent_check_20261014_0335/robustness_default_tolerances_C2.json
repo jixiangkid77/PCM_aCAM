@@ -1,0 +1,11 @@
+{
+ "condition": "C2",
+ "note": "Task 2 rerun with ngspice default tolerances vs tight tolerances",
+ "max_abs_diff_err_lsb": {
+  "dac_remap": 1.0813572259849025e-13,
+  "supply": 1.2156942119645464e-13
+ },
+ "max_abs_diff_bound_V": 5.551115123125783e-16,
+ "max_abs_diff_M0_V": 2.220446049250313e-16,
+ "max_abs_diff_vsw_V": 0.0
+}

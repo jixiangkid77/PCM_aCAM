@@ -1,0 +1,95 @@
+{
+  "cam_vs_quantized_traversal_split0": {
+    "iris": {
+      "n_test": 45,
+      "prediction_mismatches": 0,
+      "leaf_mismatches_or_not_exactly_one_match": 0
+    },
+    "wine": {
+      "n_test": 54,
+      "prediction_mismatches": 0,
+      "leaf_mismatches_or_not_exactly_one_match": 0
+    },
+    "breast_cancer": {
+      "n_test": 171,
+      "prediction_mismatches": 0,
+      "leaf_mismatches_or_not_exactly_one_match": 0
+    },
+    "digits": {
+      "n_test": 540,
+      "prediction_mismatches": 0,
+      "leaf_mismatches_or_not_exactly_one_match": 0
+    },
+    "synthetic": {
+      "n_test": 1500,
+      "prediction_mismatches": 0,
+      "leaf_mismatches_or_not_exactly_one_match": 0
+    }
+  },
+  "ideal_cam_one_match_per_tree_all_splits": {
+    "iris/split0": 0,
+    "iris/split1": 0,
+    "iris/split2": 0,
+    "wine/split0": 0,
+    "wine/split1": 0,
+    "wine/split2": 0,
+    "breast_cancer/split0": 0,
+    "breast_cancer/split1": 0,
+    "breast_cancer/split2": 0,
+    "digits/split0": 0,
+    "digits/split1": 0,
+    "digits/split2": 0,
+    "synthetic/split0": 0,
+    "synthetic/split1": 0,
+    "synthetic/split2": 0
+  },
+  "float_threshold_cam_vs_sklearn_split0": {
+    "iris": {
+      "agreement": 1.0,
+      "n_disagree": 0
+    },
+    "wine": {
+      "agreement": 1.0,
+      "n_disagree": 0
+    },
+    "breast_cancer": {
+      "agreement": 1.0,
+      "n_disagree": 0
+    },
+    "digits": {
+      "agreement": 1.0,
+      "n_disagree": 0
+    },
+    "synthetic": {
+      "agreement": 1.0,
+      "n_disagree": 0
+    }
+  },
+  "zero_noise_tracking_check_split0": {
+    "iris": 4.440892098500626e-16,
+    "wine": 4.440892098500626e-16,
+    "breast_cancer": 4.440892098500626e-16,
+    "digits": 4.440892098500626e-16,
+    "synthetic": 4.440892098500626e-16
+  },
+  "hand_values_check3": {
+    "max_abs_err_formula": 0.0,
+    "pass_1e-12": true,
+    "max_abs_err_vs_rounded_literals": 2.6094573743126737e-08,
+    "literal_pass_1e-6": true,
+    "values": {
+      "sigma0": 0.26348,
+      "sigma12.5": 0.9527050000000001,
+      "sigma25": 1.0553800000000002,
+      "mu0.025": 0.1,
+      "sd0.025": 0.045,
+      "mu5": 0.049346287642728554,
+      "sd5": 0.014217973905426257,
+      "mu25": 0.049,
+      "sd25": 0.008
+    }
+  },
+  "SELF_CHECK_total_prediction_mismatches": 0,
+  "SELF_CHECK_total_leaf_mismatches": 0,
+  "SELF_CHECK_pass": true
+}

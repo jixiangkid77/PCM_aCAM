@@ -1,0 +1,21 @@
+{
+ "note": "supplementary files written after run_check.py (outside the protocol pass/fail)",
+ "commands": [
+  "python extra_supply_law_form.py /home/claude/PCM_aCAM/results/E2_independent_check_20261014_0335",
+  "python extra_tolerance_robustness.py /home/claude/PCM_aCAM/results/E2_independent_check_20261014_0335 C2"
+ ],
+ "sha256": {
+  "README.md": "ee19d2c86d1dfaef6f0c6cc74f2756acf6a19b2cc84ef0a389da44ccc56e3aaf",
+  "extra_supply_law_form.py": "1b8bc07c538eb468a67404db51550d81e77cb368efdd3bf710276def5ffbff47",
+  "extra_tolerance_robustness.py": "70bda91c6c0b3f276fc3865a9e9ef99107f72a2f27fd10d18d282ad060235806",
+  "ind_core.py": "2188d8f0f2848519c6976a4789bad851b4d574812040991c869918784375d4ac",
+  "ind_spice.py": "9030b72faf35ca83320c4bb6502b1b9c3abbd51563e234457eed3c921c45b413",
+  "run_check.py": "96797a81bc1961de958c5dc079fb09ff809aeb0b7fee1fa7231750da8080fb0f",
+  "task1_predictor.py": "e9eb6b7b04d0321eb09c1c79a231f8ad319236d33ce9ef404781040953635b95",
+  "task2_branch_mc.py": "61653f4cd7e45e30c6277079c3fc02db0b7eca382a297df75fcdc046b33ff5ce"
+ },
+ "outputs": {
+  "supplementary_supply_law_form.json": "5858c70a7f67d07d6797b0c8a02adb791984a1a951f3eff60f4a97bdb5b3d7f0",
+  "robustness_default_tolerances_C2.json": "d38cec08c67ba68d64234c59216f5439bcaee1d61fc71c7b1579cc4a67c3f6cd"
+ }
+}

@@ -1,0 +1,29 @@
+{
+  "experiment": "E1",
+  "smoke": false,
+  "start_jst": "2026-10-14T01:51:18+09:00",
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39"
+  },
+  "ngspice": "ngspice-42 : Circuit level simulation program",
+  "sha256": {
+    "experiments/E1_config.json": "fef075d845c6328899c11148927bd065862fcc1ae3c8b58b24025fbd0ac7acf7",
+    "experiments/E1_spice_bound.py": "a3c0913a9890d89d77b2279e71a21487a2d4dbb33c91d6cda9af245b7d3e5860",
+    "src/pcm_acam/spice_iv.py": "8d5116423bd57c133f81ada89c0bd2fa8d3596e16fbc9851b6ddf347a60a9b8c",
+    "src/pcm_acam/branch_post.py": "216464c9194d22651f859dacca9d22ee4e338a149d85302c5b21f442fba9f2d9",
+    "src/pcm_acam/sky130_models.py": "74986d89a376c77e120fc1bdefb6fb1c8d27c6cf568f45e2738f8f7976e91baf",
+    "third_party/sky130_fd_pr_subset/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "third_party/sky130_fd_pr_subset/MANIFEST.json": "37e354f50570f1e21f5cd1fbac57dd0ced28ee290d9017b356677360fe531070",
+    "third_party/sky130_fd_pr_subset/lod.spice": "6200b50c14eebb68d8009ca68e452d4c045e2d25d7438ee417c155883527fd7c",
+    "third_party/sky130_fd_pr_subset/sky130_fd_pr__nfet_01v8__mismatch.corner.spice": "24a3b29d7d7f26f99098811c31eb5497950a3aed520ab83768a96f35467fe818",
+    "third_party/sky130_fd_pr_subset/sky130_fd_pr__nfet_01v8__tt.corner.spice": "0c03b2e5727c414942f1d2b27e19a68724fb84be90b2c73b361ad41779311130",
+    "third_party/sky130_fd_pr_subset/sky130_fd_pr__nfet_01v8__tt.pm3.spice": "566aa156f1c71bd963030f760e1862569593ceba740e81ecede32fad974d5875",
+    "third_party/sky130_fd_pr_subset/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice": "1855038a2ad2fe3989b64a17128d47daaa3dbc15d0f4db2c4526988923daa311",
+    "third_party/sky130_fd_pr_subset/sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice": "716b48c11275bb1edbb228807f1b8849453884adf498ac7c57a31b9295335f2b",
+    "third_party/sky130_fd_pr_subset/sky130_fd_pr__nfet_01v8_lvt__tt.pm3.spice": "8969f1112446ab7c5b138bd83904fe27f4c5a0448db587198274b9fab96ee117",
+    "third_party/sky130_fd_pr_subset/sky130_subset_tt.lib.spice": "2338df6f3ca08d7b45ec398ed4c5e7b05d921e0ea10e5669e3a355d0c9e8c2b7"
+  }
+}

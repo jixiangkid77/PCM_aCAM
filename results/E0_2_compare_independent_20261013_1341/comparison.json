@@ -1,0 +1,22 @@
+{
+  "main_run": "E0_2_20261013_1325",
+  "independent_run": "E0_2_independent_check_20261013_1338",
+  "main_decision_sha256": "dc08648d702479eae18380f63c278e4c1b9d3f7000a2fe15f90df6b41d637c9d",
+  "independent_gates_sha256": "2478afca89f5a10183a4b881605e50fefe280464082e437721b7476d0c1cca34",
+  "evaluations_compared": 1800,
+  "evaluations_missing_in_independent": 0,
+  "acc_identical": 1800,
+  "acc_max_abs_diff": 0.0,
+  "integrity_max_abs_diff": 0.0,
+  "a_hat_max_abs_diff": 0.0,
+  "acc_ref_max_abs_diff": 0.0,
+  "clipped_main": 2206,
+  "clipped_independent": 2206,
+  "summary_cells_compared": 24,
+  "mean_loss_pp_max_abs_diff": 7.105427357601002e-15,
+  "max_loss_pp_max_abs_diff": 0.0,
+  "verdict_main": "NO_GO",
+  "verdict_independent": "NO_GO",
+  "verdict_identical": true,
+  "compared_at_jst": "2026-10-13T13:41:45.208587+09:00"
+}

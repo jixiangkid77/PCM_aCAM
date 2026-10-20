@@ -1,0 +1,164 @@
+{
+  "experiment": "E3c",
+  "name": "E3c_ml_transient",
+  "project": "PCM_aCAM",
+  "plan_version": "1.0",
+  "title": "Match-line transient sensing and row crosstalk at the two drift-compensation nodes (lower-bound branch, sky130, nominal devices)",
+  "models": {
+    "lib": "third_party/sky130_fd_pr_subset/sky130_subset_tt.lib.spice",
+    "note": "tt, 27 C; the E1 subset (byte-identical to the tt files of the corner subset)"
+  },
+  "circuit": {
+    "vdd": 1.8,
+    "divider_device": "nfet_01v8",
+    "pulldown_device": "nfet_01v8_lvt",
+    "pulldown": {
+      "w_um": 0.42,
+      "l_um": 0.15
+    },
+    "d_v": 0.2,
+    "g_lo_us": 2.5,
+    "g_hi_us": 22.5,
+    "criterion_quasi_static": "V_sw = gate voltage at which the pull-down conducts 100 nA * W/L with V_DS = 1.8 V (E1-E3b); V_SL,nom = V_sw + D"
+  },
+  "designs": [
+    {
+      "id": "P1",
+      "w_div_um": 0.42,
+      "l_div_um": 0.15
+    },
+    {
+      "id": "P3",
+      "w_div_um": 0.42,
+      "l_div_um": 4.0
+    }
+  ],
+  "ml": {
+    "v_pre": 1.8,
+    "v_ref": 0.9,
+    "c_sa_f": 5e-14,
+    "c_wire_per_cell_f": 1e-15,
+    "sources": "C_SA 50 fF: Pedretti et al., Nat. Commun. 12, 5806 (2021), Methods; wire 1.0 fF per cell: Mohan & Sachdev, IEEE JSSC 2007 (145 fF for 145 bits, 0.18 um); V_ref = V_pre / 2: ML delay defined at 50 % of the precharge voltage (Pagiamtzis & Sheikholeslami, IEEE JSSC 2006)",
+    "cells": "each cell puts two pull-downs on the ML: the lower-branch pull-down (gate = divider node X) and the upper-branch pull-down (gate = inverter output, 0 V for a matched cell)",
+    "precharge": "ML held at v_pre during the DC operating point (.ic, no UIC), released at t = 0; inputs and divider nodes settled before t = 0",
+    "sense_time": "t_s(N) = time at which a row of N cells with the nominal cell-under-test pull-down at V_sw (and every other gate at 0 V) crosses v_ref; the nominal transient switching voltage therefore equals the quasi-static V_sw for every N, so the cell design of E1-E3b is unchanged",
+    "t_step_s": 1e-10,
+    "t_max_s": 2e-10,
+    "t_stop_factor": 2.5
+  },
+  "rows": [
+    1,
+    16
+  ],
+  "drift": {
+    "nu": 0.049,
+    "t0_s": 20,
+    "times_s": {
+      "1y": 31536000
+    }
+  },
+  "nodes": [
+    "t0",
+    "dac_1y",
+    "supply_1y"
+  ],
+  "node_definitions": {
+    "t0": "PCM G(theta), V_SL,nom; input map M0",
+    "dac_1y": "PCM a G(theta), V_SL,nom; input map Ma(x) = B_nom(a G(x))",
+    "supply_1y": "PCM a G(theta), V_SL(t) = V_sw + D/a; input map M0"
+  },
+  "thetas": [
+    0.0,
+    0.3333333333333333,
+    0.6666666666666666,
+    1.0
+  ],
+  "crosstalk": {
+    "n_cells": 16,
+    "leaker_theta": 0.5,
+    "configs": [
+      {
+        "id": "k1d1",
+        "k": 1,
+        "d_lsb": 1.0
+      },
+      {
+        "id": "k1d3",
+        "k": 1,
+        "d_lsb": 3.0
+      },
+      {
+        "id": "k4d3",
+        "k": 4,
+        "d_lsb": 3.0
+      },
+      {
+        "id": "k4d6",
+        "k": 4,
+        "d_lsb": 6.0
+      },
+      {
+        "id": "k15d7.5",
+        "k": 15,
+        "d_lsb": 7.5
+      }
+    ],
+    "leakers": "k other cells of the same design, lower bound theta_j = 0.5, input x_j = theta_j + d_lsb/15 (matched, d_lsb LSB inside); their divider nodes drive their lower-branch pull-downs; programmed nominally (no mismatch); the cell under test is programmed with all other gates at 0 V (threshold verify with the other cells strongly matched)",
+    "map_d_lsb": [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      6.0,
+      7.5
+    ]
+  },
+  "laws": {
+    "T2": "isolated cell: the transient bound equals the quasi-static bound (error 0) at every node",
+    "T3": "crosstalk shifts the switching level by delta_l = V_sw,tr(with leakers) - V_sw (pull-down-only transient, leaker gates at their DC divider voltages); input-referred shift = -15 (G/dG) kappa delta_l / D with kappa = 1 (t0, dac) and a (supply)",
+    "T1": "transient switching-voltage mismatch: sigma_tr from +-1 sigma transient sensitivities of the pull-down equals the quasi-static sigma_delta within 5 %"
+  },
+  "bisection": {
+    "iters": 22,
+    "iters_smoke": 12,
+    "gate_window_v": 0.15,
+    "gate_window_leak_v": 0.3,
+    "input_window_v": 0.05,
+    "input_window_leak_v": 0.4
+  },
+  "criteria": {
+    "t1_rel_tol": 0.05,
+    "t2_tol_lsb": 0.02,
+    "t3_rel_tol": 0.1,
+    "t3_abs_tol_lsb": 0.02,
+    "t3_pass_rate": 0.9,
+    "T1": "|sigma_tr / sigma_qs - 1| <= 5 % for N = 1 and N = 16 (prediction written before the computation)",
+    "T2": "isolated cell (N = 1 and 16): |error| <= 0.02 LSB for every design, theta and node",
+    "T3": "crosstalk shift: |pred - sim| <= max(10 % sim, 0.02 LSB) for >= 90 % of the (design, configuration, node, theta) cases without predicted false mismatch",
+    "T4": "supply node at 1 year has a smaller |crosstalk shift| than the input remap in every (design, configuration, theta) where both are defined",
+    "decision": "validated if T2, T3 and T4 hold; T1 reported with its own verdict",
+    "checks": "V_sw,nom identical in both phases; every configuration predicted to give a false mismatch also gives one in the full-branch simulation"
+  },
+  "sweep": {
+    "vg_start": 0.0,
+    "vg_stop": 1.8,
+    "vg_step": 0.0005
+  },
+  "smoke": {
+    "designs": [
+      "P1"
+    ],
+    "thetas": [
+      0.0,
+      1.0
+    ],
+    "crosstalk_configs": [
+      {
+        "id": "k4d6",
+        "k": 4,
+        "d_lsb": 6.0
+      }
+    ],
+    "note": "program check only"
+  }
+}

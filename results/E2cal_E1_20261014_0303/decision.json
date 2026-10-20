@@ -1,0 +1,63 @@
+{
+  "A1": {
+    "pass_rate": 1.0,
+    "pass": true,
+    "n": 12,
+    "failures": []
+  },
+  "A2": {
+    "pass": true,
+    "n_clear": 6,
+    "rows": [
+      {
+        "condition": "P1",
+        "pred_better": "supply",
+        "sim_better": "supply",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "P2",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "P3",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "S1",
+        "pred_better": "supply",
+        "sim_better": "supply",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "S2",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      },
+      {
+        "condition": "S4",
+        "pred_better": "dac_remap",
+        "sim_better": "dac_remap",
+        "clear_prediction": true,
+        "agree": true
+      }
+    ]
+  },
+  "A3_secondary": {
+    "pass_rate": 1.0,
+    "pass": true,
+    "n": 18,
+    "failures": []
+  },
+  "laws_validated": true
+}

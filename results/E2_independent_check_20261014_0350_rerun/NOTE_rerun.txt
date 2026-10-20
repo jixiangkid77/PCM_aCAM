@@ -1,0 +1,2 @@
+Rerun of the delivered copy of experiments/E2_independent/ (paths made relative to the repository root; no other change). The four comparison CSV files and the independent_<cid>.npz arrays are identical to results/E2_independent_check_20261014_0335/.
+The folder was created as results/E2_independent_check_20261014_0350 and renamed to ..._0350_rerun right after the run (its run_info.json and logs/E2_independent_rerun.log still show the original name).

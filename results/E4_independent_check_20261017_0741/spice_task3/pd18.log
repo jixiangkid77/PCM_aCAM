@@ -1,0 +1,20 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: * e4 independent: pull-downs, v_ds = 1.8 v
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+ Reference value :  3.19300e-01
+ Reference value :  3.85200e-01
+ Reference value :  4.56000e-01
+ Reference value :  5.25500e-01
+ Reference value :  5.96000e-01
+ Reference value :  6.65300e-01
+ Reference value :  7.37200e-01
+No. of Data Rows : 5001
+binary raw file "pd18.raw"
+ngspice-42 done
+Using SPARSE 1.3 as Direct Linear Solver

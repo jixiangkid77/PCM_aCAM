@@ -1,0 +1,74 @@
+{
+ "source": "https://github.com/google/skywater-pdk-libs-sky130_fd_pr",
+ "commit": "f62031a1be9aefe902d6d54cddd6f59b57627436",
+ "files": {
+  "sky130_fd_pr__nfet_01v8__tt.pm3.spice (original)": "3d706d50cf2e57175aea78bcf27e4ee07d9f750b154a4b06e6090531364a831b",
+  "sky130_fd_pr__nfet_01v8_lvt__tt.pm3.spice (original)": "5aa88993ad3ca9c34a3191b545dc7b4cfaa0dcd348439a92a60040f9d22a43a2",
+  "sky130_fd_pr__nfet_01v8__ss.pm3.spice (original)": "5280e1a07ed54547a4393008dccc4c3c1640920a5741f507ad7db9467b809114",
+  "sky130_fd_pr__nfet_01v8_lvt__ss.pm3.spice (original)": "bcd14e02edee598d0b72dcf1b1002db64145049ae6f7ef1966e8bdd942d0c052",
+  "sky130_fd_pr__nfet_01v8__ff.pm3.spice (original)": "6b7859f53968eb8bd82a8febb6ab252bb98c550b6f2c3f743db9d9728c304405",
+  "sky130_fd_pr__nfet_01v8_lvt__ff.pm3.spice (original)": "ed22ba8b49ad5fe8ce3c09fe11a60c42262f8a0481d6abf50b4b887afa0c3b8c",
+  "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "lod.spice": "6200b50c14eebb68d8009ca68e452d4c045e2d25d7438ee417c155883527fd7c",
+  "sky130_fd_pr__nfet_01v8__ff.corner.spice": "440a5b78e0aa92f9cae53a7fc750493211c9e08dbdf0169de8396de0a53e7c55",
+  "sky130_fd_pr__nfet_01v8__ff.pm3.spice": "2d236f72ae96ad5023db6b80393252afc5601fc3097c9743c2fe061a32b5f492",
+  "sky130_fd_pr__nfet_01v8__mismatch.corner.spice": "24a3b29d7d7f26f99098811c31eb5497950a3aed520ab83768a96f35467fe818",
+  "sky130_fd_pr__nfet_01v8__ss.corner.spice": "896cd2d75e86826556819d92048c99a14bab6b9e4ae9d9295519a1bd64a3210f",
+  "sky130_fd_pr__nfet_01v8__ss.pm3.spice": "3e121e24ffd0c2d2b599f79716decf14ee0e502f6db53a89c7f2c50220d3f247",
+  "sky130_fd_pr__nfet_01v8__tt.corner.spice": "0c03b2e5727c414942f1d2b27e19a68724fb84be90b2c73b361ad41779311130",
+  "sky130_fd_pr__nfet_01v8__tt.pm3.spice": "566aa156f1c71bd963030f760e1862569593ceba740e81ecede32fad974d5875",
+  "sky130_fd_pr__nfet_01v8_lvt__ff.corner.spice": "e84da569821a546bb7d59834543d680b1bd09523f5951ff5be0c67ff32370601",
+  "sky130_fd_pr__nfet_01v8_lvt__ff.pm3.spice": "1839a9169ea1504bfe51184c4920daffbe6a70510b87e02fa933653129485a98",
+  "sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice": "1855038a2ad2fe3989b64a17128d47daaa3dbc15d0f4db2c4526988923daa311",
+  "sky130_fd_pr__nfet_01v8_lvt__ss.corner.spice": "23eb2d35ada169b393a334d4ada4dcb587f074f993315b8f23ccd241429819aa",
+  "sky130_fd_pr__nfet_01v8_lvt__ss.pm3.spice": "7c8d4a550ffe7a4949aa43588cfe853d6eb12316da5faee3b647859eb1444c7b",
+  "sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice": "716b48c11275bb1edbb228807f1b8849453884adf498ac7c57a31b9295335f2b",
+  "sky130_fd_pr__nfet_01v8_lvt__tt.pm3.spice": "8969f1112446ab7c5b138bd83904fe27f4c5a0448db587198274b9fab96ee117",
+  "sky130_subset_ff.lib.spice": "87e1d6f187ab0d1cca31ac3976699e86d6a14cc6f9b686a9c006a0946524bb11",
+  "sky130_subset_ss.lib.spice": "3407790134b7079737832986be9885d6d2ac18ebb6a88fe4bedf116c61aafca6",
+  "sky130_subset_tt.lib.spice": "2338df6f3ca08d7b45ec398ed4c5e7b05d921e0ea10e5669e3a355d0c9e8c2b7"
+ },
+ "patch_counts": {
+  "nfet_01v8/tt": {
+   "vth0": 180,
+   "toxe": 180,
+   "voff": 180,
+   "nfactor": 0
+  },
+  "nfet_01v8_lvt/tt": {
+   "vth0": 88,
+   "toxe": 88,
+   "voff": 88,
+   "nfactor": 88
+  },
+  "nfet_01v8/ss": {
+   "vth0": 180,
+   "toxe": 180,
+   "voff": 180,
+   "nfactor": 0
+  },
+  "nfet_01v8_lvt/ss": {
+   "vth0": 88,
+   "toxe": 88,
+   "voff": 88,
+   "nfactor": 88
+  },
+  "nfet_01v8/ff": {
+   "vth0": 180,
+   "toxe": 180,
+   "voff": 180,
+   "nfactor": 0
+  },
+  "nfet_01v8_lvt/ff": {
+   "vth0": 88,
+   "toxe": 88,
+   "voff": 88,
+   "nfactor": 88
+  }
+ },
+ "corners": [
+  "tt",
+  "ss",
+  "ff"
+ ]
+}

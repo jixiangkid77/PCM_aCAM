@@ -1,0 +1,16 @@
+[2026-10-14 15:49:41] E3c sim phase; predictions results/E3c_predict_20261014_1543/predictions.json sha256 ae7d400172a35b9f05bdc1919c98674e4ef8658095ad9b689cc1e4fee114c649
+[2026-10-14 15:49:50] T2 P1 N=1: max |error| 2.49e-03 LSB (9 s)
+[2026-10-14 15:51:10] T2 P1 N=16: max |error| 1.82e-03 LSB (89 s)
+[2026-10-14 15:51:19] T2 P3 N=1: max |error| 2.48e-03 LSB (97 s)
+[2026-10-14 15:52:37] T2 P3 N=16: max |error| 1.82e-03 LSB (176 s)
+[2026-10-14 15:53:56] T3 P1 k1d1: done (254 s)
+[2026-10-14 15:55:14] T3 P1 k1d3: done (333 s)
+[2026-10-14 15:55:43] T3 P1 k4d3: done (362 s)
+[2026-10-14 15:57:12] T3 P1 k4d6: done (451 s)
+[2026-10-14 15:58:30] T3 P1 k15d7.5: done (529 s)
+[2026-10-14 15:59:47] T3 P3 k1d1: done (606 s)
+[2026-10-14 16:01:04] T3 P3 k1d3: done (683 s)
+[2026-10-14 16:01:34] T3 P3 k4d3: done (712 s)
+[2026-10-14 16:03:01] T3 P3 k4d6: done (799 s)
+[2026-10-14 16:05:02] T3 P3 k15d7.5: done (920 s)
+[2026-10-14 16:05:04] decision: T1 True, T2 True, T3 98% (True), T4 True; validated True

@@ -1,0 +1,21 @@
+[2026-10-14 01:51:18] E1 start; run dir E1_20261014_0151; ngspice ngspice-42 : Circuit level simulation program
+[2026-10-14 01:51:18] config sha256 fef075d845c6328899c11148927bd065862fcc1ae3c8b58b24025fbd0ac7acf7
+[2026-10-14 01:51:26] pass A pd_4x: V_sw,nom = 0.49659 V, sigma(pdk) = 11.30 mV (expected 10.87), 7.9 s
+[2026-10-14 01:51:34] pass A pd_min: V_sw,nom = 0.52622 V, sigma(pdk) = 22.15 mV (expected 21.74), 7.6 s
+[2026-10-14 01:52:06] P1: pass B done (32.4 s); V_sw,nom 0.52622 V, V_SL,nom 0.72622 V
+[2026-10-14 01:52:07] P1: done in 33.3 s; span 138.3 mV; regions t0 {'sat': 8, 'sub': 8}
+[2026-10-14 01:52:37] P2: pass B done (30.4 s); V_sw,nom 0.52622 V, V_SL,nom 0.72622 V
+[2026-10-14 01:52:38] P2: done in 31.2 s; span 218.8 mV; regions t0 {'sat': 16}
+[2026-10-14 01:53:08] P3: pass B done (30.2 s); V_sw,nom 0.52622 V, V_SL,nom 0.72622 V
+[2026-10-14 01:53:09] P3: done in 31.1 s; span 487.2 mV; regions t0 {'sat': 13, 'triode': 3}
+[2026-10-14 01:53:40] P4: pass B done (30.6 s); V_sw,nom 0.52622 V, V_SL,nom 0.72622 V
+[2026-10-14 01:53:41] P4: done in 31.5 s; span 817.2 mV; regions t0 {'sat': 6, 'triode': 10}
+[2026-10-14 01:54:14] S1: pass B done (33.0 s); V_sw,nom 0.52622 V, V_SL,nom 0.92622 V
+[2026-10-14 01:54:15] S1: done in 34.0 s; span 162.8 mV; regions t0 {'sat': 13, 'sub': 3}
+[2026-10-14 01:54:47] S2: pass B done (32.0 s); V_sw,nom 0.52622 V, V_SL,nom 0.92622 V
+[2026-10-14 01:54:48] S2: done in 32.8 s; span 310.9 mV; regions t0 {'sat': 16}
+[2026-10-14 01:55:19] S3: pass B done (31.6 s); V_sw,nom 0.52622 V, V_SL,nom 0.92622 V
+[2026-10-14 01:55:20] S3: done in 32.5 s; span 838.5 mV; regions t0 {'sat': 6, 'triode': 10}
+[2026-10-14 01:55:51] S4: pass B done (31.0 s); V_sw,nom 0.49659 V, V_SL,nom 0.69659 V
+[2026-10-14 01:55:52] S4: done in 31.9 s; span 494.3 mV; regions t0 {'sat': 11, 'triode': 5}
+[2026-10-14 01:56:21] S5: pass B done (29.4 s); V_sw,nom 0.49659 V, V_SL,nom 0.69659 V

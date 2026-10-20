@@ -1,0 +1,167 @@
+{
+ "bound_inversion_bisection_steps": 64,
+ "values_bit_identical": 0,
+ "values_total": 32,
+ "per_set": {
+  "P1/6T2M/L6T": {
+   "indep_max_abs_lsb": {
+    "t0": 3.6637359812630166e-14,
+    "supply": 3.6637359812630166e-14,
+    "ideal": 3.6637359812630166e-14,
+    "dac_remap": 4.163336342344337e-14
+   },
+   "main_max_abs_lsb": {
+    "dac_remap": 1.0630829549995724e-10,
+    "supply": 8.533507234176341e-11,
+    "ideal": 8.533507234176341e-11,
+    "t0": 8.533507234176341e-11
+   },
+   "bit_identical": {
+    "t0": false,
+    "supply": false,
+    "ideal": false,
+    "dac_remap": false
+   }
+  },
+  "P1/6T2M/UINV": {
+   "indep_max_abs_lsb": {
+    "t0": 3.6637359812630166e-14,
+    "supply": 3.6637359812630166e-14,
+    "ideal": 3.6637359812630166e-14,
+    "dac_remap": 0.10257521623700083
+   },
+   "main_max_abs_lsb": {
+    "dac_remap": 0.10257521623837307,
+    "supply": 7.870371021567735e-11,
+    "ideal": 7.870371021567735e-11,
+    "t0": 7.870371021567735e-11
+   },
+   "bit_identical": {
+    "t0": false,
+    "supply": false,
+    "ideal": false,
+    "dac_remap": false
+   }
+  },
+  "P1/GS/LBUF": {
+   "indep_max_abs_lsb": {
+    "t0": 4.496403249731884e-14,
+    "supply": 4.496403249731884e-14,
+    "ideal": 4.496403249731884e-14,
+    "dac_remap": 4.3298697960381105e-14
+   },
+   "main_max_abs_lsb": {
+    "dac_remap": 9.82214309885876e-11,
+    "supply": 8.159972697541207e-11,
+    "ideal": 8.159972697541207e-11,
+    "t0": 8.159972697541207e-11
+   },
+   "bit_identical": {
+    "t0": false,
+    "supply": false,
+    "ideal": false,
+    "dac_remap": false
+   }
+  },
+  "P1/GS/UINV": {
+   "indep_max_abs_lsb": {
+    "t0": 4.496403249731884e-14,
+    "supply": 4.496403249731884e-14,
+    "ideal": 4.496403249731884e-14,
+    "dac_remap": 0.004258042509604487
+   },
+   "main_max_abs_lsb": {
+    "dac_remap": 0.0042580424472710154,
+    "supply": 8.159972697541207e-11,
+    "ideal": 8.159972697541207e-11,
+    "t0": 8.159972697541207e-11
+   },
+   "bit_identical": {
+    "t0": false,
+    "supply": false,
+    "ideal": false,
+    "dac_remap": false
+   }
+  },
+  "P3/6T2M/L6T": {
+   "indep_max_abs_lsb": {
+    "t0": 4.496403249731884e-14,
+    "supply": 4.496403249731884e-14,
+    "ideal": 4.496403249731884e-14,
+    "dac_remap": 4.829470157119431e-14
+   },
+   "main_max_abs_lsb": {
+    "dac_remap": 4.227951322377521e-11,
+    "supply": 2.5497937095053658e-11,
+    "ideal": 2.5497937095053658e-11,
+    "t0": 2.5497937095053658e-11
+   },
+   "bit_identical": {
+    "t0": false,
+    "supply": false,
+    "ideal": false,
+    "dac_remap": false
+   }
+  },
+  "P3/6T2M/UINV": {
+   "indep_max_abs_lsb": {
+    "t0": 4.496403249731884e-14,
+    "supply": 4.496403249731884e-14,
+    "ideal": 4.496403249731884e-14,
+    "dac_remap": 0.22533067685454045
+   },
+   "main_max_abs_lsb": {
+    "dac_remap": 0.22533067683382368,
+    "supply": 2.5497937095053658e-11,
+    "ideal": 2.5497937095053658e-11,
+    "t0": 2.5497937095053658e-11
+   },
+   "bit_identical": {
+    "t0": false,
+    "supply": false,
+    "ideal": false,
+    "dac_remap": false
+   }
+  },
+  "P3/GS/LBUF": {
+   "indep_max_abs_lsb": {
+    "t0": 2.8310687127941492e-14,
+    "supply": 2.8310687127941492e-14,
+    "ideal": 2.8310687127941492e-14,
+    "dac_remap": 4.9960036108132044e-14
+   },
+   "main_max_abs_lsb": {
+    "dac_remap": 4.145017662438022e-11,
+    "supply": 2.6034174815947608e-11,
+    "ideal": 2.6034174815947608e-11,
+    "t0": 2.6034174815947608e-11
+   },
+   "bit_identical": {
+    "t0": false,
+    "supply": false,
+    "ideal": false,
+    "dac_remap": false
+   }
+  },
+  "P3/GS/UINV": {
+   "indep_max_abs_lsb": {
+    "t0": 1.9984014443252818e-14,
+    "supply": 1.9984014443252818e-14,
+    "ideal": 1.9984014443252818e-14,
+    "dac_remap": 0.007214294824128276
+   },
+   "main_max_abs_lsb": {
+    "dac_remap": 0.007214294790538478,
+    "supply": 2.6034174815947608e-11,
+    "ideal": 2.6034174815947608e-11,
+    "t0": 2.6034174815947608e-11
+   },
+   "bit_identical": {
+    "t0": false,
+    "supply": false,
+    "ideal": false,
+    "dac_remap": false
+   }
+  }
+ }
+}

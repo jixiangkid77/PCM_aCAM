@@ -1,0 +1,89 @@
+{
+ "vsw_nom_V": 0.5262215070479054,
+ "a": {
+  "1y": 0.4969457102774913
+ },
+ "t_s_s": {
+  "1": 2.42795e-07,
+  "16": 3.31056e-07
+ },
+ "sigma_qs_V": 0.022612248930355933,
+ "t1": {
+  "1": {
+   "vsw_tr_nominal_V": 0.5261848859541554,
+   "sensitivities_V": {
+    "vth0": 0.020983886718749956,
+    "toxe": 0.008532714843749956,
+    "voff": 0.0,
+    "nfactor": 0.0
+   },
+   "sigma_tr_V": 0.022652388934284205,
+   "ratio_tr_over_qs": 1.0017751442614975
+  },
+  "16": {
+   "vsw_tr_nominal_V": 0.5261848859541554,
+   "sensitivities_V": {
+    "vth0": 0.020983886718749956,
+    "toxe": 0.008532714843749956,
+    "voff": 0.0,
+    "nfactor": 0.0
+   },
+   "sigma_tr_V": 0.022652388934284205,
+   "ratio_tr_over_qs": 1.0017751442614975
+  }
+ },
+ "t3": {
+  "P1|k4d6|t0": {
+   "design": "P1",
+   "config": "k4d6",
+   "node": "t0",
+   "leaker_vx_V": 0.42647084792332124,
+   "leaker_vx_minus_vsw_mV": -99.75065912458415,
+   "false_mismatch": false,
+   "t_cross_cut_off_s": 7.80473e-07,
+   "vsw_tr_with_leakers_V": 0.5009529523604055,
+   "delta_l_mV": -25.26855468749989,
+   "kappa": 1.0,
+   "pred_shift_lsb": [
+    0.23689270019531145,
+    2.1320343017578027
+   ]
+  },
+  "P1|k4d6|dac_1y": {
+   "design": "P1",
+   "config": "k4d6",
+   "node": "dac_1y",
+   "leaker_vx_V": 0.42981007824515577,
+   "leaker_vx_minus_vsw_mV": -96.41142880274961,
+   "false_mismatch": false,
+   "t_cross_cut_off_s": 7.221e-07,
+   "vsw_tr_with_leakers_V": 0.4981697492354054,
+   "delta_l_mV": -28.051757812499968,
+   "kappa": 1.0,
+   "pred_shift_lsb": [
+    0.26298522949218717,
+    2.3668670654296844
+   ]
+  },
+  "P1|k4d6|supply_1y": {
+   "design": "P1",
+   "config": "k4d6",
+   "node": "supply_1y",
+   "leaker_vx_V": 0.3624874124696747,
+   "leaker_vx_minus_vsw_mV": -163.7340945782307,
+   "false_mismatch": false,
+   "t_cross_cut_off_s": null,
+   "vsw_tr_with_leakers_V": 0.5217537336104052,
+   "delta_l_mV": -4.467773437500155,
+   "kappa": 0.4969457102774913,
+   "pred_shift_lsb": [
+    0.020814757914913343,
+    0.18733282123422013
+   ]
+  }
+ },
+ "thetas": [
+  0.0,
+  1.0
+ ]
+}

@@ -1,0 +1,8 @@
+{
+ "pulldown_max_rel_dev_I_at_Vsw": 9.767076036837352e-12,
+ "max_abs_gate_iv_minus_branch_bound_uV_prog_unclipped_root": 0.0009861460949507374,
+ "max_abs_gate_iv_minus_branch_bound_uV_ideal": 1.4469867396522752e-05,
+ "max_abs_gate_iv_minus_branch_bound_uV_none": 2.47431374634925e-05,
+ "max_abs_gate_iv_minus_branch_bound_uV_supply": 5.942768305115451e-06,
+ "max_abs_gate_iv_minus_branch_bound_uV_nominal_M0_Ma": 1.569468204364212e-05
+}

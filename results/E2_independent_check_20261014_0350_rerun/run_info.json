@@ -1,0 +1,27 @@
+{
+ "command": "experiments/E2_independent/run_check.py --conditions G2,C2,T3,G6 --n-inst 40",
+ "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+ "numpy": "2.5.3",
+ "ngspice": [
+  "** ngspice-42 : Circuit level simulation program",
+  "** Copyright 2001-2023, The ngspice team."
+ ],
+ "workdir": "/home/claude/PCM_aCAM/logs/E2_independent_work/run_20261014_0350",
+ "sha256": {
+  "/home/claude/PCM_aCAM/experiments/E2_config.json": "d035419040b5001984cdb6dae53d72660f8934f1a70b6fec74e389b663c8be18",
+  "/home/claude/PCM_aCAM/results/E2_predict_20261014_0315/predictions.json": "2c4af6ccbacd99d543c04a033f1bb9613261cfd51dc3dc2a87315a363b78bee3",
+  "/home/claude/PCM_aCAM/results/E2_20261014_0316/arrays_G2.npz": "1790b8fe9a759401b67c6d70ab4d1ba8bcbdad0eb187622d1e94350e53335c9f",
+  "/home/claude/PCM_aCAM/results/E2_20261014_0316/arrays_C2.npz": "ca43364f79e77535708c03b86f7d8ad3247db5feba75b2af668f7592a88fdaee",
+  "/home/claude/PCM_aCAM/results/E2_20261014_0316/arrays_T3.npz": "0f8d8b99863ce1b7134c3609d19cbbad70cd790c4e50e57d1062da583320dcd6",
+  "/home/claude/PCM_aCAM/results/E2_20261014_0316/arrays_G6.npz": "62dcf232d0bcf3040e3a5858c4bdfc783ea9f99e3ccaf4033c74bcd405c1f18e",
+  "/home/claude/PCM_aCAM/experiments/E2_independent/README.md": "ee19d2c86d1dfaef6f0c6cc74f2756acf6a19b2cc84ef0a389da44ccc56e3aaf",
+  "/home/claude/PCM_aCAM/experiments/E2_independent/extra_supply_law_form.py": "44801bcc1e3b476be76dc14c596cf6edfd2ea312f886fc1acba0aba8fc8336ea",
+  "/home/claude/PCM_aCAM/experiments/E2_independent/extra_tolerance_robustness.py": "460ee0f8ca05357666db13fc8f0af53f1f0e9492a990e25aa1bcdb993cfe4eed",
+  "/home/claude/PCM_aCAM/experiments/E2_independent/ind_core.py": "2188d8f0f2848519c6976a4789bad851b4d574812040991c869918784375d4ac",
+  "/home/claude/PCM_aCAM/experiments/E2_independent/ind_spice.py": "e519c4e2eb0d1577da7271e60685dbd547200a0a716f8affb73ba7babd87c28e",
+  "/home/claude/PCM_aCAM/experiments/E2_independent/run_check.py": "0e9e2d138f14751fbfd69ab82701f472816807ac105e2ffa71ed0413542947c1",
+  "/home/claude/PCM_aCAM/experiments/E2_independent/task1_predictor.py": "e9eb6b7b04d0321eb09c1c79a231f8ad319236d33ce9ef404781040953635b95",
+  "/home/claude/PCM_aCAM/experiments/E2_independent/task2_branch_mc.py": "61653f4cd7e45e30c6277079c3fc02db0b7eca382a297df75fcdc046b33ff5ce"
+ },
+ "models_manifest_sha256": "29d4b9c9d79a35b13acab48ca104e5392fa5fe06ce46fc69140cac8b806b24fd"
+}

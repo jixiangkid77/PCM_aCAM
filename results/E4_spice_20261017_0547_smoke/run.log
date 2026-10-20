@@ -1,0 +1,14 @@
+[2026-10-17 05:47:30] E4 spice phase; run dir E4_spice_20261017_0547_smoke; 40 instances per branch type; designs ['P1']
+[2026-10-17 05:47:41] pull-downs and inverters: V_sw,nom 0.526222 V, V_Y*,nom 0.570323 V, V_X*,nom 0.568421 V (12 s)
+[2026-10-17 05:47:42] P1 L6T: 40 instances, window 0.240-1.279 V (1 s)
+[2026-10-17 05:47:43] P1 UINV: 40 instances, window 0.235-1.274 V (1 s)
+[2026-10-17 05:47:44] P1 LBUF: 40 instances, window 0.235-1.274 V (1 s)
+[2026-10-17 05:47:52] P1: I-V surface (601, 1801) (9 s)
+[2026-10-17 05:47:56] leakage tables: 28 (4 s)
+[2026-10-17 05:47:59] checks C1-C6 computed (3 s)
+[2026-10-17 05:47:59]   C1 P1/LBUF FAIL: {'max_abs_diff_mV': 0.08689956493002082, 'pass': False}
+[2026-10-17 05:47:59]   C6 P1/L6T FAIL: {'max_abs_diff_uV': 6.464334837752439, 'pass': False}
+[2026-10-17 05:47:59]   C6 P1/UINV FAIL: {'max_abs_diff_uV': 5.001117880376604, 'pass': False}
+[2026-10-17 05:47:59]   C6 P1/LBUF FAIL: {'max_abs_diff_uV': 6.41344822760459, 'pass': False}
+[2026-10-17 05:48:12] V1: 6 cases, pass fraction 0.500, max |ln ratio| 0.549527303591133, t_s(30) 413.384 ns (13 s)
+[2026-10-17 05:48:13] spice phase CHECK FAILURE: C1 P1/LBUF; C6 P1/L6T; C6 P1/UINV; C6 P1/LBUF; V1; instrument sha256 0ce007b3176f1aae6071ca75352e5ffcf50c602dd58491ddde2f8835392352ed; 43.0 s

@@ -1,0 +1,1 @@
+Superseded by results/E2_predict_20261014_0314_smoke + results/E2_20261014_0314_smoke (final files: run_prefix / rng_stream made configurable, --config path resolved). Same predictions and checks.

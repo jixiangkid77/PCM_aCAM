@@ -1,0 +1,202 @@
+{
+  "structure_cam_equals_quantized_traversal": {
+    "passed": true,
+    "detail": {
+      "iris/split0": {
+        "one_match_per_tree": true,
+        "leaves_equal_traversal": true,
+        "float64_cam_vs_sklearn_agreement": 1.0,
+        "exact_value_threshold_ties": 60
+      },
+      "iris/split1": {
+        "one_match_per_tree": true,
+        "leaves_equal_traversal": true,
+        "float64_cam_vs_sklearn_agreement": 1.0,
+        "exact_value_threshold_ties": 96
+      },
+      "iris/split2": {
+        "one_match_per_tree": true,
+        "leaves_equal_traversal": true,
+        "float64_cam_vs_sklearn_agreement": 1.0,
+        "exact_value_threshold_ties": 8
+      },
+      "wine/split0": {
+        "one_match_per_tree": true,
+        "leaves_equal_traversal": true,
+        "float64_cam_vs_sklearn_agreement": 1.0,
+        "exact_value_threshold_ties": 10
+      },
+      "wine/split1": {
+        "one_match_per_tree": true,
+        "leaves_equal_traversal": true,
+        "float64_cam_vs_sklearn_agreement": 1.0,
+        "exact_value_threshold_ties": 0
+      },
+      "wine/split2": {
+        "one_match_per_tree": true,
+        "leaves_equal_traversal": true,
+        "float64_cam_vs_sklearn_agreement": 1.0,
+        "exact_value_threshold_ties": 12
+      },
+      "breast_cancer/split0": {
+        "one_match_per_tree": true,
+        "leaves_equal_traversal": true,
+        "float64_cam_vs_sklearn_agreement": 1.0,
+        "exact_value_threshold_ties": 21
+      },
+      "breast_cancer/split1": {
+        "one_match_per_tree": true,
+        "leaves_equal_traversal": true,
+        "float64_cam_vs_sklearn_agreement": 1.0,
+        "exact_value_threshold_ties": 6
+      },
+      "breast_cancer/split2": {
+        "one_match_per_tree": true,
+        "leaves_equal_traversal": true,
+        "float64_cam_vs_sklearn_agreement": 1.0,
+        "exact_value_threshold_ties": 25
+      },
+      "digits/split0": {
+        "one_match_per_tree": true,
+        "leaves_equal_traversal": true,
+        "float64_cam_vs_sklearn_agreement": 1.0,
+        "exact_value_threshold_ties": 144771
+      },
+      "digits/split1": {
+        "one_match_per_tree": true,
+        "leaves_equal_traversal": true,
+        "float64_cam_vs_sklearn_agreement": 1.0,
+        "exact_value_threshold_ties": 158734
+      },
+      "digits/split2": {
+        "one_match_per_tree": true,
+        "leaves_equal_traversal": true,
+        "float64_cam_vs_sklearn_agreement": 1.0,
+        "exact_value_threshold_ties": 162725
+      },
+      "synthetic/split0": {
+        "one_match_per_tree": true,
+        "leaves_equal_traversal": true,
+        "float64_cam_vs_sklearn_agreement": 1.0,
+        "exact_value_threshold_ties": 2
+      },
+      "synthetic/split1": {
+        "one_match_per_tree": true,
+        "leaves_equal_traversal": true,
+        "float64_cam_vs_sklearn_agreement": 1.0,
+        "exact_value_threshold_ties": 0
+      },
+      "synthetic/split2": {
+        "one_match_per_tree": true,
+        "leaves_equal_traversal": true,
+        "float64_cam_vs_sklearn_agreement": 1.0,
+        "exact_value_threshold_ties": 0
+      }
+    }
+  },
+  "self_check_1_zero_mismatch_no_pcm_noise": {
+    "max_abs_err": 1.1102230246251565e-16,
+    "a_hat_range": [
+      1.0,
+      1.0
+    ],
+    "passed": true
+  },
+  "self_check_2_uniform_drift_closed_forms": {
+    "max_abs_err": {
+      "none": 4.440892098500626e-16,
+      "dac": 7.771561172376096e-16,
+      "supply": 1.3322676295501878e-15,
+      "ideal": 5.551115123125783e-16
+    },
+    "max_abs_ahat_minus_a": 1.1102230246251565e-16,
+    "unclipped_cells": 176994,
+    "cells": 179200,
+    "passed_required_dac_ideal": true,
+    "passed_all_four": true
+  },
+  "extra_check_3_zero_mismatch_nodes_equal": {
+    "max_abs_err": 1.1102230246251565e-15,
+    "passed": true
+  },
+  "diag_normalization_variant": {
+    "all_identical": true,
+    "detail": {
+      "iris/split0": {
+        "forest_identical": true,
+        "acc_ref_minmaxscaler": 0.9777777777777777,
+        "acc_ref_identical": true
+      },
+      "iris/split1": {
+        "forest_identical": true,
+        "acc_ref_minmaxscaler": 0.9555555555555556,
+        "acc_ref_identical": true
+      },
+      "iris/split2": {
+        "forest_identical": true,
+        "acc_ref_minmaxscaler": 1.0,
+        "acc_ref_identical": true
+      },
+      "wine/split0": {
+        "forest_identical": true,
+        "acc_ref_minmaxscaler": 0.9814814814814815,
+        "acc_ref_identical": true
+      },
+      "wine/split1": {
+        "forest_identical": true,
+        "acc_ref_minmaxscaler": 1.0,
+        "acc_ref_identical": true
+      },
+      "wine/split2": {
+        "forest_identical": true,
+        "acc_ref_minmaxscaler": 0.9814814814814815,
+        "acc_ref_identical": true
+      },
+      "breast_cancer/split0": {
+        "forest_identical": true,
+        "acc_ref_minmaxscaler": 0.9415204678362573,
+        "acc_ref_identical": true
+      },
+      "breast_cancer/split1": {
+        "forest_identical": true,
+        "acc_ref_minmaxscaler": 0.9473684210526315,
+        "acc_ref_identical": true
+      },
+      "breast_cancer/split2": {
+        "forest_identical": true,
+        "acc_ref_minmaxscaler": 0.9473684210526315,
+        "acc_ref_identical": true
+      },
+      "digits/split0": {
+        "forest_identical": true,
+        "acc_ref_minmaxscaler": 0.912962962962963,
+        "acc_ref_identical": true
+      },
+      "digits/split1": {
+        "forest_identical": true,
+        "acc_ref_minmaxscaler": 0.937037037037037,
+        "acc_ref_identical": true
+      },
+      "digits/split2": {
+        "forest_identical": true,
+        "acc_ref_minmaxscaler": 0.9074074074074074,
+        "acc_ref_identical": true
+      },
+      "synthetic/split0": {
+        "forest_identical": true,
+        "acc_ref_minmaxscaler": 0.718,
+        "acc_ref_identical": true
+      },
+      "synthetic/split1": {
+        "forest_identical": true,
+        "acc_ref_minmaxscaler": 0.7086666666666667,
+        "acc_ref_identical": true
+      },
+      "synthetic/split2": {
+        "forest_identical": true,
+        "acc_ref_minmaxscaler": 0.7366666666666667,
+        "acc_ref_identical": true
+      }
+    }
+  }
+}

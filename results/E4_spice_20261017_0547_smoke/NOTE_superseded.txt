@@ -1,0 +1,5 @@
+Smoke run of an earlier version of the E4 code (nominal-shape leakage tables). Its checks C1 (LBUF bound sampled
+on a 0.5 mV grid, too coarse for the two-inverter gain stage), C6 (linear interpolation of the stored curve
+deviations) and V1 (3 of 6 cases outside 0.05 in ln(t_c,sim/t_c,pred); a matched cell does not leak like the
+nominal cell with the same effective bound) failed. The code was changed before the freeze (per-instance leakage,
+Catmull-Rom storage, fine re-sweep for C1); see docs/E4_protocol.md section 0. Not interpreted.

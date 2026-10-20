@@ -1,0 +1,1 @@
+Crashed before any output: relative --config path not resolved (fixed: Path(args.config).resolve()). Rerun follows.

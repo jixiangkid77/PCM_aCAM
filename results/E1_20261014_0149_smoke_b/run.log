@@ -1,0 +1,9 @@
+[2026-10-14 01:49:44] E1 start; run dir E1_20261014_0149_smoke_b; ngspice ngspice-42 : Circuit level simulation program
+[2026-10-14 01:49:44] config sha256 64ce11f2b29e4f48e535fd1bab078460dfbe4036c5e561f9196a13c5e42b26ca
+[2026-10-14 01:49:45] pass A pd_min: V_sw,nom = 0.52622 V, sigma(pdk) = 18.24 mV (expected 21.74), 0.6 s
+[2026-10-14 01:49:48] P1: pass B done (2.8 s); V_sw,nom 0.52622 V, V_SL,nom 0.72622 V
+[2026-10-14 01:49:48] P1: done in 3.5 s; span 138.3 mV; regions t0 {'sat': 8, 'sub': 8}
+[2026-10-14 01:49:51] P4: pass B done (2.5 s); V_sw,nom 0.52622 V, V_SL,nom 0.72622 V
+[2026-10-14 01:49:51] P4: done in 3.1 s; span 817.2 mV; regions t0 {'sat': 6, 'triode': 10}
+[2026-10-14 01:49:51] checks C1-C5 passed
+[2026-10-14 01:49:51] E1 finished in 7.3 s

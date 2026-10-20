@@ -1,0 +1,24 @@
+[    0.9s] V_sw,nom = 0.526221473 V, V_SL,nom = 0.726221473 V, a = 0.496945710, V_SL(1y) = 0.928679923 V
+[    0.9s] V_sw instances: mean 0.524610 V, sd 0.020647 V (n=40); fine-coarse max 3.420e-08 V
+[  104.7s] P1: M0(theta)=[0.702409 0.754115 0.791279 0.813108]  Ma(theta)=[0.665757 0.712048 0.744468 0.763059]  LSB=9.2233 mV  spline-vs-direct max 5.03e-12 V
+[  189.0s] P4: M0(theta)=[0.927839 1.159443 1.405382 1.612117]  Ma(theta)=[0.808317 0.964945 1.109405 1.209819]  LSB=54.4777 mV  spline-vs-direct max 1.14e-12 V
+[  202.2s] programming iteration 0: 8 of 328 cases converged
+[  214.3s] programming iteration 1: 8 of 328 cases converged
+[  226.9s] programming iteration 2: 9 of 328 cases converged
+[  239.2s] programming iteration 3: 115 of 328 cases converged
+[  248.3s] programming iteration 4: 288 of 328 cases converged
+[  250.0s] programming iteration 5: 325 of 328 cases converged
+[  250.3s] programming iteration 6: 328 of 328 cases converged
+[  250.3s] programming done: iterations max 7, clipped 18 of 328
+[  289.6s] node bounds done; max bound 1.6728 V
+[  389.2s] x_eff polish: {"none": {"max_abs_resid_spline_V": 2.731448400794534e-11, "max_abs_newton_step_lsb": 6.603430258607132e-10, "max_abs_resid_after_polish_V": 7.771561172376096e-16, "max_abs_resid_after_polish_lsb": 5.405793398720507e-14}, "dac_remap": {"max_abs_resid_spline_V": 9.937717315722239e-12, "max_abs_newton_step_lsb": 5.846376123001467e-10, "max_abs_resid_after_polish_V": 8.881784197001252e-16, "max_abs_resid_after_polish_lsb": 6.694997560895917e-14}, "supply": {"max_abs_resid_spline_V": 7.82340858762609e-12, "max_abs_newton_step_lsb": 4.182208062111909e-10, "max_abs_resid_after_polish_V": 1.7763568394002505e-15, "max_abs_resid_after_polish_lsb": 5.64406768359355e-14}, "ideal": {"max_abs_resid_spline_V": 5.028866212342109e-12, "max_abs_newton_step_lsb": 2.6232937479671883e-10, "max_abs_resid_after_polish_V": 1.3322676295501878e-15, "max_abs_resid_after_polish_lsb": 5.4651185082231644e-14}}
+[  389.2s] rows written: 1280
+[  389.2s] P1/none        n=145 clipped=15 rms=5.017675 mean=-4.411539 max|e|=8.815740 LSB
+[  389.2s] P1/dac_remap   n=145 clipped=15 rms=0.707793 mean=+0.043956 max|e|=2.208014 LSB
+[  389.2s] P1/supply      n=145 clipped=15 rms=0.488039 mean=-0.048781 max|e|=1.896624 LSB
+[  389.2s] P1/ideal       n=145 clipped=15 rms=0.000000 mean=+0.000000 max|e|=0.000000 LSB
+[  389.2s] P4/none        n=157 clipped=3 rms=5.283329 mean=-4.669346 max|e|=8.324508 LSB
+[  389.2s] P4/dac_remap   n=157 clipped=3 rms=0.146476 mean=-0.031579 max|e|=0.681203 LSB
+[  389.2s] P4/supply      n=157 clipped=3 rms=0.493101 mean=-0.027816 max|e|=1.757253 LSB
+[  389.2s] P4/ideal       n=157 clipped=3 rms=0.000000 mean=-0.000000 max|e|=0.000000 LSB
+[  389.2s] sanity (nominal instance): {"P1/none/j1": -1.4462811, "P1/dac_remap/j1": 0.0, "P1/supply/j1": 0.0, "P1/ideal/j1": -0.0, "P1/none/j5": -3.4584982, "P1/dac_remap/j5": 0.0, "P1/supply/j5": 0.0, "P1/ideal/j5": -0.0, "P1/none/j10": -5.9737697, "P1/dac_remap/j10": 0.0, "P1/supply/j10": 0.0, "P1/ideal/j10": 0.0, "P1/none/j14": -7.9859868, "P1/dac_remap/j14": 0.0, "P1/supply/j14": 0.0, "P1/ideal/j14": 0.0, "P4/none/j1": -1.4462811, "P4/dac_remap/j1": -0.0, "P4/supply/j1": 0.0, "P4/ideal/j1": -0.0, "P4/none/j5": -3.4584982, "P4/dac_remap/j5": -0.0, "P4/supply/j5": 0.0, "P4/ideal/j5": 0.0, "P4/none/j10": -5.9737697, "P4/dac_remap/j10": -0.0, "P4/supply/j10": 0.0, "P4/ideal/j10": -0.0, "P4/none/j14": -7.9859868, "P4/dac_remap/j14": -0.0, "P4/supply/j14": 0.0, "P4/ideal/j14": 0.0}

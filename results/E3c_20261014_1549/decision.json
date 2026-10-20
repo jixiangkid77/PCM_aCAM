@@ -1,0 +1,254 @@
+{
+  "T1": {
+    "pass": true,
+    "ratios": {
+      "1": 1.0027551522624525,
+      "16": 1.0027551522624525
+    }
+  },
+  "T2": {
+    "pass": true,
+    "max_abs_error_lsb": 0.002492704255181444,
+    "n": 48
+  },
+  "T3": {
+    "pass": true,
+    "pass_rate": 0.98,
+    "n": 100,
+    "failures": [
+      "P3/k15d7.5/t0/0.667",
+      "P3/k15d7.5/t0/1.000"
+    ]
+  },
+  "T4": {
+    "pass": true,
+    "n": 28,
+    "rows": [
+      {
+        "design": "P1",
+        "config": "k1d1",
+        "theta": 0.0,
+        "dac_shift": 0.6514793687212724,
+        "supply_shift": 0.23545807686193468,
+        "supply_smaller": true
+      },
+      {
+        "design": "P1",
+        "config": "k1d1",
+        "theta": 0.3333333333333333,
+        "dac_shift": 2.3252571507096813,
+        "supply_shift": 0.8190287898636245,
+        "supply_smaller": true
+      },
+      {
+        "design": "P1",
+        "config": "k1d1",
+        "theta": 0.6666666666666666,
+        "dac_shift": 3.941429079437896,
+        "supply_shift": 1.3673217425987776,
+        "supply_smaller": true
+      },
+      {
+        "design": "P1",
+        "config": "k1d1",
+        "theta": 1.0,
+        "dac_shift": 5.51987136142154,
+        "supply_shift": 1.895094436020608,
+        "supply_smaller": true
+      },
+      {
+        "design": "P1",
+        "config": "k1d3",
+        "theta": 0.0,
+        "dac_shift": 0.21896996611326092,
+        "supply_shift": 0.049227442872630256,
+        "supply_smaller": true
+      },
+      {
+        "design": "P1",
+        "config": "k1d3",
+        "theta": 0.3333333333333333,
+        "dac_shift": 0.7868256745024851,
+        "supply_shift": 0.1723167248241836,
+        "supply_smaller": true
+      },
+      {
+        "design": "P1",
+        "config": "k1d3",
+        "theta": 0.6666666666666666,
+        "dac_shift": 1.3395660176057462,
+        "supply_shift": 0.28874677300608276,
+        "supply_smaller": true
+      },
+      {
+        "design": "P1",
+        "config": "k1d3",
+        "theta": 1.0,
+        "dac_shift": 1.8818474662665237,
+        "supply_shift": 0.4009742904341429,
+        "supply_smaller": true
+      },
+      {
+        "design": "P1",
+        "config": "k4d6",
+        "theta": 0.0,
+        "dac_shift": 0.33780700744484216,
+        "supply_shift": 0.031147510285640553,
+        "supply_smaller": true
+      },
+      {
+        "design": "P1",
+        "config": "k4d6",
+        "theta": 0.3333333333333333,
+        "dac_shift": 1.2117071980628527,
+        "supply_shift": 0.10912827580738665,
+        "supply_smaller": true
+      },
+      {
+        "design": "P1",
+        "config": "k4d6",
+        "theta": 0.6666666666666666,
+        "dac_shift": 2.060475923636069,
+        "supply_shift": 0.1829141629060571,
+        "supply_smaller": true
+      },
+      {
+        "design": "P1",
+        "config": "k4d6",
+        "theta": 1.0,
+        "dac_shift": 2.891893115373067,
+        "supply_shift": 0.25416950520414816,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k1d1",
+        "theta": 0.0,
+        "dac_shift": 0.4346364982679024,
+        "supply_shift": 0.11961411641687991,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k1d1",
+        "theta": 0.3333333333333333,
+        "dac_shift": 1.5917710406537555,
+        "supply_shift": 0.4444504504133806,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k1d1",
+        "theta": 0.6666666666666666,
+        "dac_shift": 2.7735723587387735,
+        "supply_shift": 0.8253540782236152,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k1d1",
+        "theta": 1.0,
+        "dac_shift": 4.029604018371681,
+        "supply_shift": 1.3275722380796717,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k1d3",
+        "theta": 0.0,
+        "dac_shift": 0.1266616673192631,
+        "supply_shift": 0.021921134249035412,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k1d3",
+        "theta": 0.3333333333333333,
+        "dac_shift": 0.46318114752438966,
+        "supply_shift": 0.08102307857014435,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k1d3",
+        "theta": 0.6666666666666666,
+        "dac_shift": 0.8028736707786993,
+        "supply_shift": 0.14717894214515026,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k1d3",
+        "theta": 1.0,
+        "dac_shift": 1.1513628698400376,
+        "supply_shift": 0.2317198980637225,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k4d6",
+        "theta": 0.0,
+        "dac_shift": 0.13155406525457314,
+        "supply_shift": 0.019594562431764828,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k4d6",
+        "theta": 0.3333333333333333,
+        "dac_shift": 0.48106950987474306,
+        "supply_shift": 0.07241362108148491,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k4d6",
+        "theta": 0.6666666666666666,
+        "dac_shift": 0.8339853802895525,
+        "supply_shift": 0.1315099465068187,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k4d6",
+        "theta": 1.0,
+        "dac_shift": 1.1961449553619135,
+        "supply_shift": 0.20691342298286508,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k15d7.5",
+        "theta": 0.0,
+        "dac_shift": 0.33109248190712426,
+        "supply_shift": 0.04527691010031043,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k15d7.5",
+        "theta": 0.3333333333333333,
+        "dac_shift": 1.2117482430448325,
+        "supply_shift": 0.16758626061984527,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k15d7.5",
+        "theta": 0.6666666666666666,
+        "dac_shift": 2.1067392302189143,
+        "supply_shift": 0.30587100247905785,
+        "supply_smaller": true
+      },
+      {
+        "design": "P3",
+        "config": "k15d7.5",
+        "theta": 1.0,
+        "dac_shift": 3.0436821833687704,
+        "supply_shift": 0.48413296998335076,
+        "supply_smaller": true
+      }
+    ]
+  },
+  "validated": true
+}

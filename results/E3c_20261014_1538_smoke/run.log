@@ -1,0 +1,4 @@
+[2026-10-14 15:38:10] E3c sim phase; predictions results/E3c_predict_20261014_1537_smoke/predictions.json sha256 fb294dd7c07163b05fecb2e764bf8369013115dc1cde09b6f1e7bff92dcc9290
+[2026-10-14 15:38:13] T2 P1 N=1: max |error| 3.08e-03 LSB (3 s)
+[2026-10-14 15:38:36] T2 P1 N=16: max |error| 3.08e-03 LSB (26 s)
+[2026-10-14 15:39:03] T3 P1 k4d6: done (53 s)

@@ -1,0 +1,1 @@
+Crashed in the Monte Carlo evaluation (s_of_v could not take an array of V0; fixed in src/pcm_acam/pcm_iv.py). Rerun follows.

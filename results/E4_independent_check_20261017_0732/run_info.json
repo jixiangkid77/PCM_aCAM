@@ -1,0 +1,41 @@
+{
+ "check": "E4 independent check",
+ "run_dir": "results/E4_independent_check_20261017_0732",
+ "start_jst": "2026-10-17T07:32:13+09:00",
+ "environment": {
+  "python": "3.13.16",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "sklearn": "1.9.1",
+  "ngspice": "ngspice-42 : Circuit level simulation program",
+  "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39"
+ },
+ "inputs_sha256": {
+  "experiments/E4_config.json": "8c0675a16d2d68f025e626e1328be51906be9d71a6f6a186f75157d3ba72fcbd",
+  "experiments/E0_2_config.json": "a3fa8d5506169c6e5da76dc1028135803aa3993d6f102cc8ab6344056dec1d23",
+  "results/E4_spice_20261017_0602/instrument.npz": "22699dcc0a52c4c4135b47dae3dbae741aadcedced6eb6f3c919f4068168057f",
+  "results/E4_spice_20261017_0602/v1_cases.json": "ef478007a2b69e8495631ac04831020e6c30c45a853bc1beb7a74576c324f191",
+  "results/E4_spice_20261017_0602/v1_rows.csv": "860dd38f0a048a17bddd56c7fc4816a464319789066acb10fa1b79f2f2780052",
+  "results/E4_spice_20261017_0602/checks.json": "95794b15d977b8e70f62aa391d0330be35146aff2282da95b9f28a3eb24c3b06",
+  "results/E4_spice_20261017_0602/config_used.json": "8c0675a16d2d68f025e626e1328be51906be9d71a6f6a186f75157d3ba72fcbd",
+  "results/E4_20261017_0618/per_eval.csv": "c412e9ed2cc3ceeb70d2d87f824d6d1c46807efd7d28498ea00bb71403504a7a",
+  "results/E4_20261017_0618/refs.csv": "80fceacaba9db85052d7f36cded9fce1e1fff1debcb8b1a2dc0b09d4945a8a6c",
+  "results/E4_20261017_0618/run_info.json": "a0b75e317fcd844a98460fce686211ea4da26c1a06d377cc0d301467e85be616",
+  "src/pcm_acam/trees.py": "17cb854495f528567f40e45070b61ad14ddae2e6fbecd038fe1d427a6597cb70",
+  "src/pcm_acam/acam.py": "43083ce773a2e444759ead19660e23ca56481651ee6e784ab13f28a7fb0e3b88",
+  "third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice": "8693a91e23e16678a97c0f0b9671ed0a690d1bd0211c22e6b90b0c451693c105"
+ },
+ "scripts_sha256": {
+  "experiments/E4_independent/e4i_core.py": "893b1015fd786d3ec25a5d55a9c8c1e163ac19c680f72b91486c37295c7735c8",
+  "experiments/E4_independent/e4i_spice.py": "35e59b442d6e595d3d81aef22c38a4343c09ddf99751ecee2af2acde032da9b9",
+  "experiments/E4_independent/task1_forest.py": "c282ff60b9c94b6e626bdb1d79e92db745681e53a89d817e000570d128ac23f5",
+  "experiments/E4_independent/task2_v1.py": "15748b7fe9b37f76c5058307534f889d4b51bae8de4b6576be365c632660257d",
+  "experiments/E4_independent/task3_switching.py": "1e4f8cc0051fe54a0e1556f6cf05fcf864390bed8af3e9f37b909a30302360a8",
+  "experiments/E4_independent/run_check.py": "8f89f6cfb3bbce3c5275b48dcb20849278d5de2c041d8c35273c24f68bb22f9a",
+  "experiments/E4_independent/make_report.py": "abc3c0b88a7cbba55242780b88cc3c2eb387486128b549e1d281196aa9662017"
+ },
+ "instrument_sha256_protocol_section_10": "22699dcc0a52c4c4135b47dae3dbae741aadcedced6eb6f3c919f4068168057f",
+ "instrument_sha256_matches_protocol": true,
+ "end_jst": "2026-10-17T07:35:33+09:00",
+ "elapsed_s": 200.5
+}

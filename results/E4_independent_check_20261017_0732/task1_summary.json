@@ -1,0 +1,47 @@
+{
+ "bound_inversion_bisection_steps": 40,
+ "surface_scheme": "lnvg_ivds",
+ "n_evaluations": 640,
+ "acc_identical": 640,
+ "acc_differing": 0,
+ "acc_differing_by_one_sample": 0,
+ "max_sample_difference": 0,
+ "allowed_one_sample_differences": 6,
+ "leaf_loss_differing": 0,
+ "max_abs_leaf_loss_difference": 0.0,
+ "max_sample_tree_pairs_difference": 0,
+ "a_hat_max_rel_difference": 0.0,
+ "multi_match_differing": 0,
+ "removed_by_crosstalk_differing": 0,
+ "differences_by_point": {},
+ "min_rel_gap_to_crosstalk_threshold": 3.429103336982231e-06,
+ "max_tie_pairs_x_eq_xeff_per_eval": 21,
+ "refs": {
+  "wine": {
+   "acc_ref_indep": 0.9814814814814815,
+   "acc_ref_main": 0.9814814814814815,
+   "n_rows_indep": 141,
+   "n_rows_main": 141,
+   "n_constraints_indep": 482,
+   "n_constraints_main": 482,
+   "n_lower_indep": 275,
+   "n_lower_main": 275,
+   "equal": true
+  },
+  "breast_cancer": {
+   "acc_ref_indep": 0.9415204678362573,
+   "acc_ref_main": 0.9415204678362573,
+   "n_rows_indep": 243,
+   "n_rows_main": 243,
+   "n_constraints_indep": 1022,
+   "n_constraints_main": 1022,
+   "n_lower_indep": 471,
+   "n_lower_main": 471,
+   "equal": true
+  }
+ },
+ "pass_acc": true,
+ "pass_leaf_loss": true,
+ "pass": true,
+ "elapsed_s": 45.1
+}

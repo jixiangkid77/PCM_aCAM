@@ -1,0 +1,17 @@
+[2026-10-14 03:16:21] E2 Monte Carlo phase; predictions results/E2_predict_20261014_0315/predictions.json sha256 2c4af6ccbacd99d543c04a033f1bb9613261cfd51dc3dc2a87315a363b78bee3
+[2026-10-14 03:16:52] G1: Monte Carlo done in 30.7 s; V_sw,nom 0.5262 V, sigma 21.86 mV
+[2026-10-14 03:17:20] G2: Monte Carlo done in 28.3 s; V_sw,nom 0.5262 V, sigma 21.86 mV
+[2026-10-14 03:17:51] G3: Monte Carlo done in 30.5 s; V_sw,nom 0.4966 V, sigma 11.14 mV
+[2026-10-14 03:18:21] G4: Monte Carlo done in 30.4 s; V_sw,nom 0.5262 V, sigma 21.86 mV
+[2026-10-14 03:18:51] G5: Monte Carlo done in 30.3 s; V_sw,nom 0.5262 V, sigma 21.86 mV
+[2026-10-14 03:19:20] G6: Monte Carlo done in 28.6 s; V_sw,nom 0.4966 V, sigma 11.14 mV
+[2026-10-14 03:19:51] C1: Monte Carlo done in 31.1 s; V_sw,nom 0.6245 V, sigma 21.91 mV
+[2026-10-14 03:20:22] C2: Monte Carlo done in 31.1 s; V_sw,nom 0.4197 V, sigma 21.65 mV
+[2026-10-14 03:20:51] C3: Monte Carlo done in 28.6 s; V_sw,nom 0.6245 V, sigma 21.91 mV
+[2026-10-14 03:21:20] C4: Monte Carlo done in 29.4 s; V_sw,nom 0.4197 V, sigma 21.65 mV
+[2026-10-14 03:21:52] T1: Monte Carlo done in 31.7 s; V_sw,nom 0.5828 V, sigma 22.12 mV
+[2026-10-14 03:22:22] T2: Monte Carlo done in 30.1 s; V_sw,nom 0.4789 V, sigma 21.60 mV
+[2026-10-14 03:22:51] T3: Monte Carlo done in 29.6 s; V_sw,nom 0.5828 V, sigma 22.12 mV
+[2026-10-14 03:23:20] T4: Monte Carlo done in 28.7 s; V_sw,nom 0.4789 V, sigma 21.60 mV
+[2026-10-14 03:23:20] checks C1-C7 passed
+[2026-10-14 03:23:20] decision: A1 100% (pass), A2 pass, A3 100%; laws validated: True

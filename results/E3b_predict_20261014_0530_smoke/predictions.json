@@ -1,0 +1,118 @@
+{
+ "U1": {
+  "condition": {
+   "id": "U1",
+   "w_div_um": 0.42,
+   "l_div_um": 0.15,
+   "d_v": 0.2,
+   "inverter": "INV_S"
+  },
+  "vy_star_nom_V": 0.570322521672108,
+  "v_sl_nom_V": 0.7703225216721079,
+  "y_sensitivity": {
+   "vsw_pd_nom": 0.5262215070479054,
+   "vy_star_nom": 0.570322521672108,
+   "inverter_gain": 22.628863993722877,
+   "dvy_dinvn_vth0": 0.004938198705953134,
+   "dvy_dinvp_vth0": 0.0008831948291777025,
+   "dvy_dpd_vth0": -0.0009271724412472371,
+   "dvy_dinvn_toxe": 0.004024389957171082,
+   "dvy_dinvp_toxe": -0.00034738132812633937,
+   "dvy_dpd_toxe": -0.0003738221974041167,
+   "dvy_dinvn_voff": 0.008863261467904338,
+   "dvy_dinvp_voff": -5.551115123125783e-17,
+   "dvy_dpd_voff": 0.0,
+   "dvy_dinvn_nfactor": 0.0,
+   "dvy_dinvp_nfactor": 5.244313777574838e-06,
+   "dvy_dpd_nfactor": 0.0,
+   "sigma_delta": 0.01100177490237911
+  },
+  "bound_at_30uS_V": 0.8389662053705338,
+  "feasible": true,
+  "nominal_ln_i_sha256": "80c6447df3bd4ea5d13ef281dc9ebc175073bc47a6e9266b3efe1339eafcb51c",
+  "predictions": {
+   "1d": {
+    "pdk|dac_remap": 0.5185831002249215,
+    "pdk|supply": 0.19604469116262807,
+    "div_only|dac_remap": 0.5185130871026187,
+    "div_only|supply": 0.0,
+    "y_only|dac_remap": 0.0085211702367127,
+    "y_only|supply": 0.19604469116262807
+   },
+   "30d": {
+    "pdk|dac_remap": 0.7367286757984323,
+    "pdk|supply": 0.25539355601071245,
+    "div_only|dac_remap": 0.7366366475401809,
+    "div_only|supply": 0.0,
+    "y_only|dac_remap": 0.011644365353030948,
+    "y_only|supply": 0.25539355601071245
+   },
+   "1y": {
+    "pdk|dac_remap": 0.8993397756836252,
+    "pdk|supply": 0.29310622395176666,
+    "div_only|dac_remap": 0.8992338526767106,
+    "div_only|supply": 0.0,
+    "y_only|dac_remap": 0.013802547839909142,
+    "y_only|supply": 0.29310622395176666
+   }
+  }
+ },
+ "U4": {
+  "condition": {
+   "id": "U4",
+   "w_div_um": 0.42,
+   "l_div_um": 0.15,
+   "d_v": 0.2,
+   "inverter": "INV_M"
+  },
+  "vy_star_nom_V": 0.849727237350723,
+  "v_sl_nom_V": 1.049727237350723,
+  "y_sensitivity": {
+   "vsw_pd_nom": 0.5262215070479054,
+   "vy_star_nom": 0.849727237350723,
+   "inverter_gain": 16.1906236554585,
+   "dvy_dinvn_vth0": 0.008806220823331934,
+   "dvy_dinvp_vth0": 0.00938277685655553,
+   "dvy_dpd_vth0": -0.0012954492793334493,
+   "dvy_dinvn_toxe": 0.008684813568581695,
+   "dvy_dinvp_toxe": -0.007045811199083263,
+   "dvy_dpd_toxe": -0.0005221116846461649,
+   "dvy_dinvn_voff": 0.00392121816181118,
+   "dvy_dinvp_voff": 5.551115123125783e-17,
+   "dvy_dpd_voff": 0.0,
+   "dvy_dinvn_nfactor": 5.551115123125783e-17,
+   "dvy_dinvp_nfactor": 0.00015873098261159901,
+   "dvy_dpd_nfactor": 0.0,
+   "sigma_delta": 0.017550139764323108
+  },
+  "bound_at_30uS_V": 0.822166930771266,
+  "feasible": true,
+  "nominal_ln_i_sha256": "011fcf6c0f341d5bccbaa0fbe5ca80dc37524fb5261a03e0b37212aa1e00fc28",
+  "predictions": {
+   "1d": {
+    "pdk|dac_remap": 0.5580809088097033,
+    "pdk|supply": 0.31967935270701353,
+    "div_only|dac_remap": 0.5580131551769022,
+    "div_only|supply": 0.0,
+    "y_only|dac_remap": 0.008695943156595751,
+    "y_only|supply": 0.31967935270701353
+   },
+   "30d": {
+    "pdk|dac_remap": 0.7918091722779447,
+    "pdk|supply": 0.41645629976952275,
+    "div_only|dac_remap": 0.7917222336750951,
+    "div_only|supply": 0.0,
+    "y_only|dac_remap": 0.011733286325745192,
+    "y_only|supply": 0.41645629976952275
+   },
+   "1y": {
+    "pdk|dac_remap": 0.9653507815588571,
+    "pdk|supply": 0.4779522842042646,
+    "div_only|dac_remap": 0.9652523053329498,
+    "div_only|supply": 0.0,
+    "y_only|dac_remap": 0.013788346736350165,
+    "y_only|supply": 0.4779522842042646
+   }
+  }
+ }
+}

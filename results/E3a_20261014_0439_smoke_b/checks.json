@@ -1,0 +1,37 @@
+{
+  "C1": {
+    "P1": {
+      "max_abs_diff_mV": 0.0003331830741304387,
+      "pass": true
+    }
+  },
+  "C2": {
+    "P1": {
+      "max_abs_lsb": 5.684341886080802e-14,
+      "pass": true
+    }
+  },
+  "C3": {
+    "P1": {
+      "max_abs_lsb": 4.163336342344337e-14,
+      "pass": true
+    }
+  },
+  "C4": {
+    "P1": {
+      "sigma_mc_mV": 22.47846358261419,
+      "sigma_pred_mV": 22.612248930355932,
+      "tolerance": 0.7071067811865476,
+      "pass": true
+    }
+  },
+  "C5": {},
+  "C7": {
+    "P1": {
+      "identical": true,
+      "pass": true
+    }
+  },
+  "failed": [],
+  "all_pass": true
+}

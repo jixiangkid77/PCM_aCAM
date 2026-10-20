@@ -1,0 +1,1 @@
+Superseded: smoke before the lambda term was added to the crosstalk law (T3 shifts 19-26 % larger than predicted at t0 / dac). Rerun follows.

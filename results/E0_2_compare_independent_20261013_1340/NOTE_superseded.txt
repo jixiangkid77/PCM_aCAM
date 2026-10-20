@@ -1,0 +1,1 @@
+SUPERSEDED 2026-10-13 13:40 JST: verdict_independent_found_in_gates_json was read by a plain text search that matched the label GO_STRONG inside the rule text of gates.json; the independent gates.json states verdict NO_GO. All evaluation-level comparisons in this folder are valid. Corrected comparison: the next E0_2_compare_independent_* folder.

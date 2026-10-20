@@ -1,0 +1,9 @@
+G2: done in 30.7 s
+C2: done in 32.3 s
+T3: done in 34.4 s
+G6: done in 30.1 s
+{"overall_passed": true} -> /home/claude/PCM_aCAM/results/E2_independent_check_20261014_0350
+
+real	2m8.136s
+user	3m45.521s
+sys	0m2.473s

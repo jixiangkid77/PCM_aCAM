@@ -1,0 +1,9 @@
+[2026-10-13 13:24:14] E0.2 (PCM_aCAM) start; run dir E0_2_20261013_1324_smoke; config sha256 a3fa8d5506169c6e5da76dc1028135803aa3993d6f102cc8ab6344056dec1d23
+[2026-10-13 13:24:14] pre-run checks
+[2026-10-13 13:24:14]   check_1_cam_equals_quantized_tree_traversal: {'mismatched_predictions': 0, 'min_integrity': 1.0} PASS
+[2026-10-13 13:24:14]   check_2_nominal_mapping_exact: 1.1102230246251565e-16 PASS
+[2026-10-13 13:24:14]   check_3_nodes_equal_without_mismatch: 3.3306690738754696e-16 PASS
+[2026-10-13 13:24:14]   check_4_closed_forms_uniform_drift: 5.551115123125783e-16 PASS
+[2026-10-13 13:24:14] iris split 0: constraints 385, test 45, 4-bit ref acc 0.9778 (0.2s)
+[2026-10-13 13:24:15] wine split 0: constraints 482, test 54, 4-bit ref acc 0.9815 (0.2s)
+[2026-10-13 13:24:15] verdict SMOKE (not interpreted); elapsed 0.5 s

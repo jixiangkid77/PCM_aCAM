@@ -1,0 +1,19 @@
+{
+  "experiment": "E0.1",
+  "project": "PCM_aCAM",
+  "plan_version": "1.0",
+  "smoke": true,
+  "start_jst": "2026-10-12T16:48:09.416212+09:00",
+  "config_sha256": "83ace66b9f75ae0a1e9cc3f239a53eedcb6dd633dc2576229b4ce896f5c8ddbd",
+  "script_sha256": "cdeaa91fbee221dbf77112ea0b18b02c25bd2ee9b1850c630040a8e8ec15a70e",
+  "package_version": "0.1.0",
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+    "sklearn": "1.9.1"
+  },
+  "end_jst": "2026-10-12T16:48:09.764952+09:00",
+  "elapsed_s": 0.3
+}
