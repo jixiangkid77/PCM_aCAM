@@ -3,7 +3,7 @@
 # scikit-learn 1.9.1; the figures were made with matplotlib 3.11.2. Other versions may
 # change the random forests and therefore the numbers; to use exactly these versions:
 #   pip install numpy==2.5.3 scipy==1.18.1 scikit-learn==1.9.1 matplotlib==3.11.2
-# E1-E4 also need ngspice (the runs used ngspice-42) on the PATH; it is not a
+# E1-E4 and E6 also need ngspice (the runs used ngspice-42) on the PATH; it is not a
 # Python package and is installed separately.
 numpy>=2.5.3
 scipy>=1.18.1

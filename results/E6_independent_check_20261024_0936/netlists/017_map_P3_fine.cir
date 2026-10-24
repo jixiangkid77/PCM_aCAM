@@ -1,0 +1,36 @@
+* E6 independent check: map_P3_fine
+.include "/home/claude/PCM_aCAM/third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice"
+.temp 27
+.options reltol=1e-6 vntol=1e-9 abstol=1e-15
+vd d 0 0.5262214733902646
+vg g 0 0
+xdv d g 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+.control
+set filetype=binary
+dc vg 0.6869980000000001 0.6880019999999999 1e-06
+write 017_map_P3_fine_f0.raw all
+dc vg 0.687998 0.6890019999999999 1e-06
+write 017_map_P3_fine_f1.raw all
+dc vg 0.7539980000000001 0.755002 1e-06
+write 017_map_P3_fine_f2.raw all
+dc vg 0.7549980000000001 0.756002 1e-06
+write 017_map_P3_fine_f3.raw all
+dc vg 0.8039980000000001 0.805002 1e-06
+write 017_map_P3_fine_f4.raw all
+dc vg 0.8949980000000001 0.896002 1e-06
+write 017_map_P3_fine_f5.raw all
+dc vg 0.9219980000000001 0.923002 1e-06
+write 017_map_P3_fine_f6.raw all
+dc vg 0.952998 0.9540019999999999 1e-06
+write 017_map_P3_fine_f7.raw all
+dc vg 1.0129979999999998 1.014002 1e-06
+write 017_map_P3_fine_f8.raw all
+dc vg 1.0569979999999999 1.058002 1e-06
+write 017_map_P3_fine_f9.raw all
+dc vg 1.1459979999999999 1.147002 1e-06
+write 017_map_P3_fine_f10.raw all
+dc vg 1.241998 1.2430020000000002 1e-06
+write 017_map_P3_fine_f11.raw all
+quit
+.endc
+.end

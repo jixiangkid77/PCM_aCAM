@@ -1,0 +1,443 @@
+* E6 independent check: settle_dc_plan
+.include "/home/claude/PCM_aCAM/third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice"
+.temp 27
+.options reltol=1e-6 vntol=1e-9 abstol=1e-15
+vsl_s00m sl_s00m 0 0.7262214733902645
+r_s00m sl_s00m n_s00m 400000.00000000006
+xdiv_s00m n_s00m dl_s00m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s00m dl_s00m 0 0.6793037310635283
+vml_s00m ml_s00m 0 1.8
+xpd_s00m ml_s00m n_s00m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s000 sl_s000 0 0.7262214733902645
+r_s000 sl_s000 n_s000 400000.00000000006
+xdiv_s000 n_s000 dl_s000 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s000 dl_s000 0 0.6795805910304514
+vml_s000 ml_s000 0 1.8
+xpd_s000 ml_s000 n_s000 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s00p sl_s00p 0 0.7262214733902645
+r_s00p sl_s00p n_s00p 400000.00000000006
+xdiv_s00p n_s00p dl_s00p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s00p dl_s00p 0 0.6798561807776712
+vml_s00p ml_s00p 0 1.8
+xpd_s00p ml_s00p n_s00p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s00prev sl_s00prev 0 0.7262214733902645
+r_s00prev sl_s00prev n_s00prev 400000.00000000006
+xdiv_s00prev n_s00prev dl_s00prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s00prev dl_s00prev 0 0.6795805910304514
+vml_s00prev ml_s00prev 0 1.8
+xpd_s00prev ml_s00prev n_s00prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s01m sl_s01m 0 0.7262214733902645
+r_s01m sl_s01m n_s01m 400000.00000000006
+xdiv_s01m n_s01m dl_s01m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s01m dl_s01m 0 0.6793037310635283
+vml_s01m ml_s01m 0 1.8
+xpd_s01m ml_s01m n_s01m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s010 sl_s010 0 0.7262214733902645
+r_s010 sl_s010 n_s010 400000.00000000006
+xdiv_s010 n_s010 dl_s010 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s010 dl_s010 0 0.6795805910304514
+vml_s010 ml_s010 0 1.8
+xpd_s010 ml_s010 n_s010 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s01p sl_s01p 0 0.7262214733902645
+r_s01p sl_s01p n_s01p 400000.00000000006
+xdiv_s01p n_s01p dl_s01p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s01p dl_s01p 0 0.6798561807776712
+vml_s01p ml_s01p 0 1.8
+xpd_s01p ml_s01p n_s01p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s01prev sl_s01prev 0 0.7262214733902645
+r_s01prev sl_s01prev n_s01prev 400000.00000000006
+xdiv_s01prev n_s01prev dl_s01prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s01prev dl_s01prev 0 0.8179294804962679
+vml_s01prev ml_s01prev 0 1.8
+xpd_s01prev ml_s01prev n_s01prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s02m sl_s02m 0 0.7262214733902645
+r_s02m sl_s02m n_s02m 804916.898823098
+xdiv_s02m n_s02m dl_s02m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s02m dl_s02m 0 0.6447047584369856
+vml_s02m ml_s02m 0 1.8
+xpd_s02m ml_s02m n_s02m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s020 sl_s020 0 0.7262214733902645
+r_s020 sl_s020 n_s020 804916.898823098
+xdiv_s020 n_s020 dl_s020 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s020 dl_s020 0 0.6449583443659433
+vml_s020 ml_s020 0 1.8
+xpd_s020 ml_s020 n_s020 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s02p sl_s02p 0 0.7262214733902645
+r_s02p sl_s02p n_s02p 804916.898823098
+xdiv_s02p n_s02p dl_s02p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s02p dl_s02p 0 0.6452107343090489
+vml_s02p ml_s02p 0 1.8
+xpd_s02p ml_s02p n_s02p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s02prev sl_s02prev 0 0.7262214733902645
+r_s02prev sl_s02prev n_s02prev 804916.898823098
+xdiv_s02prev n_s02prev dl_s02prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s02prev dl_s02prev 0 0.6449583443659433
+vml_s02prev ml_s02prev 0 1.8
+xpd_s02prev ml_s02prev n_s02prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s03m sl_s03m 0 0.7262214733902645
+r_s03m sl_s03m n_s03m 804916.898823098
+xdiv_s03m n_s03m dl_s03m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s03m dl_s03m 0 0.6447047584369856
+vml_s03m ml_s03m 0 1.8
+xpd_s03m ml_s03m n_s03m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s030 sl_s030 0 0.7262214733902645
+r_s030 sl_s030 n_s030 804916.898823098
+xdiv_s030 n_s030 dl_s030 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s030 dl_s030 0 0.6449583443659433
+vml_s030 ml_s030 0 1.8
+xpd_s030 ml_s030 n_s030 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s03p sl_s03p 0 0.7262214733902645
+r_s03p sl_s03p n_s03p 804916.898823098
+xdiv_s03p n_s03p dl_s03p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s03p dl_s03p 0 0.6452107343090489
+vml_s03p ml_s03p 0 1.8
+xpd_s03p ml_s03p n_s03p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s03prev sl_s03prev 0 0.7262214733902645
+r_s03prev sl_s03prev n_s03prev 804916.898823098
+xdiv_s03prev n_s03prev dl_s03prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s03prev dl_s03prev 0 0.7671122219971417
+vml_s03prev ml_s03prev 0 1.8
+xpd_s03prev ml_s03prev n_s03prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s04m sl_s04m 0 0.7262214733902645
+r_s04m sl_s04m n_s04m 400000.00000000006
+xdiv_s04m n_s04m dl_s04m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s04m dl_s04m 0 0.754483310155398
+vml_s04m ml_s04m 0 1.8
+xpd_s04m ml_s04m n_s04m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s040 sl_s040 0 0.7262214733902645
+r_s040 sl_s040 n_s040 400000.00000000006
+xdiv_s040 n_s040 dl_s040 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s040 dl_s040 0 0.7550808333496771
+vml_s040 ml_s040 0 1.8
+xpd_s040 ml_s040 n_s040 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s04p sl_s04p 0 0.7262214733902645
+r_s04p sl_s04p n_s04p 400000.00000000006
+xdiv_s04p n_s04p dl_s04p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s04p dl_s04p 0 0.7556767578884326
+vml_s04p ml_s04p 0 1.8
+xpd_s04p ml_s04p n_s04p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s04prev sl_s04prev 0 0.7262214733902645
+r_s04prev sl_s04prev n_s04prev 400000.00000000006
+xdiv_s04prev n_s04prev dl_s04prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s04prev dl_s04prev 0 0.7550808333496771
+vml_s04prev ml_s04prev 0 1.8
+xpd_s04prev ml_s04prev n_s04prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s05m sl_s05m 0 0.7262214733902645
+r_s05m sl_s05m n_s05m 400000.00000000006
+xdiv_s05m n_s05m dl_s05m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s05m dl_s05m 0 0.754483310155398
+vml_s05m ml_s05m 0 1.8
+xpd_s05m ml_s05m n_s05m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s050 sl_s050 0 0.7262214733902645
+r_s050 sl_s050 n_s050 400000.00000000006
+xdiv_s050 n_s050 dl_s050 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s050 dl_s050 0 0.7550808333496771
+vml_s050 ml_s050 0 1.8
+xpd_s050 ml_s050 n_s050 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s05p sl_s05p 0 0.7262214733902645
+r_s05p sl_s05p n_s05p 400000.00000000006
+xdiv_s05p n_s05p dl_s05p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s05p dl_s05p 0 0.7556767578884326
+vml_s05p ml_s05p 0 1.8
+xpd_s05p ml_s05p n_s05p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s05prev sl_s05prev 0 0.7262214733902645
+r_s05prev sl_s05prev n_s05prev 400000.00000000006
+xdiv_s05prev n_s05prev dl_s05prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s05prev dl_s05prev 0 1.2423154285621048
+vml_s05prev ml_s05prev 0 1.8
+xpd_s05prev ml_s05prev n_s05prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s06m sl_s06m 0 0.7262214733902645
+r_s06m sl_s06m n_s06m 804916.898823098
+xdiv_s06m n_s06m dl_s06m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s06m dl_s06m 0 0.6878710979631769
+vml_s06m ml_s06m 0 1.8
+xpd_s06m ml_s06m n_s06m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s060 sl_s060 0 0.7262214733902645
+r_s060 sl_s060 n_s060 804916.898823098
+xdiv_s060 n_s060 dl_s060 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s060 dl_s060 0 0.6883081990735151
+vml_s060 ml_s060 0 1.8
+xpd_s060 ml_s060 n_s060 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s06p sl_s06p 0 0.7262214733902645
+r_s06p sl_s06p n_s06p 804916.898823098
+xdiv_s06p n_s06p dl_s06p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s06p dl_s06p 0 0.6887438886582532
+vml_s06p ml_s06p 0 1.8
+xpd_s06p ml_s06p n_s06p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s06prev sl_s06prev 0 0.7262214733902645
+r_s06prev sl_s06prev n_s06prev 804916.898823098
+xdiv_s06prev n_s06prev dl_s06prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s06prev dl_s06prev 0 0.6883081990735151
+vml_s06prev ml_s06prev 0 1.8
+xpd_s06prev ml_s06prev n_s06prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s07m sl_s07m 0 0.7262214733902645
+r_s07m sl_s07m n_s07m 804916.898823098
+xdiv_s07m n_s07m dl_s07m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s07m dl_s07m 0 0.6878710979631769
+vml_s07m ml_s07m 0 1.8
+xpd_s07m ml_s07m n_s07m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s070 sl_s070 0 0.7262214733902645
+r_s070 sl_s070 n_s070 804916.898823098
+xdiv_s070 n_s070 dl_s070 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s070 dl_s070 0 0.6883081990735151
+vml_s070 ml_s070 0 1.8
+xpd_s070 ml_s070 n_s070 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s07p sl_s07p 0 0.7262214733902645
+r_s07p sl_s07p n_s07p 804916.898823098
+xdiv_s07p n_s07p dl_s07p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s07p dl_s07p 0 0.6887438886582532
+vml_s07p ml_s07p 0 1.8
+xpd_s07p ml_s07p n_s07p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s07prev sl_s07prev 0 0.7262214733902645
+r_s07prev sl_s07prev n_s07prev 804916.898823098
+xdiv_s07prev n_s07prev dl_s07prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s07prev dl_s07prev 0 1.013628312690415
+vml_s07prev ml_s07prev 0 1.8
+xpd_s07prev ml_s07prev n_s07prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s08m sl_s08m 0 0.7262214733902645
+r_s08m sl_s08m n_s08m 44444.444444444445
+xdiv_s08m n_s08m dl_s08m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s08m dl_s08m 0 0.8178822776445098
+vml_s08m ml_s08m 0 1.8
+xpd_s08m ml_s08m n_s08m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s080 sl_s080 0 0.7262214733902645
+r_s080 sl_s080 n_s080 44444.444444444445
+xdiv_s080 n_s080 dl_s080 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s080 dl_s080 0 0.8179294804962679
+vml_s080 ml_s080 0 1.8
+xpd_s080 ml_s080 n_s080 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s08p sl_s08p 0 0.7262214733902645
+r_s08p sl_s08p n_s08p 44444.444444444445
+xdiv_s08p n_s08p dl_s08p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s08p dl_s08p 0 0.8179766636957145
+vml_s08p ml_s08p 0 1.8
+xpd_s08p ml_s08p n_s08p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s08prev sl_s08prev 0 0.7262214733902645
+r_s08prev sl_s08prev n_s08prev 44444.444444444445
+xdiv_s08prev n_s08prev dl_s08prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s08prev dl_s08prev 0 0.6795805910304514
+vml_s08prev ml_s08prev 0 1.8
+xpd_s08prev ml_s08prev n_s08prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s09m sl_s09m 0 0.7262214733902645
+r_s09m sl_s09m n_s09m 89435.21098034421
+xdiv_s09m n_s09m dl_s09m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s09m dl_s09m 0 0.767072635508876
+vml_s09m ml_s09m 0 1.8
+xpd_s09m ml_s09m n_s09m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s090 sl_s090 0 0.7262214733902645
+r_s090 sl_s090 n_s090 89435.21098034421
+xdiv_s090 n_s090 dl_s090 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s090 dl_s090 0 0.7671122219971417
+vml_s090 ml_s090 0 1.8
+xpd_s090 ml_s090 n_s090 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s09p sl_s09p 0 0.7262214733902645
+r_s09p sl_s09p n_s09p 89435.21098034421
+xdiv_s09p n_s09p dl_s09p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s09p dl_s09p 0 0.7671517900516601
+vml_s09p ml_s09p 0 1.8
+xpd_s09p ml_s09p n_s09p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s09prev sl_s09prev 0 0.7262214733902645
+r_s09prev sl_s09prev n_s09prev 89435.21098034421
+xdiv_s09prev n_s09prev dl_s09prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s09prev dl_s09prev 0 0.6449583443659433
+vml_s09prev ml_s09prev 0 1.8
+xpd_s09prev ml_s09prev n_s09prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s10m sl_s10m 0 0.7262214733902645
+r_s10m sl_s10m n_s10m 44444.444444444445
+xdiv_s10m n_s10m dl_s10m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s10m dl_s10m 0 1.2420628054891065
+vml_s10m ml_s10m 0 1.8
+xpd_s10m ml_s10m n_s10m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s100 sl_s100 0 0.7262214733902645
+r_s100 sl_s100 n_s100 44444.444444444445
+xdiv_s100 n_s100 dl_s100 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s100 dl_s100 0 1.2423154285621048
+vml_s100 ml_s100 0 1.8
+xpd_s100 ml_s100 n_s100 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s10p sl_s10p 0 0.7262214733902645
+r_s10p sl_s10p n_s10p 44444.444444444445
+xdiv_s10p n_s10p dl_s10p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s10p dl_s10p 0 1.242568044697252
+vml_s10p ml_s10p 0 1.8
+xpd_s10p ml_s10p n_s10p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s10prev sl_s10prev 0 0.7262214733902645
+r_s10prev sl_s10prev n_s10prev 44444.444444444445
+xdiv_s10prev n_s10prev dl_s10prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s10prev dl_s10prev 0 0.7550808333496771
+vml_s10prev ml_s10prev 0 1.8
+xpd_s10prev ml_s10prev n_s10prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s11m sl_s11m 0 0.7262214733902645
+r_s11m sl_s11m n_s11m 89435.21098034421
+xdiv_s11m n_s11m dl_s11m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s11m dl_s11m 0 1.0134763720277962
+vml_s11m ml_s11m 0 1.8
+xpd_s11m ml_s11m n_s11m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s110 sl_s110 0 0.7262214733902645
+r_s110 sl_s110 n_s110 89435.21098034421
+xdiv_s110 n_s110 dl_s110 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s110 dl_s110 0 1.013628312690415
+vml_s110 ml_s110 0 1.8
+xpd_s110 ml_s110 n_s110 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s11p sl_s11p 0 0.7262214733902645
+r_s11p sl_s11p n_s11p 89435.21098034421
+xdiv_s11p n_s11p dl_s11p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s11p dl_s11p 0 1.0137802168245027
+vml_s11p ml_s11p 0 1.8
+xpd_s11p ml_s11p n_s11p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s11prev sl_s11prev 0 0.7262214733902645
+r_s11prev sl_s11prev n_s11prev 89435.21098034421
+xdiv_s11prev n_s11prev dl_s11prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s11prev dl_s11prev 0 0.6883081990735151
+vml_s11prev ml_s11prev 0 1.8
+xpd_s11prev ml_s11prev n_s11prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s12m sl_s12m 0 0.7703217764363897
+r_s12m sl_s12m n_s12m 380296.41575245006
+xdiv_s12m n_s12m dl_s12m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s12m dl_s12m 0 0.6793037310635283
+vml_s12m ml_s12m 0 1.8
+vinv_s12m vi_s12m 0 1.8
+xp_s12m o_s12m n_s12m vi_s12m vi_s12m sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s12m o_s12m n_s12m 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s12m ml_s12m o_s12m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s120 sl_s120 0 0.7703217764363897
+r_s120 sl_s120 n_s120 380296.41575245006
+xdiv_s120 n_s120 dl_s120 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s120 dl_s120 0 0.6795805910304514
+vml_s120 ml_s120 0 1.8
+vinv_s120 vi_s120 0 1.8
+xp_s120 o_s120 n_s120 vi_s120 vi_s120 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s120 o_s120 n_s120 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s120 ml_s120 o_s120 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s12p sl_s12p 0 0.7703217764363897
+r_s12p sl_s12p n_s12p 380296.41575245006
+xdiv_s12p n_s12p dl_s12p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s12p dl_s12p 0 0.6798561807776712
+vml_s12p ml_s12p 0 1.8
+vinv_s12p vi_s12p 0 1.8
+xp_s12p o_s12p n_s12p vi_s12p vi_s12p sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s12p o_s12p n_s12p 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s12p ml_s12p o_s12p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s12prev sl_s12prev 0 0.7703217764363897
+r_s12prev sl_s12prev n_s12prev 380296.41575245006
+xdiv_s12prev n_s12prev dl_s12prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s12prev dl_s12prev 0 0.8179294804962679
+vml_s12prev ml_s12prev 0 1.8
+vinv_s12prev vi_s12prev 0 1.8
+xp_s12prev o_s12prev n_s12prev vi_s12prev vi_s12prev sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s12prev o_s12prev n_s12prev 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s12prev ml_s12prev o_s12prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s13m sl_s13m 0 0.7703217764363897
+r_s13m sl_s13m n_s13m 765267.5290025041
+xdiv_s13m n_s13m dl_s13m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s13m dl_s13m 0 0.6447047584369856
+vml_s13m ml_s13m 0 1.8
+vinv_s13m vi_s13m 0 1.8
+xp_s13m o_s13m n_s13m vi_s13m vi_s13m sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s13m o_s13m n_s13m 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s13m ml_s13m o_s13m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s130 sl_s130 0 0.7703217764363897
+r_s130 sl_s130 n_s130 765267.5290025041
+xdiv_s130 n_s130 dl_s130 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s130 dl_s130 0 0.6449583443659433
+vml_s130 ml_s130 0 1.8
+vinv_s130 vi_s130 0 1.8
+xp_s130 o_s130 n_s130 vi_s130 vi_s130 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s130 o_s130 n_s130 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s130 ml_s130 o_s130 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s13p sl_s13p 0 0.7703217764363897
+r_s13p sl_s13p n_s13p 765267.5290025041
+xdiv_s13p n_s13p dl_s13p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s13p dl_s13p 0 0.6452107343090489
+vml_s13p ml_s13p 0 1.8
+vinv_s13p vi_s13p 0 1.8
+xp_s13p o_s13p n_s13p vi_s13p vi_s13p sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s13p o_s13p n_s13p 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s13p ml_s13p o_s13p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s13prev sl_s13prev 0 0.7703217764363897
+r_s13prev sl_s13prev n_s13prev 765267.5290025041
+xdiv_s13prev n_s13prev dl_s13prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_s13prev dl_s13prev 0 0.7671122219971417
+vml_s13prev ml_s13prev 0 1.8
+vinv_s13prev vi_s13prev 0 1.8
+xp_s13prev o_s13prev n_s13prev vi_s13prev vi_s13prev sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s13prev o_s13prev n_s13prev 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s13prev ml_s13prev o_s13prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s14m sl_s14m 0 0.7703217764363897
+r_s14m sl_s14m n_s14m 398816.3648810982
+xdiv_s14m n_s14m dl_s14m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s14m dl_s14m 0 0.754483310155398
+vml_s14m ml_s14m 0 1.8
+vinv_s14m vi_s14m 0 1.8
+xp_s14m o_s14m n_s14m vi_s14m vi_s14m sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s14m o_s14m n_s14m 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s14m ml_s14m o_s14m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s140 sl_s140 0 0.7703217764363897
+r_s140 sl_s140 n_s140 398816.3648810982
+xdiv_s140 n_s140 dl_s140 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s140 dl_s140 0 0.7550808333496771
+vml_s140 ml_s140 0 1.8
+vinv_s140 vi_s140 0 1.8
+xp_s140 o_s140 n_s140 vi_s140 vi_s140 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s140 o_s140 n_s140 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s140 ml_s140 o_s140 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s14p sl_s14p 0 0.7703217764363897
+r_s14p sl_s14p n_s14p 398816.3648810982
+xdiv_s14p n_s14p dl_s14p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s14p dl_s14p 0 0.7556767578884326
+vml_s14p ml_s14p 0 1.8
+vinv_s14p vi_s14p 0 1.8
+xp_s14p o_s14p n_s14p vi_s14p vi_s14p sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s14p o_s14p n_s14p 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s14p ml_s14p o_s14p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s14prev sl_s14prev 0 0.7703217764363897
+r_s14prev sl_s14prev n_s14prev 398816.3648810982
+xdiv_s14prev n_s14prev dl_s14prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s14prev dl_s14prev 0 1.2423154285621048
+vml_s14prev ml_s14prev 0 1.8
+vinv_s14prev vi_s14prev 0 1.8
+xp_s14prev o_s14prev n_s14prev vi_s14prev vi_s14prev sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s14prev o_s14prev n_s14prev 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s14prev ml_s14prev o_s14prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s15m sl_s15m 0 0.7703217764363897
+r_s15m sl_s15m n_s15m 802535.0790499866
+xdiv_s15m n_s15m dl_s15m 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s15m dl_s15m 0 0.6878710979631769
+vml_s15m ml_s15m 0 1.8
+vinv_s15m vi_s15m 0 1.8
+xp_s15m o_s15m n_s15m vi_s15m vi_s15m sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s15m o_s15m n_s15m 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s15m ml_s15m o_s15m 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s150 sl_s150 0 0.7703217764363897
+r_s150 sl_s150 n_s150 802535.0790499866
+xdiv_s150 n_s150 dl_s150 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s150 dl_s150 0 0.6883081990735151
+vml_s150 ml_s150 0 1.8
+vinv_s150 vi_s150 0 1.8
+xp_s150 o_s150 n_s150 vi_s150 vi_s150 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s150 o_s150 n_s150 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s150 ml_s150 o_s150 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s15p sl_s15p 0 0.7703217764363897
+r_s15p sl_s15p n_s15p 802535.0790499866
+xdiv_s15p n_s15p dl_s15p 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s15p dl_s15p 0 0.6887438886582532
+vml_s15p ml_s15p 0 1.8
+vinv_s15p vi_s15p 0 1.8
+xp_s15p o_s15p n_s15p vi_s15p vi_s15p sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s15p o_s15p n_s15p 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s15p ml_s15p o_s15p 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_s15prev sl_s15prev 0 0.7703217764363897
+r_s15prev sl_s15prev n_s15prev 802535.0790499866
+xdiv_s15prev n_s15prev dl_s15prev 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_s15prev dl_s15prev 0 1.013628312690415
+vml_s15prev ml_s15prev 0 1.8
+vinv_s15prev vi_s15prev 0 1.8
+xp_s15prev o_s15prev n_s15prev vi_s15prev vi_s15prev sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_s15prev o_s15prev n_s15prev 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_s15prev ml_s15prev o_s15prev 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+.control
+set filetype=binary
+op
+write 019_settle_dc_plan_o.raw all
+quit
+.endc
+.end

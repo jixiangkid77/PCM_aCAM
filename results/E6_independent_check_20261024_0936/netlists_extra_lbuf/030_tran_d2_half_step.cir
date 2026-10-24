@@ -1,0 +1,24 @@
+* E6 independent check: tran_d2_half_step
+.include "/home/claude/PCM_aCAM/third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice"
+.temp 27
+.options reltol=1e-6 vntol=1e-9 abstol=1e-15
+vsl_t sl_t 0 0.7684206115436505
+r_t sl_t n_t 44444.44444444784
+xdiv_t n_t dl_t 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_t dl_t 0 pwl(0 0.7547632648460386 1e-09 0.7547632648460386 1.1000000000000001e-09 1.2354537967309633 6.06e-07 1.2354537967309633)
+vml_t ml_t 0 1.8
+vinva_t via_t 0 1.8
+vinvb_t vib_t 0 1.8
+xp_at m_t n_t via_t via_t sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_at m_t n_t 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bt o_t m_t vib_t vib_t sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bt o_t m_t 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_t ml_t o_t 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+cpar_t n_t 0 5e-16
+.control
+set filetype=binary
+tran 5e-12 6e-07 0 1e-11
+write 030_tran_d2_half_step_tr.raw v(n_t) v(m_t) v(o_t) v(dl_t)
+quit
+.endc
+.end

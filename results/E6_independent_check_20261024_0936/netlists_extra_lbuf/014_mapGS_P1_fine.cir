@@ -1,0 +1,22 @@
+* E6 independent check: mapGS_P1_fine
+.include "/home/claude/PCM_aCAM/third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice"
+.temp 27
+.options reltol=1e-6 vntol=1e-9 abstol=1e-15
+vd d 0 0.5684206115436504
+vg g 0 0
+xdv d g 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+.control
+set filetype=binary
+dc vg 0.6419980000000001 0.643002 1e-06
+write 014_mapGS_P1_fine_f0.raw all
+dc vg 0.6769980000000001 0.678002 1e-06
+write 014_mapGS_P1_fine_f1.raw all
+dc vg 0.7639980000000001 0.765002 1e-06
+write 014_mapGS_P1_fine_f2.raw all
+dc vg 0.813998 0.8150019999999999 1e-06
+write 014_mapGS_P1_fine_f3.raw all
+dc vg 0.814998 0.8160019999999999 1e-06
+write 014_mapGS_P1_fine_f4.raw all
+quit
+.endc
+.end

@@ -1,0 +1,47 @@
+* E6 independent check: mapGS_P1_verify
+.include "/home/claude/PCM_aCAM/third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice"
+.temp 27
+.options reltol=1e-6 vntol=1e-9 abstol=1e-15
+vd0 d0 0 0.5684206115436504
+vg0 g0 0 0.6770747721820524
+xdv0 d0 g0 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vd1 d1 0 0.5684206115436504
+vg1 g1 0 0.8151558445494614
+xdv1 d1 g1 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vd2 d2 0 0.5684206115436504
+vg2 g2 0 0.8151087061487559
+xdv2 d2 g2 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vd3 d3 0 0.5684206115436504
+vg3 g3 0 0.8152029632887386
+xdv3 d3 g3 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vd4 d4 0 0.5684206115436504
+vg4 g4 0 0.8146835720727794
+xdv4 d4 g4 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vd5 d5 0 0.5684206115436504
+vg5 g5 0 0.8156261508425288
+xdv5 d5 g5 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vd6 d6 0 0.5684206115436504
+vg6 g6 0 0.6425763438745312
+xdv6 d6 g6 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vd7 d7 0 0.5684206115436504
+vg7 g7 0 0.7643995030756207
+xdv7 d7 g7 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vd8 d8 0 0.5684206115436504
+vg8 g8 0 0.7643599678561757
+xdv8 d8 g8 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vd9 d9 0 0.5684206115436504
+vg9 g9 0 0.7644390199107155
+xdv9 d9 g9 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vd10 d10 0 0.5684206115436504
+vg10 g10 0 0.7640033200369913
+xdv10 d10 g10 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vd11 d11 0 0.5684206115436504
+vg11 g11 0 0.7647938473866875
+xdv11 d11 g11 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+.control
+set filetype=binary
+op
+write 015_mapGS_P1_verify_o.raw all
+quit
+.endc
+.end

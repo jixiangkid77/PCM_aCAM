@@ -1,0 +1,2 @@
+digits 2 4 kind 0 theta*15 15 e 17.22 x_eff 2.148 g_now 3.688 g_target 3.789 clipped False a_hat 0.487
+synthetic 0 2 kind 0 theta*15 9 e 15.17 x_eff 1.611 g_now 5.712 g_target 4.521 clipped False a_hat 0.4926

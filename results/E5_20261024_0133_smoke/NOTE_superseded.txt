@@ -1,0 +1,1 @@
+Superseded smoke run (pre-freeze code). Afterwards the supply-DAC case was changed from rounding on a grid anchored at the programming level to the worst case +-step/2 (one V_SL serves the whole array, so its rounding error is common to all bounds). Numbers not interpreted.

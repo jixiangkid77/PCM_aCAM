@@ -1,0 +1,3 @@
+dataset,rows_mean,features,cells,pcm_devices,programmed_bounds_mean,replica_64_share,replica_256_share,design,lut_bits,lut_area_um2_ff,ff_area_um2,dl_bits_full_scale,vsl_dac_bits,adjustable_supplies_per_cell_set,divider_gate_area_per_cell_um2,updates_first_year_min,updates_first_year_max
+iris,126.0,4,504.0,1008.0,385.0,0.06349206349206349,0.25396825396825395,,,,,,,,,,
+,,,,,,,,P1,2560,51249.152,20.0192,10,8,2,0.126,61,64

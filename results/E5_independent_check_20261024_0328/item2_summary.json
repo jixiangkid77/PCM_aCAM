@@ -1,0 +1,67 @@
+{
+  "rows": 120,
+  "configs": [
+    "dac_remap/DL/full/8 bit",
+    "dac_remap/DL/span/8 bit",
+    "supply/DL/full/8 bit",
+    "supply/DL/span/8 bit",
+    "supply/SL/+half/8 bit",
+    "supply/SL/-half/8 bit"
+  ],
+  "bounds": 20,
+  "max_abs_diff_lsb": {
+    "added_error_lsb": 0.0,
+    "x_exact_lsb": 0.0,
+    "x_quantized_lsb": 0.0
+  },
+  "max_abs_diff_other_columns": {
+    "v_bound_v": 0.0,
+    "v_switch_quantized_v": 0.0,
+    "grid_offset_v": 0.0,
+    "grid_step_v": 0.0,
+    "d_eff_v": 0.0,
+    "map_factor": 0.0
+  },
+  "brent_inversion_max_abs_diff_to_run_lsb": {
+    "added_error_lsb": 1.1499301511008753e-10,
+    "x_exact_lsb": 8.695710818074076e-11,
+    "x_quantized_lsb": 7.571443472187411e-11
+  },
+  "min_distance_of_V*_to_a_DL_grid_point_in_steps": 0.00759517864105419,
+  "provenance_vs_E4_draws": {
+    "kind_instance_theta_identical": true,
+    "g_now_max_rel_diff": 0.0,
+    "a_hat_max_rel_diff": 0.0,
+    "x_exact_vs_E4_theta_eff_max_abs_lsb": 0.0
+  },
+  "selection_of_the_20_bounds": {
+    "bounds": 385,
+    "bound_failures": 0,
+    "candidates": 385,
+    "run_ks": [
+      7,
+      25,
+      65,
+      72,
+      74,
+      79,
+      85,
+      91,
+      122,
+      131,
+      179,
+      181,
+      198,
+      204,
+      245,
+      248,
+      269,
+      335,
+      364,
+      378
+    ],
+    "matching_variant": "sort(rng.choice(candidates, 20, replace=False))",
+    "note": "informational (the plan fixes the stream and the candidate set, not the exact numpy call)"
+  },
+  "pass": true
+}

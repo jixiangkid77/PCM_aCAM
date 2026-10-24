@@ -1,0 +1,38 @@
+{
+  "started": "2026-10-24T05:51:00.470456+09:00",
+  "argv": [
+    "experiments/E6_cost.py",
+    "--part",
+    "all",
+    "--smoke",
+    "--workers",
+    "2"
+  ],
+  "ngspice": "ngspice-42 : Circuit level simulation program",
+  "env": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "platform": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39"
+  },
+  "sha256": {
+    "experiments/E6_config.json": "385b7a8f5d9d1585cf1d62198c95fc7c848f0c8dd9ed4e2a2b13868fd421580d",
+    "experiments/E6_cost.py": "96e72bd0fb2ebf47b47768ffcababbdf299895962e853d9de1d43d8a5464b25e",
+    "third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice": "8693a91e23e16678a97c0f0b9671ed0a690d1bd0211c22e6b90b0c451693c105",
+    "third_party/sky130_fd_sc_hd_lef/sky130_fd_sc_hd__dfxtp_1.lef": "fc7b01be5e30691de4455f55cec6bb5cd7d954af0be4553198580b74c17db529",
+    "src/pcm_acam/spice_iv.py": "1e016b586a84cf26870619f4bea4fa16d213341405f82d1a565d9d2a439bd073",
+    "src/pcm_acam/branch_post.py": "1b2d1db2755eb4973d249065b31909ae57e30f5fd4a7baf323aad4b6cc7dfaf1",
+    "src/pcm_acam/inverter.py": "7dbf86d401d7f55889e03aa62ada9799f3a8cc3c719fec1f7e04d7b12798474b",
+    "src/pcm_acam/trees.py": "17cb854495f528567f40e45070b61ad14ddae2e6fbecd038fe1d427a6597cb70",
+    "src/pcm_acam/acam.py": "43083ce773a2e444759ead19660e23ca56481651ee6e784ab13f28a7fb0e3b88"
+  },
+  "finished": "2026-10-24T05:59:19.220289+09:00",
+  "seconds": 498.0,
+  "checks_pass": {
+    "C1": false,
+    "C2": false,
+    "C3": true,
+    "C4": true,
+    "C5": true
+  }
+}

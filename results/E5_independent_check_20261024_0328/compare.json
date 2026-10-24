@@ -1,0 +1,233 @@
+{
+  "item1": {
+    "case": {
+      "dataset": "iris",
+      "split": 0,
+      "seed": 0,
+      "design": "P1",
+      "cell_set": "6T2M",
+      "condition": "unif",
+      "time": "1y",
+      "nodes": [
+        "dac_remap",
+        "supply"
+      ],
+      "type": "L6T",
+      "role": "independent re-check 1: counts of |e| > 0.5 and > 1 LSB"
+    },
+    "t_s": 31536000.0,
+    "a_t": 0.49694569483461226,
+    "a_t_minus_E4_a_uniform": 0.0,
+    "n_bounds_of_type_own": 207,
+    "n_bounds_of_type_run": 207,
+    "counts_own": {
+      "dac_remap": {
+        "abs_gt_0.5": 94,
+        "abs_gt_1": 33
+      },
+      "supply": {
+        "abs_gt_0.5": 63,
+        "abs_gt_1": 18
+      }
+    },
+    "counts_run": {
+      "dac_remap": {
+        "abs_gt_0.5": 94,
+        "abs_gt_1": 33
+      },
+      "supply": {
+        "abs_gt_0.5": 63,
+        "abs_gt_1": 18
+      }
+    },
+    "threshold_margins": {
+      "dac_remap": {
+        "min_abs_distance_to_0.5_lsb": 0.007267432314820743,
+        "min_abs_distance_to_1_lsb": 0.008584837557506386
+      },
+      "supply": {
+        "min_abs_distance_to_0.5_lsb": 0.002644870361090512,
+        "min_abs_distance_to_1_lsb": 0.005402864368485805
+      }
+    },
+    "clipped_lower_bounds": 2,
+    "own_vs_E4_CellModel_theta_eff_max_abs_lsb": {
+      "dac_remap": 0.0,
+      "supply": 0.0
+    },
+    "brent_inversion": {
+      "counts": {
+        "dac_remap": {
+          "abs_gt_0.5": 94,
+          "abs_gt_1": 33
+        },
+        "supply": {
+          "abs_gt_0.5": 63,
+          "abs_gt_1": 18
+        }
+      },
+      "max_abs_diff_to_bisection_lsb": {
+        "dac_remap": 1.0383871540398104e-10,
+        "supply": 8.049561017742235e-11
+      },
+      "counts_identical_to_run": true
+    },
+    "per_bound_vs_e51_spot_bounds": {
+      "rows": 385,
+      "rows_expected": 385,
+      "kind_instance_theta_identical": true,
+      "max_abs_diff_lsb": {
+        "dac_remap": 0.0,
+        "supply": 0.0
+      }
+    },
+    "pass": true
+  },
+  "item2": {
+    "rows": 120,
+    "configs": [
+      "dac_remap/DL/full/8 bit",
+      "dac_remap/DL/span/8 bit",
+      "supply/DL/full/8 bit",
+      "supply/DL/span/8 bit",
+      "supply/SL/+half/8 bit",
+      "supply/SL/-half/8 bit"
+    ],
+    "bounds": 20,
+    "max_abs_diff_lsb": {
+      "added_error_lsb": 0.0,
+      "x_exact_lsb": 0.0,
+      "x_quantized_lsb": 0.0
+    },
+    "max_abs_diff_other_columns": {
+      "v_bound_v": 0.0,
+      "v_switch_quantized_v": 0.0,
+      "grid_offset_v": 0.0,
+      "grid_step_v": 0.0,
+      "d_eff_v": 0.0,
+      "map_factor": 0.0
+    },
+    "brent_inversion_max_abs_diff_to_run_lsb": {
+      "added_error_lsb": 1.1499301511008753e-10,
+      "x_exact_lsb": 8.695710818074076e-11,
+      "x_quantized_lsb": 7.571443472187411e-11
+    },
+    "min_distance_of_V*_to_a_DL_grid_point_in_steps": 0.00759517864105419,
+    "provenance_vs_E4_draws": {
+      "kind_instance_theta_identical": true,
+      "g_now_max_rel_diff": 0.0,
+      "a_hat_max_rel_diff": 0.0,
+      "x_exact_vs_E4_theta_eff_max_abs_lsb": 0.0
+    },
+    "selection_of_the_20_bounds": {
+      "bounds": 385,
+      "bound_failures": 0,
+      "candidates": 385,
+      "run_ks": [
+        7,
+        25,
+        65,
+        72,
+        74,
+        79,
+        85,
+        91,
+        122,
+        131,
+        179,
+        181,
+        198,
+        204,
+        245,
+        248,
+        269,
+        335,
+        364,
+        378
+      ],
+      "matching_variant": "sort(rng.choice(candidates, 20, replace=False))",
+      "note": "informational (the plan fixes the stream and the candidate set, not the exact numpy call)"
+    },
+    "pass": true
+  },
+  "item3": {
+    "set": {
+      "datasets": [
+        "iris",
+        "wine",
+        "breast_cancer",
+        "digits",
+        "synthetic"
+      ],
+      "splits": [
+        0,
+        1,
+        2
+      ],
+      "device_seeds": 20
+    },
+    "times_s": {
+      "10s": 10,
+      "1min": 60,
+      "10min": 600,
+      "1h": 3600,
+      "6h": 21600,
+      "1d": 86400,
+      "3d": 259200,
+      "1w": 604800,
+      "30d": 2592000,
+      "90d": 7776000,
+      "1y": 31536000,
+      "3y": 94608000,
+      "10y": 315360000
+    },
+    "required_cases": [
+      {
+        "design": "P1",
+        "node": "none",
+        "status_own": "interpolated",
+        "status_run": "interpolated",
+        "t_budget_s_own": 14.672506829898655,
+        "t_budget_s_run": 14.672506829898655,
+        "t_budget_rel_diff": 0.0
+      },
+      {
+        "design": "P1",
+        "node": "dac_remap",
+        "status_own": "interpolated",
+        "status_run": "interpolated",
+        "t_budget_s_own": 6135.205958316712,
+        "t_budget_s_run": 6135.205958316723,
+        "t_budget_rel_diff": -1.7763568394002505e-15
+      },
+      {
+        "design": "P1",
+        "node": "supply",
+        "status_own": "interpolated",
+        "status_run": "interpolated",
+        "t_budget_s_own": 443532.7556926667,
+        "t_budget_s_run": 443532.7556926667,
+        "t_budget_rel_diff": 0.0
+      },
+      {
+        "design": "P3",
+        "node": "supply",
+        "status_own": "interpolated",
+        "status_run": "interpolated",
+        "t_budget_s_own": 19321627.253860917,
+        "t_budget_s_run": 19321627.253860917,
+        "t_budget_rel_diff": 0.0
+      }
+    ],
+    "curves_max_rel_diff_rms_required_cases_and_t0": 2.220446049250313e-16,
+    "curves_max_rel_diff_rms_all_unif_6T2M_L6T": 2.220446049250313e-16,
+    "curves_max_abs_diff_p_exc": 0.0,
+    "curves_n_and_n_extreme_identical": true,
+    "all_unif_6T2M_L6T_budget_rows_agree": true,
+    "budget_rows_compared": 40,
+    "own_vs_E4_CellModel_theta_eff_max_abs_lsb": 0.0,
+    "elapsed_s": 168.1,
+    "pass": true
+  },
+  "all_pass": true
+}

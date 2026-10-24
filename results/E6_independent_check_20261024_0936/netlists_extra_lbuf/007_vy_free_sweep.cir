@@ -1,0 +1,17 @@
+* E6 independent check: vy_free_sweep
+.include "/home/claude/PCM_aCAM/third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice"
+.temp 27
+.options reltol=1e-6 vntol=1e-9 abstol=1e-15
+vsup vs 0 1.8
+vin in 0 0
+xp_i1 o in vs vs sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_i1 o in 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+vml ml 0 1.8
+xpd ml o 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+.control
+set filetype=binary
+dc vin 0.5702217764363896 0.5704217764363896 1e-05
+write 007_vy_free_sweep_s.raw all
+quit
+.endc
+.end

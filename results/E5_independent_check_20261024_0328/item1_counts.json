@@ -1,0 +1,84 @@
+{
+  "case": {
+    "dataset": "iris",
+    "split": 0,
+    "seed": 0,
+    "design": "P1",
+    "cell_set": "6T2M",
+    "condition": "unif",
+    "time": "1y",
+    "nodes": [
+      "dac_remap",
+      "supply"
+    ],
+    "type": "L6T",
+    "role": "independent re-check 1: counts of |e| > 0.5 and > 1 LSB"
+  },
+  "t_s": 31536000.0,
+  "a_t": 0.49694569483461226,
+  "a_t_minus_E4_a_uniform": 0.0,
+  "n_bounds_of_type_own": 207,
+  "n_bounds_of_type_run": 207,
+  "counts_own": {
+    "dac_remap": {
+      "abs_gt_0.5": 94,
+      "abs_gt_1": 33
+    },
+    "supply": {
+      "abs_gt_0.5": 63,
+      "abs_gt_1": 18
+    }
+  },
+  "counts_run": {
+    "dac_remap": {
+      "abs_gt_0.5": 94,
+      "abs_gt_1": 33
+    },
+    "supply": {
+      "abs_gt_0.5": 63,
+      "abs_gt_1": 18
+    }
+  },
+  "threshold_margins": {
+    "dac_remap": {
+      "min_abs_distance_to_0.5_lsb": 0.007267432314820743,
+      "min_abs_distance_to_1_lsb": 0.008584837557506386
+    },
+    "supply": {
+      "min_abs_distance_to_0.5_lsb": 0.002644870361090512,
+      "min_abs_distance_to_1_lsb": 0.005402864368485805
+    }
+  },
+  "clipped_lower_bounds": 2,
+  "own_vs_E4_CellModel_theta_eff_max_abs_lsb": {
+    "dac_remap": 0.0,
+    "supply": 0.0
+  },
+  "brent_inversion": {
+    "counts": {
+      "dac_remap": {
+        "abs_gt_0.5": 94,
+        "abs_gt_1": 33
+      },
+      "supply": {
+        "abs_gt_0.5": 63,
+        "abs_gt_1": 18
+      }
+    },
+    "max_abs_diff_to_bisection_lsb": {
+      "dac_remap": 1.0383871540398104e-10,
+      "supply": 8.049561017742235e-11
+    },
+    "counts_identical_to_run": true
+  },
+  "per_bound_vs_e51_spot_bounds": {
+    "rows": 385,
+    "rows_expected": 385,
+    "kind_instance_theta_identical": true,
+    "max_abs_diff_lsb": {
+      "dac_remap": 0.0,
+      "supply": 0.0
+    }
+  },
+  "pass": true
+}

@@ -1,0 +1,79 @@
+{
+  "set": {
+    "datasets": [
+      "iris",
+      "wine",
+      "breast_cancer",
+      "digits",
+      "synthetic"
+    ],
+    "splits": [
+      0,
+      1,
+      2
+    ],
+    "device_seeds": 20
+  },
+  "times_s": {
+    "10s": 10,
+    "1min": 60,
+    "10min": 600,
+    "1h": 3600,
+    "6h": 21600,
+    "1d": 86400,
+    "3d": 259200,
+    "1w": 604800,
+    "30d": 2592000,
+    "90d": 7776000,
+    "1y": 31536000,
+    "3y": 94608000,
+    "10y": 315360000
+  },
+  "required_cases": [
+    {
+      "design": "P1",
+      "node": "none",
+      "status_own": "interpolated",
+      "status_run": "interpolated",
+      "t_budget_s_own": 14.672506829898655,
+      "t_budget_s_run": 14.672506829898655,
+      "t_budget_rel_diff": 0.0
+    },
+    {
+      "design": "P1",
+      "node": "dac_remap",
+      "status_own": "interpolated",
+      "status_run": "interpolated",
+      "t_budget_s_own": 6135.205958316712,
+      "t_budget_s_run": 6135.205958316723,
+      "t_budget_rel_diff": -1.7763568394002505e-15
+    },
+    {
+      "design": "P1",
+      "node": "supply",
+      "status_own": "interpolated",
+      "status_run": "interpolated",
+      "t_budget_s_own": 443532.7556926667,
+      "t_budget_s_run": 443532.7556926667,
+      "t_budget_rel_diff": 0.0
+    },
+    {
+      "design": "P3",
+      "node": "supply",
+      "status_own": "interpolated",
+      "status_run": "interpolated",
+      "t_budget_s_own": 19321627.253860917,
+      "t_budget_s_run": 19321627.253860917,
+      "t_budget_rel_diff": 0.0
+    }
+  ],
+  "curves_max_rel_diff_rms_required_cases_and_t0": 2.220446049250313e-16,
+  "curves_max_rel_diff_rms_all_unif_6T2M_L6T": 2.220446049250313e-16,
+  "curves_max_abs_diff_p_exc": 0.0,
+  "curves_n_and_n_extreme_identical": true,
+  "all_unif_6T2M_L6T_budget_rows_agree": true,
+  "budget_rows_compared": 40,
+  "own_vs_E4_CellModel_theta_eff_max_abs_lsb": 0.0,
+  "elapsed_s": 168.1,
+  "pass": true
+}

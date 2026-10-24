@@ -1,0 +1,17 @@
+[2026-10-24 01:34:40] E5 parts ['e51', 'e52', 'e53', 'e54']; run dir E5_20261024_0134_smoke; instrument results/E4_spice_20261017_0602/instrument.npz
+[2026-10-24 01:34:40] e51: iris split 0 done (0 s)
+[2026-10-24 01:34:40] e51: wine split 0 done (1 s)
+[2026-10-24 01:34:40] e51 finished in 0.6 s
+[2026-10-24 01:34:46] e52: iris split 0 done (5 s)
+[2026-10-24 01:34:46] e52: wine split 0 done (6 s)
+[2026-10-24 01:34:46] C4 max |de| 0.000e+00 LSB
+[2026-10-24 01:34:46] e52 finished in 5.7 s
+[2026-10-24 01:34:47] e53: iris split 0 done (1 s)
+[2026-10-24 01:34:47] e53: wine split 0 done (1 s)
+[2026-10-24 01:34:48] C3 max |de| 0.000e+00 LSB
+[2026-10-24 01:34:48] e53 finished in 1.4 s
+[2026-10-24 01:34:50] e54: iris split 0 done (3 s)
+[2026-10-24 01:34:51] e54: wine split 0 done (3 s)
+[2026-10-24 01:34:51] C5 unif max |de| 0.000e+00 LSB; all max rel rms diff 0.0688
+[2026-10-24 01:34:51] e54 finished in 3.0 s
+[2026-10-24 01:34:51] E5 complete; 10.7 s

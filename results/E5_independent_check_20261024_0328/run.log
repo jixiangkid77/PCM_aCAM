@@ -1,0 +1,24 @@
+[2026-10-24 03:28:43] E5 independent check -> results/E5_independent_check_20261024_0328; instrument sha256 ok True; config_used == E5_config True
+[2026-10-24 03:28:44] item 1: own {'dac_remap': {'abs_gt_0.5': 94, 'abs_gt_1': 33}, 'supply': {'abs_gt_0.5': 63, 'abs_gt_1': 18}} vs run {'dac_remap': {'abs_gt_0.5': 94, 'abs_gt_1': 33}, 'supply': {'abs_gt_0.5': 63, 'abs_gt_1': 18}} (n 207 / 207); per-bound max |diff| {'dac_remap': 0.0, 'supply': 0.0}; Brent inversion counts {'dac_remap': {'abs_gt_0.5': 94, 'abs_gt_1': 33}, 'supply': {'abs_gt_0.5': 63, 'abs_gt_1': 18}}, max |de| {'dac_remap': 1.0383871540398104e-10, 'supply': 8.049561017742235e-11} -> PASS
+[2026-10-24 03:28:44] item 2: 120 rows (6 configurations); max |diff| added 0.000e+00, x_exact 0.000e+00, x_quantized 0.000e+00 LSB (Brent inversion: 1.150e-10 LSB); provenance {'kind_instance_theta_identical': True, 'g_now_max_rel_diff': 0.0, 'a_hat_max_rel_diff': 0.0, 'x_exact_vs_E4_theta_eff_max_abs_lsb': 0.0}; selection sort(rng.choice(candidates, 20, replace=False)) -> PASS
+[2026-10-24 03:29:31]   item 3: synthetic split 0: 54380 lower bounds (20 seeds), 47 s (47 s since start)
+[2026-10-24 03:29:32]   item 3: synthetic split 1: 54780 lower bounds (20 seeds), 48 s (48 s since start)
+[2026-10-24 03:30:19]   item 3: synthetic split 2: 54520 lower bounds (20 seeds), 48 s (95 s since start)
+[2026-10-24 03:30:20]   item 3: digits split 0: 46720 lower bounds (20 seeds), 48 s (96 s since start)
+[2026-10-24 03:31:06]   item 3: digits split 1: 46620 lower bounds (20 seeds), 47 s (142 s since start)
+[2026-10-24 03:31:07]   item 3: digits split 2: 46540 lower bounds (20 seeds), 47 s (143 s since start)
+[2026-10-24 03:31:14]   item 3: breast_cancer split 0: 9420 lower bounds (20 seeds), 8 s (150 s since start)
+[2026-10-24 03:31:15]   item 3: breast_cancer split 1: 8700 lower bounds (20 seeds), 8 s (150 s since start)
+[2026-10-24 03:31:20]   item 3: wine split 0: 5500 lower bounds (20 seeds), 5 s (155 s since start)
+[2026-10-24 03:31:23]   item 3: breast_cancer split 2: 10000 lower bounds (20 seeds), 9 s (159 s since start)
+[2026-10-24 03:31:24]   item 3: wine split 1: 4880 lower bounds (20 seeds), 4 s (160 s since start)
+[2026-10-24 03:31:28]   item 3: iris split 0: 4140 lower bounds (20 seeds), 4 s (164 s since start)
+[2026-10-24 03:31:28]   item 3: wine split 2: 6040 lower bounds (20 seeds), 5 s (164 s since start)
+[2026-10-24 03:31:32]   item 3: iris split 1: 4160 lower bounds (20 seeds), 4 s (168 s since start)
+[2026-10-24 03:31:32]   item 3: iris split 2: 4400 lower bounds (20 seeds), 4 s (168 s since start)
+[2026-10-24 03:31:32] item 3: P1 none: own interpolated 14.672506829898655 s (14.67 s) vs run interpolated 14.672506829898655 s (14.67 s); rel diff 0.0
+[2026-10-24 03:31:32] item 3: P1 dac_remap: own interpolated 6135.205958316712 s (1.704 h) vs run interpolated 6135.205958316723 s (1.704 h); rel diff -1.7763568394002505e-15
+[2026-10-24 03:31:32] item 3: P1 supply: own interpolated 443532.7556926667 s (5.133 d) vs run interpolated 443532.7556926667 s (5.133 d); rel diff 0.0
+[2026-10-24 03:31:32] item 3: P3 supply: own interpolated 19321627.253860917 s (223.6 d) vs run interpolated 19321627.253860917 s (223.6 d); rel diff 0.0
+[2026-10-24 03:31:32] item 3: curves max rel diff (required + t0) 2.220e-16, all 2.220e-16; p_exc max abs diff 0.000e+00; n identical True; all 40 budget rows agree True; own vs E4 theta_eff 0.000e+00 LSB -> PASS
+[2026-10-24 03:31:32] done in 169.3 s: {'item1': True, 'item2': True, 'item3': True} -> all pass True

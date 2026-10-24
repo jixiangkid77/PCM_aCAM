@@ -1,0 +1,12 @@
+{
+ "source": "https://github.com/google/skywater-pdk-libs-sky130_fd_sc_hd",
+ "branch": "main",
+ "commit": "ac7fb61f06e6470b94e8afdf7c25268f62fbd7b1",
+ "retrieved": "2026-10-24 (JST)",
+ "path": "cells/dfxtp/sky130_fd_sc_hd__dfxtp_1.lef",
+ "use": "E6: area of a rewritable look-up table counted as positive-edge D flip-flops (SIZE 7.36 x 2.72 um = 20.0192 um^2 per bit)",
+ "files": {
+  "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "sky130_fd_sc_hd__dfxtp_1.lef": "fc7b01be5e30691de4455f55cec6bb5cd7d954af0be4553198580b74c17db529"
+ }
+}

@@ -11,6 +11,13 @@ Folders: `third_party/sky130_fd_pr_subset/`, `third_party/sky130_fd_pr_subset_co
 - Modified: in the `*.pm3.spice` files the global mismatch hooks (`*_slope_spectre` parameters) are replaced by the per-instance parameters `mm_vth0`, `mm_toxe`, `mm_voff` and `mm_nfactor`. Every changed file says so in comments marked `(pcm_acam patch)`, and the library files state the patch. `MANIFEST.json` in each folder lists the SHA-256 of the original and of the patched files; `src/pcm_acam/sky130_models.py` makes the subsets from a checkout of the source repository.
 - SPICE netlists stored under `results/` include these model files by the absolute paths of the machine they ran on; they do not contain the model text.
 
+### SkyWater sky130 high-density standard-cell library, one layout view (Apache License 2.0)
+
+Folder: `third_party/sky130_fd_sc_hd_lef/`.
+
+- Source: https://github.com/google/skywater-pdk-libs-sky130_fd_sc_hd, commit ac7fb61f06e6470b94e8afdf7c25268f62fbd7b1, file `cells/dfxtp/sky130_fd_sc_hd__dfxtp_1.lef`. Copyright 2020 The SkyWater PDK Authors. Licensed under the Apache License, Version 2.0; a copy of the license is in the folder (`LICENSE`).
+- Unmodified. `experiments/E6_cost.py` reads only the cell size from it (to estimate the storage area of a look-up table built from these flip-flops). `MANIFEST.json` lists the source, the commit and the SHA-256 of both files.
+
 ### IBM AIHWKit (MIT License)
 
 `src/pcm_acam/pcm_model.py` transcribes into NumPy the formulas and constants of `PCMLikeNoiseModel` (`src/aihwkit/inference/noise/pcm.py`) and `SinglePairConductanceConverter` (`src/aihwkit/inference/converter/conductance.py`) of AIHWKit, https://github.com/IBM/aihwkit (master branch, read 2026-10-12). The same constants also appear in the PCM model sections of the plans `experiments/E0_1_config.json`, `experiments/E0_2_config.json` and `experiments/E4_config.json`, and in the independent re-implementations `experiments/E0_1_independent_recompute.py` and `experiments/E0_2_independent_recompute.py`. No AIHWKit code is included or imported.

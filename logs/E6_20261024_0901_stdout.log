@@ -1,0 +1,15 @@
+[2026-10-24 09:01:52] E6 start (full), part all, run dir E6_20261024_0901
+[2026-10-24 09:01:53] nominal: V_sw 0.526222 V, V_Y* 0.570323 V, V_X* 0.568421 V (2 s)
+[2026-10-24 10:25:48] E6.1: 40 netlists (5034 s)
+Traceback (most recent call last):
+  File "/home/claude/PCM_aCAM/experiments/E6_cost.py", line 656, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/claude/PCM_aCAM/experiments/E6_cost.py", line 625, in main
+    settle_rows, ch = part_settle(cfg, nom, run_dir, args.smoke, args.workers, log)
+                      ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/claude/PCM_aCAM/experiments/E6_cost.py", line 341, in part_settle
+    vals = [g[cp] for cp in order]
+            ~^^^^
+KeyError: 0.0
+exit 1

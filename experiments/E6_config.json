@@ -1,0 +1,205 @@
+{
+ "experiment": "E6",
+ "name": "E6_cost",
+ "project": "PCM_aCAM",
+ "run_prefix": "E6",
+ "plan_version": "1.1",
+ "plan_doc": "docs/E6_protocol.md",
+ "title": "Cost of the two drift-compensation nodes: settling delay, static search energy, data-line and match-line energy, area and update overhead (sky130, nominal devices, E4 forests)",
+ "models": {
+  "lib": "third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice",
+  "note": "tt, 27 C; the E3b/E4 subset (nfet_01v8, nfet_01v8_lvt, pfet_01v8)"
+ },
+ "circuit": {
+  "vdd": 1.8,
+  "divider_device": "nfet_01v8",
+  "pulldown": {
+   "device": "nfet_01v8_lvt",
+   "w_um": 0.42,
+   "l_um": 0.15
+  },
+  "inverter": {
+   "name": "INV_S",
+   "n_dev": "nfet_01v8",
+   "wn": 2.0,
+   "ln": 0.15,
+   "p_dev": "pfet_01v8",
+   "wp": 0.42,
+   "lp": 4.0
+  },
+  "d_v": 0.2,
+  "g_lo_us": 2.5,
+  "g_hi_us": 22.5,
+  "criterion": "V_sw = gate voltage at which the pull-down conducts 100 nA * W/L with V_DS = 1.8 V (E1-E5); V_sp: L6T V_sw, UINV V_Y* (inverter output = V_sw), LBUF V_X* (two inverters, output = V_sw)",
+  "supplies": "each branch type has its own V_SL = V_sp,nom + D at t0 (E4)",
+  "map": "per cell set, M_f(x) = I_0^-1(f G(x) D) on the nominal divider curve of the lower type at V_DS = V_sp,nom(lower); f = 1 (M0) or a (input remap)",
+  "programming": "nominal threshold verify: G_k(theta) = I_div(M0(theta), V_DS = V_sp,k) / D (equals G(theta) for the lower type)",
+  "ml_drain": "pull-down drain held at 1.8 V (precharged match line), source and body at 0; its current is the match-line discharge and is not counted as static power",
+  "c_par_f": 5e-16,
+  "c_par_sensitivity_f": [
+   0.0,
+   2e-15
+  ],
+  "c_par_note": "parasitic capacitance from the divider node (X or Y) to ground: PCM electrode and local wiring (assumption, decision D1)"
+ },
+ "designs": [
+  {
+   "id": "P1",
+   "w_div_um": 0.42,
+   "l_div_um": 0.15
+  },
+  {
+   "id": "P3",
+   "w_div_um": 0.42,
+   "l_div_um": 4.0
+  }
+ ],
+ "cell_sets": {
+  "6T2M": {
+   "lower": "L6T",
+   "upper": "UINV"
+  },
+  "GS": {
+   "lower": "LBUF",
+   "upper": "UINV"
+  }
+ },
+ "drift": {
+  "nu": 0.049,
+  "t0_s": 20,
+  "times_s": {
+   "1d": 86400,
+   "30d": 2592000,
+   "1y": 31536000
+  }
+ },
+ "nodes": {
+  "t0": "G, V_SL nominal, map M0",
+  "dac_remap": "a G, V_SL nominal, map M_a",
+  "supply": "a G, V_SL = V_sp,nom + D / a, map M0"
+ },
+ "levels": 16,
+ "settle": {
+  "x_prev": [
+   0.0,
+   1.0
+  ],
+  "t_edge_s": 1e-09,
+  "t_rise_s": 1e-10,
+  "t_stop_s": {
+   "L6T": 1.5e-07,
+   "UINV": 6e-07,
+   "LBUF": 6e-07
+  },
+  "t_step_s": 1e-11,
+  "t_max_step_s": 2e-11,
+  "tolerance_lsb": 0.01,
+  "tolerance_note": "the decision node (pull-down gate) must stay inside the band of its DC values for inputs theta - 0.01 LSB and theta + 0.01 LSB (decision D2)",
+  "rows_for_t_s": [
+   16
+  ],
+  "note": "DL source: PWL from M(x_prev) to M(theta), edge at t_edge, linear over t_rise; t_settle = last exit from the band minus t_edge",
+  "spice_options": ".options reltol=1e-6 vntol=1e-9 abstol=1e-15",
+  "spice_options_note": "tight tolerances: the default reltol (1e-3) leaves up to about 1 mV at the divider node, which the inverter gain (about 500 for LBUF) turns into several hundred mV at the decision node",
+  "max_copies_per_netlist": 112,
+  "sensitivity": {
+   "levels": [
+    0,
+    5,
+    10,
+    15
+   ],
+   "times": [
+    "1y"
+   ],
+   "note": "C_par 0 and 2 fF are run on t0 and both nodes after one year at four levels"
+  }
+ },
+ "power": {
+  "vdl_step": 0.001,
+  "x_grid": 1001,
+  "x_grid_check": 2001,
+  "counted": "V_SL * I(SL source) + V_DD * I(inverter supply source); the pull-down current (match-line discharge) is excluded",
+  "wildcards": "unconstrained bounds are bypassed and draw no current (E4)",
+  "window": "energy per search = mean static power x (t_s(n_features) + largest settling time of the branch types of the cell set at that node and time) (decision D3)"
+ },
+ "datasets": [
+  "iris",
+  "wine",
+  "breast_cancer",
+  "digits",
+  "synthetic"
+ ],
+ "split_seeds": [
+  0,
+  1,
+  2
+ ],
+ "bits": 4,
+ "ml": {
+  "v_pre": 1.8,
+  "v_ref": 0.9,
+  "c_sa_f": 5e-14,
+  "c_wire_per_cell_f": 1e-15,
+  "sense_time": "t_s(N) as in E3c/E4: nominal cell-under-test pull-down at V_sw, all other 2N - 1 gates at 0 V"
+ },
+ "dl": {
+  "gate_ramp_s": 1.8e-08,
+  "drain": "divider drain held at V_sp,nom of its branch type during the gate-charge ramp",
+  "energy": "a rising DL draws V_DD x (Q(V_new) - Q(V_old)) per divider from the supply; a falling DL draws nothing; two dividers per cell on one DL; every row of the array has a cell in every feature column"
+ },
+ "overhead": {
+  "replica_cells": [
+   64,
+   256
+  ],
+  "input_bits": 8,
+  "lut_note": "input remap: one rewritable look-up table per cell set, 2^input_bits entries x b_DL bits (b_DL from E5.3: full-scale DL resolution); counted as sky130_fd_sc_hd__dfxtp_1 flip-flops",
+  "ff_lef": "third_party/sky130_fd_sc_hd_lef/sky130_fd_sc_hd__dfxtp_1.lef",
+  "e5_run": "results/E5_20261024_0210"
+ },
+ "checks": {
+  "C1": "DC at x = theta: |V_gate - V_sw| / s <= 0.001 LSB, s = |dV_gate/dx| per LSB from the band; every branch type, level, node and time except UINV with the input remap (shared data line, see C1b)",
+  "C2": "transient at t_stop inside the tolerance band (settled) and |V_gate(t_stop) - V_gate,DC(theta)| / s <= 0.001 LSB",
+  "C3": "L6T at t0: SL current at x = theta equals G(theta) D within 0.5 %",
+  "C4": "largest settling time per (design, type, node, time) over the cases run at every C_par (sensitivity levels and times, both x_prev; unsettled counts as infinite) does not decrease with C_par (0, 0.5, 2 fF) (plan v1.1)",
+  "C5": "forest-average static power with 2001 instead of 1001 x points changes by <= 0.5 %",
+  "C1b": "UINV with the input remap after one year: largest residual |V_gate - V_sw| / s over the levels within 10 % (or 0.002 LSB) of E4 check C2: 6T2M P1 0.103, P3 0.225 LSB; GS P1 0.0043, P3 0.0072 LSB",
+  "C1b_reference_lsb": {
+   "6T2M": {
+    "P1": 0.103,
+    "P3": 0.225
+   },
+   "GS": {
+    "P1": 0.0043,
+    "P3": 0.0072
+   }
+  }
+ },
+ "smoke": {
+  "designs": [
+   "P1"
+  ],
+  "times": [
+   "1y"
+  ],
+  "levels": [
+   0,
+   5,
+   10,
+   15
+  ],
+  "datasets": [
+   "iris"
+  ],
+  "splits": [
+   0
+  ],
+  "t_stop_s": {
+   "L6T": 1.5e-07,
+   "UINV": 6e-07,
+   "LBUF": 6e-07
+  }
+ },
+ "decision": "KID confirmed D1-D6 as proposed (question sent 2026-10-24 06:14 JST, answer received by 09:01 JST) (C_par 0.5 fF with 0 and 2 fF sensitivity; band +-0.01 LSB; energy window t_s + largest settling time; 8-bit input LUT; counts plus flip-flop area bound; compact cost table in Section VIII, details in Supplementary S9)"
+}

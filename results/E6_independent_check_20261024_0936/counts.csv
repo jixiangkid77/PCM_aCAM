@@ -1,0 +1,5 @@
+dataset,split,rows,features,cells,pcm_devices,replica_share_256,replica_share_64,programmed_bounds,lower_bounds,upper_bounds,n_test,n_trees,rows_without_bounds,lower_at_level_0,lower_at_level_15,upper_at_level_0,upper_at_level_15
+iris,0,126,4,504,1008,0.25396825396825395,0.06349206349206349,385,207,178,45,16,0,0,0,0,0
+iris,1,125,4,500,1000,0.256,0.064,378,208,170,45,16,0,0,0,0,0
+iris,2,127,4,508,1016,0.25196850393700787,0.06299212598425197,404,220,184,45,16,0,2,0,2,0
+iris,mean,126.0,4.0,504.0,1008.0,0.2539789193017539,0.06349472982543848,389.0,211.66666666666666,177.33333333333334,,,,,,,

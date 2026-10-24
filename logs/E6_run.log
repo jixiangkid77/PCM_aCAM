@@ -1,0 +1,10 @@
+[2026-10-24 10:32:56] E6 start (full), part all, run dir E6_20261024_1032
+[2026-10-24 10:32:58] nominal: V_sw 0.526222 V, V_Y* 0.570323 V, V_X* 0.568421 V (2 s)
+[2026-10-24 10:38:58] E6.1: 40 netlists (359 s)
+[2026-10-24 10:38:59] forests: 15 (1 s)
+[2026-10-24 10:39:39] E6.2: 56 DC sweeps (41 s)
+[2026-10-24 10:41:48] E6.2: forest averages (420 rows)
+[2026-10-24 10:42:15] E6.3: data-line and match-line energy (420 rows)
+[2026-10-24 10:42:15] E6.4: overhead counts
+[2026-10-24 10:42:15] E6 done in 559 s; checks: C1 pass, C1b pass, C2 pass, C3 pass, C4 pass, C5 pass
+exit 0

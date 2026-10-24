@@ -1,0 +1,227 @@
+{
+  "experiment": "E5",
+  "name": "E5_reliability_cost",
+  "project": "PCM_aCAM",
+  "run_prefix": "E5",
+  "plan_version": "0.9 (draft, not frozen)",
+  "title": "Reliability statistics of the input-referred bound errors of the E4 forests, errors of the drift compensation itself (replica sampling, gain error, DAC resolution) and time to an error budget",
+  "plan_doc": "docs/E5_protocol.md",
+  "reuse": {
+    "e4_config": "experiments/E4_config.json",
+    "e4_script": "experiments/E4_forest_system.py",
+    "instrument": "results/E4_spice_20261017_0602/instrument.npz",
+    "instrument_sha256": "22699dcc0a52c4c4135b47dae3dbae741aadcedced6eb6f3c919f4068168057f",
+    "e4_forest_run": "results/E4_20261017_0618",
+    "note": "imported unchanged: CellModel, theta_effs, pcm_states, forest_state, eval_points, Instrument; every bound is the E4 bound of the same forest, Monte Carlo instance and PCM draw"
+  },
+  "designs": [
+    "P1",
+    "P3"
+  ],
+  "cell_sets": [
+    "6T2M",
+    "GS"
+  ],
+  "conditions": [
+    "unif",
+    "all"
+  ],
+  "error": "e = 15 (theta_eff - theta) in LSB of the 4-bit threshold (1 LSB = 1/15 of the normalized input); theta_eff from the E4 CellModel",
+  "extreme_lsb": 15.0,
+  "extreme": "|e| > 15 LSB: bound failure (PCM conductance at 0 after noise, x_eff = -10 by the E4 convention); counted as exceeding every budget; rms reported with and without them; excluded from added-error statistics",
+  "full_set": {
+    "split_seeds": [
+      0,
+      1,
+      2
+    ],
+    "device_seeds": 20
+  },
+  "subset": {
+    "split_seeds": [
+      0,
+      1,
+      2
+    ],
+    "device_seeds": 5
+  },
+  "e51": {
+    "set": "full",
+    "points": "the E4 evaluation points: t0 (programming noise only) and 1d, 30d, 1y x {dac_remap, supply, ideal}",
+    "exceed_lsb": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "percentiles": [
+      99.0,
+      99.9
+    ],
+    "percentile_method": "numpy.percentile (linear) of |e| over all bounds of a key, bound failures included",
+    "spot": {
+      "dataset": "iris",
+      "split": 0,
+      "seed": 0,
+      "design": "P1",
+      "cell_set": "6T2M",
+      "condition": "unif",
+      "time": "1y",
+      "nodes": [
+        "dac_remap",
+        "supply"
+      ],
+      "type": "L6T",
+      "role": "independent re-check 1: counts of |e| > 0.5 and > 1 LSB"
+    }
+  },
+  "e52": {
+    "set": "subset",
+    "times": [
+      "1d",
+      "30d",
+      "1y"
+    ],
+    "nodes": [
+      "dac_remap",
+      "supply",
+      "ideal"
+    ],
+    "n_limit": 1000000,
+    "gains": [
+      -0.05,
+      -0.02,
+      -0.01,
+      -0.005,
+      0.005,
+      0.01,
+      0.02,
+      0.05
+    ],
+    "replica_counts": [
+      16,
+      64,
+      256,
+      1024
+    ],
+    "rng_stream": 60,
+    "rng": "numpy.random.default_rng([base_seed, ds_idx, split, seed, 60, N]) (N = 1e6 for variant b); in this order standard_normal(N) programming noise, standard_normal(N) drift-exponent noise, standard_normal((5, N)) read noise at the five E4 inference times; replicas programmed to 12.5 uS; estimator a_hat = mean G(t) / mean G right after programming (E4)",
+    "variants": {
+      "a": "E4 a_hat (64 replicas, E4 draws); condition all only",
+      "b": "large-sample limit a_inf (N = 1e6, same estimator); reference for added errors; condition unif: a_inf = a(t) exactly",
+      "c": "gain error a_hat = a_inf (1 + g)",
+      "d": "N replicas, new streams; condition all only"
+    },
+    "added_error": "per bound de = e(a_hat) - e(a_inf); added rms = rms of de over the bounds that are not bound failures under either factor",
+    "budget_added_rms_lsb": 0.1,
+    "gain_limit": "per sign of g: |g| at which the added rms reaches 0.1 LSB, by linear interpolation of the added rms over |g| including (0, 0); beyond 5 % reported as > 5 %",
+    "update_rule": "staleness makes the applied factor too large (g > 0): updating whenever the replica estimate has fallen by the fraction r = g_max+ / (1 + g_max+) keeps g <= g_max+; updates in the first year = ceil(|ln a(1 y)| / -ln(1 - r)) with uniform drift nu = 0.049 from programming (a = 1) to 1 year"
+  },
+  "e53": {
+    "set": "subset",
+    "points": [
+      [
+        "t0",
+        "t0"
+      ],
+      [
+        "1y",
+        "dac_remap"
+      ],
+      [
+        "1y",
+        "supply"
+      ]
+    ],
+    "bits": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "full_scale_v": 1.8,
+    "dl_dac": "read-time data-line voltages rounded to the nearest point of a uniform grid (threshold-verify voltages exact); grids: full (0 ... 1.8 V, step 1.8 / (2^b - 1)) and span (M(0) ... M(1) of the current input map, step (M(1) - M(0)) / (2^b - 1)), both continued beyond their ends with the same step (inputs in [0, 1] only use points inside; the continuation only defines the quantized bound of bounds outside the input range); lower bounds switch at V_g - step/2 with V_g the lowest grid point >= V*, upper bounds at V_g' + step/2 with V_g' the highest grid point <= V*",
+    "sl_dac": "supply node: one V_SL per branch type serves the whole array, so its rounding error is common to all bounds and moves through the whole interval as a_hat changes; evaluated at the worst case D_eff = D / a_hat +- step / 2 (both signs; the larger added rms counts), step = 1.8 / (2^b - 1); programming at V_sp,nom + D is a grid point (the same DAC sets V_SL during programming)",
+    "added_error": "per bound de = e(quantized) - e(exact) with the same draw; added rms over the bounds that are not bound failures",
+    "budget_added_rms_lsb": 0.1,
+    "spot": {
+      "dataset": "iris",
+      "split": 0,
+      "seed": 0,
+      "design": "P1",
+      "cell_set": "6T2M",
+      "condition": "all",
+      "bits": 8,
+      "n_bounds": 20,
+      "rng_stream": 62,
+      "role": "independent re-check 2: quantized bound of 20 random bounds (dac_remap full and span grid, supply DAC)"
+    }
+  },
+  "e54": {
+    "set": "subset",
+    "times_s": {
+      "10s": 10,
+      "1min": 60,
+      "10min": 600,
+      "1h": 3600,
+      "6h": 21600,
+      "1d": 86400,
+      "3d": 259200,
+      "1w": 604800,
+      "30d": 2592000,
+      "90d": 7776000,
+      "1y": 31536000,
+      "3y": 94608000,
+      "10y": 315360000
+    },
+    "nodes": [
+      "none",
+      "dac_remap",
+      "supply",
+      "ideal"
+    ],
+    "none": "no compensation: the t0 setting (supplies V_sp,nom + D, input map M0) at the later time",
+    "rng_stream": 61,
+    "rng": "programming noise and drift exponents (cells and replicas): the E4 draws; read noise at the 13 times: numpy.random.default_rng([base_seed, ds_idx, split, seed, 61]); in this order standard_normal((13, K)) for the cells and standard_normal((13, 64)) for the replicas",
+    "budgets": {
+      "rms_noext_lsb": [
+        0.5,
+        1.0,
+        1.5
+      ],
+      "p_exc_1": [
+        0.05,
+        0.2
+      ]
+    },
+    "time_to_budget": "first evaluated time at which the metric exceeds the budget, interpolated linearly in log t between that time and the previous one; 'exceeded at t0' if the t0 value already exceeds it, '< 10 s' if 10 s does, '> 10 y' if no evaluated time does",
+    "refresh": "reprogramming (threshold verify of every cell) rate = 1 year / T_B, not rounded"
+  },
+  "checks": {
+    "C1": "full run only: E5.1 n and rms with bound failures (full set) equal E4 cell_errors.csv; n exact, rms relative difference <= 1e-9",
+    "C2": "full run only: E5.1 split 0, seed 0, condition all: n, bound failures, rms without them and median |e| equal E4 analysis_cell_errors_robust.csv; counts exact, values relative difference <= 1e-9",
+    "C3": "E5.3 without quantization equals the E4 bound of the same draw: max |de| <= 1e-12 LSB",
+    "C4": "E5.2 variant a (condition all) and g = 0 (condition unif) equal the E4 bound of the same draw: max |de| <= 1e-12 LSB",
+    "C5": "E5.4 at 1d, 30d, 1y (nodes dac_remap, supply, ideal): condition unif equals the E4 bound (max |de| <= 1e-12 LSB); condition all: rms without bound failures within 3 % of the E4-draw value of the same subset (read noise drawn anew)",
+    "stop_rule": "a failed check marks the run checks_failed; nothing is interpreted before the cause is found"
+  },
+  "smoke": {
+    "datasets": [
+      "iris",
+      "wine"
+    ],
+    "split_seeds": [
+      0
+    ],
+    "device_seeds": 1,
+    "note": "program check only; outcomes not interpreted; C1 and C2 need the full set and are not evaluated"
+  },
+  "not_modelled": [
+    "match-line crosstalk (acts on the row decision, not on a single bound; E4)",
+    "transistor-level circuits of the compensation (replica read-out, DAC, supply regulator), their area and energy",
+    "temperature dependence of PCM conductance and drift; programming and read at the same temperature",
+    "PCM read nonlinearity (E3a)"
+  ]
+}

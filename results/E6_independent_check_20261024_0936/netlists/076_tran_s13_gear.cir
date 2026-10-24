@@ -1,0 +1,22 @@
+* E6 independent check: tran_s13_gear
+.include "/home/claude/PCM_aCAM/third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice"
+.temp 27
+.options reltol=1e-6 vntol=1e-9 abstol=1e-15
+.options method=gear
+vsl_t sl_t 0 0.7703217764363897
+r_t sl_t n_t 765267.5290025041
+xdiv_t n_t dl_t 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_t dl_t 0 pwl(0 0.7671122219971417 1e-09 0.7671122219971417 1.1000000000000001e-09 0.6449583443659433 6.06e-07 0.6449583443659433)
+vml_t ml_t 0 1.8
+vinv_t vi_t 0 1.8
+xp_t o_t n_t vi_t vi_t sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_t o_t n_t 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_t ml_t o_t 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+cpar_t n_t 0 5e-16
+.control
+set filetype=binary
+tran 1e-11 6e-07 0 2e-11
+write 076_tran_s13_gear_tr.raw v(dl_t) v(n_t) v(o_t)
+quit
+.endc
+.end

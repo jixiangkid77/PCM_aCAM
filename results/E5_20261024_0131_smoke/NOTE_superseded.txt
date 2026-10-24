@@ -1,0 +1,1 @@
+Superseded smoke run (pre-freeze code). C5 failed only because the condition-all read-noise comparison was evaluated on the smoke sample (two small datasets, one seed); the script now evaluates that part only in full runs. e54_budget.csv wrote NaN for non-interpolated budget times (now empty). Numbers not interpreted.

@@ -1,0 +1,34 @@
+{
+  "experiment": "E5",
+  "parts": "all",
+  "smoke": true,
+  "start_jst": "2026-10-24T01:34:40+09:00",
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "platform": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39",
+    "sklearn": "1.9.1"
+  },
+  "sha256": {
+    "experiments/E5_config.json": "df274e13052c10e254753677c9084c530330426ec9696bbe24d2f44032e00c94",
+    "experiments/E5_reliability_cost.py": "0eaf64de31356d21cf6451e366c4fd79e5525b59fdfddf8a9141b548acf9a5b7",
+    "experiments/E4_config.json": "8c0675a16d2d68f025e626e1328be51906be9d71a6f6a186f75157d3ba72fcbd",
+    "experiments/E4_forest_system.py": "133a826f1f4e97204fe41cfe3713fa1db65eece6aaf8299f8f25dc1dd37d8637",
+    "src/pcm_acam/row_model.py": "b210ecaf992bee9f721b8e0d5ed321012e070540e9ed0e338969d77327c4b4a2",
+    "src/pcm_acam/acam.py": "43083ce773a2e444759ead19660e23ca56481651ee6e784ab13f28a7fb0e3b88",
+    "src/pcm_acam/pcm_model.py": "50aac8817aab38ced8438151a5864dfac2e64d840c207dc90f85570a4b7ff6c7",
+    "src/pcm_acam/trees.py": "17cb854495f528567f40e45070b61ad14ddae2e6fbecd038fe1d427a6597cb70",
+    "src/pcm_acam/io_utils.py": "d24473db814cd1cc247cff54a8df9f5ed85dc9ed9d4877d0a4a251afdcd1326b"
+  },
+  "instrument": "results/E4_spice_20261017_0602/instrument.npz",
+  "instrument_sha256": "22699dcc0a52c4c4135b47dae3dbae741aadcedced6eb6f3c919f4068168057f",
+  "workers": 2,
+  "elapsed_e51_s": 0.6,
+  "elapsed_e52_s": 5.7,
+  "elapsed_e53_s": 1.4,
+  "elapsed_e54_s": 3.0,
+  "end_jst": "2026-10-24T01:34:51+09:00",
+  "elapsed_s": 10.7,
+  "status": "complete"
+}

@@ -1,0 +1,1 @@
+Superseded smoke run (pre-freeze code). Afterwards KID chose the full set for every part (D3, 2026-10-24 02:05); the config sets were changed and the set selection in the script simplified. Numbers not interpreted.

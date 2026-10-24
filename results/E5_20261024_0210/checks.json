@@ -1,0 +1,29 @@
+{
+  "C1": {
+    "max_abs_n_diff": 0,
+    "max_rel_rms_diff": 0.0,
+    "missing": [],
+    "pass": true
+  },
+  "C2": {
+    "max_abs_count_diff": 0,
+    "max_rel_value_diff": 0.0,
+    "missing": [],
+    "pass": true
+  },
+  "C4": {
+    "max_abs_de_lsb": 0.0,
+    "pass": true
+  },
+  "C3": {
+    "max_abs_de_lsb": 0.0,
+    "pass": true
+  },
+  "C5": {
+    "unif_max_abs_de_lsb": 0.0,
+    "all_max_rel_rms_diff": 0.004371190786352175,
+    "pass": true
+  },
+  "failed": [],
+  "all_pass": true
+}

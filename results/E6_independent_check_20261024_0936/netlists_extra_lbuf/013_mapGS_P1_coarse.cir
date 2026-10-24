@@ -1,0 +1,14 @@
+* E6 independent check: mapGS_P1_coarse
+.include "/home/claude/PCM_aCAM/third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice"
+.temp 27
+.options reltol=1e-6 vntol=1e-9 abstol=1e-15
+vd d 0 0.5684206115436504
+vg g 0 0
+xdv d g 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+.control
+set filetype=binary
+dc vg 0.0 1.8 0.001
+write 013_mapGS_P1_coarse_s.raw all
+quit
+.endc
+.end

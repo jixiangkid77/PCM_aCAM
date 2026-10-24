@@ -12,9 +12,10 @@ experiments/    frozen plans (E*_config.json), run, analysis and figure scripts,
                 independent checks (E*_independent/, E0_*_independent_recompute.py)
 results/        one folder per run, never overwritten
 logs/           console logs of the main runs and of two independent-check reruns;
-                freeze records (SHA-256) of E2-E4
+                freeze records (SHA-256) of E2-E6
 figures/        figures of each step (PDF and PNG), made by experiments/E*_figures.py
-third_party/    sky130 device-model subsets for ngspice (see THIRD_PARTY_NOTICES.md)
+third_party/    sky130 device-model subsets for ngspice and the layout view (LEF) of one
+                sky130 standard cell (see THIRD_PARTY_NOTICES.md)
 ```
 
 The scripts find the library, the model files and earlier runs through paths relative to the repository root, so the folders must stay together. Run every command from the repository root.
@@ -49,12 +50,14 @@ Plans and scripts are in `experiments/`, runs in `results/`. A run of record wit
 | E3b | Upper-bound branch (divider, inverter, pull-down) | `E3b_config.json` | `E3b_upper_branch.py` | `E3b_predict_20261014_0532` + `E3b_20261014_0532` | `E3b_independent_check_20261014_1441` |
 | E3c | Transient match-line sensing and crosstalk from the other matched cells of a row (nominal devices) | `E3c_config.json` | `E3c_ml_transient.py` | `E3c_predict_20261014_1543` + `E3c_20261014_1549` | `E3c_independent_check_20261014_1628` |
 | E4 | System level: random-forest accuracy with transistor-level bound errors, PCM noise and match-line crosstalk at both nodes; the 6T2M cell as published versus a lower-bound branch with a two-inverter gain stage | `E4_config.json` | `E4_forest_system.py` | `E4_spice_20261017_0602` + `E4_20261017_0618` | `E4_independent_check_20261017_0741` |
+| E5 | Reliability metrics of the E4 bound errors (shares beyond 1 LSB, tail quantiles, programming failures, time until an error budget is exceeded) and the error and resolution required of the compensation itself (replica count, gain error, converter bits); no new SPICE | `E5_config.json` | `E5_reliability_cost.py` | `E5_20261024_0210` | `E5_independent_check_20261024_0328` |
+| E6 | Circuit cost of the two nodes with nominal devices: settling time after a data-line step, static search power and energy, data-line and match-line energy, area and update counts | `E6_config.json` | `E6_cost.py` | `E6_20261024_1032` | `E6_independent_check_20261024_0936` |
 
-Most steps also have analysis and figure scripts (`E*_analysis.py`, `E*_figures.py`) that take a run folder; E0.1, E0.2 and E3c have no analysis script.
+Most steps also have analysis and figure scripts (`E*_analysis.py`, `E*_figures.py`) that take a run folder; E0.1, E0.2 and E3c have no analysis script. E5 and E6 have table scripts (`E5_tables.py`, `E6_tables.py`) and post-hoc diagnostics that were not part of their plans (`E5_posthoc_failures.py`, `E6_posthoc_settling.py`).
 
 ### Outcomes
 
-Classes and gates are those of the frozen plans; the full records are in each run's `decision.json`. LSB is one 4-bit threshold step (1/15 of the normalized input range); pp is percentage points. For E1-E3b, errors are rms over 300 Monte Carlo instances and the 16 thresholds, one year after programming.
+Classes and gates are those of the frozen plans; the full records are in each run's `decision.json`. E5 and E6 report quantities without decision rules; their records are the run tables and `checks.json`. LSB is one 4-bit threshold step (1/15 of the normalized input range); pp is percentage points. For E1-E3b, errors are rms over 300 Monte Carlo instances and the 16 thresholds, one year after programming.
 
 | step | outcome |
 |---|---|
@@ -66,14 +69,16 @@ Classes and gates are those of the frozen plans; the full records are in each ru
 | E3b | 10/10 predictions within tolerance (largest +7.7 %), better node 4/4, decomposition 15/15. The inverter divides the pull-down offset by its gain (16-23), so the switching point of the upper branch is set by the inverter itself. |
 | E3c | For an isolated cell, transient sensing reproduces the quasi-static bound (48/48 within 0.02 LSB). The crosstalk law held in 98/100 cases; the supply node gave the smaller crosstalk shift in 28/28 cases (9-36 % of that with the input remap). |
 | E4 | H2 holds: in the 6T2M cell as published, the one-year accuracy loss with the supply node is 2.20 and 1.21 pp lower than with the input remap (short and long divider). H3 holds: crosstalk costs 4.12 and 3.15 pp at t0. H1 does not hold: with a gain stage, the node with the smaller predicted cell error wins for the short divider (+0.74 pp, 95 % CI [+0.51, +0.98]), but the difference for the long divider is not resolved (−0.06 pp [−0.21, +0.08]). |
+| E5 | Without PCM noise, one year after programming, the input remap leaves 15.3 % of the lower bounds of the short divider more than 1 LSB off and the supply node 6.4 % of those of the long divider, against 1.5 % and 0.2 % from clipping alone. With the PCM noise model, an rms error budget of 1.5 LSB is exceeded for the short divider after 23 days (input remap), 90 days (supply node) and 240 days (ideal scaling). 256 replica cells and an 8-bit supply converter each add less than 0.1 LSB rms. |
+| E6 | After one year, the upper-bound branch of the 6T2M cell settles within 0.01 LSB in up to 141 ns (input remap) or 126 ns (supply node), against up to 77 ns at t0 and a sense time of 331 ns for 16 cells; the gain-stage lower branch needs 271-310 ns at any time. In the 6T2M cell the supply node needs 1.86-2.05 times the static search energy of the input remap after one year. The input remap rewrites a table of 2^8 entries of 10 or 9 bits per cell type (6T2M or gain stage) at each of the 61-64 updates of the first year; the supply node changes two 8-bit supply codes. |
 
 ## Frozen plans and records
 
-- Every step has a plan, `experiments/E*_config.json`, with its settings, checks and decision rules, fixed before the main run. Every main run records the SHA-256 of its plan and of the code it ran in `run_info.json` (E0.1 and E0.2: plan and main script; from E1 on also the library modules) and keeps the plan as `config_used.json` (re-serialized up to E3c, so its bytes differ from the plan file; identical for E4). `logs/*_freeze_sha256.txt` record the files frozen for E2-E4.
+- Every step has a plan, `experiments/E*_config.json`, with its settings, checks and decision rules, fixed before the main run. Every main run records the SHA-256 of its plan and of the code it ran in `run_info.json` (E0.1 and E0.2: plan and main script; from E1 on also the library modules) and keeps the plan as `config_used.json` (re-serialized up to E3c, so its bytes differ from the plan file; identical for E4). `logs/*_freeze_sha256.txt` record the files frozen for E2-E6.
 - The library was extended twice without changing earlier results: before E2, `spice_iv.py` gained a temperature option (netlists without it are identical to those of E1) and `sky130_models.py` gained process corners (a tt-only build is byte-identical to the E1 subset); before E3b, `sky130_models.py` gained an optional device list (default unchanged; the earlier subsets rebuild byte for byte). The SHA-256 recorded by E1 for both files, and by the E2 calibration, E2 and E3a runs for `sky130_models.py`, therefore differ from the files here; all other hashes recorded by the runs of record match.
 - E2, E3a, E3b and E3c run in two phases: the prediction phase (`--phase predict`) writes `predictions.json`, whose SHA-256 is recorded before the Monte Carlo or transient phase (`--phase mc` or `--phase sim`) reads it. E4 first stores the transistor-level instrument (`--phase spice`) and then evaluates the forests (`--phase forest`).
 - Before a freeze, only smoke runs (code checks with small sizes), nominal feasibility scans and, for E2, the calibration on the in-sample E1 design points were run. Two smoke runs changed a model before the freeze: the λ_b factor of the crosstalk law (E3c) and the per-instance leakage of the row model (E4). Smoke runs also changed checks or settings before the freeze (for example the C4 tolerance of E1, the x grid of E2, check C4 of E3b and check T1 of E3c); the NOTE file of each superseded smoke run says what changed. The E4 plan also records how its row model reproduced the E3c data before the freeze and that the number of device seeds was chosen from the run time of a smoke run.
-- Two main runs were repeated without a change of the decision rules: `E0_1_20261012_1650` stopped at check 2 before any result was computed (the check was corrected in plan 1.1), and `E1_20261014_0151` stopped at a secondary design point whose nominal input map left the 1.8 V sweep range (code fix).
+- Three main runs were repeated without a change of the decision rules or settings: `E0_1_20261012_1650` stopped at check 2 before any result was computed (the check was corrected in plan 1.1), `E1_20261014_0151` stopped at a secondary design point whose nominal input map left the 1.8 V sweep range (code fix), and `E6_20261024_0901` stopped after its settling part at a coding error in check C4 (plan 1.1 fixed the check and limited ngspice to one OpenMP thread, which changes only the speed; the settling outputs of the two runs are identical, see its `NOTE_crashed.txt`).
 - Some comments say "pre-registered" or "not pre-registered". This means part of the frozen plan or not; the plans were fixed and hashed before the runs, not registered on a public platform.
 - Plans, scripts, freeze records and some notes refer to written protocols and result records in `docs/`. These working documents are not part of this repository; the plans carry the settings, checks and decision rules. Two independent checks hash protocol files and stop with a missing-file error without them: `E3b_independent/e3b_independent_check.py` at the start (after creating its empty results folder), and `E0_2_independent_recompute.py` at the end, after its CSV files and `gates.json` are written.
 - Independent checks: for every step, a separate re-implementation written from the written protocol, the plan file and a short task description, without reading the main code, recomputed selected cases and compared them with the run of record. The E4 check reused the forest construction (`trees.py`) and the noise draws (`make_draws` in `acam.py`). The checks of E2-E4 compare with the runs of record through paths fixed in their scripts. Each `E*_independent/` folder has a README with its method.
@@ -83,13 +88,13 @@ Classes and gates are those of the frozen plans; the full records are in each ru
 
 - Main runs and comparisons are named `<step>_<YYYYMMDD_HHMM>` after the start time in Japan Standard Time and never reuse a folder (a suffix `_b`, `_c`, ... is added). The independent checks use the same pattern; most of them stop if the folder exists (the E2 check waits for the next minute, the E4 check adds a suffix), and the E1 check writes into a folder given on its command line.
 - `_predict_`, `_spice_`: first phase of a two-phase run. `_smoke`: smoke run. `_independent_check_`, `_compare_independent_`: independent checks. `_rerun`: an independent check repeated after its paths were made relative.
-- Typical files: `run_info.json` (environment, SHA-256 of plan, code and inputs), `config_used.json`, `run.log`, `checks.json`, `decision.json`, `summary.csv`, `arrays_*.npz` (per-instance values), `per_eval.csv` (one row per evaluation), `predictions.json`, `instrument.npz` (E4).
+- Typical files: `run_info.json` (environment, SHA-256 of plan, code and inputs), `config_used.json`, `run.log`, `checks.json`, `decision.json`, `summary.csv`, `arrays_*.npz` (per-instance values), `per_eval.csv` (one row per evaluation), `predictions.json`, `instrument.npz` (E4), `tables.md` (E5, E6).
 - Smoke runs and the folders with a `NOTE_superseded.txt` or `NOTE_crashed.txt` (which says why) are kept as records; the decisions come only from the runs of record. `E0_1_20261012_1650` explains itself at the end of its `run.log`.
 - Not included: the ngspice binary output (`*.raw`, 28 MB) of task 3 of the two E4 independent checks (`spice_task3/`), whose netlists and logs are included and whose parsed values are in the CSV and JSON files; and the scratch folders `logs/*_independent_work/` of the E1-E3c checks (netlists, logs and raw files of single solver jobs), which some included files mention. Rerunning a check writes them again (the E4 check into its new results folder).
 
 ## Reproducing
 
-Python with numpy, scipy, scikit-learn and matplotlib (`requirements.txt`). The runs of record used Python 3.13.16, numpy 2.5.3, scipy 1.18.1 and scikit-learn 1.9.1 on Linux, and the figures were made with matplotlib 3.11.2; other versions may change the random forests and therefore the numbers. E1-E4 need ngspice on the PATH (the runs used ngspice-42); run one ngspice job at a time. Times below are those of the runs of record on a 2-core machine.
+Python with numpy, scipy, scikit-learn and matplotlib (`requirements.txt`). The runs of record used Python 3.13.16, numpy 2.5.3, scipy 1.18.1 and scikit-learn 1.9.1 on Linux, and the figures were made with matplotlib 3.11.2; other versions may change the random forests and therefore the numbers. E1-E4 and E6 need ngspice on the PATH (the runs used ngspice-42); run one ngspice job at a time, or set `OMP_NUM_THREADS=1` before running several (ngspice-42 uses OpenMP, and two processes with the default setting ran about 30 times slower on two cores, with identical results; `E6_cost.py` sets it itself). Times below are those of the runs of record on a 2-core machine.
 
 ```
 pip install -r requirements.txt
@@ -122,6 +127,11 @@ python experiments/E3c_independent/e3c_independent_check.py           # about 5 
 python experiments/E4_forest_system.py --phase spice                  # about 15 min
 python experiments/E4_forest_system.py --phase forest --instrument results/E4_spice_20261017_0602   # about 36 min with 2 processes
 python experiments/E4_independent/run_check.py                        # about 3.5 min
+
+python experiments/E5_reliability_cost.py --part all --workers 2      # about 67 min with 2 processes; reads the E4 runs of record
+python experiments/E5_independent/run_check.py                        # about 3 min (method in its docstring)
+python experiments/E6_cost.py --part all --workers 2                  # about 9 min with 2 processes
+python experiments/E6_independent/run_check.py                        # about 1 min (see its README)
 ```
 
 The second phase can be run on the stored first phase of the run of record, as above, or on a new one. `run_e1_indep.py` writes into the existing folder given as its argument, so give it a new, empty one. Comparisons with the independent checks write new folders:
@@ -132,7 +142,7 @@ python experiments/E0_2_compare_independent.py results/E0_2_20261013_1325 result
 python experiments/E1_compare_independent.py results/E1_20261014_0156 results/E1_independent_check_20261014_0206
 ```
 
-The analysis scripts (`E1_analysis.py`, `E1_analysis_current_mismatch.py`, `E2_analysis.py`, `E3a_analysis.py`, `E3b_analysis.py`, `E4_analysis.py`) take a run folder and write their tables into it. For the runs of record these tables are already stored; all but `E4_analysis.py` refuse to overwrite them. The figure scripts take the run folder, read these tables where needed (E1, E3a, E3b), and write into `figures/`, replacing the stored figures:
+The analysis scripts (`E1_analysis.py`, `E1_analysis_current_mismatch.py`, `E2_analysis.py`, `E3a_analysis.py`, `E3b_analysis.py`, `E4_analysis.py`, `E5_tables.py`, `E6_tables.py`, `E6_posthoc_settling.py`) take a run folder and write their tables into it. For the runs of record these tables are already stored; all but `E4_analysis.py` and the E5 and E6 scripts refuse to overwrite them. The second phase of the E6 check (`run_extra_lbuf.py`, `compare.py`) writes into the folder of its first phase; its README describes it. The figure scripts take the run folder, read these tables where needed (E1, E3a, E3b), and write into `figures/`, replacing the stored figures:
 
 ```
 python experiments/E0_1_figures.py results/E0_1_20261012_1652
@@ -164,14 +174,14 @@ The five datasets are loaded at run time: iris, wine, breast cancer (Wisconsin, 
 ## What is not here
 
 - No measured device or chip data. In E0.1, E0.2 and E4 the PCM follows the AIHWKit PCM model (programming noise, drift with a state-dependent exponent, read noise); E1-E3c use a uniform drift factor (exponent 0.049) with ideal tracking. In SPICE the PCM is a linear conductance, or a sinh-type element in E3a.
-- Transistors are the sky130 models, with the PDK's mismatch model in E1-E3b and E4 (E3c uses nominal devices); there is no layout and no parasitic extraction, and the match line is a lumped capacitance.
+- Transistors are the sky130 models, with the PDK's mismatch model in E1-E3b and E4 (E3c and E6 use nominal devices); there is no layout and no parasitic extraction (no source and drain diffusion geometry; E6 adds an assumed capacitance at the divider node), and the match line is a lumped capacitance. Converters, adjustable supplies, look-up tables and the replica readout are not designed at transistor level; E6 counts them and estimates the storage area of the tables from standard-cell flip-flops (without read multiplexers and write logic).
 - Temperature enters only through the transistor models (E2: −40 and 85 °C); the PCM model has no temperature dependence.
 - The PCM read nonlinearity is studied in E3a only; E4 uses a linear read characteristic.
 - The written protocols and reports of the steps are working documents and are not included.
 
 ## License
 
-My code and records are under the MIT License (`LICENSE`). `third_party/` holds modified subsets of the SkyWater sky130 device models under the Apache License 2.0, and `src/pcm_acam/pcm_model.py` transcribes formulas and constants of IBM AIHWKit (MIT License); see `THIRD_PARTY_NOTICES.md`.
+My code and records are under the MIT License (`LICENSE`). `third_party/` holds modified subsets of the SkyWater sky130 device models and an unmodified layout view of one sky130 standard cell, both under the Apache License 2.0, and `src/pcm_acam/pcm_model.py` transcribes formulas and constants of IBM AIHWKit (MIT License); see `THIRD_PARTY_NOTICES.md`.
 
 ## References
 

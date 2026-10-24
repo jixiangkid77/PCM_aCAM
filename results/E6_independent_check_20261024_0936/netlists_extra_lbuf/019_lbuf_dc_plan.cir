@@ -1,0 +1,299 @@
+* E6 independent check: lbuf_dc_plan
+.include "/home/claude/PCM_aCAM/third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice"
+.temp 27
+.options reltol=1e-6 vntol=1e-9 abstol=1e-15
+vsl_d00 sl_d00 0 0.7684206115436505
+r_d00 sl_d00 n_d00 44444.44444476917
+xdiv_d00 n_d00 dl_d00 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_d00 dl_d00 0 0.6770747721820524
+vml_d00 ml_d00 0 1.8
+vinva_d00 via_d00 0 1.8
+vinvb_d00 vib_d00 0 1.8
+xp_ad00 m_d00 n_d00 via_d00 via_d00 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad00 m_d00 n_d00 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd00 o_d00 m_d00 vib_d00 vib_d00 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd00 o_d00 m_d00 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d00 ml_d00 o_d00 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d01 sl_d01 0 0.7684206115436505
+r_d01 sl_d01 n_d01 44444.44444476917
+xdiv_d01 n_d01 dl_d01 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_d01 dl_d01 0 0.8146835720727794
+vml_d01 ml_d01 0 1.8
+vinva_d01 via_d01 0 1.8
+vinvb_d01 vib_d01 0 1.8
+xp_ad01 m_d01 n_d01 via_d01 via_d01 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad01 m_d01 n_d01 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd01 o_d01 m_d01 vib_d01 vib_d01 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd01 o_d01 m_d01 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d01 ml_d01 o_d01 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d02 sl_d02 0 0.7684206115436505
+r_d02 sl_d02 n_d02 44444.44444476917
+xdiv_d02 n_d02 dl_d02 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_d02 dl_d02 0 0.8151087061487559
+vml_d02 ml_d02 0 1.8
+vinva_d02 via_d02 0 1.8
+vinvb_d02 vib_d02 0 1.8
+xp_ad02 m_d02 n_d02 via_d02 via_d02 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad02 m_d02 n_d02 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd02 o_d02 m_d02 vib_d02 vib_d02 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd02 o_d02 m_d02 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d02 ml_d02 o_d02 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d03 sl_d03 0 0.7684206115436505
+r_d03 sl_d03 n_d03 44444.44444476917
+xdiv_d03 n_d03 dl_d03 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_d03 dl_d03 0 0.8151558445494614
+vml_d03 ml_d03 0 1.8
+vinva_d03 via_d03 0 1.8
+vinvb_d03 vib_d03 0 1.8
+xp_ad03 m_d03 n_d03 via_d03 via_d03 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad03 m_d03 n_d03 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd03 o_d03 m_d03 vib_d03 vib_d03 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd03 o_d03 m_d03 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d03 ml_d03 o_d03 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d04 sl_d04 0 0.7684206115436505
+r_d04 sl_d04 n_d04 44444.44444476917
+xdiv_d04 n_d04 dl_d04 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_d04 dl_d04 0 0.8152029632887386
+vml_d04 ml_d04 0 1.8
+vinva_d04 via_d04 0 1.8
+vinvb_d04 vib_d04 0 1.8
+xp_ad04 m_d04 n_d04 via_d04 via_d04 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad04 m_d04 n_d04 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd04 o_d04 m_d04 vib_d04 vib_d04 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd04 o_d04 m_d04 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d04 ml_d04 o_d04 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d05 sl_d05 0 0.7684206115436505
+r_d05 sl_d05 n_d05 44444.44444476917
+xdiv_d05 n_d05 dl_d05 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_d05 dl_d05 0 0.8156261508425288
+vml_d05 ml_d05 0 1.8
+vinva_d05 via_d05 0 1.8
+vinvb_d05 vib_d05 0 1.8
+xp_ad05 m_d05 n_d05 via_d05 via_d05 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad05 m_d05 n_d05 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd05 o_d05 m_d05 vib_d05 vib_d05 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd05 o_d05 m_d05 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d05 ml_d05 o_d05 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d10 sl_d10 0 0.7684206115436505
+r_d10 sl_d10 n_d10 89435.21098099767
+xdiv_d10 n_d10 dl_d10 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_d10 dl_d10 0 0.6425763438745312
+vml_d10 ml_d10 0 1.8
+vinva_d10 via_d10 0 1.8
+vinvb_d10 vib_d10 0 1.8
+xp_ad10 m_d10 n_d10 via_d10 via_d10 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad10 m_d10 n_d10 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd10 o_d10 m_d10 vib_d10 vib_d10 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd10 o_d10 m_d10 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d10 ml_d10 o_d10 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d11 sl_d11 0 0.7684206115436505
+r_d11 sl_d11 n_d11 89435.21098099767
+xdiv_d11 n_d11 dl_d11 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_d11 dl_d11 0 0.7640033200369913
+vml_d11 ml_d11 0 1.8
+vinva_d11 via_d11 0 1.8
+vinvb_d11 vib_d11 0 1.8
+xp_ad11 m_d11 n_d11 via_d11 via_d11 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad11 m_d11 n_d11 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd11 o_d11 m_d11 vib_d11 vib_d11 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd11 o_d11 m_d11 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d11 ml_d11 o_d11 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d12 sl_d12 0 0.7684206115436505
+r_d12 sl_d12 n_d12 89435.21098099767
+xdiv_d12 n_d12 dl_d12 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_d12 dl_d12 0 0.7643599678561757
+vml_d12 ml_d12 0 1.8
+vinva_d12 via_d12 0 1.8
+vinvb_d12 vib_d12 0 1.8
+xp_ad12 m_d12 n_d12 via_d12 via_d12 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad12 m_d12 n_d12 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd12 o_d12 m_d12 vib_d12 vib_d12 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd12 o_d12 m_d12 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d12 ml_d12 o_d12 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d13 sl_d13 0 0.7684206115436505
+r_d13 sl_d13 n_d13 89435.21098099767
+xdiv_d13 n_d13 dl_d13 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_d13 dl_d13 0 0.7643995030756207
+vml_d13 ml_d13 0 1.8
+vinva_d13 via_d13 0 1.8
+vinvb_d13 vib_d13 0 1.8
+xp_ad13 m_d13 n_d13 via_d13 via_d13 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad13 m_d13 n_d13 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd13 o_d13 m_d13 vib_d13 vib_d13 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd13 o_d13 m_d13 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d13 ml_d13 o_d13 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d14 sl_d14 0 0.7684206115436505
+r_d14 sl_d14 n_d14 89435.21098099767
+xdiv_d14 n_d14 dl_d14 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_d14 dl_d14 0 0.7644390199107155
+vml_d14 ml_d14 0 1.8
+vinva_d14 via_d14 0 1.8
+vinvb_d14 vib_d14 0 1.8
+xp_ad14 m_d14 n_d14 via_d14 via_d14 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad14 m_d14 n_d14 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd14 o_d14 m_d14 vib_d14 vib_d14 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd14 o_d14 m_d14 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d14 ml_d14 o_d14 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d15 sl_d15 0 0.7684206115436505
+r_d15 sl_d15 n_d15 89435.21098099767
+xdiv_d15 n_d15 dl_d15 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=0.15
+vdl_d15 dl_d15 0 0.7647938473866875
+vml_d15 ml_d15 0 1.8
+vinva_d15 via_d15 0 1.8
+vinvb_d15 vib_d15 0 1.8
+xp_ad15 m_d15 n_d15 via_d15 via_d15 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad15 m_d15 n_d15 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd15 o_d15 m_d15 vib_d15 vib_d15 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd15 o_d15 m_d15 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d15 ml_d15 o_d15 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d20 sl_d20 0 0.7684206115436505
+r_d20 sl_d20 n_d20 44444.44444444784
+xdiv_d20 n_d20 dl_d20 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_d20 dl_d20 0 0.7547632648460386
+vml_d20 ml_d20 0 1.8
+vinva_d20 via_d20 0 1.8
+vinvb_d20 vib_d20 0 1.8
+xp_ad20 m_d20 n_d20 via_d20 via_d20 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad20 m_d20 n_d20 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd20 o_d20 m_d20 vib_d20 vib_d20 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd20 o_d20 m_d20 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d20 ml_d20 o_d20 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d21 sl_d21 0 0.7684206115436505
+r_d21 sl_d21 n_d21 44444.44444444784
+xdiv_d21 n_d21 dl_d21 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_d21 dl_d21 0 1.2330592223450973
+vml_d21 ml_d21 0 1.8
+vinva_d21 via_d21 0 1.8
+vinvb_d21 vib_d21 0 1.8
+xp_ad21 m_d21 n_d21 via_d21 via_d21 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad21 m_d21 n_d21 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd21 o_d21 m_d21 vib_d21 vib_d21 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd21 o_d21 m_d21 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d21 ml_d21 o_d21 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d22 sl_d22 0 0.7684206115436505
+r_d22 sl_d22 n_d22 44444.44444444784
+xdiv_d22 n_d22 dl_d22 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_d22 dl_d22 0 1.235214439611338
+vml_d22 ml_d22 0 1.8
+vinva_d22 via_d22 0 1.8
+vinvb_d22 vib_d22 0 1.8
+xp_ad22 m_d22 n_d22 via_d22 via_d22 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad22 m_d22 n_d22 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd22 o_d22 m_d22 vib_d22 vib_d22 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd22 o_d22 m_d22 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d22 ml_d22 o_d22 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d23 sl_d23 0 0.7684206115436505
+r_d23 sl_d23 n_d23 44444.44444444784
+xdiv_d23 n_d23 dl_d23 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_d23 dl_d23 0 1.2354537967309633
+vml_d23 ml_d23 0 1.8
+vinva_d23 via_d23 0 1.8
+vinvb_d23 vib_d23 0 1.8
+xp_ad23 m_d23 n_d23 via_d23 via_d23 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad23 m_d23 n_d23 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd23 o_d23 m_d23 vib_d23 vib_d23 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd23 o_d23 m_d23 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d23 ml_d23 o_d23 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d24 sl_d24 0 0.7684206115436505
+r_d24 sl_d24 n_d24 44444.44444444784
+xdiv_d24 n_d24 dl_d24 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_d24 dl_d24 0 1.2356931318786155
+vml_d24 ml_d24 0 1.8
+vinva_d24 via_d24 0 1.8
+vinvb_d24 vib_d24 0 1.8
+xp_ad24 m_d24 n_d24 via_d24 via_d24 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad24 m_d24 n_d24 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd24 o_d24 m_d24 vib_d24 vib_d24 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd24 o_d24 m_d24 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d24 ml_d24 o_d24 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d25 sl_d25 0 0.7684206115436505
+r_d25 sl_d25 n_d25 44444.44444444784
+xdiv_d25 n_d25 dl_d25 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_d25 dl_d25 0 1.2378461738098658
+vml_d25 ml_d25 0 1.8
+vinva_d25 via_d25 0 1.8
+vinvb_d25 vib_d25 0 1.8
+xp_ad25 m_d25 n_d25 via_d25 via_d25 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad25 m_d25 n_d25 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd25 o_d25 m_d25 vib_d25 vib_d25 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd25 o_d25 m_d25 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d25 ml_d25 o_d25 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d30 sl_d30 0 0.7684206115436505
+r_d30 sl_d30 n_d30 89435.21098035105
+xdiv_d30 n_d30 dl_d30 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_d30 dl_d30 0 0.6880312653539422
+vml_d30 ml_d30 0 1.8
+vinva_d30 via_d30 0 1.8
+vinvb_d30 vib_d30 0 1.8
+xp_ad30 m_d30 n_d30 via_d30 via_d30 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad30 m_d30 n_d30 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd30 o_d30 m_d30 vib_d30 vib_d30 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd30 o_d30 m_d30 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d30 ml_d30 o_d30 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d31 sl_d31 0 0.7684206115436505
+r_d31 sl_d31 n_d31 89435.21098035105
+xdiv_d31 n_d31 dl_d31 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_d31 dl_d31 0 1.0111012472624072
+vml_d31 ml_d31 0 1.8
+vinva_d31 via_d31 0 1.8
+vinvb_d31 vib_d31 0 1.8
+xp_ad31 m_d31 n_d31 via_d31 via_d31 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad31 m_d31 n_d31 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd31 o_d31 m_d31 vib_d31 vib_d31 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd31 o_d31 m_d31 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d31 ml_d31 o_d31 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d32 sl_d32 0 0.7684206115436505
+r_d32 sl_d32 n_d32 89435.21098035105
+xdiv_d32 n_d32 dl_d32 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_d32 dl_d32 0 1.0124608592925806
+vml_d32 ml_d32 0 1.8
+vinva_d32 via_d32 0 1.8
+vinvb_d32 vib_d32 0 1.8
+xp_ad32 m_d32 n_d32 via_d32 via_d32 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad32 m_d32 n_d32 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd32 o_d32 m_d32 vib_d32 vib_d32 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd32 o_d32 m_d32 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d32 ml_d32 o_d32 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d33 sl_d33 0 0.7684206115436505
+r_d33 sl_d33 n_d33 89435.21098035105
+xdiv_d33 n_d33 dl_d33 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_d33 dl_d33 0 1.0126117369472014
+vml_d33 ml_d33 0 1.8
+vinva_d33 via_d33 0 1.8
+vinvb_d33 vib_d33 0 1.8
+xp_ad33 m_d33 n_d33 via_d33 via_d33 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad33 m_d33 n_d33 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd33 o_d33 m_d33 vib_d33 vib_d33 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd33 o_d33 m_d33 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d33 ml_d33 o_d33 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d34 sl_d34 0 0.7684206115436505
+r_d34 sl_d34 n_d34 89435.21098035105
+xdiv_d34 n_d34 dl_d34 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_d34 dl_d34 0 1.012762576662809
+vml_d34 ml_d34 0 1.8
+vinva_d34 via_d34 0 1.8
+vinvb_d34 vib_d34 0 1.8
+xp_ad34 m_d34 n_d34 via_d34 via_d34 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad34 m_d34 n_d34 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd34 o_d34 m_d34 vib_d34 vib_d34 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd34 o_d34 m_d34 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d34 ml_d34 o_d34 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+vsl_d35 sl_d35 0 0.7684206115436505
+r_d35 sl_d35 n_d35 89435.21098035105
+xdiv_d35 n_d35 dl_d35 0 0 sky130_fd_pr__nfet_01v8 w=0.42 l=4.0
+vdl_d35 dl_d35 0 1.0141184326921235
+vml_d35 ml_d35 0 1.8
+vinva_d35 via_d35 0 1.8
+vinvb_d35 vib_d35 0 1.8
+xp_ad35 m_d35 n_d35 via_d35 via_d35 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_ad35 m_d35 n_d35 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xp_bd35 o_d35 m_d35 vib_d35 vib_d35 sky130_fd_pr__pfet_01v8 w=0.42 l=4.0
+xn_bd35 o_d35 m_d35 0 0 sky130_fd_pr__nfet_01v8 w=2.0 l=0.15
+xpd_d35 ml_d35 o_d35 0 0 sky130_fd_pr__nfet_01v8_lvt w=0.42 l=0.15
+.control
+set filetype=binary
+op
+write 019_lbuf_dc_plan_o.raw all
+quit
+.endc
+.end

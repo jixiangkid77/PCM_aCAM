@@ -1,0 +1,28 @@
+{
+  "case": {
+    "dataset": "iris",
+    "split": 0,
+    "seed": 0,
+    "design": "P1",
+    "cell_set": "6T2M",
+    "condition": "unif",
+    "time": "1y",
+    "nodes": [
+      "dac_remap",
+      "supply"
+    ],
+    "type": "L6T",
+    "role": "independent re-check 1: counts of |e| > 0.5 and > 1 LSB"
+  },
+  "n_bounds_of_type": 207,
+  "counts": {
+    "dac_remap": {
+      "abs_gt_0.5": 94,
+      "abs_gt_1": 33
+    },
+    "supply": {
+      "abs_gt_0.5": 63,
+      "abs_gt_1": 18
+    }
+  }
+}

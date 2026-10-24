@@ -1,0 +1,49 @@
+{
+  "C1": {
+    "max_dev_lsb": 6.581545459655054e-05,
+    "n": 704,
+    "limit_lsb": 0.001,
+    "pass": true
+  },
+  "C1b": {
+    "residual_lsb": {
+      "6T2M|P1": 0.10121058801730079,
+      "GS|P1": 0.004199401207356451,
+      "6T2M|P3": 0.23317130956692544,
+      "GS|P3": 0.007281770735088996
+    },
+    "reference_lsb": {
+      "6T2M|P1": 0.103,
+      "GS|P1": 0.0043,
+      "6T2M|P3": 0.225,
+      "GS|P3": 0.0072
+    },
+    "pass": true
+  },
+  "C2": {
+    "max_dev_lsb": 3.7992313263721175e-05,
+    "n_unsettled": 0,
+    "n": 2176,
+    "limit_lsb": 0.001,
+    "pass": true
+  },
+  "C3": {
+    "max_rel_dev": 1.2707563792346832e-06,
+    "n": 32,
+    "limit_rel": 0.005,
+    "pass": true
+  },
+  "C4": {
+    "pass": true,
+    "n": 24,
+    "violations": [],
+    "n_cases": 192,
+    "n_cases_nonmonotone": 0,
+    "basis": "largest settling time over the sensitivity cases (levels x x_prev) at each C_par"
+  },
+  "C5": {
+    "max_rel_dev": 4.39287881395245e-05,
+    "limit_rel": 0.005,
+    "pass": true
+  }
+}

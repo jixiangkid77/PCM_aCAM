@@ -1,0 +1,42 @@
+{
+  "C1": {
+    "max_dev_lsb": 6.186057796279303e-05,
+    "n": 40,
+    "limit_lsb": 0.001,
+    "pass": true
+  },
+  "C1b": {
+    "residual_lsb": {
+      "6T2M|P1": 0.10121058801732719,
+      "GS|P1": 0.004199401207345504
+    },
+    "reference_lsb": {
+      "6T2M|P1": 0.103,
+      "GS|P1": 0.0043
+    },
+    "pass": true
+  },
+  "C2": {
+    "max_dev_lsb": 3.782226305418314e-05,
+    "n_unsettled": 0,
+    "n": 96,
+    "limit_lsb": 0.001,
+    "pass": true
+  },
+  "C3": {
+    "max_rel_dev": 1.241379562477718e-06,
+    "n": 4,
+    "limit_rel": 0.005,
+    "pass": true
+  },
+  "C4": {
+    "pass": true,
+    "n": 0,
+    "violations": []
+  },
+  "C5": {
+    "max_rel_dev": 1.1169050853077067e-06,
+    "limit_rel": 0.005,
+    "pass": true
+  }
+}

@@ -1,0 +1,140 @@
+[2026-10-24 09:36:13] E6 independent check part 1; output /home/claude/PCM_aCAM/results/E6_independent_check_20261024_0936
+[2026-10-24 09:36:13] ngspice temporary folder /tmp/claude-0/-home-claude/6dfef7ba-89f2-5845-85d8-aa33235ce2d6/scratchpad/E6ind_spice_zrwmuckv; ngspice-42; model third_party/sky130_fd_pr_subset_e3b/sky130_subset_tt.lib.spice
+[2026-10-24 09:36:13] a(1 y) = 0.496945710277; I_sw target = 2.800000e-07 A; LSB = 1/15; band = +-0.01 LSB
+[2026-10-24 09:36:14]   ngspice 001_vsw_coarse: 0.73 s wall, 0.49 s cpu
+[2026-10-24 09:36:14]   ngspice 002_vsw_fine: 0.16 s wall, 0.14 s cpu
+[2026-10-24 09:36:14]   ngspice 003_vsw_verify: 0.12 s wall, 0.12 s cpu
+[2026-10-24 09:36:14] V_sw = 0.526221473 V (I at root 2.800000000e-07 A, rel. residual -5.27e-11)
+[2026-10-24 09:36:15]   ngspice 004_vy_forced_coarse: 0.19 s wall, 0.18 s cpu
+[2026-10-24 09:36:15]   ngspice 005_vy_forced_fine: 0.18 s wall, 0.18 s cpu
+[2026-10-24 09:36:15]   ngspice 006_vy_free_op: 0.14 s wall, 0.13 s cpu
+[2026-10-24 09:36:15]   ngspice 007_vy_free_sweep: 0.17 s wall, 0.17 s cpu
+[2026-10-24 09:36:15] V_Y* = 0.570321776 V (free output at root - V_sw = 3.26e-11 V, gain -22.63)
+[2026-10-24 09:36:15]   ngspice 008_vx_cascade_coarse: 0.35 s wall, 0.31 s cpu
+[2026-10-24 09:36:16]   ngspice 009_vx_cascade_fine: 0.25 s wall, 0.25 s cpu
+[2026-10-24 09:36:16]   ngspice 010_vx_forced_coarse: 0.18 s wall, 0.18 s cpu
+[2026-10-24 09:36:16]   ngspice 011_vx_forced_fine: 0.15 s wall, 0.15 s cpu
+[2026-10-24 09:36:16]   ngspice 012_vx_free_op: 0.15 s wall, 0.14 s cpu
+[2026-10-24 09:36:16] V_X* = 0.568420612 V (cascade gain 537.9; forced-output cross-check 0.568420612 V, diff 6.86e-11 V)
+[2026-10-24 09:36:16]   ngspice 013_map_P1_coarse: 0.19 s wall, 0.19 s cpu
+[2026-10-24 09:36:17]   ngspice 014_map_P1_fine: 0.36 s wall, 0.36 s cpu
+[2026-10-24 09:36:17]   ngspice 015_map_P1_verify: 0.13 s wall, 0.13 s cpu
+[2026-10-24 09:36:17] P1: map roots verified, worst |voltage residual| = 2.11e-12 V; G_UINV(0) = 2.629528 uS, G_UINV(8/15) = 13.717291 uS
+[2026-10-24 09:36:17]   ngspice 016_map_P3_coarse: 0.15 s wall, 0.15 s cpu
+[2026-10-24 09:36:17]   ngspice 017_map_P3_fine: 0.40 s wall, 0.40 s cpu
+[2026-10-24 09:36:18]   ngspice 018_map_P3_verify: 0.13 s wall, 0.13 s cpu
+[2026-10-24 09:36:18] P3: map roots verified, worst |voltage residual| = 5.91e-13 V; G_UINV(0) = 2.507420 uS, G_UINV(8/15) = 13.235450 uS
+[2026-10-24 09:36:18]   ngspice 019_settle_dc_plan: 0.25 s wall, 0.25 s cpu
+[2026-10-24 09:36:18]   ngspice 020_settle_dc_tight: 0.24 s wall, 0.24 s cpu
+[2026-10-24 09:36:18] settling DC points: max |plan - tight options| = 5.33e-15 V over 64 op points x 2 nodes
+[2026-10-24 09:36:18]   ngspice 021_tran_s00_plan: 0.22 s wall, 0.22 s cpu
+[2026-10-24 09:36:19]   ngspice 022_tran_s00_half_step: 0.32 s wall, 0.32 s cpu
+[2026-10-24 09:36:19]   ngspice 023_tran_s00_quarter_step: 0.57 s wall, 0.57 s cpu
+[2026-10-24 09:36:19]   ngspice 024_tran_s00_gear: 0.22 s wall, 0.22 s cpu
+[2026-10-24 09:36:19] s00 1a P1 L6T t0            theta=0  x_prev=0: t_settle = 0.0000 ns (half 0.0000, quarter 0.0000, extrapolated 0.0000, gear 0.0000 ns); band 0.525358-0.527086 V; end-DC 2.6e-14 LSB
+[2026-10-24 09:36:20]   ngspice 025_tran_s01_plan: 0.25 s wall, 0.22 s cpu
+[2026-10-24 09:36:20]   ngspice 026_tran_s01_half_step: 0.33 s wall, 0.32 s cpu
+[2026-10-24 09:36:20]   ngspice 027_tran_s01_quarter_step: 0.53 s wall, 0.52 s cpu
+[2026-10-24 09:36:21]   ngspice 028_tran_s01_gear: 0.22 s wall, 0.22 s cpu
+[2026-10-24 09:36:21] s01 1a P1 L6T t0            theta=0  x_prev=1: t_settle = 2.2416 ns (half 2.2417, quarter 2.2417, extrapolated 2.2418, gear 2.2405 ns); band 0.525358-0.527086 V; end-DC -2.6e-10 LSB
+[2026-10-24 09:36:21]   ngspice 029_tran_s02_plan: 0.22 s wall, 0.22 s cpu
+[2026-10-24 09:36:21]   ngspice 030_tran_s02_half_step: 0.33 s wall, 0.33 s cpu
+[2026-10-24 09:36:22]   ngspice 031_tran_s02_quarter_step: 0.63 s wall, 0.59 s cpu
+[2026-10-24 09:36:22]   ngspice 032_tran_s02_gear: 0.23 s wall, 0.22 s cpu
+[2026-10-24 09:36:22] s02 1a P1 L6T dac_remap_1y  theta=0  x_prev=0: t_settle = 0.0000 ns (half 0.0000, quarter 0.0000, extrapolated 0.0000, gear 0.0000 ns); band 0.525365-0.527080 V; end-DC -1.8e-14 LSB
+[2026-10-24 09:36:22]   ngspice 033_tran_s03_plan: 0.23 s wall, 0.23 s cpu
+[2026-10-24 09:36:23]   ngspice 034_tran_s03_half_step: 0.33 s wall, 0.33 s cpu
+[2026-10-24 09:36:23]   ngspice 035_tran_s03_quarter_step: 0.55 s wall, 0.54 s cpu
+[2026-10-24 09:36:23]   ngspice 036_tran_s03_gear: 0.24 s wall, 0.23 s cpu
+[2026-10-24 09:36:23] s03 1a P1 L6T dac_remap_1y  theta=0  x_prev=1: t_settle = 4.4325 ns (half 4.4324, quarter 4.4324, extrapolated 4.4324, gear 4.4325 ns); band 0.525365-0.527080 V; end-DC -1.7e-10 LSB
+[2026-10-24 09:36:24]   ngspice 037_tran_s04_plan: 0.23 s wall, 0.23 s cpu
+[2026-10-24 09:36:24]   ngspice 038_tran_s04_half_step: 0.40 s wall, 0.40 s cpu
+[2026-10-24 09:36:25]   ngspice 039_tran_s04_quarter_step: 0.53 s wall, 0.52 s cpu
+[2026-10-24 09:36:25]   ngspice 040_tran_s04_gear: 0.23 s wall, 0.23 s cpu
+[2026-10-24 09:36:25] s04 1a P3 L6T t0            theta=0  x_prev=0: t_settle = 0.0000 ns (half 0.0000, quarter 0.0000, extrapolated 0.0000, gear 0.0000 ns); band 0.525169-0.527274 V; end-DC 1.1e-13 LSB
+[2026-10-24 09:36:25]   ngspice 041_tran_s05_plan: 0.26 s wall, 0.25 s cpu
+[2026-10-24 09:36:25]   ngspice 042_tran_s05_half_step: 0.33 s wall, 0.33 s cpu
+[2026-10-24 09:36:26]   ngspice 043_tran_s05_quarter_step: 0.61 s wall, 0.59 s cpu
+[2026-10-24 09:36:26]   ngspice 044_tran_s05_gear: 0.22 s wall, 0.22 s cpu
+[2026-10-24 09:36:26] s05 1a P3 L6T t0            theta=0  x_prev=1: t_settle = 4.3498 ns (half 4.3502, quarter 4.3503, extrapolated 4.3503, gear 4.3487 ns); band 0.525169-0.527274 V; end-DC 4.3e-08 LSB
+[2026-10-24 09:36:27]   ngspice 045_tran_s06_plan: 0.22 s wall, 0.22 s cpu
+[2026-10-24 09:36:27]   ngspice 046_tran_s06_half_step: 0.32 s wall, 0.31 s cpu
+[2026-10-24 09:36:27]   ngspice 047_tran_s06_quarter_step: 0.52 s wall, 0.51 s cpu
+[2026-10-24 09:36:28]   ngspice 048_tran_s06_gear: 0.22 s wall, 0.22 s cpu
+[2026-10-24 09:36:28] s06 1a P3 L6T dac_remap_1y  theta=0  x_prev=0: t_settle = 0.0000 ns (half 0.0000, quarter 0.0000, extrapolated 0.0000, gear 0.0000 ns); band 0.525172-0.527271 V; end-DC -1.6e-14 LSB
+[2026-10-24 09:36:28]   ngspice 049_tran_s07_plan: 0.28 s wall, 0.28 s cpu
+[2026-10-24 09:36:28]   ngspice 050_tran_s07_half_step: 0.33 s wall, 0.33 s cpu
+[2026-10-24 09:36:29]   ngspice 051_tran_s07_quarter_step: 0.60 s wall, 0.59 s cpu
+[2026-10-24 09:36:29]   ngspice 052_tran_s07_gear: 0.23 s wall, 0.23 s cpu
+[2026-10-24 09:36:29] s07 1a P3 L6T dac_remap_1y  theta=0  x_prev=1: t_settle = 7.7829 ns (half 7.7831, quarter 7.7831, extrapolated 7.7831, gear 7.7824 ns); band 0.525172-0.527271 V; end-DC 3.5e-08 LSB
+[2026-10-24 09:36:29]   ngspice 053_tran_s08_plan: 0.22 s wall, 0.22 s cpu
+[2026-10-24 09:36:30]   ngspice 054_tran_s08_half_step: 0.38 s wall, 0.38 s cpu
+[2026-10-24 09:36:30]   ngspice 055_tran_s08_quarter_step: 0.60 s wall, 0.59 s cpu
+[2026-10-24 09:36:30]   ngspice 056_tran_s08_gear: 0.23 s wall, 0.23 s cpu
+[2026-10-24 09:36:30] s08 1b P1 L6T t0            theta=1  x_prev=0: t_settle = 0.3766 ns (half 0.3804, quarter 0.3812, extrapolated 0.3814, gear 0.3473 ns); band 0.526120-0.526323 V; end-DC -4.8e-10 LSB
+[2026-10-24 09:36:31]   ngspice 057_tran_s09_plan: 0.23 s wall, 0.22 s cpu
+[2026-10-24 09:36:31]   ngspice 058_tran_s09_half_step: 0.34 s wall, 0.34 s cpu
+[2026-10-24 09:36:32]   ngspice 059_tran_s09_quarter_step: 0.63 s wall, 0.60 s cpu
+[2026-10-24 09:36:32]   ngspice 060_tran_s09_gear: 0.31 s wall, 0.29 s cpu
+[2026-10-24 09:36:32] s09 1b P1 L6T dac_remap_1y  theta=1  x_prev=0: t_settle = 0.6782 ns (half 0.6802, quarter 0.6806, extrapolated 0.6808, gear 0.6665 ns); band 0.526122-0.526321 V; end-DC 9.4e-10 LSB
+[2026-10-24 09:36:32]   ngspice 061_tran_s10_plan: 0.24 s wall, 0.23 s cpu
+[2026-10-24 09:36:33]   ngspice 062_tran_s10_half_step: 0.38 s wall, 0.38 s cpu
+[2026-10-24 09:36:33]   ngspice 063_tran_s10_quarter_step: 0.60 s wall, 0.60 s cpu
+[2026-10-24 09:36:33]   ngspice 064_tran_s10_gear: 0.25 s wall, 0.24 s cpu
+[2026-10-24 09:36:33] s10 1b P3 L6T t0            theta=1  x_prev=0: t_settle = 0.8736 ns (half 0.8755, quarter 0.8761, extrapolated 0.8762, gear 0.8635 ns); band 0.526113-0.526330 V; end-DC -1.5e-07 LSB
+[2026-10-24 09:36:34]   ngspice 065_tran_s11_plan: 0.23 s wall, 0.23 s cpu
+[2026-10-24 09:36:34]   ngspice 066_tran_s11_half_step: 0.34 s wall, 0.34 s cpu
+[2026-10-24 09:36:35]   ngspice 067_tran_s11_quarter_step: 0.53 s wall, 0.53 s cpu
+[2026-10-24 09:36:35]   ngspice 068_tran_s11_gear: 0.22 s wall, 0.22 s cpu
+[2026-10-24 09:36:35] s11 1b P3 L6T dac_remap_1y  theta=1  x_prev=0: t_settle = 1.1129 ns (half 1.1144, quarter 1.1147, extrapolated 1.1148, gear 1.1039 ns); band 0.526106-0.526337 V; end-DC 3.0e-07 LSB
+[2026-10-24 09:36:35]   ngspice 069_tran_s12_plan: 0.67 s wall, 0.66 s cpu
+[2026-10-24 09:36:37]   ngspice 070_tran_s12_half_step: 1.33 s wall, 1.31 s cpu
+[2026-10-24 09:36:46]   ngspice 071_tran_s12_quarter_step: 9.46 s wall, 6.86 s cpu
+[2026-10-24 09:36:47]   ngspice 072_tran_s12_gear: 0.70 s wall, 0.68 s cpu
+[2026-10-24 09:36:47] s12 1c P1 UINV t0            theta=0  x_prev=1: t_settle = 63.8261 ns (half 63.8258, quarter 63.8258, extrapolated 63.8257, gear 63.8265 ns); band 0.506765-0.546087 V; end-DC -7.1e-13 LSB
+[2026-10-24 09:36:48]   ngspice 073_tran_s13_plan: 0.83 s wall, 0.80 s cpu
+[2026-10-24 09:36:49]   ngspice 074_tran_s13_half_step: 1.32 s wall, 1.31 s cpu
+[2026-10-24 09:36:52]   ngspice 075_tran_s13_quarter_step: 2.38 s wall, 2.35 s cpu
+[2026-10-24 09:36:52]   ngspice 076_tran_s13_gear: 0.73 s wall, 0.73 s cpu
+[2026-10-24 09:36:52] s13 1c P1 UINV dac_remap_1y  theta=0  x_prev=1: t_settle = 114.8893 ns (half 114.8890, quarter 114.8890, extrapolated 114.8889, gear 114.8902 ns); band 0.513876-0.553344 V; end-DC -1.5e-12 LSB
+[2026-10-24 09:36:53]   ngspice 077_tran_s14_plan: 0.68 s wall, 0.68 s cpu
+[2026-10-24 09:36:54]   ngspice 078_tran_s14_half_step: 1.25 s wall, 1.24 s cpu
+[2026-10-24 09:36:57]   ngspice 079_tran_s14_quarter_step: 2.31 s wall, 2.28 s cpu
+[2026-10-24 09:36:57]   ngspice 080_tran_s14_gear: 0.67 s wall, 0.67 s cpu
+[2026-10-24 09:36:57] s14 1c P3 UINV t0            theta=0  x_prev=1: t_settle = 76.5514 ns (half 76.5513, quarter 76.5512, extrapolated 76.5512, gear 76.5516 ns); band 0.502734-0.550359 V; end-DC 2.1e-11 LSB
+[2026-10-24 09:36:58]   ngspice 081_tran_s15_plan: 0.68 s wall, 0.68 s cpu
+[2026-10-24 09:36:59]   ngspice 082_tran_s15_half_step: 1.22 s wall, 1.21 s cpu
+[2026-10-24 09:37:02]   ngspice 083_tran_s15_quarter_step: 2.46 s wall, 2.43 s cpu
+[2026-10-24 09:37:02]   ngspice 084_tran_s15_gear: 0.74 s wall, 0.71 s cpu
+[2026-10-24 09:37:02] s15 1c P3 UINV dac_remap_1y  theta=0  x_prev=1: t_settle = 140.5996 ns (half 140.5995, quarter 140.5994, extrapolated 140.5994, gear 140.5999 ns); band 0.505268-0.552913 V; end-DC -3.9e-12 LSB
+[2026-10-24 09:37:02]   ngspice 085_power_dc_plan: 0.20 s wall, 0.19 s cpu
+[2026-10-24 09:37:03]   ngspice 086_power_dc_tight: 0.20 s wall, 0.19 s cpu
+[2026-10-24 09:37:03] power: max rel. diff plan vs tight options = 0.00e+00; max rel. |I(SL source) - G (V_SL - V_node)| / I = 1.18e-15
+[2026-10-24 09:37:03]   P1 L6T  t0            x=0.25: P = 1.1770353 uW (SL 1.1770353, inv 0.0000000); V_div 0.603125 V, V_dec 0.603125 V
+[2026-10-24 09:37:03]   P1 L6T  t0            x=0.75: P = 2.4209243 uW (SL 2.4209243, inv 0.0000000); V_div 0.473037 V, V_dec 0.473037 V
+[2026-10-24 09:37:03]   P1 L6T  dac_remap_1y  x=0.25: P = 0.5882782 uW (SL 0.5882782, inv 0.0000000); V_div 0.602419 V, V_dec 0.602419 V
+[2026-10-24 09:37:03]   P1 L6T  dac_remap_1y  x=0.75: P = 1.1961775 uW (SL 1.1961775, inv 0.0000000); V_div 0.474488 V, V_dec 0.474488 V
+[2026-10-24 09:37:03]   P1 L6T  supply_1y     x=0.25: P = 1.5967185 uW (SL 1.5967185, inv 0.0000000); V_div 0.665909 V, V_dec 0.665909 V
+[2026-10-24 09:37:03]   P1 L6T  supply_1y     x=0.75: P = 2.9896643 uW (SL 2.9896643, inv 0.0000000); V_div 0.436673 V, V_dec 0.436673 V
+[2026-10-24 09:37:03]   P1 UINV t0            x=0.25: P = 1.7389532 uW (SL 1.3017327, inv 0.4372205); V_div 0.647130 V, V_dec 0.009836 V
+[2026-10-24 09:37:03]   P1 UINV t0            x=0.75: P = 3.2005730 uW (SL 2.6744690, inv 0.5261040); V_div 0.517219 V, V_dec 1.680943 V
+[2026-10-24 09:37:03]   P1 UINV dac_remap_1y  x=0.25: P = 1.0931781 uW (SL 0.6525462, inv 0.4406319); V_div 0.646053 V, V_dec 0.010161 V
+[2026-10-24 09:37:03]   P1 UINV dac_remap_1y  x=0.75: P = 1.8566757 uW (SL 1.3278079, inv 0.5288678); V_div 0.517458 V, V_dec 1.680016 V
+[2026-10-24 09:37:03]   P1 UINV supply_1y     x=0.25: P = 2.0033584 uW (SL 1.7403987, inv 0.2629597); V_div 0.710324 V, V_dec 0.001794 V
+[2026-10-24 09:37:03]   P1 UINV supply_1y     x=0.75: P = 3.4886922 uW (SL 3.2652339, inv 0.2234583); V_div 0.480375 V, V_dec 1.760264 V
+[2026-10-24 09:37:03]   P3 L6T  t0            x=0.25: P = 1.0953657 uW (SL 1.0953657, inv 0.0000000); V_div 0.611666 V, V_dec 0.611666 V
+[2026-10-24 09:37:03]   P3 L6T  t0            x=0.75: P = 2.4846916 uW (SL 2.4846916, inv 0.0000000); V_div 0.466369 V, V_dec 0.466369 V
+[2026-10-24 09:37:03]   P3 L6T  dac_remap_1y  x=0.25: P = 0.5441890 uW (SL 0.5441890, inv 0.0000000); V_div 0.611698 V, V_dec 0.611698 V
+[2026-10-24 09:37:03]   P3 L6T  dac_remap_1y  x=0.75: P = 1.2546731 uW (SL 1.2546731, inv 0.0000000); V_div 0.462177 V, V_dec 0.462177 V
+[2026-10-24 09:37:03]   P3 L6T  supply_1y     x=0.25: P = 1.4069421 uW (SL 1.4069421, inv 0.0000000); V_div 0.697140 V, V_dec 0.697140 V
+[2026-10-24 09:37:03]   P3 L6T  supply_1y     x=0.75: P = 3.0846757 uW (SL 3.0846757, inv 0.0000000); V_div 0.421037 V, V_dec 0.421037 V
+[2026-10-24 09:37:03]   P3 UINV t0            x=0.25: P = 1.5740756 uW (SL 1.1646603, inv 0.4094153); V_div 0.656090 V, V_dec 0.007557 V
+[2026-10-24 09:37:03]   P3 UINV t0            x=0.75: P = 3.1030181 uW (SL 2.6810605, inv 0.4219575); V_div 0.507358 V, V_dec 1.712531 V
+[2026-10-24 09:37:03]   P3 UINV dac_remap_1y  x=0.25: P = 0.9880487 uW (SL 0.5786858, inv 0.4093629); V_div 0.656107 V, V_dec 0.007553 V
+[2026-10-24 09:37:03]   P3 UINV dac_remap_1y  x=0.75: P = 1.7497931 uW (SL 1.3374653, inv 0.4123278); V_div 0.506347 V, V_dec 1.715175 V
+[2026-10-24 09:37:03]   P3 UINV supply_1y     x=0.25: P = 1.6716125 uW (SL 1.4768256, inv 0.1947868); V_div 0.741964 V, V_dec 0.000832 V
+[2026-10-24 09:37:03]   P3 UINV supply_1y     x=0.75: P = 3.4306371 uW (SL 3.3088033, inv 0.1218339); V_div 0.455640 V, V_dec 1.780237 V
+[2026-10-24 09:37:04] iris split 0: rows 126, features 4, cells 504, PCM 1008, 256/(2 cells) = 0.253968, programmed bounds 385 (lower 207, upper 178)
+[2026-10-24 09:37:04] iris split 1: rows 125, features 4, cells 500, PCM 1000, 256/(2 cells) = 0.256000, programmed bounds 378 (lower 208, upper 170)
+[2026-10-24 09:37:04] iris split 2: rows 127, features 4, cells 508, PCM 1016, 256/(2 cells) = 0.251969, programmed bounds 404 (lower 220, upper 184)
+[2026-10-24 09:37:04] done: 86 ngspice runs, 45.6 s ngspice CPU, wall 51 s

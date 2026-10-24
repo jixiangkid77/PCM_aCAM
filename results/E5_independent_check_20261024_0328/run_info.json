@@ -1,0 +1,47 @@
+{
+  "check": "E5 independent re-check (plan section 10)",
+  "start_jst": "2026-10-24T03:28:43+09:00",
+  "items": [
+    1,
+    2,
+    3
+  ],
+  "workers": 2,
+  "run_checked": "results/E5_20261024_0210",
+  "environment": {
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "sklearn": "1.9.1",
+    "platform": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39"
+  },
+  "sha256_inputs": {
+    "experiments/E4_forest_system.py": "133a826f1f4e97204fe41cfe3713fa1db65eece6aaf8299f8f25dc1dd37d8637",
+    "experiments/E4_config.json": "8c0675a16d2d68f025e626e1328be51906be9d71a6f6a186f75157d3ba72fcbd",
+    "experiments/E5_config.json": "d8f7c7288414dfd2d59f1904a972f6d4787b96761724445ee57c1c2ddb30fb2e",
+    "docs/E5_protocol.md": "35f41c8c403234d31eeca27b220c059e069de7ed16939e4e626c0d8fe57254f3",
+    "results/E4_spice_20261017_0602/instrument.npz": "22699dcc0a52c4c4135b47dae3dbae741aadcedced6eb6f3c919f4068168057f",
+    "src/pcm_acam/row_model.py": "b210ecaf992bee9f721b8e0d5ed321012e070540e9ed0e338969d77327c4b4a2",
+    "src/pcm_acam/acam.py": "43083ce773a2e444759ead19660e23ca56481651ee6e784ab13f28a7fb0e3b88",
+    "src/pcm_acam/pcm_model.py": "50aac8817aab38ced8438151a5864dfac2e64d840c207dc90f85570a4b7ff6c7",
+    "src/pcm_acam/trees.py": "17cb854495f528567f40e45070b61ad14ddae2e6fbecd038fe1d427a6597cb70",
+    "src/pcm_acam/io_utils.py": "d24473db814cd1cc247cff54a8df9f5ed85dc9ed9d4877d0a4a251afdcd1326b",
+    "results/E5_20261024_0210/e51_spot.json": "2ca55dbb439fc8296ea72faa6f06e5e9cf542d083962229888d4f9c736858ce8",
+    "results/E5_20261024_0210/e51_spot_bounds.csv": "865ea4326921e78918a7356a3883e0711d7e377796a2c0323de207cc0745fbba",
+    "results/E5_20261024_0210/e53_spot.csv": "d29c284fc5c4a1ce5e75a346881b8eb90b41d288d6df22b2299d6e228b7db26b",
+    "results/E5_20261024_0210/e54_budget.csv": "e564ba317150635935363aebad1da58d8fdc669d656f6feef1f5330cd4aa7a8d",
+    "results/E5_20261024_0210/e54_curves.csv": "832fe19e794e48aa3efca8baf2c2a6486d3ce526029d78fa7134a7673ddd40e8",
+    "results/E5_20261024_0210/config_used.json": "28f5d77c2c680d43d0950b1b8c371eca1fbe677f900ca04f272497b4e014e870"
+  },
+  "sha256_script": {
+    "experiments/E5_independent/run_check.py": "3d5bd2399de26f9b2d852ffc91c39903a9fc64aa2af1b20f2aebe595d91eae62"
+  },
+  "config_used_equals_E5_config": true,
+  "instrument_sha256_matches_plan": true,
+  "end_jst": "2026-10-24T03:31:32+09:00",
+  "elapsed_s": 169.3,
+  "result": {
+    "item1": true,
+    "item2": true,
+    "item3": true
+  }
+}

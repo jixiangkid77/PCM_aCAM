@@ -1,0 +1,9 @@
+E6 freeze 2026-10-24 09:01:39 JST (KID confirmed D1-D6 as proposed; question sent 06:14, answer received by 09:01)
+experiments/E6_cost.py  82f7bd8903a4159e8d2cca86e4bd8b402be9af4d6b88df05aefd8d6e8cc88514
+experiments/E6_config.json  a89efd26159a7826d38181f949352beae63b79640e9ea1660c57f6133056f9f4
+docs/E6_protocol.md  9425aa1a2f235f4ca5cc736277eb3c10bbd4f5e0e50fb70ae465a7c0e08ef01d
+
+E6 re-freeze (plan v1.1) 2026-10-24 10:32:48 JST: v1.0 main run E6_20261024_0901 stopped in check C4 (KeyError) after E6.1; C4 compares the same cases at every C_par; OpenMP one thread per ngspice process (speed only); D1-D6 and all settings unchanged
+experiments/E6_cost.py  2f7da36affa88ab2c14a4b10d68b9b2476c5cde3128b342c139364fbaacfb022
+experiments/E6_config.json  d7b2e39103f2f9b2b76cc439f21a69549919da113c3b9ec970a760aa62b26904
+docs/E6_protocol.md  8f0855ce8c4c3cdc7baea9876a1b4081a614efeed22001be1729762c422b86e7

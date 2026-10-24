@@ -1,0 +1,12 @@
+E6 main run under plan v1.0 (started 2026-10-24 09:01:52 JST). It stopped at 10:25:48, after E6.1, with
+"KeyError: 0.0" in check C4 (largest settling time not decreasing with C_par): the check also looked up the
+0 and 2 fF values for the node-times that have no sensitivity runs (1 day, 30 days). The smoke runs have no
+sensitivity runs, so they did not reach this code.
+
+settle.csv and settle_summary.csv were written before the stop and are complete (2,176 cases, all settled).
+checks.json was not written; E6.2 (power), E6.3 (data line and match line) and E6.4 (overhead) did not run.
+The console output, including the traceback, is logs/E6_20261024_0901_stdout.log.
+
+Replaced by the run of record results/E6_20261024_1032 (plan v1.1, frozen 10:32:48; logs/E6_freeze_sha256.txt):
+C4 compares the same cases at every C_par, and ngspice runs with one OpenMP thread (speed only). The E6.1
+outputs of the two runs are compared value by value in docs/E6_results.md.

@@ -1,0 +1,31 @@
+{
+  "C1": {
+    "max_abs_dev_v": 0.023398087179048788,
+    "n": 48,
+    "limit_v": 5e-05,
+    "pass": false
+  },
+  "C2": {
+    "max_abs_dev_v": 0.5238011973490831,
+    "n_unsettled": 10,
+    "n": 96,
+    "limit_v": 0.0001,
+    "pass": false
+  },
+  "C3": {
+    "max_rel_dev": 1.241379562477718e-06,
+    "n": 4,
+    "limit_rel": 0.005,
+    "pass": true
+  },
+  "C4": {
+    "pass": true,
+    "n": 0,
+    "violations": []
+  },
+  "C5": {
+    "max_rel_dev": 1.1169050853077067e-06,
+    "limit_rel": 0.005,
+    "pass": true
+  }
+}
