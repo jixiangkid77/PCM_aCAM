@@ -1,0 +1,71 @@
+{
+  "run_prefix": "E4_1",
+  "title": "E4.1: full-row transient check of the row model for the gain-stage cell set (check V1 of E4 repeated for GS)",
+  "question": "Does the behavioural row model of E4 (bound violation, or per-instance leakage summed by inverse-time additivity) predict the match-line crossing time of rows built from the gain-stage cell set GS as well as it did for the 6T2M cell set in check V1?",
+  "why": "Check V1 of E4 compared the row model with full-row transient SPICE only for the 6T2M cell set (arm xt). The gs arm of E4 uses the same rule with the LBUF chain (divider node X -> INV_S -> INV_S -> pull-down) for the lower bounds and the UINV chain for the upper bounds; no full-row simulation of these rows exists. The revised paper uses the gain-stage cell as the main system-level test of the node ranking.",
+  "status_of_e4": "E4 and its decisions are not changed by this step; it adds a validation of one model input of the gs arm.",
+  "inputs": {
+    "e4_plan": {
+      "path": "experiments/E4_config.json",
+      "sha256": "8c0675a16d2d68f025e626e1328be51906be9d71a6f6a186f75157d3ba72fcbd"
+    },
+    "instrument": {
+      "path": "results/E4_spice_20261017_0602/instrument.npz",
+      "sha256": "22699dcc0a52c4c4135b47dae3dbae741aadcedced6eb6f3c919f4068168057f"
+    },
+    "models": "the sky130 subset of E4 (E4_config.json: models.lib); the mismatch draws of the E4 pools (pool_draws of E4_forest_system.py, same base seed and stream)"
+  },
+  "cases": {
+    "dataset": "breast_cancer",
+    "split": 0,
+    "seed": 0,
+    "condition": "all",
+    "cell_set": "GS",
+    "designs": [
+      "P1",
+      "P3"
+    ],
+    "points": [
+      [
+        "t0",
+        "t0"
+      ],
+      [
+        "1y",
+        "dac_remap"
+      ],
+      [
+        "1y",
+        "supply"
+      ]
+    ],
+    "selection": "as in V1: (sample, row) pairs without a violated bound whose model leakage sum S lies in [0.3, 3]; per (design, point) 8 pairs evenly spread in ln S (indices round(linspace(0, n-1, 8)) of the pairs sorted by ln S, duplicates removed)",
+    "per_group": 8,
+    "feasibility_scan_before_freeze": "candidate pairs with S in [0.3, 3] (breast_cancer, split 0, seed 0): P1 t0 123, P1 remap 1 y 112, P1 supply 1 y 61, P3 t0 98, P3 remap 1 y 92, P3 supply 1 y 41 (6T2M for comparison: 880-1628)"
+  },
+  "netlist": {
+    "ml": "one ML node per case: lumped capacitor C_SA + N C_wire (N = number of features), precharged by .ic to v_pre (no UIC: every other node starts at its DC operating point), released at t = 0; crossing time t_c = first fall of V_ML through v_ref",
+    "lower_bound_LBUF": "PCM resistor 1/G from SL_lo to X; divider (nfet_01v8, design W/L, div_lo mismatch of the instance) from X to ground with its gate on the bound's DL source; INV_S 1 (b1n, b1p mismatch) from X to W; INV_S 2 (b2n, b2p mismatch) from W to Z; pull-down (nfet_01v8_lvt 0.42/0.15, pd_lo mismatch) from the ML to ground with its gate on Z",
+    "upper_bound_UINV": "as in V1: PCM resistor from SL_hi to Y; divider (div_hi mismatch) from Y to ground; INV_S (un, up mismatch) from Y to Z; pull-down (pd_hi mismatch) with its gate on Z",
+    "unconstrained": "2N minus the number of constrained bounds pull-downs with their gate at 0 V (nominal device), as in V1",
+    "supplies": "SL_lo = V_X*,nom + D_eff and SL_hi = V_Y*,nom + D_eff, with D_eff = D (t0, input remap) or D / a_hat (supply node); one data-line source per constrained bound at the voltage of the current input map for the sample's feature value",
+    "conductances": "the PCM conductance of each bound after programming noise, drift and read noise, divided as the node prescribes (unchanged for both nodes here), from the E4 machinery",
+    "simulation": "ngspice-42, transient as V1 (ml_transient.tran_card, maximum step 0.2 ns), t_stop = 6 t_s(N), 12 cases per netlist, one ngspice process at a time"
+  },
+  "prediction": "t_c,pred = t_s(N) (1 + (2N - 1) w0) / S, with t_s(N) the crossing time of one nominal pull-down at V_sw,nom and all other gates at 0 V, and w0 the leakage of the nominal pull-down at gate 0 V (as V1)",
+  "decision": {
+    "V1GS": "pass if |ln(t_c,sim / t_c,pred)| <= 0.05 for at least 90 % of the 48 cases",
+    "reported_without_gate": [
+      "largest |ln(t_c,sim / t_c,pred)|, by design and point",
+      "row decisions: model (S >= 1 + (2N - 1) w0) versus simulation (t_c,sim <= t_s); disagreements and those with |ln S| < 0.05",
+      "share of S from the lower (LBUF) and the upper (UINV) bounds of each case",
+      "gate voltage of every constrained pull-down 2 ns after release, model versus simulation"
+    ],
+    "if_fail": "reported as is; the row model and the E4 results are not changed; the paper then states that the gs rows were not validated within the V1 tolerance and gives the measured deviation"
+  },
+  "smoke": {
+    "per_group": 1,
+    "purpose": "code check only (netlist builds, ngspice runs, measures parse); its numbers are not used"
+  },
+  "outputs": "results/E4_1_<stamp>/: run_info.json, config_used.json, run.log, cases.json, rows.csv, bounds.csv, checks.json, decision.json"
+}

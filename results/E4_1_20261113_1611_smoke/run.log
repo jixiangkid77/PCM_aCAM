@@ -1,0 +1,9 @@
+[2026-11-13 16:11:54] P1 t0 t0: 2850 matched pairs, 123 with S in [0.3, 3]
+[2026-11-13 16:11:54] P1 1y dac_remap: 2827 matched pairs, 112 with S in [0.3, 3]
+[2026-11-13 16:11:54] P1 1y supply: 2867 matched pairs, 61 with S in [0.3, 3]
+[2026-11-13 16:11:54] P3 t0 t0: 2824 matched pairs, 98 with S in [0.3, 3]
+[2026-11-13 16:11:54] P3 1y dac_remap: 2822 matched pairs, 92 with S in [0.3, 3]
+[2026-11-13 16:11:54] P3 1y supply: 2812 matched pairs, 41 with S in [0.3, 3]
+[2026-11-13 16:11:57] 6 cases; N = 30; t_s(N) = 413.384 ns; w0 = 1.0151e-05
+[2026-11-13 16:12:09] cases 0-5 simulated (16 s)
+[2026-11-13 16:12:09] V1GS: 6 cases, pass fraction 1.000, largest |ln ratio| 0.0080, decision disagreements 0; PASS; 15.7 s

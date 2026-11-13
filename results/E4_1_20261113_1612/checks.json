@@ -1,0 +1,24 @@
+{
+  "V1GS": {
+    "cases": 48,
+    "pass_fraction": 1.0,
+    "max_abs_ln_ratio": 0.017985381320417142,
+    "max_abs_ln_ratio_by_group": {
+      "P1|t0|t0": 0.017985381320417142,
+      "P1|1y|dac_remap": 0.011979502180716776,
+      "P1|1y|supply": 0.010588580134008502,
+      "P3|t0|t0": 0.012311173831832188,
+      "P3|1y|dac_remap": 0.009410112904614881,
+      "P3|1y|supply": 0.009379978877535163
+    },
+    "decision_disagreements": 0,
+    "decision_disagreements_near_tie": 0,
+    "t_s_ns": 413.384,
+    "pass": true
+  },
+  "gates_2ns": {
+    "max_abs_diff_mV": 18.529817996420345,
+    "max_abs_diff_mV_lower": 18.529817996420345,
+    "max_abs_diff_mV_upper": 16.862462445777556
+  }
+}

@@ -1,0 +1,9 @@
+variant,case,t_sim_ns,rel_change_vs_my_main_setting,rel_diff_vs_main_run,elapsed_s
+default_tolerances,0,1378.1509999999998,0.0,7.25610419527456e-07,4.4
+tmax_0.4ns,0,1378.1509999999998,0.0,7.25610419527456e-07,1.3
+six_rows_one_netlist_tmax_0.2ns_tstop_6ts,0,1378.1509999999998,0.0,7.25610419527456e-07,11.1
+six_rows_one_netlist_tmax_0.2ns_tstop_6ts,8,1367.107,0.0,-2.194410106182154e-06,11.1
+six_rows_one_netlist_tmax_0.2ns_tstop_6ts,16,1378.999,0.0,-7.251631617410936e-07,11.1
+six_rows_one_netlist_tmax_0.2ns_tstop_6ts,24,1385.9360000000001,-1.1102230246251565e-16,-2.8861278267289237e-06,11.1
+six_rows_one_netlist_tmax_0.2ns_tstop_6ts,32,1345.7649999999999,0.0,3.7153727261429736e-06,11.1
+six_rows_one_netlist_tmax_0.2ns_tstop_6ts,40,1379.367,0.0,-2.1749059353481925e-06,11.1

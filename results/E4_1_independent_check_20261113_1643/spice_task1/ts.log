@@ -1,0 +1,37 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: * e4.1 independent: sense time t_s(30)
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+g                                     0.526222
+ml                                         1.8
+vg#branch                                    0
+vdd#branch                                   0
+
+ Reference value :  2.97280e-08
+ Reference value :  1.44628e-07
+ Reference value :  2.54728e-07
+ Reference value :  3.62328e-07
+ Reference value :  4.63528e-07
+ Reference value :  5.70028e-07
+ Reference value :  6.74828e-07
+ Reference value :  7.83228e-07
+ Reference value :  8.92728e-07
+ Reference value :  9.94128e-07
+ Reference value :  1.08993e-06
+ Reference value :  1.18623e-06
+No. of Data Rows : 12008
+tc                  =  4.133844e-07
+ngspice-42 done
+Using SPARSE 1.3 as Direct Linear Solver

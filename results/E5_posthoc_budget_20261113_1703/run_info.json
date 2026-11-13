@@ -1,0 +1,16 @@
+{
+  "analysis": "E5 post hoc: time to an rms budget versus the budget",
+  "start_jst": "2026-11-13T17:03:45+09:00",
+  "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "platform": "Linux-6.18.44-fc-v445-x86_64-with-glibc2.39"
+  },
+  "sha256": {
+    "results/E5_20261024_0210/e54_curves.csv": "832fe19e794e48aa3efca8baf2c2a6486d3ce526029d78fa7134a7673ddd40e8",
+    "results/E5_20261024_0210/e54_budget.csv": "e564ba317150635935363aebad1da58d8fdc669d656f6feef1f5330cd4aa7a8d",
+    "experiments/E5_posthoc_budget.py": "248f64c588fd4ccdf469d1880faa56216e654c417e5a467bd3aa9669100c3962"
+  },
+  "end_jst": "2026-11-13T17:03:45+09:00"
+}

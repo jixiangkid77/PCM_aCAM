@@ -1,0 +1,23 @@
+[2026-11-13 16:43:55] E4.1 independent check -> results/E4_1_independent_check_20261113_1643
+[2026-11-13 16:43:56] inputs: plan, E4 plan and instrument match the recorded SHA-256: True
+[2026-11-13 16:43:56] task 1: SPICE side (own row netlists, t_s(N))
+[2026-11-13 16:43:58] [task1] t_s(30) = 413.3844 ns (rows.csv 413.384 ns, cases.json 413.384 ns)
+[2026-11-13 16:44:02] [task1] case 0 (P1|t0|t0, 1 LBUF + 3 UINV, LBUF share of S 3.2e-05): t_sim 1378.151 ns, main 1378.150 ns, diff +0.0001 %, ratio to t_pred 1.0081 (4.2 s)
+[2026-11-13 16:44:07] [task1] case 8 (P1|1y|dac_remap, 1 LBUF + 4 UINV, LBUF share of S 3.6e-05): t_sim 1367.107 ns, main 1367.110 ns, diff -0.0002 %, ratio to t_pred 1.0027 (4.4 s)
+[2026-11-13 16:44:11] [task1] case 16 (P1|1y|supply, 3 LBUF + 1 UINV, LBUF share of S 0.00011): t_sim 1378.999 ns, main 1379.000 ns, diff -0.0001 %, ratio to t_pred 1.0015 (4.5 s)
+[2026-11-13 16:44:16] [task1] case 24 (P3|t0|t0, 2 LBUF + 2 UINV, LBUF share of S 8.9e-05): t_sim 1385.936 ns, main 1385.940 ns, diff -0.0003 %, ratio to t_pred 1.0055 (4.4 s)
+[2026-11-13 16:44:20] [task1] case 32 (P3|1y|dac_remap, 3 LBUF + 2 UINV, LBUF share of S 0.0001): t_sim 1345.765 ns, main 1345.760 ns, diff +0.0004 %, ratio to t_pred 1.0052 (4.6 s)
+[2026-11-13 16:44:25] [task1] case 40 (P3|1y|supply, 3 LBUF + 2 UINV, LBUF share of S 0.00011): t_sim 1379.367 ns, main 1379.370 ns, diff -0.0002 %, ratio to t_pred 1.0051 (4.7 s)
+[2026-11-13 16:44:27] [task1] case 11 (P1|1y|dac_remap, 3 LBUF + 0 UINV, LBUF share of S 1, extra): t_sim 781.392 ns, main 781.392 ns, diff -0.0000 %, ratio to t_pred 1.0084 (2.6 s)
+[2026-11-13 16:44:28] [task1] case 15 (P1|1y|dac_remap, 2 LBUF + 2 UINV, LBUF share of S 0.54, extra): t_sim 252.686 ns, main 252.686 ns, diff +0.0002 %, ratio to t_pred 1.0121 (1.1 s)
+[2026-11-13 16:44:30] [task1] case 21 (P1|1y|supply, 1 LBUF + 3 UINV, LBUF share of S 1, extra): t_sim 489.207 ns, main 489.207 ns, diff +0.0000 %, ratio to t_pred 1.0081 (1.7 s)
+[2026-11-13 16:44:35] [task1] case 25 (P3|t0|t0, 4 LBUF + 1 UINV, LBUF share of S 1, extra): t_sim 1257.368 ns, main 1257.370 ns, diff -0.0002 %, ratio to t_pred 0.9979 (4.4 s)
+[2026-11-13 16:44:51] [task1] numerical sensitivity: largest |change| 0.0000 %
+[2026-11-13 16:44:51] [task1] max |rel diff| vs main 0.0004 % (6 cases), 0.0002 % (4 extra LBUF-dominated cases); t_s rel diff +9.68e-07; PASS=True (55.1 s)
+[2026-11-13 16:44:51] task 2: model side (48 cases)
+[2026-11-13 16:44:52] [task2] model side recomputed for 48 cases, 199 bounds
+[2026-11-13 16:44:53] [task2] case selection redone: P1|t0|t0 2850/123, P1|1y|dac_remap 2827/112, P1|1y|supply 2867/61, P3|t0|t0 2824/98, P3|1y|dac_remap 2822/92, P3|1y|supply 2812/41; identical to the main run: True
+[2026-11-13 16:44:53] [task2] max rel diff: w 8.08e-07 (LBUF 8.08e-07, UINV 4.66e-08), S 8.06e-07, t_pred 8.06e-07; unsolved inputs: g 1.1e-16, theta_eff 0.0e+00, V_DL 0.0e+00; PASS=True (1.8 s)
+[2026-11-13 16:44:53] task 3: decision of the frozen plan (V1GS)
+[2026-11-13 16:44:53] [task3] V1GS from rows.csv: 48/48 within, max |ln| 0.0180 -> PASS; with my t_pred: 48/48, max 0.0180 -> PASS; with my t_pred and t_s: 48/48 -> PASS; my 6 SPICE rows: max |ln| 0.0080; decision.json PASS; PASS=True
+[2026-11-13 16:44:53] done: {'task1': True, 'task2': True, 'task3': True} all_pass=True (57.7 s)

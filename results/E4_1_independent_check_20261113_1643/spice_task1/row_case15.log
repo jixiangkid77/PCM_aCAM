@@ -1,0 +1,62 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: * e4.1 independent gs row case15
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+sl_lo                                 0.768421
+sl_hi                                 0.770323
+dl0                                   0.699954
+x0                                    0.558553
+w0                                    0.590245
+z0                                    0.522188
+ml                                         1.8
+dl1                                    0.71745
+x1                                    0.562225
+w1                                    0.718959
+z1                                  0.00149955
+dl2                                   0.699954
+y2                                     0.58375
+z2                                   0.0856075
+dl3                                   0.689422
+y3                                    0.574631
+z3                                    0.488682
+vdl3#branch                                  0
+vdl2#branch                                  0
+vdl1#branch                                  0
+vdl0#branch                                  0
+vslhi#branch                      -1.29251e-06
+vsllo#branch                      -2.08277e-06
+vdd#branch                        -2.11403e-06
+
+ Reference value :  2.41280e-08
+ Reference value :  1.07828e-07
+ Reference value :  1.90228e-07
+ Reference value :  2.69828e-07
+ Reference value :  3.57828e-07
+ Reference value :  4.49628e-07
+ Reference value :  5.33528e-07
+No. of Data Rows : 6002
+tc                  =  2.526864e-07
+n0_2ns              =  5.585522e-01
+m0_2ns              =  5.902291e-01
+g0_2ns              =  5.217910e-01
+n1_2ns              =  5.622253e-01
+m1_2ns              =  7.189590e-01
+g1_2ns              =  1.494242e-03
+n2_2ns              =  5.837432e-01
+g2_2ns              =  8.535762e-02
+n3_2ns              =  5.746189e-01
+g3_2ns              =  4.882943e-01
+ngspice-42 done
+Using SPARSE 1.3 as Direct Linear Solver

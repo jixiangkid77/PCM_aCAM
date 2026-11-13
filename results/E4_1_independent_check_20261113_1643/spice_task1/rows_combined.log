@@ -1,0 +1,328 @@
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: * e4.1 independent: the six rows in one netlist
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+c0_sl_lo                              0.768421
+c0_sl_hi                              0.770323
+c0_dl0                                0.785123
+c0_x0                                 0.228977
+c0_w0                                  1.79996
+c0_z0                              7.44163e-10
+c0_ml                                      1.8
+c0_dl1                                0.723364
+c0_y1                                 0.570574
+c0_z1                                 0.473535
+c0_dl2                                0.784824
+c0_y2                                  0.57697
+c0_z2                                 0.252194
+c0_dl3                                0.780604
+c0_y3                                 0.593665
+c0_z3                                 0.266025
+c8_sl_lo                              0.768421
+c8_sl_hi                              0.770323
+c8_dl0                                0.698198
+c8_x0                                 0.568118
+c8_w0                                   1.0098
+c8_z0                              2.17233e-06
+c8_ml                                      1.8
+c8_dl1                                0.692835
+c8_y1                                 0.573416
+c8_z1                                 0.478552
+c8_dl2                                0.711401
+c8_y2                                 0.669876
+c8_z2                               0.00603821
+c8_dl3                                0.649655
+c8_y3                                 0.673259
+c8_z3                               0.00597355
+c8_dl4                                0.705324
+c8_y4                                 0.597578
+c8_z4                                0.0312732
+c16_sl_lo                             0.962292
+c16_sl_hi                             0.964193
+c16_dl0                               0.767702
+c16_x0                                0.571766
+c16_w0                                0.728803
+c16_z0                             0.000903696
+c16_ml                                     1.8
+c16_dl1                               0.739367
+c16_x1                                0.517339
+c16_w1                                 1.74102
+c16_z1                              7.1919e-10
+c16_dl2                               0.776634
+c16_x2                                0.537179
+c16_w2                                 1.52191
+c16_z2                             7.55138e-10
+c16_dl3                               0.727584
+c16_y3                                0.563104
+c16_z3                                0.474095
+c24_sl_lo                             0.768421
+c24_sl_hi                             0.770323
+c24_dl0                               0.931312
+c24_x0                                0.557715
+c24_w0                                  1.1397
+c24_z0                             1.74608e-07
+c24_ml                                     1.8
+c24_dl1                               0.855041
+c24_x1                                0.563426
+c24_w1                                0.795618
+c24_z1                             0.000233767
+c24_dl2                               0.811246
+c24_y2                                0.572599
+c24_z2                                0.450211
+c24_dl3                               0.902723
+c24_y3                                0.581321
+c24_z3                                0.390355
+c32_sl_lo                             0.768421
+c32_sl_hi                             0.770323
+c32_dl0                               0.761915
+c32_x0                               0.0702785
+c32_w0                                     1.8
+c32_z0                              7.4578e-10
+c32_ml                                     1.8
+c32_dl1                                0.84488
+c32_x1                                0.542524
+c32_w1                                 1.36515
+c32_z1                             1.32717e-09
+c32_dl2                               0.823686
+c32_x2                                0.557058
+c32_w2                                0.763281
+c32_z2                             0.000536268
+c32_dl3                               0.874509
+c32_y3                                0.571822
+c32_z3                                0.497069
+c32_dl4                               0.823686
+c32_y4                                0.603186
+c32_z4                               0.0344891
+c40_sl_lo                             0.962292
+c40_sl_hi                             0.964193
+c40_dl0                                1.10124
+c40_x0                                0.508962
+c40_w0                                 1.71829
+c40_z0                             7.24795e-10
+c40_ml                                     1.8
+c40_dl1                                1.17331
+c40_x1                                0.258681
+c40_w1                                 1.79995
+c40_z1                             7.27272e-10
+c40_dl2                                1.01618
+c40_x2                                0.368154
+c40_w2                                 1.79721
+c40_z2                             7.37827e-10
+c40_dl3                               0.885072
+c40_y3                                0.681905
+c40_z3                               0.0052063
+c40_dl4                                1.04202
+c40_y4                                0.574621
+c40_z4                                0.463416
+vdl4_c40#branch                              0
+vdl3_c40#branch                              0
+vdl2_c40#branch                              0
+vdl1_c40#branch                              0
+vdl0_c40#branch                              0
+vslhi_c40#branch                  -3.79179e-06
+vsllo_c40#branch                  -7.97864e-06
+vdl4_c32#branch                              0
+vdl3_c32#branch                              0
+vdl2_c32#branch                              0
+vdl1_c32#branch                              0
+vdl0_c32#branch                              0
+vslhi_c32#branch                  -2.04652e-06
+vsllo_c32#branch                  -2.11099e-06
+vdl3_c24#branch                              0
+vdl2_c24#branch                              0
+vdl1_c24#branch                              0
+vdl0_c24#branch                              0
+vslhi_c24#branch                  -2.20059e-06
+vsllo_c24#branch                  -2.69474e-06
+vdl3_c16#branch                              0
+vdl2_c16#branch                              0
+vdl1_c16#branch                              0
+vdl0_c16#branch                              0
+vslhi_c16#branch                  -1.30548e-06
+vsllo_c16#branch                  -7.12344e-06
+vdl4_c8#branch                               0
+vdl3_c8#branch                               0
+vdl2_c8#branch                               0
+vdl1_c8#branch                               0
+vdl0_c8#branch                               0
+vslhi_c8#branch                   -3.31667e-06
+vsllo_c8#branch                   -1.01663e-06
+vdl3_c0#branch                               0
+vdl2_c0#branch                               0
+vdl1_c0#branch                               0
+vdl0_c0#branch                               0
+vslhi_c0#branch                   -9.93843e-06
+vsllo_c0#branch                   -2.20522e-06
+vdd#branch                        -8.29288e-06
+
+ Reference value :  0.00000e+00
+ Reference value :  2.62560e-08
+ Reference value :  5.66560e-08
+ Reference value :  8.74560e-08
+ Reference value :  1.18656e-07
+ Reference value :  1.49256e-07
+ Reference value :  1.77056e-07
+ Reference value :  2.09856e-07
+ Reference value :  2.41856e-07
+ Reference value :  2.74056e-07
+ Reference value :  3.04256e-07
+ Reference value :  3.36456e-07
+ Reference value :  3.67456e-07
+ Reference value :  3.92056e-07
+ Reference value :  4.14056e-07
+ Reference value :  4.43456e-07
+ Reference value :  4.73856e-07
+ Reference value :  5.05456e-07
+ Reference value :  5.36056e-07
+ Reference value :  5.67056e-07
+ Reference value :  5.98256e-07
+ Reference value :  6.28256e-07
+ Reference value :  6.59256e-07
+ Reference value :  6.90256e-07
+ Reference value :  7.22256e-07
+ Reference value :  7.53256e-07
+ Reference value :  7.81456e-07
+ Reference value :  8.12856e-07
+ Reference value :  8.45056e-07
+ Reference value :  8.75456e-07
+ Reference value :  9.05856e-07
+ Reference value :  9.35256e-07
+ Reference value :  9.63656e-07
+ Reference value :  9.93456e-07
+ Reference value :  1.02366e-06
+ Reference value :  1.05606e-06
+ Reference value :  1.08786e-06
+ Reference value :  1.11786e-06
+ Reference value :  1.14886e-06
+ Reference value :  1.17946e-06
+ Reference value :  1.21026e-06
+ Reference value :  1.24146e-06
+ Reference value :  1.27346e-06
+ Reference value :  1.30206e-06
+ Reference value :  1.33166e-06
+ Reference value :  1.36246e-06
+ Reference value :  1.38846e-06
+ Reference value :  1.42046e-06
+ Reference value :  1.45086e-06
+ Reference value :  1.48146e-06
+ Reference value :  1.51186e-06
+ Reference value :  1.54346e-06
+ Reference value :  1.57486e-06
+ Reference value :  1.60426e-06
+ Reference value :  1.63666e-06
+ Reference value :  1.66906e-06
+ Reference value :  1.70186e-06
+ Reference value :  1.73346e-06
+ Reference value :  1.76566e-06
+ Reference value :  1.79466e-06
+ Reference value :  1.81406e-06
+ Reference value :  1.83926e-06
+ Reference value :  1.85966e-06
+ Reference value :  1.88966e-06
+ Reference value :  1.91626e-06
+ Reference value :  1.94406e-06
+ Reference value :  1.97506e-06
+ Reference value :  2.00826e-06
+ Reference value :  2.03866e-06
+ Reference value :  2.06506e-06
+ Reference value :  2.09386e-06
+ Reference value :  2.12546e-06
+ Reference value :  2.15646e-06
+ Reference value :  2.18806e-06
+ Reference value :  2.22026e-06
+ Reference value :  2.25286e-06
+ Reference value :  2.28326e-06
+ Reference value :  2.31346e-06
+ Reference value :  2.34446e-06
+ Reference value :  2.37606e-06
+ Reference value :  2.40146e-06
+ Reference value :  2.42486e-06
+ Reference value :  2.45366e-06
+No. of Data Rows : 12410
+tc_c0               =  1.378151e-06
+n0_c0_2ns           =  2.289768e-01
+m0_c0_2ns           =  1.799960e+00
+g0_c0_2ns           =  -2.779318e-08
+n1_c0_2ns           =  5.705722e-01
+g1_c0_2ns           =  4.734602e-01
+n2_c0_2ns           =  5.769693e-01
+g2_c0_2ns           =  2.521189e-01
+n3_c0_2ns           =  5.936648e-01
+g3_c0_2ns           =  2.659445e-01
+tc_c8               =  1.367107e-06
+n0_c8_2ns           =  5.681183e-01
+m0_c8_2ns           =  1.009800e+00
+g0_c8_2ns           =  2.081761e-06
+n1_c8_2ns           =  5.734140e-01
+g1_c8_2ns           =  4.784735e-01
+n2_c8_2ns           =  6.698760e-01
+g2_c8_2ns           =  6.035404e-03
+n3_c8_2ns           =  6.732592e-01
+g3_c8_2ns           =  5.970585e-03
+n4_c8_2ns           =  5.975779e-01
+g4_c8_2ns           =  3.126025e-02
+tc_c16              =  1.378999e-06
+n0_c16_2ns          =  5.717656e-01
+m0_c16_2ns          =  7.288031e-01
+g0_c16_2ns          =  9.030108e-04
+n1_c16_2ns          =  5.173391e-01
+m1_c16_2ns          =  1.741021e+00
+g1_c16_2ns          =  -2.851556e-08
+n2_c16_2ns          =  5.371791e-01
+m2_c16_2ns          =  1.521912e+00
+g2_c16_2ns          =  -3.445559e-08
+n3_c16_2ns          =  5.631019e-01
+g3_c16_2ns          =  4.740238e-01
+tc_c24              =  1.385936e-06
+n0_c24_2ns          =  5.577152e-01
+m0_c24_2ns          =  1.139696e+00
+g0_c24_2ns          =  1.097073e-07
+n1_c24_2ns          =  5.634256e-01
+m1_c24_2ns          =  7.956175e-01
+g1_c24_2ns          =  2.334385e-04
+n2_c24_2ns          =  5.725970e-01
+g2_c24_2ns          =  4.501392e-01
+n3_c24_2ns          =  5.813193e-01
+g3_c24_2ns          =  3.902796e-01
+tc_c32              =  1.345765e-06
+n0_c32_2ns          =  7.027847e-02
+m0_c32_2ns          =  1.799999e+00
+g0_c32_2ns          =  -2.867828e-08
+n1_c32_2ns          =  5.425238e-01
+m1_c32_2ns          =  1.365147e+00
+g1_c32_2ns          =  -4.259307e-08
+n2_c32_2ns          =  5.570575e-01
+m2_c32_2ns          =  7.632809e-01
+g2_c32_2ns          =  5.357307e-04
+n3_c32_2ns          =  5.718200e-01
+g3_c32_2ns          =  4.969902e-01
+n4_c32_2ns          =  6.031858e-01
+g4_c32_2ns          =  3.447385e-02
+tc_c40              =  1.379367e-06
+n0_c40_2ns          =  5.089618e-01
+m0_c40_2ns          =  1.718293e+00
+g0_c40_2ns          =  -2.952190e-08
+n1_c40_2ns          =  2.586807e-01
+m1_c40_2ns          =  1.799949e+00
+g1_c40_2ns          =  -2.739577e-08
+n2_c40_2ns          =  3.681543e-01
+m2_c40_2ns          =  1.797213e+00
+g2_c40_2ns          =  -2.775685e-08
+n3_c40_2ns          =  6.819048e-01
+g3_c40_2ns          =  5.203799e-03
+n4_c40_2ns          =  5.746193e-01
+g4_c40_2ns          =  4.633401e-01
+ngspice-42 done
+Using SPARSE 1.3 as Direct Linear Solver

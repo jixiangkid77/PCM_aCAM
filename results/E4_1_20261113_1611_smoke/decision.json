@@ -1,0 +1,9 @@
+{
+  "V1GS": {
+    "rule": "pass if |ln(t_c,sim / t_c,pred)| <= 0.05 for at least 90 % of the 48 cases",
+    "pass_fraction": 1.0,
+    "cases": 6,
+    "outcome": "PASS"
+  },
+  "smoke": true
+}

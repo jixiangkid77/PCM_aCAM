@@ -1,0 +1,4 @@
+Superseded by the later E5_posthoc_budget run of the same day. The later run uses the same script with one addition: it
+also writes array_interval.csv (for each cell set, the earlier of the times of its lower-bound and upper-bound branch
+type, i.e. the reprogramming interval of the array) and the corresponding section of summary.md. Check R1 and every value
+of budget_sweep.csv are identical in both runs.
